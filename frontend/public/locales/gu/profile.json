@@ -1,0 +1,28 @@
+{
+  "title": "મારી પ્રોફાઇલ",
+  "editProfile": "પ્રોફાઇલ સંપાદિત કરો",
+  "saveChanges": "ફેરફારો સાચવો",
+  "saving": "સાચવી રહ્યું છે...",
+  "firstName": "પ્રથમ નામ",
+  "lastName": "છેલ્લું નામ",
+  "email": "ઇમેઇલ સરનામું",
+  "phone": "ફોન નંબર",
+  "grade": "ગ્રેડ",
+  "primaryLanguage": "પ્રાથમિક ભાષા",
+  "guardianName": "વાલીનું નામ",
+  "guardianRelation": "વાલી સંબંધ",
+  "selectGrade": "ગ્રેડ પસંદ કરો",
+  "selectLanguage": "ભાષા પસંદ કરો",
+  "selectRelation": "સંબંધ પસંદ કરો",
+  "studentID": "ID",
+  "role": "વિદ્યાર્થી",
+  "errorLoading": "પ્રોફાઇલ લોડ કરવામાં ભૂલ",
+  "successUpdate": "પ્રોફાઇલ સફળતાપૂર્વક અપડેટ થઈ!",
+  "errorUpdate": "પ્રોફાઇલ અપડેટ કરવામાં નિષ્ફળ",
+  "genericError": "એક ભૂલ આવી. કૃપા કરીને ફરી પ્રયાસ કરો.",
+  "relations": {
+    "father": "પિતા",
+    "mother": "માતા",
+    "other": "અન્ય"
+  }
+}

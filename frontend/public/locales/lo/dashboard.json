@@ -1,0 +1,26 @@
+{
+  "title": "ກະດານນັກຮຽນ",
+  "subtitle": "ຍິນດີຕ້ອນຮັບກັບຄືນ! ນີ້ແມ່ນພາບລວມຂອງຄວາມຄືບໜ້າຂອງເຈົ້າ.",
+  "stats": {
+    "teachers": "ໝາຍເລກຄູ",
+    "teachersSubText": "ອາຈານທີ່ທ່ານສົນທະນາກັບ",
+    "conversations": "ການສົນທະນາ",
+    "conversationsSubText": "ຂໍ້ຄວາມທັງໝົດ",
+    "languages": "ພາສາທີ່ຮອງຮັບ",
+    "languagesSubText": "ຂຽນ ({{written}}) | ຄຳເວົ້າ ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "ສະຖານະສະຫນັບສະຫນູນພາສາ",
+    "primary": "ພາສາຫຼັກຂອງເຈົ້າແມ່ນ",
+    "written": {
+      "title": "ສະຫນັບສະຫນູນລາຍລັກອັກສອນ",
+      "available": "ມີໃຫ້ສໍາລັບການສົ່ງຂໍ້ຄວາມ",
+      "unsupported": "ບໍ່ຮອງຮັບ"
+    },
+    "verbal": {
+      "title": "ການສະຫນັບສະຫນູນທາງປາກ",
+      "available": "ມີໃຫ້ສໍາລັບກອງປະຊຸມສົດ",
+      "unsupported": "ບໍ່ຮອງຮັບ"
+    }
+  }
+}

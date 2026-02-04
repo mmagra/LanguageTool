@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Mo Phróifíl",
+  "changePassword": "Athraigh Pasfhocal",
+  "helpSupport": "Cabhair & Tacaíocht",
+  "signOut": "Sínigh amach",
+  "notifications": {
+    "title": "Fógraí",
+    "unread": "teachtaireachtaí gan léamh",
+    "empty": "Gan fógraí nua",
+    "viewAll": "Féach ar gach teachtaireacht",
+    "newMessage": "Teachtaireacht nua"
+  },
+  "language": {
+    "switchToNative": "Athraigh go Do Theanga",
+    "switchToEnglish": "Athraigh go Béarla"
+  }
+}

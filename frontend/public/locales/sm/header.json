@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "O'u Tala'aga",
+  "changePassword": "Suia le upu faataga",
+  "helpSupport": "Fesoasoani & Lagolago",
+  "signOut": "Saini ese",
+  "notifications": {
+    "title": "Fa'asilasilaga",
+    "unread": "savali e le'i faitauina",
+    "empty": "Leai ni fa'amatalaga fou",
+    "viewAll": "Va'ai savali uma",
+    "newMessage": "Fe'au fou"
+  },
+  "language": {
+    "switchToNative": "Sui i Lau Gagana",
+    "switchToEnglish": "Su'e ile Igilisi"
+  }
+}

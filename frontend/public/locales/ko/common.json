@@ -1,0 +1,13 @@
+{
+  "loading": "로드 중...",
+  "error": "오류",
+  "save": "구하다",
+  "cancel": "취소",
+  "language": "언어",
+  "switchToEnglish": "영어로 전환",
+  "switchToNative": "{{언어}}로 전환하세요",
+  "online": "온라인",
+  "offline": "오프라인",
+  "notProvided": "제공되지 않음",
+  "tryAgain": "다시 시도"
+}

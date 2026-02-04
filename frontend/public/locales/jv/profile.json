@@ -1,0 +1,28 @@
+{
+  "title": "Profil Kula",
+  "editProfile": "Sunting Profil",
+  "saveChanges": "Simpen Owah-owahan",
+  "saving": "Ngirit...",
+  "firstName": "Jeneng pisanan",
+  "lastName": "Jeneng mburi",
+  "email": "Alamat Email",
+  "phone": "Nomer telpon",
+  "grade": "sasmita",
+  "primaryLanguage": "Basa utami",
+  "guardianName": "Jeneng Wali",
+  "guardianRelation": "Hubungan Wali",
+  "selectGrade": "Pilih Grade",
+  "selectLanguage": "Pilih Basa",
+  "selectRelation": "Pilih Relation",
+  "studentID": "ID",
+  "role": "mahasiswa",
+  "errorLoading": "Kesalahan Loading Profil",
+  "successUpdate": "Profil dianyari kanthi sukses!",
+  "errorUpdate": "Gagal nganyari profil",
+  "genericError": "Ana kesalahan. Coba maneh.",
+  "relations": {
+    "father": "Bapak",
+    "mother": "ibu",
+    "other": "Liyane"
+  }
+}

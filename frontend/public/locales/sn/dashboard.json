@@ -1,0 +1,26 @@
+{
+  "title": "Mudzidzi Dashboard",
+  "subtitle": "Madzokoyi! Heino mhedziso yekufambira mberi kwako.",
+  "stats": {
+    "teachers": "Nhamba yeMudzidzisi(s)",
+    "teachersSubText": "Vadzidzisi vamakataura navo",
+    "conversations": "Hurukuro",
+    "conversationsSubText": "Total Messages",
+    "languages": "Mitauro Inotsigirwa",
+    "languagesSubText": "Yakanyorwa ({{written}}) | Nezwi ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Mutauro Support Status",
+    "primary": "Mutauro wako wekutanga",
+    "written": {
+      "title": "Written Support",
+      "available": "Inowanikwa pakutumira mameseji",
+      "unsupported": "Haisi kutsigirwa"
+    },
+    "verbal": {
+      "title": "Verbal Support",
+      "available": "Inowanikwa kumisangano yehupenyu",
+      "unsupported": "Haisi kutsigirwa"
+    }
+  }
+}

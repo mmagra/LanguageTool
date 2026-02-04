@@ -1,0 +1,28 @@
+{
+  "title": "Môj profil",
+  "editProfile": "Upraviť profil",
+  "saveChanges": "Uložiť zmeny",
+  "saving": "Ukladá sa...",
+  "firstName": "Krstné meno",
+  "lastName": "Priezvisko",
+  "email": "E-mailová adresa",
+  "phone": "Telefónne číslo",
+  "grade": "stupňa",
+  "primaryLanguage": "Primárny jazyk",
+  "guardianName": "Meno strážcu",
+  "guardianRelation": "Vzťah opatrovníka",
+  "selectGrade": "Vyberte možnosť Stupeň",
+  "selectLanguage": "Vyberte Jazyk",
+  "selectRelation": "Vyberte položku Vzťah",
+  "studentID": "ID",
+  "role": "Študent",
+  "errorLoading": "Chyba pri načítavaní profilu",
+  "successUpdate": "Profil bol úspešne aktualizovaný!",
+  "errorUpdate": "Aktualizácia profilu zlyhala",
+  "genericError": "Vyskytla sa chyba. Skúste to znova.",
+  "relations": {
+    "father": "otec",
+    "mother": "matka",
+    "other": "Iné"
+  }
+}

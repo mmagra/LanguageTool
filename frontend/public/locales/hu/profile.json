@@ -1,0 +1,28 @@
+{
+  "title": "Saját profil",
+  "editProfile": "Profil szerkesztése",
+  "saveChanges": "Módosítások mentése",
+  "saving": "Megtakarítás...",
+  "firstName": "Keresztnév",
+  "lastName": "Vezetéknév",
+  "email": "E-mail cím",
+  "phone": "Telefonszám",
+  "grade": "Fokozat",
+  "primaryLanguage": "Elsődleges nyelv",
+  "guardianName": "Gyám neve",
+  "guardianRelation": "Gyámi kapcsolat",
+  "selectGrade": "Válassza az Osztály lehetőséget",
+  "selectLanguage": "Válassza a Nyelv lehetőséget",
+  "selectRelation": "Válassza a Kapcsolat lehetőséget",
+  "studentID": "ID",
+  "role": "Diák",
+  "errorLoading": "Hiba a profil betöltésekor",
+  "successUpdate": "A profil sikeresen frissítve!",
+  "errorUpdate": "Nem sikerült frissíteni a profilt",
+  "genericError": "Hiba történt. Kérjük, próbálja újra.",
+  "relations": {
+    "father": "Apa",
+    "mother": "Anya",
+    "other": "Más"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "loading": "Inapakia...",
+  "error": "Hitilafu",
+  "save": "Hifadhi",
+  "cancel": "Ghairi",
+  "language": "Lugha",
+  "switchToEnglish": "Badili hadi Kiingereza",
+  "switchToNative": "Badili hadi {{lugha}}",
+  "online": "Mtandaoni",
+  "offline": "Nje ya mtandao",
+  "notProvided": "Haijatolewa",
+  "tryAgain": "Jaribu Tena"
+}

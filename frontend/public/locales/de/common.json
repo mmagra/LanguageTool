@@ -1,0 +1,13 @@
+{
+  "loading": "Laden...",
+  "error": "Fehler",
+  "save": "Speichern",
+  "cancel": "Stornieren",
+  "language": "Sprache",
+  "switchToEnglish": "Wechseln Sie zu Englisch",
+  "switchToNative": "Zu {{Sprache}} wechseln",
+  "online": "Online",
+  "offline": "Offline",
+  "notProvided": "Nicht bereitgestellt",
+  "tryAgain": "Versuchen Sie es erneut"
+}

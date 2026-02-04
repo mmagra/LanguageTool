@@ -1,0 +1,47 @@
+{
+  "title": "Aiuto e supporto",
+  "description": "Siamo qui per aiutarti con qualsiasi domanda o problema che potresti incontrare durante l'utilizzo della nostra applicazione web. Se hai bisogno di aiuto per iniziare, hai una domanda su una funzionalità o desideri segnalare un bug, siamo qui per aiutarti.",
+  "contact": {
+    "title": "Contatta l'assistenza",
+    "emailTitle": "Supporto via e-mail",
+    "emailDesc": "Il nostro obiettivo è rispondere a tutte le e-mail entro 24 ore.",
+    "phoneTitle": "Supporto telefonico",
+    "hours": "Lun-Ven (9:00 – 17:00)",
+    "footer": "Grazie per aver scelto la nostra applicazione web. Ci impegniamo a rendere la tua esperienza il più agevole e piacevole possibile."
+  },
+  "supportedLanguages": {
+    "title": "Elenco delle lingue supportate",
+    "headers": {
+      "rank": "#",
+      "language": "Lingua",
+      "translation": "Traduzione (app e dispositivi mobili)",
+      "desktop": "Comunicazione di persona (desktop)",
+      "mobile": "Comunicazione di persona (app mobile)"
+    },
+    "mobileLabels": {
+      "translation": "Messaggi tradotti",
+      "desktop": "Desktop di persona",
+      "mobile": "Mobile di persona"
+    },
+    "supported": "Supportato",
+    "notSupported": "Non supportato"
+  },
+  "detailedFeatures": {
+    "title": "Supporto dettagliato delle funzionalità",
+    "subtitle": "Suddivisione delle funzionalità di input vocale e di sintesi vocale per dispositivo.",
+    "headers": {
+      "rank": "#",
+      "language": "Lingua",
+      "translation": "Traduzione (tutti)",
+      "desktopVersion": "Versione desktop",
+      "mobileApp": "Applicazione mobile",
+      "voiceInput": "Ingresso vocale",
+      "tts": "Da testo a voce"
+    },
+    "mobileHeaders": {
+      "translation": "Traduzione",
+      "desktop": "Funzionalità del desktop",
+      "mobile": "Funzionalità dell'app mobile"
+    }
+  }
+}

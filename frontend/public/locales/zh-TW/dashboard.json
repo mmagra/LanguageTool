@@ -1,0 +1,26 @@
+{
+  "title": "學生儀表板",
+  "subtitle": "歡迎回來！以下是您的進展概述。",
+  "stats": {
+    "teachers": "教師人數",
+    "teachersSubText": "與您聊天的老師",
+    "conversations": "對話",
+    "conversationsSubText": "消息總數",
+    "languages": "支持的語言",
+    "languagesSubText": "書面 ({{written}}) |口頭 ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "語言支持狀態",
+    "primary": "您的主要語言是",
+    "written": {
+      "title": "書面支持",
+      "available": "可用於消息傳遞",
+      "unsupported": "不支持"
+    },
+    "verbal": {
+      "title": "口頭支持",
+      "available": "可用於現場會議",
+      "unsupported": "不支持"
+    }
+  }
+}

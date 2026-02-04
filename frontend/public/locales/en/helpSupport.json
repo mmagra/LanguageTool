@@ -1,0 +1,47 @@
+{
+  "title": "Help and Support",
+  "description": "We are here to help with any questions or issues you may encounter while using our web application. Whether you need help getting started, have a question about a feature, or want to report a bug, we're here to help.",
+  "contact": {
+    "title": "Contact Support",
+    "emailTitle": "Email Support",
+    "emailDesc": "We aim to respond to all emails within 24 hours.",
+    "phoneTitle": "Phone Support",
+    "hours": "Mon-Fri (9 am – 5 pm)",
+    "footer": "Thank you for choosing our web application. We're committed to making your experience as smooth and enjoyable as possible."
+  },
+  "supportedLanguages": {
+    "title": "List of Supported Languages",
+    "headers": {
+      "rank": "#",
+      "language": "Language",
+      "translation": "Translation (App & Mobile)",
+      "desktop": "In-Person Communication (Desktop)",
+      "mobile": "In-Person Communication (Mobile App)"
+    },
+    "mobileLabels": {
+      "translation": "Translated Messages",
+      "desktop": "Desktop In-Person",
+      "mobile": "Mobile In-Person"
+    },
+    "supported": "Supported",
+    "notSupported": "Not Supported"
+  },
+  "detailedFeatures": {
+    "title": "Detailed Feature Support",
+    "subtitle": "Breakdown of Voice Input and Text-to-Speech capabilities per device.",
+    "headers": {
+      "rank": "#",
+      "language": "Language",
+      "translation": "Translation (All)",
+      "desktopVersion": "Desktop Version",
+      "mobileApp": "Mobile App",
+      "voiceInput": "Voice Input",
+      "tts": "Text-to-Speech"
+    },
+    "mobileHeaders": {
+      "translation": "Translation",
+      "desktop": "Desktop Features",
+      "mobile": "Mobile App Features"
+    }
+  }
+}

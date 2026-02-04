@@ -1,0 +1,28 @@
+{
+  "title": "Aking Profile",
+  "editProfile": "I-edit ang Profile",
+  "saveChanges": "I-save ang Mga Pagbabago",
+  "saving": "Nagse-save...",
+  "firstName": "Unang Pangalan",
+  "lastName": "Apelyido",
+  "email": "Email Address",
+  "phone": "Numero ng Telepono",
+  "grade": "Grade",
+  "primaryLanguage": "Pangunahing Wika",
+  "guardianName": "Pangalan ng Tagapangalaga",
+  "guardianRelation": "Relasyon ng Tagapangalaga",
+  "selectGrade": "Piliin ang Marka",
+  "selectLanguage": "Piliin ang Wika",
+  "selectRelation": "Piliin ang Relasyon",
+  "studentID": "ID",
+  "role": "Estudyante",
+  "errorLoading": "Error sa Paglo-load ng Profile",
+  "successUpdate": "Matagumpay na na-update ang profile!",
+  "errorUpdate": "Nabigong i-update ang profile",
+  "genericError": "May naganap na error. Pakisubukang muli.",
+  "relations": {
+    "father": "Ama",
+    "mother": "Inay",
+    "other": "Iba pa"
+  }
+}

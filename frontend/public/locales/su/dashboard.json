@@ -1,0 +1,26 @@
+{
+  "title": "Dasbor Siswa",
+  "subtitle": "Wilujeng sumping! Ieu tinjauan kamajuan anjeun.",
+  "stats": {
+    "teachers": "Jumlah Guru",
+    "teachersSubText": "Guru nu diajak ngobrol",
+    "conversations": "Paguneman (s)",
+    "conversationsSubText": "Total Talatah",
+    "languages": "Basa anu Dirojong",
+    "languagesSubText": "Ditulis ({{written}}) | Verbal ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Status Rojongan Basa",
+    "primary": "Basa primér anjeun nyaéta",
+    "written": {
+      "title": "Rojongan tinulis",
+      "available": "Sadia pikeun olahtalatah",
+      "unsupported": "Teu dirojong"
+    },
+    "verbal": {
+      "title": "Rojongan verbal",
+      "available": "Sadia pikeun sesi live",
+      "unsupported": "Teu dirojong"
+    }
+  }
+}

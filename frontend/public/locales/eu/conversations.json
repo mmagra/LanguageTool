@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Mezuak",
+  "searchPlaceholder": "Bilatu irakasleak...",
+  "noConversations": "Oraindik ez dago elkarrizketarik",
+  "unknownTeacher": "Irakasle ezezaguna",
+  "noMessages": "Oraindik ez dago mezurik",
+  "typing": "Idazten...",
+  "typePlaceholder": "Idatzi zure mezua euskaraz...",
+  "emptyState": {
+    "title": "Zure Elkarrizketak",
+    "desc": "Hautatu irakasle bat alboko barratik galderak egiten hasteko edo zure notak eztabaidatzen hasteko.",
+    "startPrompt": "Hasi elkarrizketa zure irakaslearekin"
+  },
+  "refreshList": "Freskatu zerrenda"
+}

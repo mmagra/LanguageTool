@@ -1,0 +1,26 @@
+{
+  "title": "Talabalar paneli",
+  "subtitle": "Qaytib kelganingizdan xursandmiz! Bu yerda muvaffaqiyatingiz haqida umumiy ma’lumot.",
+  "stats": {
+    "teachers": "O'qituvchilar soni",
+    "teachersSubText": "Siz suhbatlashgan o'qituvchilar",
+    "conversations": "Suhbat(lar)",
+    "conversationsSubText": "Jami xabarlar",
+    "languages": "Qo'llab-quvvatlanadigan tillar",
+    "languagesSubText": "Yozilgan ({{written}}) | Og'zaki ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Tilni qo'llab-quvvatlash holati",
+    "primary": "Sizning asosiy tilingiz",
+    "written": {
+      "title": "Yozma yordam",
+      "available": "Xabar almashish uchun mavjud",
+      "unsupported": "Qo'llab-quvvatlanmaydi"
+    },
+    "verbal": {
+      "title": "Og'zaki qo'llab-quvvatlash",
+      "available": "Jonli seanslar uchun mavjud",
+      "unsupported": "Qo'llab-quvvatlanmaydi"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Mbiri yanga",
+  "changePassword": "Sinthani mawu achinsinsi",
+  "helpSupport": "Thandizo & Thandizo",
+  "signOut": "Tulukani",
+  "notifications": {
+    "title": "Zidziwitso",
+    "unread": "mauthenga osawerengedwa",
+    "empty": "Palibe zidziwitso zatsopano",
+    "viewAll": "Onani mauthenga onse",
+    "newMessage": "Uthenga watsopano"
+  },
+  "language": {
+    "switchToNative": "Sinthani ku Chiyankhulo Chanu",
+    "switchToEnglish": "Sinthani ku Chingerezi"
+  }
+}

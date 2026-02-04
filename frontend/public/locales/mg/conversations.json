@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Hafatra",
+  "searchPlaceholder": "Mikaroka mpampianatra...",
+  "noConversations": "Tsy mbola misy resaka",
+  "unknownTeacher": "Mpampianatra tsy fantatra",
+  "noMessages": "Tsy mbola misy hafatra",
+  "typing": "Mitendry...",
+  "typePlaceholder": "Soraty amin'ny teny malagasy ny hafatrao...",
+  "emptyState": {
+    "title": "Resadresakao",
+    "desc": "Mifidiana mpampianatra iray avy amin'ny sisiny mba hanomboka hametraka fanontaniana na hiresaka momba ny naoty.",
+    "startPrompt": "Manomboha resadresaka amin'ny mpampianatra anao"
+  },
+  "refreshList": "Havaozina ny lisitra"
+}

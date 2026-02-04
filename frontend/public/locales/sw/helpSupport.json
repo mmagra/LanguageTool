@@ -1,0 +1,47 @@
+{
+  "title": "Msaada na Usaidizi",
+  "description": "Tuko hapa kukusaidia kwa maswali au masuala yoyote ambayo unaweza kukutana nayo unapotumia programu yetu ya wavuti. Iwe unahitaji usaidizi ili kuanza, una swali kuhusu kipengele, au unataka kuripoti hitilafu, tuko hapa kukusaidia.",
+  "contact": {
+    "title": "Wasiliana na Usaidizi",
+    "emailTitle": "Msaada wa barua pepe",
+    "emailDesc": "Tunalenga kujibu barua pepe zote ndani ya saa 24.",
+    "phoneTitle": "Msaada wa Simu",
+    "hours": "Jumatatu-Ijumaa (9 asubuhi - 5 jioni)",
+    "footer": "Asante kwa kuchagua programu yetu ya wavuti. Tumejitolea kufanya matumizi yako kuwa laini na ya kufurahisha iwezekanavyo."
+  },
+  "supportedLanguages": {
+    "title": "Orodha ya Lugha Zinazotumika",
+    "headers": {
+      "rank": "#",
+      "language": "Lugha",
+      "translation": "Tafsiri (Programu na Simu ya Mkononi)",
+      "desktop": "Mawasiliano ya ndani ya mtu (Desktop)",
+      "mobile": "Mawasiliano ya Ndani ya Mtu (Programu ya Simu ya Mkononi)"
+    },
+    "mobileLabels": {
+      "translation": "Ujumbe Uliotafsiriwa",
+      "desktop": "Eneo-kazi-Katika-Mtu",
+      "mobile": "Simu ya kibinafsi"
+    },
+    "supported": "Imeungwa mkono",
+    "notSupported": "Haitumiki"
+  },
+  "detailedFeatures": {
+    "title": "Usaidizi wa Kina wa Kipengele",
+    "subtitle": "Uchanganuzi wa uwezo wa Kuingiza Data kwa Sauti na Maandishi-hadi-Hotuba kwa kila kifaa.",
+    "headers": {
+      "rank": "#",
+      "language": "Lugha",
+      "translation": "Tafsiri (Zote)",
+      "desktopVersion": "Toleo la Eneo-kazi",
+      "mobileApp": "Programu ya Simu ya Mkononi",
+      "voiceInput": "Uingizaji wa Sauti",
+      "tts": "Maandishi-kwa-Hotuba"
+    },
+    "mobileHeaders": {
+      "translation": "Tafsiri",
+      "desktop": "Vipengele vya Desktop",
+      "mobile": "Vipengele vya Programu ya Simu ya Mkononi"
+    }
+  }
+}

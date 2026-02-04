@@ -1,0 +1,13 @@
+{
+  "loading": "Kuremera ...",
+  "error": "Ikosa",
+  "save": "Bika",
+  "cancel": "Kureka",
+  "language": "Ururimi",
+  "switchToEnglish": "Hindura Icyongereza",
+  "switchToNative": "Hindura kuri {{ururimi}}",
+  "online": "Kumurongo",
+  "offline": "Kurubuga",
+  "notProvided": "Ntabwo yatanzwe",
+  "tryAgain": "Gerageza"
+}

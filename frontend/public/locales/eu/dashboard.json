@@ -1,0 +1,26 @@
+{
+  "title": "Ikasleen panela",
+  "subtitle": "Ongi etorri berriro! Hona hemen zure aurrerapenaren ikuspegi orokorra.",
+  "stats": {
+    "teachers": "Irakasle kopurua",
+    "teachersSubText": "Txateatu duzun irakasleekin",
+    "conversations": "Elkarrizketa(k)",
+    "conversationsSubText": "Mezuak guztira",
+    "languages": "Onartutako hizkuntzak",
+    "languagesSubText": "Idatzizkoa ({{written}}) | Hitzezkoa ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Hizkuntza Laguntzaren Egoera",
+    "primary": "Zure Lehen Hizkuntza da",
+    "written": {
+      "title": "Idatzizko euskarria",
+      "available": "Mezuetarako eskuragarri",
+      "unsupported": "Ez da onartzen"
+    },
+    "verbal": {
+      "title": "Hitzezko laguntza",
+      "available": "Zuzeneko saioetarako eskuragarri",
+      "unsupported": "Ez da onartzen"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Моят профил",
+  "changePassword": "Промяна на паролата",
+  "helpSupport": "Помощ и поддръжка",
+  "signOut": "Излезте",
+  "notifications": {
+    "title": "Известия",
+    "unread": "непрочетени съобщения",
+    "empty": "Няма нови известия",
+    "viewAll": "Вижте всички съобщения",
+    "newMessage": "Ново съобщение"
+  },
+  "language": {
+    "switchToNative": "Превключете на вашия език",
+    "switchToEnglish": "Преминете към английски"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Taku Kōtaha",
+  "editProfile": "Whakatika Kōtaha",
+  "saveChanges": "Tiaki Huringa",
+  "saving": "Tiaki...",
+  "firstName": "Ingoa Tuatahi",
+  "lastName": "Ingoa Whakamutunga",
+  "email": "Wāhitau Īmēra",
+  "phone": "Tau Waea",
+  "grade": "Kōeke",
+  "primaryLanguage": "Te Reo Tuatahi",
+  "guardianName": "Ingoa Kaitiaki",
+  "guardianRelation": "Whanaungatanga Kaitiaki",
+  "selectGrade": "Tīpako Kōeke",
+  "selectLanguage": "Tīpakohia te Reo",
+  "selectRelation": "Tīpakohia te Hononga",
+  "studentID": "ID",
+  "role": "Ākonga",
+  "errorLoading": "Hapa Uta Kōtaha",
+  "successUpdate": "I momoho te whakahōu kōtaha!",
+  "errorUpdate": "I rahua te whakahōu kōtaha",
+  "genericError": "I puta he hapa. Me ngana ano.",
+  "relations": {
+    "father": "Matua",
+    "mother": "Whaea",
+    "other": "Ētahi atu"
+  }
+}

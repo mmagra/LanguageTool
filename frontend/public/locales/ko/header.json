@@ -1,0 +1,18 @@
+{
+  "title": "스포큰엣지",
+  "myProfile": "내 프로필",
+  "changePassword": "비밀번호 변경",
+  "helpSupport": "도움말 및 지원",
+  "signOut": "로그아웃",
+  "notifications": {
+    "title": "알림",
+    "unread": "읽지 않은 메시지",
+    "empty": "새로운 알림 없음",
+    "viewAll": "모든 메시지 보기",
+    "newMessage": "새 메시지"
+  },
+  "language": {
+    "switchToNative": "귀하의 언어로 전환하십시오",
+    "switchToEnglish": "영어로 전환"
+  }
+}

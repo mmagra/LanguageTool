@@ -1,0 +1,13 @@
+{
+  "loading": "लोड करत आहे...",
+  "error": "त्रुटी",
+  "save": "जतन करा",
+  "cancel": "रद्द करा",
+  "language": "भाषा",
+  "switchToEnglish": "इंग्रजीवर स्विच करा",
+  "switchToNative": "{{language}} वर स्विच करा",
+  "online": "ऑनलाइन",
+  "offline": "ऑफलाइन",
+  "notProvided": "प्रदान केले नाही",
+  "tryAgain": "पुन्हा प्रयत्न करा"
+}

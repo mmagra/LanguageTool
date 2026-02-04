@@ -1,0 +1,28 @@
+{
+  "title": "Моят профил",
+  "editProfile": "Редактиране на профил",
+  "saveChanges": "Запазване на промените",
+  "saving": "Запазва се...",
+  "firstName": "Първо име",
+  "lastName": "Фамилия",
+  "email": "Имейл адрес",
+  "phone": "Телефонен номер",
+  "grade": "Степен",
+  "primaryLanguage": "Основен език",
+  "guardianName": "Име на пазител",
+  "guardianRelation": "Настойническа връзка",
+  "selectGrade": "Изберете Оценка",
+  "selectLanguage": "Изберете език",
+  "selectRelation": "Изберете връзка",
+  "studentID": "ID",
+  "role": "Студент",
+  "errorLoading": "Грешка при зареждане на профил",
+  "successUpdate": "Профилът е актуализиран успешно!",
+  "errorUpdate": "Неуспешно актуализиране на профила",
+  "genericError": "Възникна грешка. Моля, опитайте отново.",
+  "relations": {
+    "father": "баща",
+    "mother": "Майка",
+    "other": "други"
+  }
+}

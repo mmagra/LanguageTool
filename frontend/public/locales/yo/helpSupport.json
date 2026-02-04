@@ -1,0 +1,47 @@
+{
+  "title": "Iranlọwọ ati atilẹyin",
+  "description": "A wa nibi lati ṣe iranlọwọ pẹlu eyikeyi ibeere tabi awọn ọran ti o le ba pade lakoko lilo ohun elo wẹẹbu wa. Boya o nilo iranlọwọ lati bẹrẹ, ni ibeere nipa ẹya kan, tabi fẹ jabo kokoro kan, a wa nibi lati ṣe iranlọwọ.",
+  "contact": {
+    "title": "Olubasọrọ Support",
+    "emailTitle": "Imeeli Support",
+    "emailDesc": "A ṣe ifọkansi lati dahun si gbogbo awọn imeeli laarin awọn wakati 24.",
+    "phoneTitle": "Foonu Support",
+    "hours": "Aarọ-jimọọ (9 owurọ - 5 irọlẹ)",
+    "footer": "O ṣeun fun yiyan ohun elo wẹẹbu wa. A ti pinnu lati jẹ ki iriri rẹ jẹ ki o dan ati igbadun bi o ti ṣee ṣe."
+  },
+  "supportedLanguages": {
+    "title": "Akojọ ti Awọn ede Atilẹyin",
+    "headers": {
+      "rank": "#",
+      "language": "Ede",
+      "translation": "Itumọ (App & Alagbeka)",
+      "desktop": "Ibaraẹnisọrọ Ninu Eniyan (Ojú-iṣẹ)",
+      "mobile": "Ibaraẹnisọrọ Ninu Eniyan (Alagbeka App)"
+    },
+    "mobileLabels": {
+      "translation": "Awọn Ifiranṣẹ Tumọ",
+      "desktop": "Ojú-iṣẹ Ni-Eniyan",
+      "mobile": "Mobile Ni-Eniyan"
+    },
+    "supported": "Atilẹyin",
+    "notSupported": "Ko Atilẹyin"
+  },
+  "detailedFeatures": {
+    "title": "Alaye Atilẹyin Ẹya",
+    "subtitle": "Pipinpin ti igbewọle ohun ati awọn agbara Ọrọ-si-Ọrọ fun ẹrọ kan.",
+    "headers": {
+      "rank": "#",
+      "language": "Ede",
+      "translation": "Itumọ (Gbogbo)",
+      "desktopVersion": "Ẹya Ojú-iṣẹ",
+      "mobileApp": "Ohun elo Alagbeka",
+      "voiceInput": "Iṣagbewọle ohun",
+      "tts": "Ọrọ-si-Ọrọ"
+    },
+    "mobileHeaders": {
+      "translation": "Itumọ",
+      "desktop": "Awọn ẹya ara ẹrọ tabili",
+      "mobile": "Mobile App Awọn ẹya ara ẹrọ"
+    }
+  }
+}

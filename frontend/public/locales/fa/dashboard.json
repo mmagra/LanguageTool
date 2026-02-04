@@ -1,0 +1,26 @@
+{
+  "title": "داشبورد دانش آموزی",
+  "subtitle": "خوش آمدید! در اینجا یک مرور کلی از پیشرفت شما است.",
+  "stats": {
+    "teachers": "شماره معلم(های)",
+    "teachersSubText": "معلمانی که با آنها چت کردید",
+    "conversations": "مکالمه(های)",
+    "conversationsSubText": "کل پیام ها",
+    "languages": "زبان های پشتیبانی شده",
+    "languagesSubText": "نوشته شده ({{written}}) | شفاهی ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "وضعیت پشتیبانی زبان",
+    "primary": "زبان اصلی شماست",
+    "written": {
+      "title": "پشتیبانی کتبی",
+      "available": "برای پیام رسانی موجود است",
+      "unsupported": "پشتیبانی نمی شود"
+    },
+    "verbal": {
+      "title": "پشتیبانی کلامی",
+      "available": "برای جلسات زنده موجود است",
+      "unsupported": "پشتیبانی نمی شود"
+    }
+  }
+}

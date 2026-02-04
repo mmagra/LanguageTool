@@ -1,0 +1,28 @@
+{
+  "title": "Profilim",
+  "editProfile": "Profili redaktə edin",
+  "saveChanges": "Dəyişiklikləri Saxla",
+  "saving": "Yadda saxlanılır...",
+  "firstName": "Ad",
+  "lastName": "Soyadı",
+  "email": "E-poçt ünvanı",
+  "phone": "Telefon nömrəsi",
+  "grade": "Dərəcə",
+  "primaryLanguage": "İbtidai Dil",
+  "guardianName": "Qəyyumun adı",
+  "guardianRelation": "Qəyyum münasibəti",
+  "selectGrade": "Qiymət seçin",
+  "selectLanguage": "Dil seçin",
+  "selectRelation": "Əlaqə seçin",
+  "studentID": "ID",
+  "role": "tələbə",
+  "errorLoading": "Profilin yüklənməsi xətası",
+  "successUpdate": "Profil uğurla yeniləndi!",
+  "errorUpdate": "Profili yeniləmək alınmadı",
+  "genericError": "Xəta baş verdi. Yenidən cəhd edin.",
+  "relations": {
+    "father": "Ata",
+    "mother": "ana",
+    "other": "Digər"
+  }
+}

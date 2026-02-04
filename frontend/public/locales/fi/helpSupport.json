@@ -1,0 +1,47 @@
+{
+  "title": "Apua ja tukea",
+  "description": "Autamme kaikissa kysymyksissä tai ongelmissa, joita saatat kohdata käyttäessäsi verkkosovellustamme. Tarvitsetpa sitten apua aloittamiseen, sinulla on kysyttävää ominaisuudesta tai haluat ilmoittaa virheestä, autamme mielellämme.",
+  "contact": {
+    "title": "Ota yhteyttä tukeen",
+    "emailTitle": "Sähköpostituki",
+    "emailDesc": "Pyrimme vastaamaan kaikkiin sähköposteihin 24 tunnin sisällä.",
+    "phoneTitle": "Puhelintuki",
+    "hours": "ma-pe (klo 9-17)",
+    "footer": "Kiitos, että valitsit verkkosovelluksemme. Olemme sitoutuneet tekemään kokemuksestasi mahdollisimman sujuvan ja nautinnollisen."
+  },
+  "supportedLanguages": {
+    "title": "Luettelo tuetuista kielistä",
+    "headers": {
+      "rank": "#",
+      "language": "Kieli",
+      "translation": "Käännös (sovellus ja mobiili)",
+      "desktop": "Henkilökohtainen viestintä (työpöytä)",
+      "mobile": "Henkilökohtainen viestintä (mobiilisovellus)"
+    },
+    "mobileLabels": {
+      "translation": "Käännetyt viestit",
+      "desktop": "Työpöytä henkilökohtaisesti",
+      "mobile": "Mobiili henkilökohtaisesti"
+    },
+    "supported": "Tuettu",
+    "notSupported": "Ei tuettu"
+  },
+  "detailedFeatures": {
+    "title": "Yksityiskohtainen ominaisuustuki",
+    "subtitle": "Äänisyötön ja tekstistä puheeksi -ominaisuuksien erittely laitteittain.",
+    "headers": {
+      "rank": "#",
+      "language": "Kieli",
+      "translation": "Käännös (kaikki)",
+      "desktopVersion": "Työpöytäversio",
+      "mobileApp": "Mobiilisovellus",
+      "voiceInput": "Äänisyöttö",
+      "tts": "Tekstistä puheeksi"
+    },
+    "mobileHeaders": {
+      "translation": "Käännös",
+      "desktop": "Työpöytäominaisuudet",
+      "mobile": "Mobiilisovelluksen ominaisuudet"
+    }
+  }
+}

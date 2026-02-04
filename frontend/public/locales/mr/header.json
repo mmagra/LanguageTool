@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "माझे प्रोफाइल",
+  "changePassword": "पासवर्ड बदला",
+  "helpSupport": "मदत आणि समर्थन",
+  "signOut": "साइन आउट करा",
+  "notifications": {
+    "title": "सूचना",
+    "unread": "न वाचलेले संदेश",
+    "empty": "कोणत्याही नवीन सूचना नाहीत",
+    "viewAll": "सर्व संदेश पहा",
+    "newMessage": "नवीन संदेश"
+  },
+  "language": {
+    "switchToNative": "तुमच्या भाषेवर स्विच करा",
+    "switchToEnglish": "इंग्रजीवर स्विच करा"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "loading": "Á lódáil...",
+  "error": "Earráid",
+  "save": "Sábháil",
+  "cancel": "Cealaigh",
+  "language": "Teanga",
+  "switchToEnglish": "Athraigh go Béarla",
+  "switchToNative": "Athraigh go {{ language}}",
+  "online": "Ar líne",
+  "offline": "As líne",
+  "notProvided": "Ní sholáthraítear",
+  "tryAgain": "Bain triail eile as"
+}

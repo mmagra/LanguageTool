@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Imilayezo",
+  "searchPlaceholder": "Sesha othisha...",
+  "noConversations": "Azikho izingxoxo okwamanje",
+  "unknownTeacher": "Uthisha Ongaziwa",
+  "noMessages": "Ayikho imilayezo okwamanje",
+  "typing": "Iyathayipha...",
+  "typePlaceholder": "Thayipha umyalezo wakho ngesiZulu...",
+  "emptyState": {
+    "title": "Izingxoxo Zakho",
+    "desc": "Khetha uthisha kubha eseceleni ukuze uqale ukubuza imibuzo noma ukuxoxa ngamamaki akho.",
+    "startPrompt": "Qala ingxoxo nothisha wakho"
+  },
+  "refreshList": "Vuselela Uhlu"
+}

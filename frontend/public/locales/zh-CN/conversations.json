@@ -1,0 +1,15 @@
+{
+  "myTeachers": "留言",
+  "searchPlaceholder": "寻找老师...",
+  "noConversations": "还没有对话",
+  "unknownTeacher": "未知老师",
+  "noMessages": "还没有消息",
+  "typing": "正在打字...",
+  "typePlaceholder": "用中文（简体）输入您的消息...",
+  "emptyState": {
+    "title": "你的对话",
+    "desc": "从侧栏中选择一位老师开始提问或讨论您的成绩。",
+    "startPrompt": "与你的老师开始对话"
+  },
+  "refreshList": "刷新列表"
+}

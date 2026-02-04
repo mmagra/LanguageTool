@@ -1,0 +1,13 @@
+{
+  "loading": "Ачааж байна...",
+  "error": "Алдаа",
+  "save": "Хадгалах",
+  "cancel": "Цуцлах",
+  "language": "Хэл",
+  "switchToEnglish": "Англи хэл рүү шилжих",
+  "switchToNative": "{{language}} руу шилжих",
+  "online": "Онлайн",
+  "offline": "Офлайн",
+  "notProvided": "Өгөгдөөгүй",
+  "tryAgain": "Дахин оролдоно уу"
+}

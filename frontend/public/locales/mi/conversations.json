@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Nga Karere",
+  "searchPlaceholder": "Rapua nga kaiako...",
+  "noConversations": "Kaore ano kia korero",
+  "unknownTeacher": "Kaiako Unknown",
+  "noMessages": "Kare ano he karere",
+  "typing": "Pato...",
+  "typePlaceholder": "Patohia to karere ki te reo Maori...",
+  "emptyState": {
+    "title": "Ō Kōrerorero",
+    "desc": "Tīpakohia he kaiako mai i te paetaha ki te timata ki te patapatai, ki te matapaki ranei i o tohu.",
+    "startPrompt": "Tīmatahia he korerorero ki to kaiako"
+  },
+  "refreshList": "Tāmata Rārangi"
+}

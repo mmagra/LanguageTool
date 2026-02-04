@@ -1,0 +1,18 @@
+{
+  "title": "Ikirangantego",
+  "myProfile": "Umwirondoro wanjye",
+  "changePassword": "Hindura ijambo ryibanga",
+  "helpSupport": "Gufasha & Inkunga",
+  "signOut": "Sohoka",
+  "notifications": {
+    "title": "Kumenyesha",
+    "unread": "ubutumwa budasomwe",
+    "empty": "Nta matangazo mashya",
+    "viewAll": "Reba ubutumwa bwose",
+    "newMessage": "Ubutumwa bushya"
+  },
+  "language": {
+    "switchToNative": "Hindura Ururimi rwawe",
+    "switchToEnglish": "Hindura Icyongereza"
+  }
+}

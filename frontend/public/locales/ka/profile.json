@@ -1,0 +1,28 @@
+{
+  "title": "ჩემი პროფილი",
+  "editProfile": "პროფილის რედაქტირება",
+  "saveChanges": "ცვლილებების შენახვა",
+  "saving": "მიმდინარეობს შენახვა...",
+  "firstName": "სახელი",
+  "lastName": "გვარი",
+  "email": "ელფოსტის მისამართი",
+  "phone": "ტელეფონის ნომერი",
+  "grade": "შეფასება",
+  "primaryLanguage": "ძირითადი ენა",
+  "guardianName": "მეურვის სახელი",
+  "guardianRelation": "მეურვის ურთიერთობა",
+  "selectGrade": "აირჩიეთ ხარისხი",
+  "selectLanguage": "აირჩიეთ ენა",
+  "selectRelation": "აირჩიეთ ურთიერთობა",
+  "studentID": "ID",
+  "role": "სტუდენტი",
+  "errorLoading": "შეცდომა პროფილის ჩატვირთვისას",
+  "successUpdate": "პროფილი წარმატებით განახლდა!",
+  "errorUpdate": "პროფილის განახლება ვერ მოხერხდა",
+  "genericError": "მოხდა შეცდომა. გთხოვთ, სცადოთ ხელახლა.",
+  "relations": {
+    "father": "მამაო",
+    "mother": "დედა",
+    "other": "სხვა"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "title": "口语边缘",
+  "myProfile": "我的个人资料",
+  "changePassword": "更改密码",
+  "helpSupport": "帮助与支持",
+  "signOut": "登出",
+  "notifications": {
+    "title": "通知",
+    "unread": "未读消息",
+    "empty": "没有新通知",
+    "viewAll": "查看所有消息",
+    "newMessage": "新消息"
+  },
+  "language": {
+    "switchToNative": "切换到您的语言",
+    "switchToEnglish": "切换到英语"
+  }
+}

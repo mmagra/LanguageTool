@@ -1,0 +1,13 @@
+{
+  "loading": "در حال بارگیری...",
+  "error": "خطا",
+  "save": "ذخیره کنید",
+  "cancel": "لغو کنید",
+  "language": "زبان",
+  "switchToEnglish": "به انگلیسی تغییر دهید",
+  "switchToNative": "جابجایی به {{language}}",
+  "online": "آنلاین",
+  "offline": "آفلاین",
+  "notProvided": "ارائه نشده است",
+  "tryAgain": "دوباره امتحان کنید"
+}

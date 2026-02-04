@@ -1,0 +1,13 @@
+{
+  "loading": "Yuklanmoqda...",
+  "error": "Xato",
+  "save": "Saqlash",
+  "cancel": "Bekor qilish",
+  "language": "Til",
+  "switchToEnglish": "Ingliz tiliga o'tish",
+  "switchToNative": "{{language}} tiliga o‘tish",
+  "online": "Onlayn",
+  "offline": "Oflayn",
+  "notProvided": "Taqdim etilmaydi",
+  "tryAgain": "Qayta urinib ko'ring"
+}

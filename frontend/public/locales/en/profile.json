@@ -1,0 +1,28 @@
+{
+  "title": "My Profile",
+  "editProfile": "Edit Profile",
+  "saveChanges": "Save Changes",
+  "saving": "Saving...",
+  "firstName": "First Name",
+  "lastName": "Last Name",
+  "email": "Email Address",
+  "phone": "Phone Number",
+  "grade": "Grade",
+  "primaryLanguage": "Primary Language",
+  "guardianName": "Guardian Name",
+  "guardianRelation": "Guardian Relation",
+  "selectGrade": "Select Grade",
+  "selectLanguage": "Select Language",
+  "selectRelation": "Select Relation",
+  "studentID": "ID",
+  "role": "Student",
+  "errorLoading": "Error Loading Profile",
+  "successUpdate": "Profile updated successfully!",
+  "errorUpdate": "Failed to update profile",
+  "genericError": "An error occurred. Please try again.",
+  "relations": {
+    "father": "Father",
+    "mother": "Mother",
+    "other": "Other"
+  }
+}

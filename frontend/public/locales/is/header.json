@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Prófíllinn minn",
+  "changePassword": "Breyta lykilorði",
+  "helpSupport": "Hjálp og stuðningur",
+  "signOut": "Skráðu þig út",
+  "notifications": {
+    "title": "Tilkynningar",
+    "unread": "ólesin skilaboð",
+    "empty": "Engar nýjar tilkynningar",
+    "viewAll": "Skoða öll skilaboð",
+    "newMessage": "Ný skilaboð"
+  },
+  "language": {
+    "switchToNative": "Skiptu yfir í tungumálið þitt",
+    "switchToEnglish": "Skiptu yfir í ensku"
+  }
+}

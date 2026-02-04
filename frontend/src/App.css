@@ -1,0 +1,24 @@
+/* App-level overrides and layout helpers
+ * Keep this file minimal; most design lives in Tailwind (see index.css).
+ */
+
+/* Ensure the root can use full viewport width/height.
+   Page-level components handle their own max-width/containers. */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Z-index helpers – kept for clarity with dashboard overlays */
+.sidebar-z-index {
+  z-index: 70;
+}
+
+.header-z-index {
+  z-index: 60;
+}
+
+.backdrop-z-index {
+  z-index: 50;
+}
+

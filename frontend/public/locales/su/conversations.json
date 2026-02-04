@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Talatah",
+  "searchPlaceholder": "Pilarian guru...",
+  "noConversations": "Taya obrolan acan",
+  "unknownTeacher": "Teu kanyahoan Guru",
+  "noMessages": "Tacan aya pesen",
+  "typing": "Ngetik...",
+  "typePlaceholder": "Ketik pesen anjeun dina basa Sunda...",
+  "emptyState": {
+    "title": "Paguneman Anjeun",
+    "desc": "Pilih guru tina sidebar pikeun ngamimitian naroskeun atanapi ngabahas peunteun anjeun.",
+    "startPrompt": "Mimitian paguneman sareng guru anjeun"
+  },
+  "refreshList": "Refresh Daptar"
+}

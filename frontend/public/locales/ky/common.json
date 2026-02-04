@@ -1,0 +1,13 @@
+{
+  "loading": "Жүктөлүүдө...",
+  "error": "Ката",
+  "save": "Сактоо",
+  "cancel": "Жокко чыгаруу",
+  "language": "Тил",
+  "switchToEnglish": "Англис тилине которулуу",
+  "switchToNative": "{{language}} тилине которулуу",
+  "online": "Онлайн",
+  "offline": "Оффлайн",
+  "notProvided": "каралган эмес",
+  "tryAgain": "Кайра аракет кыл"
+}

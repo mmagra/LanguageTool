@@ -1,0 +1,18 @@
+{
+  "title": "Konuşulan Kenar",
+  "myProfile": "Profilim",
+  "changePassword": "Şifre değiştir",
+  "helpSupport": "Yardım ve Destek",
+  "signOut": "oturumu Kapat",
+  "notifications": {
+    "title": "Bildirimler",
+    "unread": "okunmamış mesajlar",
+    "empty": "Yeni bildirim yok",
+    "viewAll": "Tüm mesajları görüntüle",
+    "newMessage": "Yeni mesaj"
+  },
+  "language": {
+    "switchToNative": "Dilinize Geçin",
+    "switchToEnglish": "İngilizceye geç"
+  }
+}

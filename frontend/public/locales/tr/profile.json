@@ -1,0 +1,28 @@
+{
+  "title": "Profilim",
+  "editProfile": "Profili Düzenle",
+  "saveChanges": "Değişiklikleri Kaydet",
+  "saving": "Kaydediliyor...",
+  "firstName": "İlk adı",
+  "lastName": "Soy isim",
+  "email": "E-posta Adresi",
+  "phone": "Telefon Numarası",
+  "grade": "Seviye",
+  "primaryLanguage": "Ana Dil",
+  "guardianName": "Veli Adı",
+  "guardianRelation": "Vasi İlişkisi",
+  "selectGrade": "Not Seç",
+  "selectLanguage": "Dil Seçiniz",
+  "selectRelation": "İlişkiyi Seçin",
+  "studentID": "İD",
+  "role": "Öğrenci",
+  "errorLoading": "Profil Yükleme Hatası",
+  "successUpdate": "Profil başarıyla güncellendi!",
+  "errorUpdate": "Profil güncellenemedi",
+  "genericError": "Bir hata oluştu. Lütfen tekrar deneyin.",
+  "relations": {
+    "father": "Baba",
+    "mother": "Anne",
+    "other": "Diğer"
+  }
+}

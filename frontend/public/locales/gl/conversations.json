@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Mensaxes",
+  "searchPlaceholder": "Busca profesores...",
+  "noConversations": "Aínda non hai conversas",
+  "unknownTeacher": "Profesor descoñecido",
+  "noMessages": "Aínda non hai mensaxes",
+  "typing": "Escribindo...",
+  "typePlaceholder": "Escribe a túa mensaxe en galego...",
+  "emptyState": {
+    "title": "As túas conversas",
+    "desc": "Selecciona un profesor na barra lateral para comezar a facer preguntas ou a comentar as túas cualificacións.",
+    "startPrompt": "Comeza unha conversa co teu profesor"
+  },
+  "refreshList": "Lista de actualización"
+}

@@ -1,0 +1,26 @@
+{
+  "title": "विद्यार्थी डॅशबोर्ड",
+  "subtitle": "परत स्वागत आहे! तुमच्या प्रगतीचे विहंगावलोकन येथे आहे.",
+  "stats": {
+    "teachers": "शिक्षकांची संख्या",
+    "teachersSubText": "तुम्ही ज्या शिक्षकांशी गप्पा मारल्या",
+    "conversations": "संभाषण(चे)",
+    "conversationsSubText": "एकूण संदेश",
+    "languages": "समर्थित भाषा",
+    "languagesSubText": "लिखित ({{written}}) | मौखिक ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "भाषा समर्थन स्थिती",
+    "primary": "तुमची प्राथमिक भाषा आहे",
+    "written": {
+      "title": "लेखी समर्थन",
+      "available": "संदेशवहनासाठी उपलब्ध",
+      "unsupported": "सपोर्ट नाही"
+    },
+    "verbal": {
+      "title": "मौखिक समर्थन",
+      "available": "थेट सत्रांसाठी उपलब्ध",
+      "unsupported": "सपोर्ट नाही"
+    }
+  }
+}

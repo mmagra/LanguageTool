@@ -1,0 +1,13 @@
+{
+  "loading": "Cargando...",
+  "error": "Erro",
+  "save": "Gardar",
+  "cancel": "Cancelar",
+  "language": "Linguaxe",
+  "switchToEnglish": "Cambia ao inglés",
+  "switchToNative": "Cambiar a {{idioma}}",
+  "online": "En liña",
+  "offline": "Sen conexión",
+  "notProvided": "Non proporcionado",
+  "tryAgain": "Téntao de novo"
+}

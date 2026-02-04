@@ -1,0 +1,18 @@
+{
+  "title": "स्पोकनएज",
+  "myProfile": "मेरी प्रोफाइल",
+  "changePassword": "पासवर्ड बदलें",
+  "helpSupport": "सहायता एवं सहायता",
+  "signOut": "साइन आउट",
+  "notifications": {
+    "title": "सूचनाएं",
+    "unread": "अपठित संदेश",
+    "empty": "कोई नए संदेश नहीं",
+    "viewAll": "सभी संदेश देखें",
+    "newMessage": "नया सन्देश"
+  },
+  "language": {
+    "switchToNative": "अपनी भाषा पर स्विच करें",
+    "switchToEnglish": "अंग्रेज़ी पर स्विच करें"
+  }
+}

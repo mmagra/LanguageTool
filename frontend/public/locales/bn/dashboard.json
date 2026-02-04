@@ -1,0 +1,26 @@
+{
+  "title": "ছাত্র ড্যাশবোর্ড",
+  "subtitle": "আবার স্বাগতম! এখানে আপনার অগ্রগতির একটি ওভারভিউ আছে.",
+  "stats": {
+    "teachers": "শিক্ষকের সংখ্যা",
+    "teachersSubText": "শিক্ষকদের সাথে আপনি চ্যাট করেছেন",
+    "conversations": "কথোপকথন(গুলি)",
+    "conversationsSubText": "মোট বার্তা",
+    "languages": "সমর্থিত ভাষা",
+    "languagesSubText": "লেখা ({{written}}) | মৌখিক ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "ভাষা সমর্থন অবস্থা",
+    "primary": "আপনার প্রাথমিক ভাষা হল",
+    "written": {
+      "title": "লিখিত সমর্থন",
+      "available": "বার্তা পাঠানোর জন্য উপলব্ধ",
+      "unsupported": "সমর্থিত নয়"
+    },
+    "verbal": {
+      "title": "মৌখিক সমর্থন",
+      "available": "লাইভ সেশনের জন্য উপলব্ধ",
+      "unsupported": "সমর্থিত নয়"
+    }
+  }
+}

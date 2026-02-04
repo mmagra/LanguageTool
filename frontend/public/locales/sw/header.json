@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Wasifu Wangu",
+  "changePassword": "Badilisha Nenosiri",
+  "helpSupport": "Usaidizi na Usaidizi",
+  "signOut": "Ondoka",
+  "notifications": {
+    "title": "Arifa",
+    "unread": "ujumbe ambao haujasomwa",
+    "empty": "Hakuna arifa mpya",
+    "viewAll": "Tazama ujumbe wote",
+    "newMessage": "Ujumbe mpya"
+  },
+  "language": {
+    "switchToNative": "Badili hadi Lugha Yako",
+    "switchToEnglish": "Badili hadi Kiingereza"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Mauthenga",
+  "searchPlaceholder": "Sakani aphunzitsi...",
+  "noConversations": "Palibe zokambilana pano",
+  "unknownTeacher": "Mphunzitsi Wosadziwika",
+  "noMessages": "Palibe mauthenga pano",
+  "typing": "Kulemba...",
+  "typePlaceholder": "Lembani uthenga wanu mu Chichewa...",
+  "emptyState": {
+    "title": "Zokambirana zanu",
+    "desc": "Sankhani mphunzitsi m'mbali kuti muyambe kufunsa mafunso kapena kukambirana za maphunziro anu.",
+    "startPrompt": "Yambani kukambirana ndi aphunzitsi anu"
+  },
+  "refreshList": "Refresh List"
+}

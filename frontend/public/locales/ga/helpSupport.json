@@ -1,0 +1,47 @@
+{
+  "title": "Cabhair agus Tacaíocht",
+  "description": "Táimid anseo chun cabhrú le haon cheist nó ceisteanna a d’fhéadfadh teacht ort agus tú ag baint úsáide as ár bhfeidhmchlár gréasáin. Cibé an bhfuil cabhair uait chun tús a chur leis, má tá ceist agat faoi ghné, nó más mian leat fabht a thuairisciú, táimid anseo chun cabhrú leat.",
+  "contact": {
+    "title": "Tacaíocht Teagmhála",
+    "emailTitle": "Tacaíocht Ríomhphost",
+    "emailDesc": "Tá sé mar aidhm againn freagra a thabhairt ar gach ríomhphost laistigh de 24 uair an chloig.",
+    "phoneTitle": "Tacaíocht Fón",
+    "hours": "Luan-Aoine (9am – 5pm)",
+    "footer": "Go raibh maith agat as ár bhfeidhmchlár gréasáin a roghnú. Táimid tiomanta do thaithí a dhéanamh chomh réidh agus chomh taitneamhach agus is féidir."
+  },
+  "supportedLanguages": {
+    "title": "Liosta na dTeangacha Tacaithe",
+    "headers": {
+      "rank": "#",
+      "language": "Teanga",
+      "translation": "Aistriúchán (Aip & Soghluaiste)",
+      "desktop": "Cumarsáid Phearsanta (Deisce)",
+      "mobile": "Cumarsáid Phearsanta (Aip Soghluaiste)"
+    },
+    "mobileLabels": {
+      "translation": "Teachtaireachtaí Aistrithe",
+      "desktop": "Deisce In-Duine",
+      "mobile": "In-Duine Soghluaiste"
+    },
+    "supported": "Tacaithe",
+    "notSupported": "Gan Tacaíocht"
+  },
+  "detailedFeatures": {
+    "title": "Tacaíocht Gné Mionsonraithe",
+    "subtitle": "Miondealú ar chumas Ionchur Gutha agus Téacs-go-Caint in aghaidh an ghléis.",
+    "headers": {
+      "rank": "#",
+      "language": "Teanga",
+      "translation": "Aistriúchán (Gach)",
+      "desktopVersion": "Leagan Deisce",
+      "mobileApp": "App Soghluaiste",
+      "voiceInput": "Ionchur Gutha",
+      "tts": "Téacs-go-Caint"
+    },
+    "mobileHeaders": {
+      "translation": "Aistriúchán",
+      "desktop": "Gnéithe Deisce",
+      "mobile": "Gnéithe App Soghluaiste"
+    }
+  }
+}

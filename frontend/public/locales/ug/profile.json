@@ -1,0 +1,28 @@
+{
+  "title": "مېنىڭ ئارخىپىم",
+  "editProfile": "ئارخىپنى تەھرىرلەش",
+  "saveChanges": "ئۆزگەرتىشلەرنى ساقلاڭ",
+  "saving": "تېجەش ...",
+  "firstName": "ئىسمى",
+  "lastName": "فامىلىسى",
+  "email": "ئېلخەت ئادرېسى",
+  "phone": "تېلېفون نومۇرى",
+  "grade": "Grade",
+  "primaryLanguage": "باشلانغۇچ تىل",
+  "guardianName": "قوغدىغۇچى ئىسمى",
+  "guardianRelation": "قوغدىغۇچى مۇناسىۋىتى",
+  "selectGrade": "Grade نى تاللاڭ",
+  "selectLanguage": "تىل تاللاڭ",
+  "selectRelation": "مۇناسىۋەتنى تاللاڭ",
+  "studentID": "كىملىك",
+  "role": "ئوقۇغۇچى",
+  "errorLoading": "ئارخىپ يۈكلەشتە خاتالىق",
+  "successUpdate": "ئارخىپ مۇۋەپپەقىيەتلىك يېڭىلاندى!",
+  "errorUpdate": "ئارخىپ يېڭىلانمىدى",
+  "genericError": "خاتالىق كۆرۈلدى. قايتا سىناڭ.",
+  "relations": {
+    "father": "ئاتا",
+    "mother": "ئانا",
+    "other": "باشقىلىرى"
+  }
+}

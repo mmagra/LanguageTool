@@ -1,0 +1,28 @@
+{
+  "title": "منهنجو پروفائل",
+  "editProfile": "پروفائل ايڊٽ ڪريو",
+  "saveChanges": "تبديليون محفوظ ڪريو",
+  "saving": "محفوظ ڪري رهيو آهي...",
+  "firstName": "پهريون نالو",
+  "lastName": "آخري نالو",
+  "email": "اي ميل پتو",
+  "phone": "فون نمبر",
+  "grade": "گريڊ",
+  "primaryLanguage": "پرائمري ٻولي",
+  "guardianName": "سرپرست جو نالو",
+  "guardianRelation": "سنڀاليندڙ جو تعلق",
+  "selectGrade": "گريڊ چونڊيو",
+  "selectLanguage": "ٻولي چونڊيو",
+  "selectRelation": "منتخب ڪريو تعلق",
+  "studentID": "ID",
+  "role": "شاگرد",
+  "errorLoading": "پروفائل لوڊ ڪرڻ ۾ غلطي",
+  "successUpdate": "پروفائل کي ڪاميابي سان اپڊيٽ ڪيو ويو!",
+  "errorUpdate": "پروفائل کي اپڊيٽ ڪرڻ ۾ ناڪام ٿيو",
+  "genericError": "هڪ غلطي ٿي وئي. مهرباني ڪري ٻيهر ڪوشش ڪريو.",
+  "relations": {
+    "father": "پيءُ",
+    "mother": "ماءُ",
+    "other": "ٻيو"
+  }
+}

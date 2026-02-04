@@ -1,0 +1,47 @@
+{
+  "title": "Hëllef an Ënnerstëtzung",
+  "description": "Mir sinn hei fir mat all Froen oder Themen ze hëllefen déi Dir begéine kënnt wann Dir eis Webapplikatioun benotzt. Egal ob Dir Hëllef braucht fir unzefänken, eng Fro iwwer eng Feature hutt oder e Feeler mellen wëllt, mir sinn hei fir ze hëllefen.",
+  "contact": {
+    "title": "Kontakt Support",
+    "emailTitle": "E-Mail Ënnerstëtzung",
+    "emailDesc": "Mir zielen op all E-Mail bannent 24 Stonnen ze äntweren.",
+    "phoneTitle": "Telefon Ënnerstëtzung",
+    "hours": "Mo-Fr (9-17 Uhr)",
+    "footer": "Merci datt Dir eis Webapplikatioun gewielt hutt. Mir verpflichte Är Erfahrung esou glat an agreabel wéi méiglech ze maachen."
+  },
+  "supportedLanguages": {
+    "title": "Lëscht vun ënnerstëtzt Sproochen",
+    "headers": {
+      "rank": "#",
+      "language": "Sprooch",
+      "translation": "Iwwersetzung (App & Mobile)",
+      "desktop": "Perséinlech Kommunikatioun (Desktop)",
+      "mobile": "Perséinlech Kommunikatioun (Mobil App)"
+    },
+    "mobileLabels": {
+      "translation": "Iwwersat Messagen",
+      "desktop": "Desktop In-Persoun",
+      "mobile": "Mobile Perséinlech"
+    },
+    "supported": "Ënnerstëtzt",
+    "notSupported": "Net ënnerstëtzt"
+  },
+  "detailedFeatures": {
+    "title": "Detailléiert Feature Support",
+    "subtitle": "Ënnerdeelung vu Voice Input an Text-to-Speech Fäegkeeten pro Apparat.",
+    "headers": {
+      "rank": "#",
+      "language": "Sprooch",
+      "translation": "Iwwersetzung (All)",
+      "desktopVersion": "Desktop Versioun",
+      "mobileApp": "Mobile App",
+      "voiceInput": "Stëmm Input",
+      "tts": "Text-zu-Speech"
+    },
+    "mobileHeaders": {
+      "translation": "Iwwersetzung",
+      "desktop": "Desktop Fonctiounen",
+      "mobile": "Mobile App Fonctiounen"
+    }
+  }
+}

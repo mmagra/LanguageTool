@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "הפרופיל שלי",
+  "changePassword": "שנה סיסמה",
+  "helpSupport": "עזרה ותמיכה",
+  "signOut": "צא",
+  "notifications": {
+    "title": "התראות",
+    "unread": "הודעות שלא נקראו",
+    "empty": "אין הודעות חדשות",
+    "viewAll": "הצג את כל ההודעות",
+    "newMessage": "הודעה חדשה"
+  },
+  "language": {
+    "switchToNative": "עבור לשפה שלך",
+    "switchToEnglish": "עבור לאנגלית"
+  }
+}

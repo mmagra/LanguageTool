@@ -1,0 +1,26 @@
+{
+  "title": "Ideshibhodi yabafundi",
+  "subtitle": "Siyakwamkela emva! Nantsi isishwankathelo senkqubela phambili yakho.",
+  "stats": {
+    "teachers": "Inani likaTitshala",
+    "teachersSubText": "Ootitshala oncokole nabo",
+    "conversations": "Iincoko",
+    "conversationsSubText": "Iyonke imiyalezo",
+    "languages": "Iilwimi ezixhaswayo",
+    "languagesSubText": "Ibhaliwe ({{written}}) | Ngelizwi ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Ubume beNkxaso yoLwimi",
+    "primary": "Ulwimi lwakho oluphambili lu",
+    "written": {
+      "title": "Inkxaso eBhaliweyo",
+      "available": "Iyafumaneka ukuze uthumele umyalezo",
+      "unsupported": "Ayixhaswa"
+    },
+    "verbal": {
+      "title": "Inkxaso yomlomo",
+      "available": "Iyafumaneka kwiiseshoni ezibukhoma",
+      "unsupported": "Ayixhaswa"
+    }
+  }
+}

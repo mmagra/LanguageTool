@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Mesajlar",
+  "searchPlaceholder": "Müəllimləri axtarın...",
+  "noConversations": "Hələ söhbət yoxdur",
+  "unknownTeacher": "Naməlum Müəllim",
+  "noMessages": "Hələ mesaj yoxdur",
+  "typing": "Yazılır...",
+  "typePlaceholder": "Mesajınızı Azərbaycan dilində yazın...",
+  "emptyState": {
+    "title": "Söhbətləriniz",
+    "desc": "Suallar verməyə və ya qiymətlərinizi müzakirə etməyə başlamaq üçün yan paneldən müəllim seçin.",
+    "startPrompt": "Müəlliminizlə söhbətə başlayın"
+  },
+  "refreshList": "Siyahını yeniləyin"
+}

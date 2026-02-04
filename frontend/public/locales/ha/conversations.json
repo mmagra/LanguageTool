@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Saƙonni",
+  "searchPlaceholder": "Neman malamai...",
+  "noConversations": "Babu tattaunawa tukuna",
+  "unknownTeacher": "Malamin da ba a sani ba",
+  "noMessages": "Babu saƙonni tukuna",
+  "typing": "Ana bugawa...",
+  "typePlaceholder": "Buga sakonku da Hausa...",
+  "emptyState": {
+    "title": "Tattaunawarku",
+    "desc": "Zaɓi malami daga layin gefe don fara yin tambayoyi ko tattaunawa akan maki.",
+    "startPrompt": "Fara tattaunawa da malaminku"
+  },
+  "refreshList": "Sabunta Lissafi"
+}

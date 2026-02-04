@@ -1,0 +1,28 @@
+{
+  "title": "Profaịlụ m",
+  "editProfile": "Dezie profaịlụ",
+  "saveChanges": "Chekwaa mgbanwe",
+  "saving": "Na-echekwa...",
+  "firstName": "Aha mbụ",
+  "lastName": "Aha ikpeazụ",
+  "email": "Adreesị ozi ịntanetị",
+  "phone": "Nọmba ekwentị",
+  "grade": "Ọkwa",
+  "primaryLanguage": "Asụsụ Mbụ",
+  "guardianName": "Aha nche",
+  "guardianRelation": "Mmekọrịta ndị nche",
+  "selectGrade": "Họrọ ọkwa",
+  "selectLanguage": "Họrọ Asụsụ",
+  "selectRelation": "Họrọ Mmekọrịta",
+  "studentID": "NJ",
+  "role": "Nwa akwukwo",
+  "errorLoading": "Mperi na-ebu profaịlụ",
+  "successUpdate": "Emelitere profaịlụ nke ọma!",
+  "errorUpdate": "Emelite profaịlụ agaghị eme",
+  "genericError": "Enwere mperi. Biko nwaa ọzọ.",
+  "relations": {
+    "father": "Nna",
+    "mother": "Nne",
+    "other": "Ndị ọzọ"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "loading": "ກຳລັງໂຫລດ...",
+  "error": "ຜິດພາດ",
+  "save": "ບັນທຶກ",
+  "cancel": "ຍົກເລີກ",
+  "language": "ພາສາ",
+  "switchToEnglish": "ປ່ຽນເປັນພາສາອັງກິດ",
+  "switchToNative": "ປ່ຽນເປັນ {{ພາສາ}}",
+  "online": "ອອນລາຍ",
+  "offline": "ອອບໄລນ໌",
+  "notProvided": "ບໍ່ໄດ້ສະໜອງໃຫ້",
+  "tryAgain": "ລອງອີກຄັ້ງ"
+}

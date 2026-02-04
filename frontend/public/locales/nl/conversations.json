@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Berichten",
+  "searchPlaceholder": "Zoek docenten...",
+  "noConversations": "Nog geen gesprekken",
+  "unknownTeacher": "Onbekende leraar",
+  "noMessages": "Nog geen berichten",
+  "typing": "Typen...",
+  "typePlaceholder": "Typ uw bericht in het Nederlands...",
+  "emptyState": {
+    "title": "Jouw gesprekken",
+    "desc": "Selecteer een docent in de zijbalk om vragen te stellen of je cijfers te bespreken.",
+    "startPrompt": "Begin een gesprek met je docent"
+  },
+  "refreshList": "Lijst vernieuwen"
+}

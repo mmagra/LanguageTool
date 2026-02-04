@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Профили ман",
+  "changePassword": "Ивази калидвожа",
+  "helpSupport": "Кӯмак ва дастгирӣ",
+  "signOut": "баромадан",
+  "notifications": {
+    "title": "Огоҳиномаҳо",
+    "unread": "паёмҳои нохонда",
+    "empty": "Огоҳиҳои нав нест",
+    "viewAll": "Ҳама паёмҳоро бинед",
+    "newMessage": "Паёми нав"
+  },
+  "language": {
+    "switchToNative": "Ба забони худ гузаред",
+    "switchToEnglish": "Гузариш ба забони англисӣ"
+  }
+}

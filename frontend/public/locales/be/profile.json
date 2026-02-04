@@ -1,0 +1,28 @@
+{
+  "title": "Мой профіль",
+  "editProfile": "Рэдагаваць профіль",
+  "saveChanges": "Захаваць змены",
+  "saving": "Захаванне...",
+  "firstName": "Імя",
+  "lastName": "Прозвішча",
+  "email": "Адрас электроннай пошты",
+  "phone": "нумар тэлефона",
+  "grade": "Гатунак",
+  "primaryLanguage": "Асноўная мова",
+  "guardianName": "Імя апекуна",
+  "guardianRelation": "Апякунскія адносіны",
+  "selectGrade": "Выберыце Ацэнка",
+  "selectLanguage": "Выберыце мову",
+  "selectRelation": "Выберыце Адносіны",
+  "studentID": "ID",
+  "role": "Студэнт",
+  "errorLoading": "Памылка загрузкі профілю",
+  "successUpdate": "Профіль паспяхова абноўлены!",
+  "errorUpdate": "Не ўдалося абнавіць профіль",
+  "genericError": "Адбылася памылка. Калі ласка, паспрабуйце яшчэ раз.",
+  "relations": {
+    "father": "Бацька",
+    "mother": "маці",
+    "other": "Іншае"
+  }
+}

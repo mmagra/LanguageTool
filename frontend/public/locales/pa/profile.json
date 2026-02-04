@@ -1,0 +1,28 @@
+{
+  "title": "ਮੇਰੀ ਪ੍ਰੋਫ਼ਾਈਲ",
+  "editProfile": "ਪ੍ਰੋਫਾਈਲ ਦਾ ਸੰਪਾਦਨ ਕਰੋ",
+  "saveChanges": "ਤਬਦੀਲੀਆਂ ਨੂੰ ਸੁਰੱਖਿਅਤ ਕਰੋ",
+  "saving": "ਰੱਖਿਅਤ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ...",
+  "firstName": "ਪਹਿਲਾ ਨਾਂ",
+  "lastName": "ਆਖਰੀ ਨਾਂਮ",
+  "email": "ਈਮੇਲ ਪਤਾ",
+  "phone": "ਫੋਨ ਨੰਬਰ",
+  "grade": "ਗ੍ਰੇਡ",
+  "primaryLanguage": "ਪ੍ਰਾਇਮਰੀ ਭਾਸ਼ਾ",
+  "guardianName": "ਸਰਪ੍ਰਸਤ ਨਾਮ",
+  "guardianRelation": "ਸਰਪ੍ਰਸਤ ਸਬੰਧ",
+  "selectGrade": "ਗ੍ਰੇਡ ਚੁਣੋ",
+  "selectLanguage": "ਭਾਸ਼ਾ ਚੁਣੋ",
+  "selectRelation": "ਰਿਲੇਸ਼ਨ ਚੁਣੋ",
+  "studentID": "ਆਈ.ਡੀ",
+  "role": "ਵਿਦਿਆਰਥੀ",
+  "errorLoading": "ਪ੍ਰੋਫਾਈਲ ਲੋਡ ਕਰਨ ਵਿੱਚ ਤਰੁੱਟੀ",
+  "successUpdate": "ਪ੍ਰੋਫਾਈਲ ਸਫਲਤਾਪੂਰਵਕ ਅੱਪਡੇਟ ਕੀਤਾ ਗਿਆ!",
+  "errorUpdate": "ਪ੍ਰੋਫਾਈਲ ਅੱਪਡੇਟ ਕਰਨ ਵਿੱਚ ਅਸਫਲ",
+  "genericError": "ਇੱਕ ਤਰੁੱਟੀ ਉਤਪੰਨ ਹੋਈ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+  "relations": {
+    "father": "ਪਿਤਾ",
+    "mother": "ਮਾਂ",
+    "other": "ਹੋਰ"
+  }
+}

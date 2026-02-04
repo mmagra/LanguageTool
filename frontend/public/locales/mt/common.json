@@ -1,0 +1,13 @@
+{
+  "loading": "Tagħbija...",
+  "error": "Żball",
+  "save": "Ħlief",
+  "cancel": "Ikkanċella",
+  "language": "Lingwa",
+  "switchToEnglish": "Aqleb għall-Ingliż",
+  "switchToNative": "Aqleb għal {{lingwa}}",
+  "online": "Online",
+  "offline": "Offline",
+  "notProvided": "Mhux ipprovdut",
+  "tryAgain": "Erġa' Ipprova"
+}

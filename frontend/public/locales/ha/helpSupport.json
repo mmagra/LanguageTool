@@ -1,0 +1,47 @@
+{
+  "title": "Taimako da Tallafawa",
+  "description": "Muna nan don taimakawa da kowace tambaya ko batutuwa da za ku iya fuskanta yayin amfani da aikace-aikacen yanar gizon mu. Ko kuna buƙatar taimako don farawa, kuna da tambaya game da fasali, ko kuna son bayar da rahoton bug, muna nan don taimakawa.",
+  "contact": {
+    "title": "Tuntuɓi Support",
+    "emailTitle": "Tallafin Imel",
+    "emailDesc": "Muna nufin amsa duk imel a cikin sa'o'i 24.",
+    "phoneTitle": "Tallafin Waya",
+    "hours": "Litinin-Jumma'a (9 na safe - 5 na yamma)",
+    "footer": "Mun gode da zaɓar aikace-aikacen yanar gizon mu. Mun himmatu don sanya kwarewarku ta zama santsi da jin daɗi sosai."
+  },
+  "supportedLanguages": {
+    "title": "Jerin Harsuna masu Tallafawa",
+    "headers": {
+      "rank": "#",
+      "language": "Harshe",
+      "translation": "Fassarar (App & Mobile)",
+      "desktop": "Sadarwa Cikin Mutum (Desktop)",
+      "mobile": "Sadarwar Cikin Mutum (Kayan Waya)"
+    },
+    "mobileLabels": {
+      "translation": "Saƙonnin Fassara",
+      "desktop": "Desktop In-Person",
+      "mobile": "Waya Cikin Mutum"
+    },
+    "supported": "Tallafawa",
+    "notSupported": "Ba a Tallafawa"
+  },
+  "detailedFeatures": {
+    "title": "Cikakken Taimakon Siffar",
+    "subtitle": "Rushewar damar shigar da murya da rubutu-zuwa-Magana kowace na'ura.",
+    "headers": {
+      "rank": "#",
+      "language": "Harshe",
+      "translation": "Fassara (Duk)",
+      "desktopVersion": "Sigar Desktop",
+      "mobileApp": "Mobile App",
+      "voiceInput": "Shigar da murya",
+      "tts": "Rubutu-zuwa-Magana"
+    },
+    "mobileHeaders": {
+      "translation": "Fassara",
+      "desktop": "Siffofin Desktop",
+      "mobile": "Fasalolin Wayar hannu"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Messages",
+  "searchPlaceholder": "Li mamosteyan bigerin...",
+  "noConversations": "Hîn ne axaftin",
+  "unknownTeacher": "Mamoste nenas",
+  "noMessages": "Hîn peyam tune",
+  "typing": "Nivîsandin...",
+  "typePlaceholder": "Peyama xwe bi kurdî (kurmancî) binivîse...",
+  "emptyState": {
+    "title": "Axaftina we",
+    "desc": "Mamosteyek ji hêlekê hilbijêrin da ku dest bi pirskirin an nîqaşkirina notên xwe bikin.",
+    "startPrompt": "Bi mamosteyê xwe re axaftinek dest pê bikin"
+  },
+  "refreshList": "Refresh List"
+}

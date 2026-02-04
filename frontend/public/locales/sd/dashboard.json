@@ -1,0 +1,26 @@
+{
+  "title": "شاگردن جي ڊيش بورڊ",
+  "subtitle": "واپس ڀلي ڪري آيا! هتي توهان جي ترقي جو هڪ جائزو آهي.",
+  "stats": {
+    "teachers": "استادن جو تعداد",
+    "teachersSubText": "استادن سان توهان ڳالهايو",
+    "conversations": "ڳالهه ٻولهه",
+    "conversationsSubText": "ڪل پيغام",
+    "languages": "سپورٽ ٿيل ٻوليون",
+    "languagesSubText": "لکيل ({{written}}) | زباني ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "ٻولي سپورٽ اسٽيٽس",
+    "primary": "توھان جي پرائمري ٻولي آھي",
+    "written": {
+      "title": "لکيل حمايت",
+      "available": "ميسيج لاءِ موجود",
+      "unsupported": "سپورٽ ناهي"
+    },
+    "verbal": {
+      "title": "زباني حمايت",
+      "available": "لائيو سيشن لاءِ دستياب آهي",
+      "unsupported": "سپورٽ ناهي"
+    }
+  }
+}

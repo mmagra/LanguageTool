@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Viestit",
+  "searchPlaceholder": "Hae opettajia...",
+  "noConversations": "Ei vielä keskusteluja",
+  "unknownTeacher": "Tuntematon opettaja",
+  "noMessages": "Ei viestejä vielä",
+  "typing": "Kirjoitetaan...",
+  "typePlaceholder": "Kirjoita viestisi suomeksi...",
+  "emptyState": {
+    "title": "Sinun keskustelusi",
+    "desc": "Aloita kysymysten esittäminen tai arvosanoistasi keskusteleminen valitsemalla sivupalkista opettaja.",
+    "startPrompt": "Aloita keskustelu opettajan kanssa"
+  },
+  "refreshList": "Päivitä luettelo"
+}

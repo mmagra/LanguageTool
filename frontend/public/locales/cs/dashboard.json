@@ -1,0 +1,26 @@
+{
+  "title": "Studentský panel",
+  "subtitle": "Vítejte zpět! Zde je přehled vašeho pokroku.",
+  "stats": {
+    "teachers": "Počet učitelů",
+    "teachersSubText": "Učitelé, se kterými jste chatovali",
+    "conversations": "konverzace",
+    "conversationsSubText": "Celkem zpráv",
+    "languages": "Podporované jazyky",
+    "languagesSubText": "Napsáno ({{written}}) | Slovní ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Stav jazykové podpory",
+    "primary": "Váš primární jazyk je",
+    "written": {
+      "title": "Písemná podpora",
+      "available": "K dispozici pro zasílání zpráv",
+      "unsupported": "Není podporováno"
+    },
+    "verbal": {
+      "title": "Verbální podpora",
+      "available": "K dispozici pro živé relace",
+      "unsupported": "Není podporováno"
+    }
+  }
+}

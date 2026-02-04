@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Awọn ifiranṣẹ",
+  "searchPlaceholder": "Wa awọn olukọ...",
+  "noConversations": "Ko si awọn ibaraẹnisọrọ sibẹsibẹ",
+  "unknownTeacher": "Olukọni ti a ko mọ",
+  "noMessages": "Ko si awọn ifiranṣẹ sibẹsibẹ",
+  "typing": "Titẹ...",
+  "typePlaceholder": "Tẹ ifiranṣẹ rẹ si ede Yoruba...",
+  "emptyState": {
+    "title": "Awọn ibaraẹnisọrọ Rẹ",
+    "desc": "Yan olukọ kan lati ẹgbẹ ẹgbẹ lati bẹrẹ bibeere awọn ibeere tabi jiroro lori awọn ipele rẹ.",
+    "startPrompt": "Bẹrẹ ibaraẹnisọrọ pẹlu olukọ rẹ"
+  },
+  "refreshList": "Atokọ sọtun"
+}

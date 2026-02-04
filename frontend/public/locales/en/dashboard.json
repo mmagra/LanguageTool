@@ -1,0 +1,26 @@
+{
+  "title": "Student Dashboard",
+  "subtitle": "Welcome back! Here is an overview of your progress.",
+  "stats": {
+    "teachers": "No. of Teacher(s)",
+    "teachersSubText": "Teachers you chatted with",
+    "conversations": "Conversation(s)",
+    "conversationsSubText": "Total Messages",
+    "languages": "Supported Languages",
+    "languagesSubText": "Written ({{written}}) | Verbal ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Language Support Status",
+    "primary": "Your Primary Language is",
+    "written": {
+      "title": "Written Support",
+      "available": "Available for messaging",
+      "unsupported": "Not supported"
+    },
+    "verbal": {
+      "title": "Verbal Support",
+      "available": "Available for live sessions",
+      "unsupported": "Not supported"
+    }
+  }
+}

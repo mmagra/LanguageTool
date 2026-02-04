@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Mandata",
+  "searchPlaceholder": "Quaere magistros...",
+  "noConversations": "Nulla colloquia adhuc",
+  "unknownTeacher": "Incognitus Magister",
+  "noMessages": "Nullae epistulae adhuc",
+  "typing": "Typing...",
+  "typePlaceholder": "Typus nuntium tuum in Latin...",
+  "emptyState": {
+    "title": "Colloquia tua",
+    "desc": "Magistrum e latera elige ut quaestiones incipias interrogare vel de gradibus tuis disserere.",
+    "startPrompt": "Incipit colloquium cum doctore"
+  },
+  "refreshList": "Renovare List"
+}

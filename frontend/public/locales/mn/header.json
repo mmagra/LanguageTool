@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Миний профайл",
+  "changePassword": "Нууц үг солих",
+  "helpSupport": "Тусламж ба дэмжлэг",
+  "signOut": "Гарах",
+  "notifications": {
+    "title": "Мэдэгдэл",
+    "unread": "уншаагүй мессежүүд",
+    "empty": "Шинэ мэдэгдэл алга",
+    "viewAll": "Бүх мессежийг үзэх",
+    "newMessage": "Шинэ мессеж"
+  },
+  "language": {
+    "switchToNative": "Өөрийн хэл рүү шилжинэ үү",
+    "switchToEnglish": "Англи хэл рүү шилжих"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "loading": "A' luchdachadh...",
+  "error": "Mearachd",
+  "save": "Sàbhail",
+  "cancel": "Sguir dheth",
+  "language": "Cànain",
+  "switchToEnglish": "Tionndaidh gu Beurla",
+  "switchToNative": "Atharraich gu {{language}}",
+  "online": "Air-loidhne",
+  "offline": "Offline",
+  "notProvided": "Gun a thoirt seachad",
+  "tryAgain": "Feuch ris a-rithist"
+}

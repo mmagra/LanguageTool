@@ -1,0 +1,13 @@
+{
+  "loading": "تحميل...",
+  "error": "خطأ",
+  "save": "يحفظ",
+  "cancel": "يلغي",
+  "language": "لغة",
+  "switchToEnglish": "التبديل إلى اللغة الإنجليزية",
+  "switchToNative": "التبديل إلى {{اللغة}}",
+  "online": "متصل",
+  "offline": "غير متصل",
+  "notProvided": "غير متوفر",
+  "tryAgain": "حاول ثانية"
+}

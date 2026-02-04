@@ -1,0 +1,28 @@
+{
+  "title": "Mbiri yanga",
+  "editProfile": "Sinthani Mbiri",
+  "saveChanges": "Sungani Zosintha",
+  "saving": "Kusunga...",
+  "firstName": "Dzina loyamba",
+  "lastName": "Dzina lomaliza",
+  "email": "Imelo adilesi",
+  "phone": "Nambala yafoni",
+  "grade": "Gulu",
+  "primaryLanguage": "Chinenero Choyambirira",
+  "guardianName": "Dzina la Guardian",
+  "guardianRelation": "Guardian Relation",
+  "selectGrade": "Sankhani Gulu",
+  "selectLanguage": "Sankhani Chiyankhulo",
+  "selectRelation": "Sankhani Relation",
+  "studentID": "ID",
+  "role": "Wophunzira",
+  "errorLoading": "Vuto pakutsegula Mbiri",
+  "successUpdate": "Mbiri yasinthidwa bwino!",
+  "errorUpdate": "Zalephera kusintha mbiri",
+  "genericError": "Zalakwika. Chonde yesaninso.",
+  "relations": {
+    "father": "Atate",
+    "mother": "Amayi",
+    "other": "Zina"
+  }
+}

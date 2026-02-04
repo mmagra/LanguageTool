@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Mesaj",
+  "searchPlaceholder": "Chèche pwofesè...",
+  "noConversations": "Pa gen konvèsasyon ankò",
+  "unknownTeacher": "Pwofesè enkoni",
+  "noMessages": "Pa gen mesaj ankò",
+  "typing": "Tape...",
+  "typePlaceholder": "Tape mesaj ou an kreyòl ayisyen...",
+  "emptyState": {
+    "title": "Konvèsasyon ou yo",
+    "desc": "Chwazi yon pwofesè nan kad la pou kòmanse poze kesyon oswa diskite sou nòt ou yo.",
+    "startPrompt": "Kòmanse yon konvèsasyon ak pwofesè ou"
+  },
+  "refreshList": "Rafrechi lis"
+}

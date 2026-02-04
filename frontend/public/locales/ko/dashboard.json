@@ -1,0 +1,26 @@
+{
+  "title": "학생 대시보드",
+  "subtitle": "돌아온 것을 환영합니다! 다음은 진행 상황에 대한 개요입니다.",
+  "stats": {
+    "teachers": "교사 수",
+    "teachersSubText": "채팅한 선생님",
+    "conversations": "대화",
+    "conversationsSubText": "총 메시지",
+    "languages": "지원되는 언어",
+    "languagesSubText": "작성({{written}}) | 구두({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "언어 지원 현황",
+    "primary": "귀하의 기본 언어는 다음과 같습니다",
+    "written": {
+      "title": "서면 지원",
+      "available": "메시지 사용 가능",
+      "unsupported": "지원되지 않음"
+    },
+    "verbal": {
+      "title": "구두 지원",
+      "available": "라이브 세션에 사용 가능",
+      "unsupported": "지원되지 않음"
+    }
+  }
+}

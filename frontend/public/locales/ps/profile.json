@@ -1,0 +1,28 @@
+{
+  "title": "زما پروفایل",
+  "editProfile": "پروفایل سمول",
+  "saveChanges": "بدلونونه خوندي کړئ",
+  "saving": "خوندي کول...",
+  "firstName": "لومړی نوم",
+  "lastName": "تخلص",
+  "email": "بریښنا‌لیک",
+  "phone": "د تلیفون شمیره",
+  "grade": "درجه",
+  "primaryLanguage": "لومړنۍ ژبه",
+  "guardianName": "د ساتونکي نوم",
+  "guardianRelation": "د ساتونکي اړیکه",
+  "selectGrade": "درجه غوره کړئ",
+  "selectLanguage": "ژبه غوره کړئ",
+  "selectRelation": "اړیکه غوره کړئ",
+  "studentID": "ID",
+  "role": "زده کوونکی",
+  "errorLoading": "د پروفایل په پورته کولو کې تېروتنه",
+  "successUpdate": "پروفایل په بریالیتوب سره تازه شو!",
+  "errorUpdate": "د پروفایل تازه کولو کې پاتې راغلی",
+  "genericError": "یوه تېروتنه رامنځته شوه. مهرباني وکړئ بیا هڅه وکړئ.",
+  "relations": {
+    "father": "پلار",
+    "mother": "مور",
+    "other": "نور"
+  }
+}

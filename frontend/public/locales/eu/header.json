@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Nire profila",
+  "changePassword": "Aldatu pasahitza",
+  "helpSupport": "Laguntza eta laguntza",
+  "signOut": "Amaitu saioa",
+  "notifications": {
+    "title": "Jakinarazpenak",
+    "unread": "irakurri gabeko mezuak",
+    "empty": "Ez dago jakinarazpen berririk",
+    "viewAll": "Ikusi mezu guztiak",
+    "newMessage": "Mezu berria"
+  },
+  "language": {
+    "switchToNative": "Aldatu zure hizkuntzara",
+    "switchToEnglish": "Aldatu ingelesera"
+  }
+}

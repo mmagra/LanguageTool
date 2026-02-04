@@ -1,0 +1,28 @@
+{
+  "title": "Fy Mhroffil",
+  "editProfile": "Golygu Proffil",
+  "saveChanges": "Cadw Newidiadau",
+  "saving": "Wrthi'n cadw...",
+  "firstName": "Enw Cyntaf",
+  "lastName": "Enw olaf",
+  "email": "Cyfeiriad Ebost",
+  "phone": "Rhif Ffôn",
+  "grade": "Gradd",
+  "primaryLanguage": "Iaith Gynradd",
+  "guardianName": "Enw Gwarcheidwad",
+  "guardianRelation": "Perthynas Gwarcheidwad",
+  "selectGrade": "Dewiswch Gradd",
+  "selectLanguage": "Dewiswch Iaith",
+  "selectRelation": "Dewiswch Perthynas",
+  "studentID": "ID",
+  "role": "Myfyriwr",
+  "errorLoading": "Gwall Wrth Llwytho Proffil",
+  "successUpdate": "Proffil wedi'i ddiweddaru'n llwyddiannus!",
+  "errorUpdate": "Wedi methu diweddaru'r proffil",
+  "genericError": "Digwyddodd gwall. Ceisiwch eto.",
+  "relations": {
+    "father": "Tad",
+    "mother": "Mam",
+    "other": "Arall"
+  }
+}

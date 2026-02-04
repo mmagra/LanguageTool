@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Profilul meu",
+  "changePassword": "Schimbaţi parola",
+  "helpSupport": "Ajutor și asistență",
+  "signOut": "Sign out",
+  "notifications": {
+    "title": "Notificări",
+    "unread": "mesaje necitite",
+    "empty": "Fără notificări noi",
+    "viewAll": "Vizualizați toate mesajele",
+    "newMessage": "Mesaj nou"
+  },
+  "language": {
+    "switchToNative": "Comutați la limba dvs",
+    "switchToEnglish": "Comutați la engleză"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Profil Saya",
+  "editProfile": "Sunting Profil",
+  "saveChanges": "Simpan Perubahan",
+  "saving": "Penghematan...",
+  "firstName": "Nama depan",
+  "lastName": "Nama Belakang",
+  "email": "Alamat Surel",
+  "phone": "Nomor telepon",
+  "grade": "Nilai",
+  "primaryLanguage": "Bahasa Utama",
+  "guardianName": "Nama Wali",
+  "guardianRelation": "Hubungan Wali",
+  "selectGrade": "Pilih Kelas",
+  "selectLanguage": "Pilih Bahasa",
+  "selectRelation": "Pilih Relasi",
+  "studentID": "PENGENAL",
+  "role": "Murid",
+  "errorLoading": "Terjadi Kesalahan Saat Memuat Profil",
+  "successUpdate": "Profil berhasil diperbarui!",
+  "errorUpdate": "Gagal memperbarui profil",
+  "genericError": "Terjadi kesalahan. Silakan coba lagi.",
+  "relations": {
+    "father": "Ayah",
+    "mother": "Ibu",
+    "other": "Lainnya"
+  }
+}

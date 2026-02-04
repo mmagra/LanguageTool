@@ -1,0 +1,26 @@
+{
+  "title": "Dashboard dalibi",
+  "subtitle": "Barka da dawowa! Anan ga bayanin ci gaban ku.",
+  "stats": {
+    "teachers": "No. na Malami(s)",
+    "teachersSubText": "Malaman da kuka tattauna da su",
+    "conversations": "Tattaunawa(s)",
+    "conversationsSubText": "Jimlar Saƙonni",
+    "languages": "Harsuna masu goyan baya",
+    "languagesSubText": "An rubuta ({{written}}) | Na baka ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Matsayin Taimakon Harshe",
+    "primary": "Harshenku na Farko shine",
+    "written": {
+      "title": "Taimakon Rubutu",
+      "available": "Akwai don saƙo",
+      "unsupported": "Ba a tallafawa"
+    },
+    "verbal": {
+      "title": "Taimakon Magana",
+      "available": "Akwai don zama kai tsaye",
+      "unsupported": "Ba a tallafawa"
+    }
+  }
+}

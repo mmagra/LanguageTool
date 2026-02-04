@@ -1,0 +1,26 @@
+{
+  "title": "Dashboard-ka Ardayga",
+  "subtitle": "Soo dhawoow dib! Halkan waxaa ah dulmar guud oo ku saabsan horumarkaaga.",
+  "stats": {
+    "teachers": "Tirada. ee Macallinka",
+    "teachersSubText": "Macalimiin aad la sheekaysatay",
+    "conversations": "Sheeko",
+    "conversationsSubText": "Wadarta fariimaha",
+    "languages": "Luuqadaha la taageeray",
+    "languagesSubText": "Qoray ({{written}}) | Af ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Heerka Taageerada Luuqadda",
+    "primary": "Luqadaada Koowaad waa",
+    "written": {
+      "title": "Taageero qoran",
+      "available": "Loo heli karo fariimaha",
+      "unsupported": "Lama taageero"
+    },
+    "verbal": {
+      "title": "Taageero Afka ah",
+      "available": "Loo heli karo fadhiyada tooska ah",
+      "unsupported": "Lama taageero"
+    }
+  }
+}

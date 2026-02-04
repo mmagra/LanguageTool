@@ -1,0 +1,28 @@
+{
+  "title": "ʻO kaʻu moʻolelo",
+  "editProfile": "Hoʻoponopono i ka moʻolelo",
+  "saveChanges": "E mālama i nā hoʻololi",
+  "saving": "Mālama ʻia...",
+  "firstName": "Inoa mua",
+  "lastName": "Inoa hope",
+  "email": "Helu leka uila",
+  "phone": "Helu kelepona",
+  "grade": "Papa",
+  "primaryLanguage": "ʻŌlelo Kuʻuna",
+  "guardianName": "Inoa kahu",
+  "guardianRelation": "Pilikia kahu",
+  "selectGrade": "E koho i ka Papa",
+  "selectLanguage": "E koho i ka ʻōlelo",
+  "selectRelation": "E koho i ka pilina",
+  "studentID": "ID",
+  "role": "Haumāna",
+  "errorLoading": "Ua hewa ke hoʻouka ʻana i ka moʻolelo",
+  "successUpdate": "Ua hōʻano hou ʻia ka moʻolelo!",
+  "errorUpdate": "ʻAʻole hiki ke hōʻano hou i ka moʻolelo",
+  "genericError": "Ua hewa. E ʻoluʻolu e hoʻāʻo hou.",
+  "relations": {
+    "father": "Makuakāne",
+    "mother": "Makuahine",
+    "other": "'ē aʻe"
+  }
+}

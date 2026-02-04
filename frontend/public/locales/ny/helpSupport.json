@@ -1,0 +1,47 @@
+{
+  "title": "Thandizo ndi Thandizo",
+  "description": "Tili pano kuti tikuthandizeni ndi mafunso kapena zovuta zilizonse zomwe mungakumane nazo mukamagwiritsa ntchito intaneti. Kaya mukufuna thandizo poyambira, khalani ndi funso lokhudza zina, kapena mukufuna kunena za vuto, tili pano kuti tikuthandizeni.",
+  "contact": {
+    "title": "Lumikizanani ndi Thandizo",
+    "emailTitle": "Thandizo la imelo",
+    "emailDesc": "Tikufuna kuyankha maimelo onse mkati mwa maola 24.",
+    "phoneTitle": "Thandizo la Mafoni",
+    "hours": "Lolemba-Lachisanu (9 am - 5pm)",
+    "footer": "Zikomo posankha pulogalamu yathu yapaintaneti. Tadzipereka kukupangani kuti zomwe mukukumana nazo zikhale zosavuta komanso zosangalatsa momwe tingathere."
+  },
+  "supportedLanguages": {
+    "title": "Mndandanda wa Zinenero Zothandizidwa",
+    "headers": {
+      "rank": "#",
+      "language": "Chiyankhulo",
+      "translation": "Kumasulira (App & Mobile)",
+      "desktop": "Kulankhulana Kwamunthu (Pakompyuta)",
+      "mobile": "Kulankhulana Kwamunthu (Mobile App)"
+    },
+    "mobileLabels": {
+      "translation": "Mauthenga Omasuliridwa",
+      "desktop": "Desktop Mu-Munthu",
+      "mobile": "Mobile Mu-Munthu"
+    },
+    "supported": "Zothandizidwa",
+    "notSupported": "Osathandizidwa"
+  },
+  "detailedFeatures": {
+    "title": "Thandizo Latsatanetsatane la Mbali",
+    "subtitle": "Kuwonongeka kwa Kulowetsa kwa Mawu ndi kuthekera kwa Mauthenga-Kulankhula pa chipangizo chilichonse.",
+    "headers": {
+      "rank": "#",
+      "language": "Chiyankhulo",
+      "translation": "Kumasulira (Zonse)",
+      "desktopVersion": "Mtundu wa Desktop",
+      "mobileApp": "Mobile App",
+      "voiceInput": "Kulowetsa Mawu",
+      "tts": "Mawu-kupita-Kulankhula"
+    },
+    "mobileHeaders": {
+      "translation": "Kumasulira",
+      "desktop": "Mawonekedwe a Desktop",
+      "mobile": "Mawonekedwe a Mobile App"
+    }
+  }
+}

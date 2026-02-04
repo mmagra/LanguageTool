@@ -1,0 +1,26 @@
+{
+  "title": "Paneli i nxënësve",
+  "subtitle": "Mirë se vini përsëri! Këtu është një pasqyrë e përparimit tuaj.",
+  "stats": {
+    "teachers": "Nr. i mësuesit(ve)",
+    "teachersSubText": "Mësuesit me të cilët keni biseduar",
+    "conversations": "Biseda(t)",
+    "conversationsSubText": "Totali i mesazheve",
+    "languages": "Gjuhët e mbështetura",
+    "languagesSubText": "Shkruar ({{written}}) | Verbale ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Statusi i mbështetjes gjuhësore",
+    "primary": "Gjuha juaj kryesore është",
+    "written": {
+      "title": "Mbështetje me shkrim",
+      "available": "Në dispozicion për mesazhe",
+      "unsupported": "Nuk mbështetet"
+    },
+    "verbal": {
+      "title": "Mbështetje verbale",
+      "available": "Në dispozicion për seanca të drejtpërdrejta",
+      "unsupported": "Nuk mbështetet"
+    }
+  }
+}

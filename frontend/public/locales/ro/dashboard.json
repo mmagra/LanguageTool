@@ -1,0 +1,26 @@
+{
+  "title": "Tabloul de bord pentru studenți",
+  "subtitle": "Bine ai revenit! Iată o prezentare generală a progresului dvs.",
+  "stats": {
+    "teachers": "Nr. profesor(i)",
+    "teachersSubText": "Profesorii cu care ai discutat",
+    "conversations": "Conversație(e)",
+    "conversationsSubText": "Total mesaje",
+    "languages": "Limbi acceptate",
+    "languagesSubText": "Scris ({{written}}) | Verbal ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Starea suportului lingvistic",
+    "primary": "Limba ta primară este",
+    "written": {
+      "title": "Suport scris",
+      "available": "Disponibil pentru mesagerie",
+      "unsupported": "Nu este acceptat"
+    },
+    "verbal": {
+      "title": "Suport verbal",
+      "available": "Disponibil pentru sesiuni live",
+      "unsupported": "Nu este acceptat"
+    }
+  }
+}

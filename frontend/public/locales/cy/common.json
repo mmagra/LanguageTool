@@ -1,0 +1,13 @@
+{
+  "loading": "Wrthi'n llwytho...",
+  "error": "Gwall",
+  "save": "Arbed",
+  "cancel": "Canslo",
+  "language": "Iaith",
+  "switchToEnglish": "Newid i'r Saesneg",
+  "switchToNative": "Newid i {{ language}}",
+  "online": "Ar-lein",
+  "offline": "All-lein",
+  "notProvided": "Heb ei ddarparu",
+  "tryAgain": "Ceisiwch Eto"
+}

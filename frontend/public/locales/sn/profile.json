@@ -1,0 +1,28 @@
+{
+  "title": "My Profile",
+  "editProfile": "Rongedza Profile",
+  "saveChanges": "Chengetedza Kuchinja",
+  "saving": "Kuchengeta...",
+  "firstName": "Zita rokutanga",
+  "lastName": "Zita rokupedzisa",
+  "email": "Chikero chetsamba yemumhepo",
+  "phone": "Nhamba yenhare",
+  "grade": "Giredhi",
+  "primaryLanguage": "Mutauro Wepuraimari",
+  "guardianName": "Guardian Name",
+  "guardianRelation": "Guardian Relation",
+  "selectGrade": "Sarudza Giredhi",
+  "selectLanguage": "Sarudza Mutauro",
+  "selectRelation": "Sarudza Hukama",
+  "studentID": "ID",
+  "role": "Mudzidzi",
+  "errorLoading": "Kutadza Kuisa Profile",
+  "successUpdate": "Profile yakagadziridzwa!",
+  "errorUpdate": "Tatadza kugadzirisa chimiro",
+  "genericError": "Paitika chikanganiso. Ndapota edza zvakare.",
+  "relations": {
+    "father": "Baba",
+    "mother": "Amai",
+    "other": "Zvimwe"
+  }
+}

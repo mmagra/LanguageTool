@@ -1,0 +1,47 @@
+{
+  "title": "Laguntza eta Laguntza",
+  "description": "Hemen gaude gure web-aplikazioa erabiltzean aurki ditzakezun galdera edo arazoei laguntzeko. Hasteko laguntza behar baduzu, eginbide bati buruzko galderarik baduzu edo akatsen bat jakinarazi nahi baduzu, hemen gaude laguntzeko.",
+  "contact": {
+    "title": "Jarri harremanetan laguntzarekin",
+    "emailTitle": "Posta elektroniko bidezko laguntza",
+    "emailDesc": "Mezu elektroniko guztiei 24 orduko epean erantzutea dugu helburu.",
+    "phoneTitle": "Telefono-laguntza",
+    "hours": "Astelehenetik ostiralera (9:00etatik 17:00etara)",
+    "footer": "Eskerrik asko gure web aplikazioa aukeratzeagatik. Zure esperientzia ahalik eta atseginena eta atseginena izateko konpromisoa hartzen dugu."
+  },
+  "supportedLanguages": {
+    "title": "Onartutako hizkuntzen zerrenda",
+    "headers": {
+      "rank": "#",
+      "language": "Hizkuntza",
+      "translation": "Itzulpena (aplikazioa eta mugikorra)",
+      "desktop": "Pertsonalaren komunikazioa (mahaigainean)",
+      "mobile": "Pertsonalaren komunikazioa (Mugikorreko aplikazioa)"
+    },
+    "mobileLabels": {
+      "translation": "Itzulitako mezuak",
+      "desktop": "Mahaigaina Pertsonalki",
+      "mobile": "Mugikorra Pertsonalki"
+    },
+    "supported": "Onartua",
+    "notSupported": "Ez da onartzen"
+  },
+  "detailedFeatures": {
+    "title": "Ezaugarrien laguntza zehatza",
+    "subtitle": "Gailu bakoitzeko Ahots-sarrera eta Testu-hizketarako gaitasunen banaketa.",
+    "headers": {
+      "rank": "#",
+      "language": "Hizkuntza",
+      "translation": "Itzulpena (guztiak)",
+      "desktopVersion": "Mahaigaineko bertsioa",
+      "mobileApp": "Mugikorretarako aplikazioa",
+      "voiceInput": "Ahots-sarrera",
+      "tts": "Testutik Hizketara"
+    },
+    "mobileHeaders": {
+      "translation": "Itzulpena",
+      "desktop": "Mahaigaineko Ezaugarriak",
+      "mobile": "Mugikorretarako aplikazioen Ezaugarriak"
+    }
+  }
+}

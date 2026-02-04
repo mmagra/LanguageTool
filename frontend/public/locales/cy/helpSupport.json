@@ -1,0 +1,47 @@
+{
+  "title": "Cymorth a Chefnogaeth",
+  "description": "Rydym yma i helpu gydag unrhyw gwestiynau neu faterion y gallech ddod ar eu traws wrth ddefnyddio ein cymhwysiad gwe. P'un a oes angen help arnoch i gychwyn arni, os oes gennych gwestiwn am nodwedd, neu os ydych am adrodd am fyg, rydym yma i helpu.",
+  "contact": {
+    "title": "Cefnogaeth Cyswllt",
+    "emailTitle": "Cefnogaeth E-bost",
+    "emailDesc": "Ein nod yw ymateb i bob e-bost o fewn 24 awr.",
+    "phoneTitle": "Cefnogaeth Ffôn",
+    "hours": "Llun-Gwener (9am – 5pm)",
+    "footer": "Diolch am ddewis ein cymhwysiad gwe. Rydym wedi ymrwymo i wneud eich profiad mor llyfn a phleserus â phosibl."
+  },
+  "supportedLanguages": {
+    "title": "Rhestr o Ieithoedd a Gefnogir",
+    "headers": {
+      "rank": "#",
+      "language": "Iaith",
+      "translation": "Cyfieithu (Ap a Symudol)",
+      "desktop": "Cyfathrebu Personol (Bwrdd Gwaith)",
+      "mobile": "Cyfathrebu Personol (App Symudol)"
+    },
+    "mobileLabels": {
+      "translation": "Negeseuon wedi'u Cyfieithu",
+      "desktop": "Bwrdd Gwaith yn Bersonol",
+      "mobile": "Symudol yn Bersonol"
+    },
+    "supported": "Cefnogir",
+    "notSupported": "Heb ei Gefnogi"
+  },
+  "detailedFeatures": {
+    "title": "Cymorth Nodwedd Manwl",
+    "subtitle": "Dadansoddiad o alluoedd Mewnbwn Llais a Thestun-i-Lleferydd fesul dyfais.",
+    "headers": {
+      "rank": "#",
+      "language": "Iaith",
+      "translation": "Cyfieithu (Pawb)",
+      "desktopVersion": "Fersiwn Penbwrdd",
+      "mobileApp": "Ap Symudol",
+      "voiceInput": "Mewnbwn Llais",
+      "tts": "Testun-i-Leferydd"
+    },
+    "mobileHeaders": {
+      "translation": "Cyfieithiad",
+      "desktop": "Nodweddion Bwrdd Gwaith",
+      "mobile": "Nodweddion Ap Symudol"
+    }
+  }
+}

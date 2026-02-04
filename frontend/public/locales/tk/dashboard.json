@@ -1,0 +1,26 @@
+{
+  "title": "Talyplar paneli",
+  "subtitle": "Hoş geldiňiz! Ine, öňegidişligiňize syn.",
+  "stats": {
+    "teachers": "Mugallymlaryň sany",
+    "teachersSubText": "Söhbetdeş bolan mugallymlar",
+    "conversations": "Söhbet",
+    "conversationsSubText": "Jemi habarlar",
+    "languages": "Goldaw dilleri",
+    "languagesSubText": "Ittenazan ({{written}}) | Dildar ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Dil goldaw ýagdaýy",
+    "primary": "Esasy diliňiz",
+    "written": {
+      "title": "Ittenazmaça goldaw",
+      "available": "Habarlaşmak üçin elýeterli",
+      "unsupported": "Goldaw berilmeýär"
+    },
+    "verbal": {
+      "title": "Dildar goldaw",
+      "available": "Göni sessiýalar üçin elýeterli",
+      "unsupported": "Goldaw berilmeýär"
+    }
+  }
+}

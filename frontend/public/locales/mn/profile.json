@@ -1,0 +1,28 @@
+{
+  "title": "Миний профайл",
+  "editProfile": "Профайлыг засах",
+  "saveChanges": "Өөрчлөлтүүдийг хадгалах",
+  "saving": "Хадгалж байна...",
+  "firstName": "Нэр",
+  "lastName": "Овог",
+  "email": "Имэйл хаяг",
+  "phone": "Утасны дугаар",
+  "grade": "Зэрэг",
+  "primaryLanguage": "Үндсэн хэл",
+  "guardianName": "Хамгаалагчийн нэр",
+  "guardianRelation": "Хамгаалагчийн харилцаа",
+  "selectGrade": "Зэрэг сонгоно уу",
+  "selectLanguage": "Хэл сонгоно уу",
+  "selectRelation": "Харилцааг сонгоно уу",
+  "studentID": "ID",
+  "role": "Оюутан",
+  "errorLoading": "Профайлыг ачаалахад алдаа гарлаа",
+  "successUpdate": "Профайлыг амжилттай шинэчилсэн!",
+  "errorUpdate": "Профайлыг шинэчилж чадсангүй",
+  "genericError": "Алдаа гарлаа. Дахин оролдоно уу.",
+  "relations": {
+    "father": "Аав",
+    "mother": "Ээж ээ",
+    "other": "Бусад"
+  }
+}

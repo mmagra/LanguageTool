@@ -1,0 +1,28 @@
+{
+  "title": "मेरी प्रोफाइल",
+  "editProfile": "प्रोफ़ाइल संपादित करें",
+  "saveChanges": "परिवर्तनों को सुरक्षित करें",
+  "saving": "सहेजा जा रहा है...",
+  "firstName": "पहला नाम",
+  "lastName": "उपनाम",
+  "email": "मेल पता",
+  "phone": "फ़ोन नंबर",
+  "grade": "श्रेणी",
+  "primaryLanguage": "प्राथमिक भाषा",
+  "guardianName": "संरक्षक का नाम",
+  "guardianRelation": "अभिभावक संबंध",
+  "selectGrade": "ग्रेड चुनें",
+  "selectLanguage": "भाषा चुने",
+  "selectRelation": "संबंध चुनें",
+  "studentID": "पहचान",
+  "role": "विद्यार्थी",
+  "errorLoading": "प्रोफ़ाइल लोड करने में त्रुटि",
+  "successUpdate": "प्रोफ़ाइल सफलतापूर्वक अपडेट की गई!",
+  "errorUpdate": "प्रोफ़ाइल अपडेट करने में विफल",
+  "genericError": "एक त्रुटि पाई गई। कृपया पुन: प्रयास करें।",
+  "relations": {
+    "father": "पिता",
+    "mother": "माँ",
+    "other": "अन्य"
+  }
+}

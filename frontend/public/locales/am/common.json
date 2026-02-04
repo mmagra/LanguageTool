@@ -1,0 +1,13 @@
+{
+  "loading": "በመጫን ላይ...",
+  "error": "ስህተት",
+  "save": "አስቀምጥ",
+  "cancel": "ሰርዝ",
+  "language": "ቋንቋ",
+  "switchToEnglish": "ወደ እንግሊዝኛ ቀይር",
+  "switchToNative": "ወደ {{ቋንቋ}} ቀይር",
+  "online": "በመስመር ላይ",
+  "offline": "ከመስመር ውጭ",
+  "notProvided": "አልተሰጠም።",
+  "tryAgain": "እንደገና ይሞክሩ"
+}

@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Habarlar",
+  "searchPlaceholder": "Mugallymlary gözläň ...",
+  "noConversations": "Entek gepleşik ýok",
+  "unknownTeacher": "Näbelli mugallym",
+  "noMessages": "Entek habar ýok",
+  "typing": "Typazmak ...",
+  "typePlaceholder": "Habaryňyzy türkmen dilinde ýazyň ...",
+  "emptyState": {
+    "title": "Söhbetdeşlikleriňiz",
+    "desc": "Sorag bermäge ýa-da bahalaryňyzy ara alyp maslahatlaşmaga başlamak üçin gapdal panelden mugallym saýlaň.",
+    "startPrompt": "Mugallymyňyz bilen söhbetdeşlige başlaň"
+  },
+  "refreshList": "Sanawy täzele"
+}

@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "โปรไฟล์ของฉัน",
+  "changePassword": "เปลี่ยนรหัสผ่าน",
+  "helpSupport": "ช่วยเหลือและสนับสนุน",
+  "signOut": "ออกจากระบบ",
+  "notifications": {
+    "title": "การแจ้งเตือน",
+    "unread": "ข้อความที่ยังไม่ได้อ่าน",
+    "empty": "ไม่มีการแจ้งเตือนใหม่",
+    "viewAll": "ดูข้อความทั้งหมด",
+    "newMessage": "ข้อความใหม่"
+  },
+  "language": {
+    "switchToNative": "สลับเป็นภาษาของคุณ",
+    "switchToEnglish": "เปลี่ยนเป็นภาษาอังกฤษ"
+  }
+}

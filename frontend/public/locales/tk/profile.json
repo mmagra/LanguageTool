@@ -1,0 +1,28 @@
+{
+  "title": "Meniň profilim",
+  "editProfile": "Profili redaktirläň",
+  "saveChanges": "Üýtgeşmeleri ýazdyryň",
+  "saving": "Tygşytlamak ...",
+  "firstName": "Ady",
+  "lastName": "Familiýasy",
+  "email": "E-poçta salgysy",
+  "phone": "Telefon belgisi",
+  "grade": "Baha",
+  "primaryLanguage": "Başlangyç dil",
+  "guardianName": "Goragçynyň ady",
+  "guardianRelation": "Goragçy gatnaşyklary",
+  "selectGrade": "Bahasy saýlaň",
+  "selectLanguage": "Dil saýlaň",
+  "selectRelation": "Gatnaşyk saýlaň",
+  "studentID": "Şahsyýetnamasy",
+  "role": "Talyp",
+  "errorLoading": "Profil ýüklemekde säwlik",
+  "successUpdate": "Profil üstünlikli täzelendi!",
+  "errorUpdate": "Profili täzeläp bilmedi",
+  "genericError": "Erroralňyşlyk ýüze çykdy Gaýtadan synanyşmagyňyzy haýyş edýäris.",
+  "relations": {
+    "father": "Kaka",
+    "mother": "Eje",
+    "other": "Beýlekiler"
+  }
+}

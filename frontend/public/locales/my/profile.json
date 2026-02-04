@@ -1,0 +1,28 @@
+{
+  "title": "ကျွန်တော့် Profile",
+  "editProfile": "Profile ကို တည်းဖြတ်ပါ။",
+  "saveChanges": "အပြောင်းအလဲများကို သိမ်းဆည်းပါ။",
+  "saving": "သိမ်းဆည်းနေသည်...",
+  "firstName": "နာမည်",
+  "lastName": "မျိုးနွယ်အမည်",
+  "email": "အီးမေးလ်လိပ်စာ",
+  "phone": "ဖုန်းနံပါတ်",
+  "grade": "တန်း",
+  "primaryLanguage": "မူလတန်းဘာသာစကား",
+  "guardianName": "အုပ်ထိန်းသူအမည်",
+  "guardianRelation": "အုပ်ထိန်းသူဆက်ဆံရေး",
+  "selectGrade": "Grade ကို ရွေးပါ။",
+  "selectLanguage": "ဘာသာစကားကို ရွေးပါ။",
+  "selectRelation": "Relation ကို ရွေးပါ။",
+  "studentID": "အမှတ်သညာ",
+  "role": "ကျောင်းသား",
+  "errorLoading": "ပရိုဖိုင်ကို တင်ရာတွင် အမှားအယွင်းရှိသည်။",
+  "successUpdate": "ပရိုဖိုင်ကို အောင်မြင်စွာ အပ်ဒိတ်လုပ်ခဲ့သည်။",
+  "errorUpdate": "ပရိုဖိုင်ကို အပ်ဒိတ်လုပ်ရန် မအောင်မြင်ပါ။",
+  "genericError": "အမှားအယွင်းတစ်ခု ဖြစ်ပွားခဲ့သည်။ ထပ်စမ်းကြည့်ပါ။",
+  "relations": {
+    "father": "ဖေဖေ",
+    "mother": "မေမေ",
+    "other": "တခြား"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "loading": "بار کول...",
+  "error": "تېروتنه",
+  "save": "خوندي کړئ",
+  "cancel": "لغوه کړئ",
+  "language": "ژبه",
+  "switchToEnglish": "انګلیسي ته واړوئ",
+  "switchToNative": "{{language}} ته لاړشئ",
+  "online": "آنلاین",
+  "offline": "آفلاین",
+  "notProvided": "نه دی ورکړل شوی",
+  "tryAgain": "بیا هڅه وکړئ"
+}

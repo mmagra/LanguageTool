@@ -1,0 +1,26 @@
+{
+  "title": "Dashboard tal-Istudenti",
+  "subtitle": "Merħba lura! Hawnhekk hawn ħarsa ġenerali lejn il-progress tiegħek.",
+  "stats": {
+    "teachers": "Numru ta' Għalliema",
+    "teachersSubText": "Għalliema inti ċettjat magħhom",
+    "conversations": "Konversazzjoni(jiet)",
+    "conversationsSubText": "Messaġġi Totali",
+    "languages": "Lingwi Appoġġjati",
+    "languagesSubText": "Miktub ({{written}}) | Verbali ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Status ta' Appoġġ Lingwistiku",
+    "primary": "Il-Lingwa Primarja tiegħek hija",
+    "written": {
+      "title": "Appoġġ bil-Miktub",
+      "available": "Disponibbli għall-messaġġi",
+      "unsupported": "Mhux appoġġjat"
+    },
+    "verbal": {
+      "title": "Appoġġ Verbali",
+      "available": "Disponibbli għal sessjonijiet live",
+      "unsupported": "Mhux appoġġjat"
+    }
+  }
+}

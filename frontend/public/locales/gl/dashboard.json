@@ -1,0 +1,26 @@
+{
+  "title": "Panel de control do estudante",
+  "subtitle": "Benvido de novo! Aquí tes unha visión xeral do teu progreso.",
+  "stats": {
+    "teachers": "Nº de profesor(es)",
+    "teachersSubText": "Profesores cos que conversaches",
+    "conversations": "Conversa(s)",
+    "conversationsSubText": "Total de mensaxes",
+    "languages": "Idiomas admitidos",
+    "languagesSubText": "Escrito ({{written}}) | Verbal ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Estado de apoio lingüístico",
+    "primary": "O teu idioma principal é",
+    "written": {
+      "title": "Soporte escrito",
+      "available": "Dispoñible para enviar mensaxes",
+      "unsupported": "Non é compatible"
+    },
+    "verbal": {
+      "title": "Apoio verbal",
+      "available": "Dispoñible para sesións en directo",
+      "unsupported": "Non é compatible"
+    }
+  }
+}

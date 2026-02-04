@@ -1,0 +1,13 @@
+{
+  "loading": "Hleður...",
+  "error": "Villa",
+  "save": "Vista",
+  "cancel": "Hætta við",
+  "language": "Tungumál",
+  "switchToEnglish": "Skiptu yfir í ensku",
+  "switchToNative": "Skipta yfir í {{tungumál}}",
+  "online": "Á netinu",
+  "offline": "Ótengdur",
+  "notProvided": "Ekki veitt",
+  "tryAgain": "Reyndu aftur"
+}

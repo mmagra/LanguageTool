@@ -1,0 +1,28 @@
+{
+  "title": "میرا پروفائل",
+  "editProfile": "پروفائل میں ترمیم کریں",
+  "saveChanges": "تبدیلیوں کو بچائیں",
+  "saving": "بچت ...",
+  "firstName": "پہلا نام",
+  "lastName": "آخری نام",
+  "email": "ای میل ایڈریس",
+  "phone": "فون نمبر",
+  "grade": "گریڈ",
+  "primaryLanguage": "بنیادی زبان",
+  "guardianName": "گارڈین کا نام",
+  "guardianRelation": "سرپرست رشتہ",
+  "selectGrade": "گریڈ منتخب کریں",
+  "selectLanguage": "زبان منتخب کریں",
+  "selectRelation": "رشتہ منتخب کریں",
+  "studentID": "ID",
+  "role": "طالب علم",
+  "errorLoading": "پروفائل لوڈ کرنے میں خرابی",
+  "successUpdate": "پروفائل کامیابی کے ساتھ اپ ڈیٹ ہوا!",
+  "errorUpdate": "پروفائل کو اپ ڈیٹ کرنے میں ناکام",
+  "genericError": "ایک غلطی ہوئی۔ براہ کرم دوبارہ کوشش کریں۔",
+  "relations": {
+    "father": "باپ",
+    "mother": "ماں",
+    "other": "دیگر"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Dashboard mpianatra",
+  "subtitle": "Tongasoa indray! Ity misy topimaso momba ny fandrosoanao.",
+  "stats": {
+    "teachers": "Laharan'ny mpampianatra",
+    "teachersSubText": "Mpampianatra niresahanao",
+    "conversations": "Resadresaka",
+    "conversationsSubText": "Total Messages",
+    "languages": "Fiteny tohanana",
+    "languagesSubText": "Voasoratra ({{written}}) | Verbal ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Satan'ny fanohanana ny fiteny",
+    "primary": "Ny fiteninao voalohany dia",
+    "written": {
+      "title": "Fanohanana an-tsoratra",
+      "available": "Afaka mandefa hafatra",
+      "unsupported": "Tsy tohana"
+    },
+    "verbal": {
+      "title": "Fanohanana am-bava",
+      "available": "Misy amin'ny fivoriana mivantana",
+      "unsupported": "Tsy tohana"
+    }
+  }
+}

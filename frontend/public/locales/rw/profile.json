@@ -1,0 +1,28 @@
+{
+  "title": "Umwirondoro wanjye",
+  "editProfile": "Hindura Umwirondoro",
+  "saveChanges": "Bika Impinduka",
+  "saving": "Kuzigama ...",
+  "firstName": "Izina",
+  "lastName": "Izina ryanyuma",
+  "email": "Aderesi ya imeri",
+  "phone": "Numero ya terefone",
+  "grade": "Icyiciro",
+  "primaryLanguage": "Ururimi rwibanze",
+  "guardianName": "Izina ry'umurinzi",
+  "guardianRelation": "Umubano w'Abarinzi",
+  "selectGrade": "Hitamo Icyiciro",
+  "selectLanguage": "Hitamo Ururimi",
+  "selectRelation": "Hitamo Isano",
+  "studentID": "Indangamuntu",
+  "role": "Umunyeshuri",
+  "errorLoading": "Umwirondoro wo Gutwara Ikosa",
+  "successUpdate": "Umwirondoro wavuguruwe neza!",
+  "errorUpdate": "Kunanirwa kuvugurura umwirondoro",
+  "genericError": "Habayeho ikosa. Nyamuneka gerageza.",
+  "relations": {
+    "father": "Data",
+    "mother": "Mama",
+    "other": "Ibindi"
+  }
+}

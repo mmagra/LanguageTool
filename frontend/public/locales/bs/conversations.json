@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Poruke",
+  "searchPlaceholder": "Traži nastavnike...",
+  "noConversations": "Još nema razgovora",
+  "unknownTeacher": "Nepoznati učitelj",
+  "noMessages": "Još nema poruka",
+  "typing": "kucanje...",
+  "typePlaceholder": "Ukucajte svoju poruku na bosanskom...",
+  "emptyState": {
+    "title": "Vaši razgovori",
+    "desc": "Odaberite nastavnika sa bočne trake da počnete postavljati pitanja ili raspravljati o svojim ocjenama.",
+    "startPrompt": "Započnite razgovor sa svojim učiteljem"
+  },
+  "refreshList": "Osvježi listu"
+}

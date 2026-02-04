@@ -1,0 +1,26 @@
+{
+  "title": "Dashboard di i studienti",
+  "subtitle": "Benvenuta di ritornu! Eccu una panoramica di u vostru prugressu.",
+  "stats": {
+    "teachers": "No. di Maestru (s)",
+    "teachersSubText": "I maestri chì avete parlatu",
+    "conversations": "Conversazione(e)",
+    "conversationsSubText": "Total Messages",
+    "languages": "Lingue supportate",
+    "languagesSubText": "Scrittu ({{written}}) | Verbali ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Status di sustegnu di lingua",
+    "primary": "A vostra lingua primaria hè",
+    "written": {
+      "title": "Supportu scrittu",
+      "available": "Disponibile per messageria",
+      "unsupported": "Ùn hè micca supportatu"
+    },
+    "verbal": {
+      "title": "Supportu verbale",
+      "available": "Disponibile per sessioni live",
+      "unsupported": "Ùn hè micca supportatu"
+    }
+  }
+}

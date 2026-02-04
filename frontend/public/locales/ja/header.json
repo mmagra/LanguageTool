@@ -1,0 +1,18 @@
+{
+  "title": "スポークンエッジ",
+  "myProfile": "私のプロフィール",
+  "changePassword": "パスワードを変更する",
+  "helpSupport": "ヘルプとサポート",
+  "signOut": "サインアウト",
+  "notifications": {
+    "title": "通知",
+    "unread": "未読メッセージ",
+    "empty": "新しい通知はありません",
+    "viewAll": "すべてのメッセージを表示",
+    "newMessage": "新しいメッセージ"
+  },
+  "language": {
+    "switchToNative": "あなたの言語に切り替えてください",
+    "switchToEnglish": "英語に切り替える"
+  }
+}

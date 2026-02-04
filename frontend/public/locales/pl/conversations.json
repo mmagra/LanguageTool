@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Wiadomości",
+  "searchPlaceholder": "Szukaj nauczycieli...",
+  "noConversations": "Nie ma jeszcze żadnych rozmów",
+  "unknownTeacher": "Nieznany nauczyciel",
+  "noMessages": "Nie ma jeszcze żadnych wiadomości",
+  "typing": "Pisanie na maszynie...",
+  "typePlaceholder": "Wpisz wiadomość po polsku...",
+  "emptyState": {
+    "title": "Twoje rozmowy",
+    "desc": "Wybierz nauczyciela z paska bocznego, aby zacząć zadawać pytania lub omawiać swoje oceny.",
+    "startPrompt": "Rozpocznij rozmowę ze swoim nauczycielem"
+  },
+  "refreshList": "Odśwież listę"
+}

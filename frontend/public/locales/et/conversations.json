@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Sõnumid",
+  "searchPlaceholder": "Otsi õpetajaid...",
+  "noConversations": "Vestlusi veel pole",
+  "unknownTeacher": "Tundmatu Õpetaja",
+  "noMessages": "Sõnumeid pole veel",
+  "typing": "Tippimine...",
+  "typePlaceholder": "Sisesta oma sõnum eesti keeles...",
+  "emptyState": {
+    "title": "Teie vestlused",
+    "desc": "Valige külgribalt õpetaja, et alustada küsimuste esitamist või hinnete üle arutleda.",
+    "startPrompt": "Alustage vestlust oma õpetajaga"
+  },
+  "refreshList": "Värskenda loendit"
+}

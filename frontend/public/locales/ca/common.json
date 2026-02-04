@@ -1,0 +1,13 @@
+{
+  "loading": "Carregant...",
+  "error": "Error",
+  "save": "Desa",
+  "cancel": "Cancel·la",
+  "language": "Llengua",
+  "switchToEnglish": "Canvia a l'anglès",
+  "switchToNative": "Canvia a {{idioma}}",
+  "online": "En línia",
+  "offline": "Fora de línia",
+  "notProvided": "No proporcionat",
+  "tryAgain": "Torna-ho a provar"
+}

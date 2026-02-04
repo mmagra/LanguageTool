@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Min profil",
+  "changePassword": "Endre passord",
+  "helpSupport": "Hjelp og støtte",
+  "signOut": "Logg ut",
+  "notifications": {
+    "title": "Varsler",
+    "unread": "uleste meldinger",
+    "empty": "Ingen nye varsler",
+    "viewAll": "Se alle meldinger",
+    "newMessage": "Ny melding"
+  },
+  "language": {
+    "switchToNative": "Bytt til ditt språk",
+    "switchToEnglish": "Bytt til engelsk"
+  }
+}

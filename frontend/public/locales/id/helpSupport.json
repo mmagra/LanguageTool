@@ -1,0 +1,47 @@
+{
+  "title": "Bantuan dan Dukungan",
+  "description": "Kami di sini untuk membantu dengan pertanyaan atau masalah apa pun yang mungkin Anda temui saat menggunakan aplikasi web kami. Baik Anda memerlukan bantuan untuk memulai, memiliki pertanyaan tentang fitur, atau ingin melaporkan bug, kami siap membantu.",
+  "contact": {
+    "title": "Hubungi Dukungan",
+    "emailTitle": "Dukungan Email",
+    "emailDesc": "Kami bertujuan untuk menanggapi semua email dalam waktu 24 jam.",
+    "phoneTitle": "Dukungan Telepon",
+    "hours": "Senin-Jumat (09.00 – 17.00)",
+    "footer": "Terima kasih telah memilih aplikasi web kami. Kami berkomitmen untuk membuat pengalaman Anda semulus dan semenyenangkan mungkin."
+  },
+  "supportedLanguages": {
+    "title": "Daftar Bahasa yang Didukung",
+    "headers": {
+      "rank": "#",
+      "language": "Bahasa",
+      "translation": "Terjemahan (Aplikasi & Seluler)",
+      "desktop": "Komunikasi Tatap Muka (Desktop)",
+      "mobile": "Komunikasi Tatap Muka (Aplikasi Seluler)"
+    },
+    "mobileLabels": {
+      "translation": "Pesan yang Diterjemahkan",
+      "desktop": "Desktop Secara Langsung",
+      "mobile": "Seluler Secara Langsung"
+    },
+    "supported": "Didukung",
+    "notSupported": "Tidak Didukung"
+  },
+  "detailedFeatures": {
+    "title": "Dukungan Fitur Terperinci",
+    "subtitle": "Perincian kemampuan Input Suara dan Text-to-Speech per perangkat.",
+    "headers": {
+      "rank": "#",
+      "language": "Bahasa",
+      "translation": "Terjemahan (Semua)",
+      "desktopVersion": "Versi Desktop",
+      "mobileApp": "Aplikasi Seluler",
+      "voiceInput": "Masukan Suara",
+      "tts": "Teks-ke-Ucapan"
+    },
+    "mobileHeaders": {
+      "translation": "Terjemahan",
+      "desktop": "Fitur Desktop",
+      "mobile": "Fitur Aplikasi Seluler"
+    }
+  }
+}

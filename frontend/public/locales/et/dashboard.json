@@ -1,0 +1,26 @@
+{
+  "title": "Õpilaste armatuurlaud",
+  "subtitle": "Tere tulemast tagasi! Siin on ülevaade teie edusammudest.",
+  "stats": {
+    "teachers": "Õpetajate arv",
+    "teachersSubText": "Õpetajad, kellega vestlesite",
+    "conversations": "Vestlus(ed)",
+    "conversationsSubText": "Sõnumeid kokku",
+    "languages": "Toetatud keeled",
+    "languagesSubText": "Kirjutatud ({{written}}) | Verbaalne ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Keeletoe olek",
+    "primary": "Teie põhikeel on",
+    "written": {
+      "title": "Kirjalik tugi",
+      "available": "Saadaval sõnumite saatmiseks",
+      "unsupported": "Ei toetata"
+    },
+    "verbal": {
+      "title": "Verbaalne tugi",
+      "available": "Saadaval reaalajas seansside jaoks",
+      "unsupported": "Ei toetata"
+    }
+  }
+}

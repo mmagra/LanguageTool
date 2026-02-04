@@ -1,0 +1,15 @@
+{
+  "myTeachers": "הודעות",
+  "searchPlaceholder": "חפש מורים...",
+  "noConversations": "עדיין אין שיחות",
+  "unknownTeacher": "מורה לא ידוע",
+  "noMessages": "עדיין אין הודעות",
+  "typing": "הַקלָדָה...",
+  "typePlaceholder": "הקלד את הודעתך בעברית...",
+  "emptyState": {
+    "title": "השיחות שלך",
+    "desc": "בחר מורה בסרגל הצד כדי להתחיל לשאול שאלות או לדון בציונים שלך.",
+    "startPrompt": "התחל שיחה עם המורה שלך"
+  },
+  "refreshList": "רענן רשימה"
+}

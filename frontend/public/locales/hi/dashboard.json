@@ -1,0 +1,26 @@
+{
+  "title": "छात्र डैशबोर्ड",
+  "subtitle": "वापसी पर स्वागत है! यहां आपकी प्रगति का एक सिंहावलोकन है.",
+  "stats": {
+    "teachers": "शिक्षकों की संख्या",
+    "teachersSubText": "जिन शिक्षकों से आपने बातचीत की",
+    "conversations": "बात चिट)",
+    "conversationsSubText": "कुल संदेश",
+    "languages": "समर्थित भाषाएँ",
+    "languagesSubText": "लिखित ({{written}}) | मौखिक ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "भाषा समर्थन स्थिति",
+    "primary": "आपकी प्राथमिक भाषा है",
+    "written": {
+      "title": "लिखित समर्थन",
+      "available": "मैसेजिंग के लिए उपलब्ध है",
+      "unsupported": "समर्थित नहीं"
+    },
+    "verbal": {
+      "title": "मौखिक समर्थन",
+      "available": "लाइव सत्र के लिए उपलब्ध है",
+      "unsupported": "समर्थित नहीं"
+    }
+  }
+}

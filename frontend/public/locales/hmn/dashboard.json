@@ -1,0 +1,26 @@
+{
+  "title": "Tub Kawm Ntawv Dashboard",
+  "subtitle": "Txais tos rov qab! Nov yog ib qho piv txwv ntawm koj qhov kev vam meej.",
+  "stats": {
+    "teachers": "No. ntawm Xib Fwb",
+    "teachersSubText": "Cov xib fwb koj tham nrog",
+    "conversations": "Kev sib tham",
+    "conversationsSubText": "Tag nrho cov lus",
+    "languages": "Lus txhawb",
+    "languagesSubText": "Sau ({{written}}) | Hais lus ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Lus txhawb xwm txheej",
+    "primary": "Koj Cov Lus Tseem Ceeb yog",
+    "written": {
+      "title": "Sau ntawv txhawb nqa",
+      "available": "Muaj rau kev xa xov",
+      "unsupported": "Tsis txhawb"
+    },
+    "verbal": {
+      "title": "Kev txhawb nqa lus",
+      "available": "Muaj rau cov kev sib tham nyob",
+      "unsupported": "Tsis txhawb"
+    }
+  }
+}

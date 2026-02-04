@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "U mo prufilu",
+  "changePassword": "Cambia Password",
+  "helpSupport": "Aiutu è Supportu",
+  "signOut": "Sorte",
+  "notifications": {
+    "title": "Notificazioni",
+    "unread": "missaghji micca letti",
+    "empty": "Nisuna notificazione nova",
+    "viewAll": "Vede tutti i missaghji",
+    "newMessage": "Novu missaghju"
+  },
+  "language": {
+    "switchToNative": "Cambia à a vostra lingua",
+    "switchToEnglish": "Cambia à l'inglese"
+  }
+}

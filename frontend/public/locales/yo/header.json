@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Profaili Mi",
+  "changePassword": "Tun oruko akowole re se",
+  "helpSupport": "Iranlọwọ & Atilẹyin",
+  "signOut": "ifowosi jada",
+  "notifications": {
+    "title": "Awọn iwifunni",
+    "unread": "aika awọn ifiranṣẹ",
+    "empty": "Ko si awọn iwifunni titun",
+    "viewAll": "Wo gbogbo awọn ifiranṣẹ",
+    "newMessage": "Ifiranṣẹ titun"
+  },
+  "language": {
+    "switchToNative": "Yipada si ede Rẹ",
+    "switchToEnglish": "Yipada si English"
+  }
+}

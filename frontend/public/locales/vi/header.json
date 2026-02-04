@@ -1,0 +1,18 @@
+{
+  "title": "Nói",
+  "myProfile": "Hồ sơ của tôi",
+  "changePassword": "Thay đổi mật khẩu",
+  "helpSupport": "Trợ giúp & Hỗ trợ",
+  "signOut": "Đăng xuất",
+  "notifications": {
+    "title": "Thông báo",
+    "unread": "tin nhắn chưa đọc",
+    "empty": "Không có thông báo mới",
+    "viewAll": "Xem tất cả tin nhắn",
+    "newMessage": "Tin nhắn mới"
+  },
+  "language": {
+    "switchToNative": "Chuyển sang ngôn ngữ của bạn",
+    "switchToEnglish": "Chuyển sang tiếng Anh"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "title": "ମୋର ପ୍ରୋଫାଇଲ୍",
+  "editProfile": "ପ୍ରୋଫାଇଲ୍ ସଂପାଦନ କରନ୍ତୁ |",
+  "saveChanges": "ପରିବର୍ତ୍ତନଗୁଡିକ ସଞ୍ଚୟ କରନ୍ତୁ |",
+  "saving": "ସଞ୍ଚୟ ...",
+  "firstName": "ପ୍ରଥମ ନାମ",
+  "lastName": "ଶେଷ ନାମ",
+  "email": "ଇମେଲ୍ ଠିକଣା",
+  "phone": "ଫୋନ୍ ନମ୍ବର |",
+  "grade": "ଗ୍ରେଡ୍",
+  "primaryLanguage": "ପ୍ରାଥମିକ ଭାଷା",
+  "guardianName": "ଅଭିଭାବକ ନାମ |",
+  "guardianRelation": "ଅଭିଭାବକ ସମ୍ପର୍କ |",
+  "selectGrade": "ଗ୍ରେଡ୍ ଚୟନ କରନ୍ତୁ |",
+  "selectLanguage": "ଭାଷା ଚୟନ କରନ୍ତୁ |",
+  "selectRelation": "ସମ୍ପର୍କ ଚୟନ କରନ୍ତୁ |",
+  "studentID": "ID",
+  "role": "ଛାତ୍ର",
+  "errorLoading": "ପ୍ରୋଫାଇଲ୍ ଲୋଡିଙ୍ଗ୍ ତ୍ରୁଟି |",
+  "successUpdate": "ପ୍ରୋଫାଇଲ୍ ସଫଳତାର ସହିତ ଅଦ୍ୟତନ ହେଲା!",
+  "errorUpdate": "ପ୍ରୋଫାଇଲ୍ ଅପଡେଟ୍ କରିବାରେ ବିଫଳ |",
+  "genericError": "ଏକ ତ୍ରୁଟି ଘଟିଲା | ଦୟାକରି ପୁନର୍ବାର ଚେଷ୍ଟା କରନ୍ତୁ |",
+  "relations": {
+    "father": "ପିତା",
+    "mother": "ମା",
+    "other": "ଅନ୍ୟମାନେ |"
+  }
+}

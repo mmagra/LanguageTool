@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Mesazhet",
+  "searchPlaceholder": "Kërko mësuesit...",
+  "noConversations": "Nuk ka ende biseda",
+  "unknownTeacher": "Mësues i panjohur",
+  "noMessages": "Nuk ka ende mesazhe",
+  "typing": "Po shkruan...",
+  "typePlaceholder": "Shkruani mesazhin tuaj në shqip...",
+  "emptyState": {
+    "title": "Bisedat tuaja",
+    "desc": "Zgjidhni një mësues nga shiriti anësor për të filluar të bëni pyetje ose të diskutoni notat tuaja.",
+    "startPrompt": "Filloni një bisedë me mësuesin tuaj"
+  },
+  "refreshList": "Rifresko listën"
+}

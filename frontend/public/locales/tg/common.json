@@ -1,0 +1,13 @@
+{
+  "loading": "Loading...",
+  "error": "Хатогӣ",
+  "save": "Захира кунед",
+  "cancel": "Бекор кардан",
+  "language": "Забон",
+  "switchToEnglish": "Гузариш ба забони англисӣ",
+  "switchToNative": "Гузариш ба {{language}}",
+  "online": "Онлайн",
+  "offline": "Офлайн",
+  "notProvided": "таъмин карда нашудааст",
+  "tryAgain": "Як бори дигар санҷед"
+}

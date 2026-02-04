@@ -1,0 +1,18 @@
+{
+  "title": "Ọnụ okwu",
+  "myProfile": "Profaịlụ m",
+  "changePassword": "Gbanwee okwuntughe",
+  "helpSupport": "Enyemaka & Nkwado",
+  "signOut": "pụọ",
+  "notifications": {
+    "title": "Amamọkwa",
+    "unread": "ozi na-agụghị",
+    "empty": "Enweghị ọkwa ọhụụ",
+    "viewAll": "Lelee ozi niile",
+    "newMessage": "Ozi ọhụrụ"
+  },
+  "language": {
+    "switchToNative": "Banye n'asụsụ gị",
+    "switchToEnglish": "Banye na bekee"
+  }
+}

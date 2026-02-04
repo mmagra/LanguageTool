@@ -1,0 +1,26 @@
+{
+  "title": "ਵਿਦਿਆਰਥੀ ਡੈਸ਼ਬੋਰਡ",
+  "subtitle": "ਵਾਪਸ ਸਵਾਗਤ! ਇੱਥੇ ਤੁਹਾਡੀ ਤਰੱਕੀ ਦੀ ਇੱਕ ਸੰਖੇਪ ਜਾਣਕਾਰੀ ਹੈ।",
+  "stats": {
+    "teachers": "ਅਧਿਆਪਕਾਂ ਦੀ ਗਿਣਤੀ",
+    "teachersSubText": "ਅਧਿਆਪਕ ਜਿਨ੍ਹਾਂ ਨਾਲ ਤੁਸੀਂ ਗੱਲਬਾਤ ਕੀਤੀ",
+    "conversations": "ਗੱਲਬਾਤ",
+    "conversationsSubText": "ਕੁੱਲ ਸੁਨੇਹੇ",
+    "languages": "ਸਮਰਥਿਤ ਭਾਸ਼ਾਵਾਂ",
+    "languagesSubText": "ਲਿਖਿਆ ({{written}}) | ਜ਼ੁਬਾਨੀ ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "ਭਾਸ਼ਾ ਸਹਾਇਤਾ ਸਥਿਤੀ",
+    "primary": "ਤੁਹਾਡੀ ਪ੍ਰਾਇਮਰੀ ਭਾਸ਼ਾ ਹੈ",
+    "written": {
+      "title": "ਲਿਖਤੀ ਸਮਰਥਨ",
+      "available": "ਸੁਨੇਹਾ ਭੇਜਣ ਲਈ ਉਪਲਬਧ ਹੈ",
+      "unsupported": "ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ"
+    },
+    "verbal": {
+      "title": "ਜ਼ੁਬਾਨੀ ਸਹਾਇਤਾ",
+      "available": "ਲਾਈਵ ਸੈਸ਼ਨਾਂ ਲਈ ਉਪਲਬਧ",
+      "unsupported": "ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ"
+    }
+  }
+}

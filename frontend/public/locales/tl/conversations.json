@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Mga mensahe",
+  "searchPlaceholder": "Maghanap ng mga guro...",
+  "noConversations": "Wala pang usapan",
+  "unknownTeacher": "Hindi Kilalang Guro",
+  "noMessages": "Wala pang mensahe",
+  "typing": "Nagta-type...",
+  "typePlaceholder": "I-type ang iyong mensahe sa Filipino...",
+  "emptyState": {
+    "title": "Iyong mga Pag-uusap",
+    "desc": "Pumili ng guro mula sa sidebar para magsimulang magtanong o pag-usapan ang iyong mga marka.",
+    "startPrompt": "Magsimula ng pakikipag-usap sa iyong guro"
+  },
+  "refreshList": "I-refresh ang Listahan"
+}

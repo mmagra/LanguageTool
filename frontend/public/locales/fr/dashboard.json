@@ -1,0 +1,26 @@
+{
+  "title": "Tableau de bord des étudiants",
+  "subtitle": "Content de te revoir! Voici un aperçu de votre progression.",
+  "stats": {
+    "teachers": "Nombre d'enseignants",
+    "teachersSubText": "Les professeurs avec qui vous avez discuté",
+    "conversations": "Conversation(s)",
+    "conversationsSubText": "Nombre total de messages",
+    "languages": "Langues prises en charge",
+    "languagesSubText": "Écrit ({{written}}) | Verbal ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Statut de prise en charge linguistique",
+    "primary": "Votre langue principale est",
+    "written": {
+      "title": "Soutien écrit",
+      "available": "Disponible pour la messagerie",
+      "unsupported": "Non pris en charge"
+    },
+    "verbal": {
+      "title": "Soutien verbal",
+      "available": "Disponible pour les sessions en direct",
+      "unsupported": "Non pris en charge"
+    }
+  }
+}

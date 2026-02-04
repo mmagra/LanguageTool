@@ -1,0 +1,13 @@
+{
+  "loading": "Ana lodawa...",
+  "error": "Kuskure",
+  "save": "Ajiye",
+  "cancel": "Soke",
+  "language": "Harshe",
+  "switchToEnglish": "Canja zuwa Turanci",
+  "switchToNative": "Canja zuwa {{language}}",
+  "online": "Kan layi",
+  "offline": "Offline",
+  "notProvided": "Ba a bayar ba",
+  "tryAgain": "Gwada kuma"
+}

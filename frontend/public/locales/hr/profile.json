@@ -1,0 +1,28 @@
+{
+  "title": "Moj profil",
+  "editProfile": "Uredi profil",
+  "saveChanges": "Spremi promjene",
+  "saving": "Spremanje...",
+  "firstName": "Ime",
+  "lastName": "Prezime",
+  "email": "E-mail adresa",
+  "phone": "Broj telefona",
+  "grade": "Razred",
+  "primaryLanguage": "Primarni jezik",
+  "guardianName": "Ime skrbnika",
+  "guardianRelation": "Odnos skrbnika",
+  "selectGrade": "Odaberite Ocjena",
+  "selectLanguage": "Odaberite jezik",
+  "selectRelation": "Odaberite Odnos",
+  "studentID": "ID",
+  "role": "Student",
+  "errorLoading": "Pogreška pri učitavanju profila",
+  "successUpdate": "Profil je uspješno ažuriran!",
+  "errorUpdate": "Ažuriranje profila nije uspjelo",
+  "genericError": "Došlo je do pogreške. Molimo pokušajte ponovo.",
+  "relations": {
+    "father": "Otac",
+    "mother": "Majka",
+    "other": "ostalo"
+  }
+}

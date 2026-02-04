@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "My Profile",
+  "changePassword": "Chinja password",
+  "helpSupport": "Rubatsiro & Rutsigiro",
+  "signOut": "Buda",
+  "notifications": {
+    "title": "Notifications",
+    "unread": "mameseji asina kuverengwa",
+    "empty": "Hapana zvitsva zviziviso",
+    "viewAll": "Ona mameseji ese",
+    "newMessage": "Mharidzo itsva"
+  },
+  "language": {
+    "switchToNative": "Chinja kuMutauro Wako",
+    "switchToEnglish": "Chinja kuChirungu"
+  }
+}

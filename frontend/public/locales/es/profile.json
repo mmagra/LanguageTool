@@ -1,0 +1,28 @@
+{
+  "title": "Mi perfil",
+  "editProfile": "Editar perfil",
+  "saveChanges": "Guardar cambios",
+  "saving": "Ahorro...",
+  "firstName": "Nombre de pila",
+  "lastName": "Apellido",
+  "email": "Dirección de correo electrónico",
+  "phone": "Número de teléfono",
+  "grade": "Calificación",
+  "primaryLanguage": "Idioma principal",
+  "guardianName": "Nombre del tutor",
+  "guardianRelation": "Relación de tutor",
+  "selectGrade": "Seleccionar grado",
+  "selectLanguage": "Seleccionar idioma",
+  "selectRelation": "Seleccionar relación",
+  "studentID": "IDENTIFICACIÓN",
+  "role": "Alumno",
+  "errorLoading": "Error al cargar el perfil",
+  "successUpdate": "¡Perfil actualizado exitosamente!",
+  "errorUpdate": "No se pudo actualizar el perfil",
+  "genericError": "Se produjo un error. Por favor inténtalo de nuevo.",
+  "relations": {
+    "father": "Padre",
+    "mother": "Madre",
+    "other": "Otro"
+  }
+}

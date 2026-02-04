@@ -1,0 +1,47 @@
+{
+  "title": "Helpo kaj Subteno",
+  "description": "Ni estas ĉi tie por helpi pri ajnaj demandoj aŭ problemoj, kiujn vi povas renkonti dum uzado de nia retejo. Ĉu vi bezonas helpon por komenci, ĉu vi havas demandojn pri funkcio aŭ ĉu vi volas raporti cimon, ni estas ĉi tie por helpi.",
+  "contact": {
+    "title": "Kontaktu Subtenon",
+    "emailTitle": "Retpoŝta Subteno",
+    "emailDesc": "Ni celas respondi ĉiujn retpoŝtojn ene de 24 horoj.",
+    "phoneTitle": "Telefona Subteno",
+    "hours": "Lu-Ve (9am – 5pm)",
+    "footer": "Dankon pro la elekto de nia retejo. Ni kompromitas fari vian sperton kiel eble plej glata kaj agrabla."
+  },
+  "supportedLanguages": {
+    "title": "Listo de Subtenataj Lingvoj",
+    "headers": {
+      "rank": "#",
+      "language": "Lingvo",
+      "translation": "Tradukado (Apo & Poŝtelefono)",
+      "desktop": "Enpersona Komunikado (Tablo)",
+      "mobile": "Enpersona Komunikado (Poŝtelefona Apo)"
+    },
+    "mobileLabels": {
+      "translation": "Tradukitaj Mesaĝoj",
+      "desktop": "Labortablo Persona",
+      "mobile": "Poŝtelefono En-Persono"
+    },
+    "supported": "Subtenita",
+    "notSupported": "Ne Subtenata"
+  },
+  "detailedFeatures": {
+    "title": "Detala Karakterizaĵa Subteno",
+    "subtitle": "Diskonigo de Voĉa Enigo kaj Teksto-Al-Parolado-kapabloj per aparato.",
+    "headers": {
+      "rank": "#",
+      "language": "Lingvo",
+      "translation": "Traduko (Ĉiuj)",
+      "desktopVersion": "Labortabla Versio",
+      "mobileApp": "Poŝtelefono",
+      "voiceInput": "Voĉa Enigo",
+      "tts": "Teksto-al-Parolado"
+    },
+    "mobileHeaders": {
+      "translation": "Traduko",
+      "desktop": "Labortablaj Trajtoj",
+      "mobile": "Trajtoj de Mobile App"
+    }
+  }
+}

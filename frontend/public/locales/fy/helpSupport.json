@@ -1,0 +1,47 @@
+{
+  "title": "Help en stipe",
+  "description": "Wy binne hjir om te helpen mei alle fragen of problemen dy't jo kinne tsjinkomme by it brûken fan ús webapplikaasje. Oft jo help nedich hawwe om te begjinnen, in fraach hawwe oer in funksje, of wolle jo in brek melde, wy binne hjir om te helpen.",
+  "contact": {
+    "title": "Kontakt Support",
+    "emailTitle": "E-post stipe",
+    "emailDesc": "Wy binne fan doel om te reagearjen op alle e-mails binnen 24 oeren.",
+    "phoneTitle": "Phone Support",
+    "hours": "Mo-Fr (9 oere - 5 oere)",
+    "footer": "Tankewol foar it kiezen fan ús webapplikaasje. Wy sette ús yn om jo ûnderfining sa glêd en noflik mooglik te meitsjen."
+  },
+  "supportedLanguages": {
+    "title": "List fan stipe talen",
+    "headers": {
+      "rank": "#",
+      "language": "Taal",
+      "translation": "Oersetting (app en mobyl)",
+      "desktop": "Persoanlike kommunikaasje (buroblêd)",
+      "mobile": "Persoanlike kommunikaasje (Mobile App)"
+    },
+    "mobileLabels": {
+      "translation": "Oersette berjochten",
+      "desktop": "Desktop In-Persoan",
+      "mobile": "Mobile In-Persoan"
+    },
+    "supported": "Stipe",
+    "notSupported": "Net stipe"
+  },
+  "detailedFeatures": {
+    "title": "Detaillearre Feature Support",
+    "subtitle": "Ferdieling fan mooglikheden foar stimynfier en tekst-nei-spraak per apparaat.",
+    "headers": {
+      "rank": "#",
+      "language": "Taal",
+      "translation": "Oersetting (Alles)",
+      "desktopVersion": "Buroblêd Ferzje",
+      "mobileApp": "Mobile App",
+      "voiceInput": "Stim ynfier",
+      "tts": "Tekst-nei-spraak"
+    },
+    "mobileHeaders": {
+      "translation": "Oersetting",
+      "desktop": "Desktop Features",
+      "mobile": "Mobile App Features"
+    }
+  }
+}

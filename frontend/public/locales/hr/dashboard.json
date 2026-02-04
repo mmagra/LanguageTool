@@ -1,0 +1,26 @@
+{
+  "title": "Nadzorna ploča učenika",
+  "subtitle": "Dobro došao nazad! Ovdje je pregled vašeg napretka.",
+  "stats": {
+    "teachers": "Broj nastavnika",
+    "teachersSubText": "Učitelji s kojima ste razgovarali",
+    "conversations": "Razgovor(i)",
+    "conversationsSubText": "Ukupno poruka",
+    "languages": "Podržani jezici",
+    "languagesSubText": "Napisano ({{written}}) | Verbalno ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Status jezične podrške",
+    "primary": "Vaš primarni jezik je",
+    "written": {
+      "title": "Pisana podrška",
+      "available": "Dostupno za slanje poruka",
+      "unsupported": "Nije podržano"
+    },
+    "verbal": {
+      "title": "Verbalna podrška",
+      "available": "Dostupno za sesije uživo",
+      "unsupported": "Nije podržano"
+    }
+  }
+}

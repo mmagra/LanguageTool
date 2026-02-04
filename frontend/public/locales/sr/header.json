@@ -1,0 +1,18 @@
+{
+  "title": "СпокенЕдге",
+  "myProfile": "Мој профил",
+  "changePassword": "Промени лозинку",
+  "helpSupport": "Помоћ и подршка",
+  "signOut": "Одјави се",
+  "notifications": {
+    "title": "Обавештења",
+    "unread": "непрочитане поруке",
+    "empty": "Нема нових обавештења",
+    "viewAll": "Прикажи све поруке",
+    "newMessage": "Нова порука"
+  },
+  "language": {
+    "switchToNative": "Пребаците се на свој језик",
+    "switchToEnglish": "Пребаците се на енглески"
+  }
+}

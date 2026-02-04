@@ -1,0 +1,47 @@
+{
+  "title": "Hulp en ondersteuning",
+  "description": "Wij staan ​​klaar om u te helpen met eventuele vragen of problemen die u tegenkomt tijdens het gebruik van onze webapplicatie. Of u nu hulp nodig heeft om aan de slag te gaan, een vraag heeft over een functie of een bug wilt melden: wij staan ​​klaar om u te helpen.",
+  "contact": {
+    "title": "Neem contact op met ondersteuning",
+    "emailTitle": "E-mailondersteuning",
+    "emailDesc": "Wij streven ernaar om alle e-mails binnen 24 uur te beantwoorden.",
+    "phoneTitle": "Telefonische ondersteuning",
+    "hours": "ma-vr (9.00 – 17.00 uur)",
+    "footer": "Bedankt dat u voor onze webapplicatie heeft gekozen. We doen er alles aan om uw ervaring zo soepel en plezierig mogelijk te maken."
+  },
+  "supportedLanguages": {
+    "title": "Lijst met ondersteunde talen",
+    "headers": {
+      "rank": "#",
+      "language": "Taal",
+      "translation": "Vertaling (app en mobiel)",
+      "desktop": "Persoonlijke communicatie (desktop)",
+      "mobile": "Persoonlijke communicatie (mobiele app)"
+    },
+    "mobileLabels": {
+      "translation": "Vertaalde berichten",
+      "desktop": "Persoonlijk bureaublad",
+      "mobile": "Mobiel persoonlijk"
+    },
+    "supported": "Ondersteund",
+    "notSupported": "Niet ondersteund"
+  },
+  "detailedFeatures": {
+    "title": "Gedetailleerde functieondersteuning",
+    "subtitle": "Uitsplitsing van de mogelijkheden voor spraakinvoer en tekst-naar-spraak per apparaat.",
+    "headers": {
+      "rank": "#",
+      "language": "Taal",
+      "translation": "Vertaling (alle)",
+      "desktopVersion": "Desktopversie",
+      "mobileApp": "Mobiele app",
+      "voiceInput": "Spraakinvoer",
+      "tts": "Tekst-naar-spraak"
+    },
+    "mobileHeaders": {
+      "translation": "Vertaling",
+      "desktop": "Bureaubladfuncties",
+      "mobile": "Functies van mobiele apps"
+    }
+  }
+}

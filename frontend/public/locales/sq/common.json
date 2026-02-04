@@ -1,0 +1,13 @@
+{
+  "loading": "Po ngarkohet...",
+  "error": "Gabim",
+  "save": "Ruaj",
+  "cancel": "Anulo",
+  "language": "Gjuha",
+  "switchToEnglish": "Kalo në anglisht",
+  "switchToNative": "Kalo në {{language}}",
+  "online": "Online",
+  "offline": "Jashtë linje",
+  "notProvided": "Nuk ofrohet",
+  "tryAgain": "Provo sërish"
+}

@@ -1,0 +1,47 @@
+{
+  "title": "Pomoč in podpora",
+  "description": "Tukaj smo, da vam pomagamo pri kakršnih koli vprašanjih ali težavah, na katere lahko naletite med uporabo naše spletne aplikacije. Ne glede na to, ali potrebujete pomoč pri začetku, imate vprašanje o funkciji ali želite prijaviti napako, smo tukaj, da vam pomagamo.",
+  "contact": {
+    "title": "Obrnite se na podporo",
+    "emailTitle": "Podpora po e-pošti",
+    "emailDesc": "Na vsa e-poštna sporočila želimo odgovoriti v 24 urah.",
+    "phoneTitle": "Telefonska podpora",
+    "hours": "Pon–pet (9.00–17.00)",
+    "footer": "Zahvaljujemo se vam za izbiro naše spletne aplikacije. Zavezani smo k temu, da bo vaša izkušnja čim bolj gladka in prijetna."
+  },
+  "supportedLanguages": {
+    "title": "Seznam podprtih jezikov",
+    "headers": {
+      "rank": "#",
+      "language": "Jezik",
+      "translation": "Prevajanje (aplikacije in mobilne naprave)",
+      "desktop": "Osebna komunikacija (namizni računalnik)",
+      "mobile": "Osebna komunikacija (mobilna aplikacija)"
+    },
+    "mobileLabels": {
+      "translation": "Prevedena sporočila",
+      "desktop": "Osebno na namizju",
+      "mobile": "Osebno z mobilnim telefonom"
+    },
+    "supported": "Podprto",
+    "notSupported": "Ni podprto"
+  },
+  "detailedFeatures": {
+    "title": "Podrobna podpora za funkcije",
+    "subtitle": "Razčlenitev zmožnosti glasovnega vnosa in pretvorbe besedila v govor na napravo.",
+    "headers": {
+      "rank": "#",
+      "language": "Jezik",
+      "translation": "Prevod (vse)",
+      "desktopVersion": "Namizna različica",
+      "mobileApp": "Mobilna aplikacija",
+      "voiceInput": "Glasovni vnos",
+      "tts": "Pretvorba besedila v govor"
+    },
+    "mobileHeaders": {
+      "translation": "Prevajanje",
+      "desktop": "Funkcije namizja",
+      "mobile": "Funkcije mobilne aplikacije"
+    }
+  }
+}

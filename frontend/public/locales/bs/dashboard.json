@@ -1,0 +1,26 @@
+{
+  "title": "Student Dashboard",
+  "subtitle": "Dobrodošli nazad! Ovdje je pregled vašeg napretka.",
+  "stats": {
+    "teachers": "br. nastavnika",
+    "teachersSubText": "Nastavnici sa kojima ste razgovarali",
+    "conversations": "razgovor(i)",
+    "conversationsSubText": "Total Messages",
+    "languages": "Podržani jezici",
+    "languagesSubText": "Napisano ({{written}}) | Verbalno ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Status jezičke podrške",
+    "primary": "Vaš primarni jezik je",
+    "written": {
+      "title": "Pismena podrška",
+      "available": "Dostupno za razmjenu poruka",
+      "unsupported": "Nije podržano"
+    },
+    "verbal": {
+      "title": "Verbalna podrška",
+      "available": "Dostupno za sesije uživo",
+      "unsupported": "Nije podržano"
+    }
+  }
+}

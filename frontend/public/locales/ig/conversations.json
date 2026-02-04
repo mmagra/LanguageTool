@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Ozi",
+  "searchPlaceholder": "Chọọ ndị nkuzi...",
+  "noConversations": "Enweghị mkparịta ụka ma",
+  "unknownTeacher": "Onye nkuzi amaghi ama",
+  "noMessages": "Enweghị ozi ma",
+  "typing": "Na-apị...",
+  "typePlaceholder": "Tinye ozi gị n'asusu Igbo...",
+  "emptyState": {
+    "title": "Mkparịta ụka gị",
+    "desc": "Họrọ onye nkuzi site na sidebar ka ịmalite ịjụ ajụjụ ma ọ bụ kparịta akara ule gị.",
+    "startPrompt": "Gị na onye nkụzi gị malite mkparịta ụka"
+  },
+  "refreshList": "Ndepụta ume ọhụrụ"
+}

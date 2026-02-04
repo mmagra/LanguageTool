@@ -1,0 +1,47 @@
+{
+  "title": "Pitulung jeung Rojongan",
+  "description": "Kami di dieu pikeun ngabantosan patarosan atanapi masalah anu anjeun pikahoyong nalika nganggo aplikasi wéb kami. Naha anjeun peryogi bantosan ngamimitian, gaduh patarosan ngeunaan fitur, atanapi hoyong ngalaporkeun bug, kami di dieu pikeun ngabantosan.",
+  "contact": {
+    "title": "Kontak Rojongan",
+    "emailTitle": "Rojongan surélék",
+    "emailDesc": "Kami tujuanana pikeun ngabales sadaya email dina 24 jam.",
+    "phoneTitle": "Rojongan telepon",
+    "hours": "Sen-Jum (9 am - 5 pm)",
+    "footer": "Hatur nuhun pikeun milih aplikasi wéb kami. Kami komitmen pikeun ngajantenkeun pangalaman anjeun langkung lancar sareng pikaresepeun."
+  },
+  "supportedLanguages": {
+    "title": "Daptar Basa nu Dirojong",
+    "headers": {
+      "rank": "#",
+      "language": "Basa",
+      "translation": "Tarjamahan (Aplikasi & Seluler)",
+      "desktop": "Komunikasi Pribadi (Desktop)",
+      "mobile": "Komunikasi Pribadi (Aplikasi Seluler)"
+    },
+    "mobileLabels": {
+      "translation": "Talatah Tarjamah",
+      "desktop": "Desktop Pribadi",
+      "mobile": "Mobile Pribadi"
+    },
+    "supported": "Dirojong",
+    "notSupported": "Teu Dirojong"
+  },
+  "detailedFeatures": {
+    "title": "Rojongan Fitur lengkep",
+    "subtitle": "Ngarecah kamampuan Input Sora sareng Text-to-Speech per alat.",
+    "headers": {
+      "rank": "#",
+      "language": "Basa",
+      "translation": "Tarjamahan (Sadaya)",
+      "desktopVersion": "Vérsi Desktop",
+      "mobileApp": "Aplikasi Mobile",
+      "voiceInput": "Input Sora",
+      "tts": "Text-to-Speech"
+    },
+    "mobileHeaders": {
+      "translation": "Tarjamahan",
+      "desktop": "Fitur Desktop",
+      "mobile": "Fitur Aplikasi Mobile"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Môj profil",
+  "changePassword": "Zmeniť heslo",
+  "helpSupport": "Pomoc a podpora",
+  "signOut": "Odhláste sa",
+  "notifications": {
+    "title": "Upozornenia",
+    "unread": "neprečítané správy",
+    "empty": "Žiadne nové upozornenia",
+    "viewAll": "Zobraziť všetky správy",
+    "newMessage": "Nová správa"
+  },
+  "language": {
+    "switchToNative": "Prepnite na svoj jazyk",
+    "switchToEnglish": "Prepnúť do angličtiny"
+  }
+}

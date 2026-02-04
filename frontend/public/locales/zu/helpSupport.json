@@ -1,0 +1,47 @@
+{
+  "title": "Usizo Nokwesekwa",
+  "description": "Sikhona ukuze sisize nganoma imiphi imibuzo noma izinkinga ongahlangabezana nazo ngenkathi usebenzisa uhlelo lwethu lwewebhu. Kungakhathaliseki ukuthi udinga usizo ukuze uqalise, unombuzo mayelana nesici, noma ufuna ukubika isiphazamisi, silapha ukuze sikusize.",
+  "contact": {
+    "title": "Xhumana Nosekelo",
+    "emailTitle": "Usekelo lwe-imeyili",
+    "emailDesc": "Sihlose ukuphendula wonke ama-imeyili phakathi namahora angu-24.",
+    "phoneTitle": "Ukusekelwa Kwefoni",
+    "hours": "Msombuluko-Lwesihlanu (9 am - 5pm)",
+    "footer": "Siyabonga ngokukhetha isicelo sethu sewebhu. Sizibophezele ekwenzeni ukuzizwisa kwakho kube bushelelezi futhi kujabulise ngangokunokwenzeka."
+  },
+  "supportedLanguages": {
+    "title": "Uhlu Lwezilimi Ezisekelwe",
+    "headers": {
+      "rank": "#",
+      "language": "Ulimi",
+      "translation": "Ukuhumusha (Uhlelo lokusebenza neselula)",
+      "desktop": "Ukuxhumana Kwangaphakathi Komuntu (Ideskithophu)",
+      "mobile": "Ukuxhumana Kwangaphakathi Komuntu (Uhlelo Lokusebenza Lweselula)"
+    },
+    "mobileLabels": {
+      "translation": "Imilayezo Ehunyushiwe",
+      "desktop": "Ideskithophu Ngomuntu",
+      "mobile": "Iselula Ngomuntu"
+    },
+    "supported": "Isekelwe",
+    "notSupported": "Akusekelwe"
+  },
+  "detailedFeatures": {
+    "title": "Usekelo Lwesici Oluningiliziwe",
+    "subtitle": "Ukwahlukaniswa kwamakhono Okufaka Izwi kanye namandla okuguqula umbhalo ube inkulumo kudivayisi ngayinye.",
+    "headers": {
+      "rank": "#",
+      "language": "Ulimi",
+      "translation": "Ukuhumusha (Konke)",
+      "desktopVersion": "Inguqulo yedeskithophu",
+      "mobileApp": "Uhlelo lokusebenza lweselula",
+      "voiceInput": "Okokufaka kwezwi",
+      "tts": "Umbhalo-kuya-Enkulumweni"
+    },
+    "mobileHeaders": {
+      "translation": "Ukuhumusha",
+      "desktop": "Izici zedeskithophu",
+      "mobile": "Izici Zohlelo Lokusebenza Lweselula"
+    }
+  }
+}

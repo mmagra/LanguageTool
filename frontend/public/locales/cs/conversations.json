@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Zprávy",
+  "searchPlaceholder": "Hledat učitele...",
+  "noConversations": "Zatím žádné konverzace",
+  "unknownTeacher": "Neznámý učitel",
+  "noMessages": "Zatím žádné zprávy",
+  "typing": "Psaní...",
+  "typePlaceholder": "Napište zprávu v češtině...",
+  "emptyState": {
+    "title": "Vaše konverzace",
+    "desc": "Vyberte učitele z postranního panelu a začněte klást otázky nebo diskutovat o svých známkách.",
+    "startPrompt": "Zahajte konverzaci se svým učitelem"
+  },
+  "refreshList": "Obnovit seznam"
+}

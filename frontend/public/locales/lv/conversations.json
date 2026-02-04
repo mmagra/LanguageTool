@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Ziņojumi",
+  "searchPlaceholder": "Meklēt skolotājus...",
+  "noConversations": "Vēl nav sarunu",
+  "unknownTeacher": "Nezināms Skolotājs",
+  "noMessages": "Vēl nav ziņojumu",
+  "typing": "Rakstīšana...",
+  "typePlaceholder": "Ieraksti savu ziņu latviešu valodā...",
+  "emptyState": {
+    "title": "Jūsu sarunas",
+    "desc": "Sānjoslā atlasiet skolotāju, lai sāktu uzdot jautājumus vai apspriest savus vērtējumus.",
+    "startPrompt": "Sāciet sarunu ar savu skolotāju"
+  },
+  "refreshList": "Atsvaidzināt sarakstu"
+}

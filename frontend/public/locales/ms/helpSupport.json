@@ -1,0 +1,47 @@
+{
+  "title": "Bantuan dan Sokongan",
+  "description": "Kami di sini untuk membantu dengan sebarang soalan atau isu yang mungkin anda hadapi semasa menggunakan aplikasi web kami. Sama ada anda memerlukan bantuan untuk bermula, mempunyai soalan tentang ciri atau ingin melaporkan pepijat, kami sedia membantu.",
+  "contact": {
+    "title": "Hubungi Sokongan",
+    "emailTitle": "Sokongan E-mel",
+    "emailDesc": "Kami menyasarkan untuk membalas semua e-mel dalam masa 24 jam.",
+    "phoneTitle": "Sokongan Telefon",
+    "hours": "Isnin-Jumaat (9 pagi - 5 petang)",
+    "footer": "Terima kasih kerana memilih aplikasi web kami. Kami komited untuk menjadikan pengalaman anda selancar dan menyeronokkan yang mungkin."
+  },
+  "supportedLanguages": {
+    "title": "Senarai Bahasa yang Disokong",
+    "headers": {
+      "rank": "#",
+      "language": "Bahasa",
+      "translation": "Terjemahan (Apl & Mudah Alih)",
+      "desktop": "Komunikasi Sendiri (Desktop)",
+      "mobile": "Komunikasi Dalam Orang (Apl Mudah Alih)"
+    },
+    "mobileLabels": {
+      "translation": "Mesej Diterjemah",
+      "desktop": "Desktop Secara Sendiri",
+      "mobile": "Mudah Alih Secara Persendirian"
+    },
+    "supported": "Disokong",
+    "notSupported": "Tidak Disokong"
+  },
+  "detailedFeatures": {
+    "title": "Sokongan Ciri Terperinci",
+    "subtitle": "Pecahan keupayaan Input Suara dan Text-to-Speech bagi setiap peranti.",
+    "headers": {
+      "rank": "#",
+      "language": "Bahasa",
+      "translation": "Terjemahan (Semua)",
+      "desktopVersion": "Versi Desktop",
+      "mobileApp": "Apl Mudah Alih",
+      "voiceInput": "Input Suara",
+      "tts": "Teks-ke-Pertuturan"
+    },
+    "mobileHeaders": {
+      "translation": "Terjemahan",
+      "desktop": "Ciri Desktop",
+      "mobile": "Ciri Apl Mudah Alih"
+    }
+  }
+}

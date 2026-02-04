@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Imiyalezo",
+  "searchPlaceholder": "Phendla abafundisi...",
+  "noConversations": "Akukho ncoko okwangoku",
+  "unknownTeacher": "Mfundisi ongaziwayo",
+  "noMessages": "Akukho miyalezo okwangoku",
+  "typing": "Ukuchwetheza...",
+  "typePlaceholder": "Chwetheza umyalezo wakho ngesiXhosa...",
+  "emptyState": {
+    "title": "Iincoko Zakho",
+    "desc": "Khetha utitshala kwibar esecaleni ukuze aqalise ukubuza imibuzo okanye axoxe ngamabakala akho.",
+    "startPrompt": "Qala incoko notitshala wakho"
+  },
+  "refreshList": "Uluhlu Lokuhlaziya"
+}

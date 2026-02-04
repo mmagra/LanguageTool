@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Messagen",
+  "searchPlaceholder": "Enseignanten sichen ...",
+  "noConversations": "Keng Gespréicher nach",
+  "unknownTeacher": "Onbekannt Enseignant",
+  "noMessages": "Nee Messagen nach",
+  "typing": "Tippen ...",
+  "typePlaceholder": "Schreift Äre Message op Lëtzebuergesch...",
+  "emptyState": {
+    "title": "Är Gespréicher",
+    "desc": "Wielt en Enseignant aus der Sidebar fir unzefänken Froen ze stellen oder Är Bewäertungen ze diskutéieren.",
+    "startPrompt": "Start e Gespréich mat Ärem Enseignant"
+  },
+  "refreshList": "Lëscht opfrëschen"
+}

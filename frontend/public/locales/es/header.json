@@ -1,0 +1,18 @@
+{
+  "title": "Borde hablado",
+  "myProfile": "Mi perfil",
+  "changePassword": "Cambiar la contraseña",
+  "helpSupport": "Ayuda y soporte",
+  "signOut": "desconectar",
+  "notifications": {
+    "title": "Notificaciones",
+    "unread": "mensajes no leídos",
+    "empty": "No hay notificaciones nuevas",
+    "viewAll": "Ver todos los mensajes",
+    "newMessage": "Nuevo mensaje"
+  },
+  "language": {
+    "switchToNative": "Cambia a tu idioma",
+    "switchToEnglish": "Cambiar al inglés"
+  }
+}

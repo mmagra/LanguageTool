@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "منهنجو پروفائل",
+  "changePassword": "پاسورڊ تبديل ڪريو",
+  "helpSupport": "مدد ۽ مدد",
+  "signOut": "سائن آئوٽ ڪريو",
+  "notifications": {
+    "title": "نوٽيفڪيشن",
+    "unread": "اڻ پڙهيل پيغام",
+    "empty": "ڪابه نئين اطلاع نه آهي",
+    "viewAll": "سڀ پيغام ڏسو",
+    "newMessage": "نئون پيغام"
+  },
+  "language": {
+    "switchToNative": "پنھنجي ٻولي ڏانھن وڃو",
+    "switchToEnglish": "انگريزي ۾ تبديل ڪريو"
+  }
+}

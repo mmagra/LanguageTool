@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "የእኔ መገለጫ",
+  "changePassword": "የይለፍ ቃል ቀይር",
+  "helpSupport": "እገዛ እና ድጋፍ",
+  "signOut": "ዘግተህ ውጣ",
+  "notifications": {
+    "title": "ማሳወቂያዎች",
+    "unread": "ያልተነበቡ መልዕክቶች",
+    "empty": "ምንም አዲስ ማሳወቂያዎች የሉም",
+    "viewAll": "ሁሉንም መልዕክቶች ይመልከቱ",
+    "newMessage": "አዲስ መልእክት"
+  },
+  "language": {
+    "switchToNative": "ወደ ቋንቋህ ቀይር",
+    "switchToEnglish": "ወደ እንግሊዝኛ ቀይር"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Студентлар ассортименты",
+  "subtitle": "Рәхим итегез! Менә сезнең алгарышка күзәтү.",
+  "stats": {
+    "teachers": "Укытучы (лар) юк",
+    "teachersSubText": "Сез сөйләшкән укытучылар",
+    "conversations": "Сөйләшү",
+    "conversationsSubText": "Гомуми хәбәрләр",
+    "languages": "Ярдәмләнгән телләр",
+    "languagesSubText": "Язылган ({{written}}) | Телдән ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Телгә ярдәм статусы",
+    "primary": "Сезнең төп тел",
+    "written": {
+      "title": "Язма ярдәм",
+      "available": "Хәбәрләшү өчен бар",
+      "unsupported": "Ярдәм итми"
+    },
+    "verbal": {
+      "title": "Телдән ярдәм",
+      "available": "Тере сессияләр өчен бар",
+      "unsupported": "Ярдәм итми"
+    }
+  }
+}

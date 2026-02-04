@@ -1,0 +1,26 @@
+{
+  "title": "የተማሪ ዳሽቦርድ",
+  "subtitle": "እንኳን ደህና መጣህ! የሂደትዎ አጠቃላይ እይታ ይኸውና።",
+  "stats": {
+    "teachers": "የአስተማሪ(ዎች) ቁጥር",
+    "teachersSubText": "ያወጋሃቸው አስተማሪዎች",
+    "conversations": "ውይይት(ዎች)",
+    "conversationsSubText": "ጠቅላላ መልዕክቶች",
+    "languages": "የሚደገፉ ቋንቋዎች",
+    "languagesSubText": "የተጻፈ ({{written}}) | የቃል ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "የቋንቋ ድጋፍ ሁኔታ",
+    "primary": "ዋናው ቋንቋህ ነው።",
+    "written": {
+      "title": "የጽሑፍ ድጋፍ",
+      "available": "ለመልእክት ይገኛል።",
+      "unsupported": "አይደገፍም።"
+    },
+    "verbal": {
+      "title": "የቃል ድጋፍ",
+      "available": "ለቀጥታ ክፍለ ጊዜዎች ይገኛል።",
+      "unsupported": "አይደገፍም።"
+    }
+  }
+}

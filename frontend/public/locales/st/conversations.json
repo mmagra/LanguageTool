@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Melaetsa",
+  "searchPlaceholder": "Batla matichere...",
+  "noConversations": "Ha ho na lipuisano",
+  "unknownTeacher": "Mosuoe ea sa Tsejoeng",
+  "noMessages": "Ha ho na melaetsa",
+  "typing": "E ngola...",
+  "typePlaceholder": "Ngola molaetsa wa hao ka Sesotho...",
+  "emptyState": {
+    "title": "Lipuisano Tsa Hao",
+    "desc": "Kgetha titjhere ka thoko ho qala ho botsa dipotso kapa ho buisana ka dimaraka tsa hao.",
+    "startPrompt": "Qala moqoqo le tichere ea hao"
+  },
+  "refreshList": "Hlahisa Lethathamo"
+}

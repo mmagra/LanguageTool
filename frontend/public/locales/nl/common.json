@@ -1,0 +1,13 @@
+{
+  "loading": "Laden...",
+  "error": "Fout",
+  "save": "Redden",
+  "cancel": "Annuleren",
+  "language": "Taal",
+  "switchToEnglish": "Schakel over naar Engels",
+  "switchToNative": "Schakel over naar {{taal}}",
+  "online": "Online",
+  "offline": "Offline",
+  "notProvided": "Niet voorzien",
+  "tryAgain": "Probeer het opnieuw"
+}

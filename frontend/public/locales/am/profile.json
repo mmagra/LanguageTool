@@ -1,0 +1,28 @@
+{
+  "title": "የእኔ መገለጫ",
+  "editProfile": "መገለጫ አርትዕ",
+  "saveChanges": "ለውጦችን ያስቀምጡ",
+  "saving": "በማስቀመጥ ላይ...",
+  "firstName": "የመጀመሪያ ስም",
+  "lastName": "የአያት ስም",
+  "email": "ኢሜል አድራሻ",
+  "phone": "ስልክ ቁጥር",
+  "grade": "ደረጃ",
+  "primaryLanguage": "ዋና ቋንቋ",
+  "guardianName": "ጠባቂ ስም",
+  "guardianRelation": "ጠባቂ ግንኙነት",
+  "selectGrade": "ደረጃ ይምረጡ",
+  "selectLanguage": "ቋንቋ ይምረጡ",
+  "selectRelation": "ግንኙነትን ይምረጡ",
+  "studentID": "መታወቂያ",
+  "role": "ተማሪ",
+  "errorLoading": "መገለጫን መጫን ላይ ስህተት",
+  "successUpdate": "መገለጫ በተሳካ ሁኔታ ዘምኗል!",
+  "errorUpdate": "መገለጫን ማዘመን አልተሳካም።",
+  "genericError": "ስህተት ተከስቷል። እባክህ እንደገና ሞክር።",
+  "relations": {
+    "father": "አባት",
+    "mother": "እናት",
+    "other": "ሌላ"
+  }
+}

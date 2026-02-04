@@ -1,0 +1,18 @@
+{
+  "title": "Iomall air a labhairt",
+  "myProfile": "Mo Phròifil",
+  "changePassword": "Atharraich Facal-faire",
+  "helpSupport": "Cuideachadh & Taic",
+  "signOut": "Soidhnig a-mach",
+  "notifications": {
+    "title": "Brathan",
+    "unread": "teachdaireachdan gun leughadh",
+    "empty": "Gun sanasan ùra",
+    "viewAll": "Seall a h-uile brath",
+    "newMessage": "Teachdaireachd ùr"
+  },
+  "language": {
+    "switchToNative": "Atharraich gu do chànan",
+    "switchToEnglish": "Tionndaidh gu Beurla"
+  }
+}

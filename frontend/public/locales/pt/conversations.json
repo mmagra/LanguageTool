@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Mensagens",
+  "searchPlaceholder": "Pesquisar professores...",
+  "noConversations": "Ainda não há conversas",
+  "unknownTeacher": "Professor Desconhecido",
+  "noMessages": "Nenhuma mensagem ainda",
+  "typing": "Digitando...",
+  "typePlaceholder": "Digite sua mensagem em português...",
+  "emptyState": {
+    "title": "Suas conversas",
+    "desc": "Selecione um professor na barra lateral para começar a fazer perguntas ou discutir suas notas.",
+    "startPrompt": "Inicie uma conversa com seu professor"
+  },
+  "refreshList": "Atualizar lista"
+}

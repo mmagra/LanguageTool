@@ -1,0 +1,26 @@
+{
+  "title": "Student Dashboard",
+  "subtitle": "Wëllkomm zréck! Hei ass en Iwwerbléck iwwer Är Fortschrëtter.",
+  "stats": {
+    "teachers": "Zuel vun Enseignanten",
+    "teachersSubText": "Léierpersonal mat deenen Dir geschwat hutt",
+    "conversations": "Gespréich(en)",
+    "conversationsSubText": "Total Messagen",
+    "languages": "Ënnerstëtzt Sproochen",
+    "languagesSubText": "Geschriwen ({{written}}) | Verbal ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Sprooch Ënnerstëtzung Status",
+    "primary": "Är Primärsprooch ass",
+    "written": {
+      "title": "Geschriwen Ënnerstëtzung",
+      "available": "Verfügbar fir Messagerie",
+      "unsupported": "Net ënnerstëtzt"
+    },
+    "verbal": {
+      "title": "Verbal Ënnerstëtzung",
+      "available": "Verfügbar fir Live Sessiounen",
+      "unsupported": "Net ënnerstëtzt"
+    }
+  }
+}

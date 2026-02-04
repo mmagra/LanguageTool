@@ -1,0 +1,28 @@
+{
+  "title": "Mo Phròifil",
+  "editProfile": "Deasaich Pròifil",
+  "saveChanges": "Sàbhail Atharrachaidhean",
+  "saving": "A' sàbhaladh...",
+  "firstName": "A’ chiad ainm",
+  "lastName": "Ainm deireannach",
+  "email": "Seòladh puist-d",
+  "phone": "Àireamh fòn",
+  "grade": "Ìre",
+  "primaryLanguage": "Cànan Bun-sgoile",
+  "guardianName": "Ainm Neach-gleidhidh",
+  "guardianRelation": "Gaol Guardian",
+  "selectGrade": "Tagh Ìre",
+  "selectLanguage": "Tagh Cànan",
+  "selectRelation": "Tagh Càirdeas",
+  "studentID": "ID",
+  "role": "Oileanach",
+  "errorLoading": "Thachair mearachd le luchdachadh pròifil",
+  "successUpdate": "Pròifil air ùrachadh gu soirbheachail!",
+  "errorUpdate": "Dh'fhàillig ùrachadh na pròifil",
+  "genericError": "Thachair mearachd. Feuch ris a-rithist.",
+  "relations": {
+    "father": "Athair",
+    "mother": "Màthair",
+    "other": "Eile"
+  }
+}

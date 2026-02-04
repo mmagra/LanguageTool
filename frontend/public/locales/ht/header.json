@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Profil mwen an",
+  "changePassword": "Chanje modpas",
+  "helpSupport": "Èd & Sipò",
+  "signOut": "Siyen soti",
+  "notifications": {
+    "title": "Notifikasyon",
+    "unread": "mesaj ki pa li yo",
+    "empty": "Pa gen nouvo notifikasyon",
+    "viewAll": "Gade tout mesaj yo",
+    "newMessage": "Nouvo mesaj"
+  },
+  "language": {
+    "switchToNative": "Chanje nan lang ou",
+    "switchToEnglish": "Chanje nan angle"
+  }
+}

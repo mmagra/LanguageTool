@@ -1,0 +1,13 @@
+{
+  "loading": "Yüklənir...",
+  "error": "Xəta",
+  "save": "Saxla",
+  "cancel": "Ləğv et",
+  "language": "Dil",
+  "switchToEnglish": "İngilis dilinə keçin",
+  "switchToNative": "{{language}} dilinə keçin",
+  "online": "Onlayn",
+  "offline": "Oflayn",
+  "notProvided": "təmin edilməyib",
+  "tryAgain": "Yenidən cəhd edin"
+}

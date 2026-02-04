@@ -1,0 +1,28 @@
+{
+  "title": "Iphrofayela Yami",
+  "editProfile": "Hlela iphrofayela",
+  "saveChanges": "Londoloza Izinguquko",
+  "saving": "Iyalondoloza...",
+  "firstName": "Igama",
+  "lastName": "Isibongo",
+  "email": "Ikheli le-imeyili",
+  "phone": "Inombolo yocingo",
+  "grade": "Ibanga",
+  "primaryLanguage": "Ulimi Oluyisisekelo",
+  "guardianName": "Igama lomnakekeli",
+  "guardianRelation": "Guardian Relation",
+  "selectGrade": "Khetha Ibanga",
+  "selectLanguage": "Khetha Ulimi",
+  "selectRelation": "Khetha Ubudlelwano",
+  "studentID": "I-ID",
+  "role": "Mfundi",
+  "errorLoading": "Iphutha Lokulayisha Iphrofayela",
+  "successUpdate": "Iphrofayela ibuyekezwe ngempumelelo!",
+  "errorUpdate": "Yehlulekile ukubuyekeza iphrofayela",
+  "genericError": "Kwenzeke iphutha. Sicela uzame futhi.",
+  "relations": {
+    "father": "Baba",
+    "mother": "Umama",
+    "other": "Okunye"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "title": "Enyemaka na Nkwado",
+  "description": "Anyị nọ ebe a iji nyere aka na ajụjụ ma ọ bụ nsogbu ọ bụla ị nwere ike izute mgbe ị na-eji ngwa weebụ anyị. Ma ịchọrọ enyemaka ịmalite, nwee ajụjụ gbasara njirimara, ma ọ bụ chọọ ịkọ ahụhụ, anyị nọ ebe a iji nyere aka.",
+  "contact": {
+    "title": "Nkwado kọntaktị",
+    "emailTitle": "Nkwado email",
+    "emailDesc": "Anyị bu n'obi ịzaghachi ozi-e niile n'ime awa 24.",
+    "phoneTitle": "Nkwado ekwentị",
+    "hours": "Mon-Fri (9 ụtụtụ - 5 mgbede)",
+    "footer": "Daalụ maka ịhọrọ ngwa weebụ anyị. Anyị na-agba mbọ ime ka ahụmịhe gị dị nro ma tọọ ụtọ dịka o kwere mee."
+  },
+  "supportedLanguages": {
+    "title": "Ndepụta asụsụ akwadoro",
+    "headers": {
+      "rank": "#",
+      "language": "Asụsụ",
+      "translation": "Ntụgharị asụsụ (ngwa & mkpanaka)",
+      "desktop": "Nkwukọrịta Onwe Onye (Desktọpụ)",
+      "mobile": "Nkwukọrịta n'ime mmadụ (ngwa mkpanaka)"
+    },
+    "mobileLabels": {
+      "translation": "Ozi atụgharịrị",
+      "desktop": "Desktọpụ n'ime mmadụ",
+      "mobile": "Mobile N'ime Onye"
+    },
+    "supported": "Akwadoro",
+    "notSupported": "Akwadoghi"
+  },
+  "detailedFeatures": {
+    "title": "Nkwado njirimara zuru oke",
+    "subtitle": "Nbibie nke ntinye olu na ike ederede gaa na okwu kwa ngwaọrụ.",
+    "headers": {
+      "rank": "#",
+      "language": "Asụsụ",
+      "translation": "Ntụgharị asụsụ (Niile)",
+      "desktopVersion": "Ụdị Desktop",
+      "mobileApp": "Ngwa mkpanaaka",
+      "voiceInput": "Ntinye olu",
+      "tts": "Ederede-gaa-na-okwu"
+    },
+    "mobileHeaders": {
+      "translation": "Ntụgharị asụsụ",
+      "desktop": "Atụmatụ Desktop",
+      "mobile": "Njirimara ngwa mkpanaaka"
+    }
+  }
+}

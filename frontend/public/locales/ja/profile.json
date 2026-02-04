@@ -1,0 +1,28 @@
+{
+  "title": "私のプロフィール",
+  "editProfile": "プロフィールの編集",
+  "saveChanges": "変更を保存",
+  "saving": "保存中...",
+  "firstName": "ファーストネーム",
+  "lastName": "苗字",
+  "email": "電子メールアドレス",
+  "phone": "電話番号",
+  "grade": "学年",
+  "primaryLanguage": "第一言語",
+  "guardianName": "守護者名",
+  "guardianRelation": "後見関係",
+  "selectGrade": "グレードを選択してください",
+  "selectLanguage": "言語の選択",
+  "selectRelation": "関係の選択",
+  "studentID": "ID",
+  "role": "学生",
+  "errorLoading": "プロファイルの読み込みエラー",
+  "successUpdate": "プロフィールが正常に更新されました。",
+  "errorUpdate": "プロフィールの更新に失敗しました",
+  "genericError": "エラーが発生しました。もう一度試してください。",
+  "relations": {
+    "father": "父親",
+    "mother": "母親",
+    "other": "他の"
+  }
+}

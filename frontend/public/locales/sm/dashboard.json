@@ -1,0 +1,26 @@
+{
+  "title": "Laupapa o tamaiti aoga",
+  "subtitle": "Maliu mai! O se aotelega lenei o lou alualu i luma.",
+  "stats": {
+    "teachers": "Numera (s) Faiaoga",
+    "teachersSubText": "Faiaoga na e talanoa i ai",
+    "conversations": "Talanoaga (s)",
+    "conversationsSubText": "Aofa'i Feau",
+    "languages": "Gagana Lagolago",
+    "languagesSubText": "Tusia ({{written}}) | Tulaga ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Tulaga Lagolago Gagana",
+    "primary": "O lau Gagana Muamua",
+    "written": {
+      "title": "Lagolago Tusitusi",
+      "available": "Avanoa mo fe'au",
+      "unsupported": "Le lagolagoina"
+    },
+    "verbal": {
+      "title": "Lagolago Upu",
+      "available": "Avanoa mo sauniga tuusao",
+      "unsupported": "Le lagolagoina"
+    }
+  }
+}

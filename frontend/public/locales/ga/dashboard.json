@@ -1,0 +1,26 @@
+{
+  "title": "Painéal na Mac Léinn",
+  "subtitle": "Fáilte ar ais! Seo forbhreathnú ar do dhul chun cinn.",
+  "stats": {
+    "teachers": "Líon Múinteoir(í)",
+    "teachersSubText": "Múinteoirí ar labhair tú leo",
+    "conversations": "comhrá(í)",
+    "conversationsSubText": "Teachtaireachtaí Iomlána",
+    "languages": "Teangacha Tacaithe",
+    "languagesSubText": "Scríofa ({{written}}) | Briathartha (_PH_1__)"
+  },
+  "languageStatus": {
+    "title": "Stádas Tacaíochta Teanga",
+    "primary": "Is í do Phríomhtheanga",
+    "written": {
+      "title": "Tacaíocht Scríofa",
+      "available": "Ar fáil le haghaidh teachtaireachtaí",
+      "unsupported": "Ní thacaítear leis"
+    },
+    "verbal": {
+      "title": "Tacaíocht Briathartha",
+      "available": "Ar fáil le haghaidh seisiúin bheo",
+      "unsupported": "Ní thacaítear leis"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Student Dashboard",
+  "subtitle": "Takulandilaninso! Nazi mwachidule za kupita patsogolo kwanu.",
+  "stats": {
+    "teachers": "Nambala ya Aphunzitsi",
+    "teachersSubText": "Aphunzitsi omwe mudacheza nawo",
+    "conversations": "Zokambirana",
+    "conversationsSubText": "Mauthenga Onse",
+    "languages": "Zinenero Zothandizidwa",
+    "languagesSubText": "Zalembedwa ({{written}}) | Mawu ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Mkhalidwe Wothandizira Chiyankhulo",
+    "primary": "Chinenero Chanu Choyambirira ndi",
+    "written": {
+      "title": "Thandizo Lolemba",
+      "available": "Zopezeka potumizirana mauthenga",
+      "unsupported": "Osathandizidwa"
+    },
+    "verbal": {
+      "title": "Chithandizo cha Mawu",
+      "available": "Zilipo pa magawo amoyo",
+      "unsupported": "Osathandizidwa"
+    }
+  }
+}

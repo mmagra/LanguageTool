@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Oma profiili",
+  "changePassword": "Vaihda salasana",
+  "helpSupport": "Apua ja tuki",
+  "signOut": "Kirjaudu ulos",
+  "notifications": {
+    "title": "Ilmoitukset",
+    "unread": "lukemattomia viestejä",
+    "empty": "Ei uusia ilmoituksia",
+    "viewAll": "Katso kaikki viestit",
+    "newMessage": "Uusi viesti"
+  },
+  "language": {
+    "switchToNative": "Vaihda kielellesi",
+    "switchToEnglish": "Vaihda englanniksi"
+  }
+}

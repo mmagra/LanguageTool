@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Meldinger",
+  "searchPlaceholder": "Søk etter lærere...",
+  "noConversations": "Ingen samtaler ennå",
+  "unknownTeacher": "Ukjent lærer",
+  "noMessages": "Ingen meldinger ennå",
+  "typing": "Skriver...",
+  "typePlaceholder": "Skriv inn meldingen din på norsk...",
+  "emptyState": {
+    "title": "Dine samtaler",
+    "desc": "Velg en lærer fra sidefeltet for å begynne å stille spørsmål eller diskutere karakterene dine.",
+    "startPrompt": "Start en samtale med læreren din"
+  },
+  "refreshList": "Oppdater liste"
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Min profil",
+  "editProfile": "Redigera profil",
+  "saveChanges": "Spara ändringar",
+  "saving": "Sparande...",
+  "firstName": "Förnamn",
+  "lastName": "Efternamn",
+  "email": "E-postadress",
+  "phone": "Telefonnummer",
+  "grade": "Kvalitet",
+  "primaryLanguage": "Primärt språk",
+  "guardianName": "Förmyndarens namn",
+  "guardianRelation": "Förmyndarrelation",
+  "selectGrade": "Välj Betyg",
+  "selectLanguage": "Välj Språk",
+  "selectRelation": "Välj Relation",
+  "studentID": "ID",
+  "role": "Student",
+  "errorLoading": "Fel vid laddning av profil",
+  "successUpdate": "Profilen har uppdaterats!",
+  "errorUpdate": "Det gick inte att uppdatera profilen",
+  "genericError": "Ett fel uppstod. Försök igen.",
+  "relations": {
+    "father": "Far",
+    "mother": "Mor",
+    "other": "Andra"
+  }
+}

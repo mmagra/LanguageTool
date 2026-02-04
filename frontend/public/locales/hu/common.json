@@ -1,0 +1,13 @@
+{
+  "loading": "Terhelés...",
+  "error": "Hiba",
+  "save": "Megtakarítás",
+  "cancel": "Mégsem",
+  "language": "Nyelv",
+  "switchToEnglish": "Váltson angolra",
+  "switchToNative": "Váltás {{language}} nyelvre",
+  "online": "Online",
+  "offline": "Offline",
+  "notProvided": "Nem biztosított",
+  "tryAgain": "Próbáld újra"
+}

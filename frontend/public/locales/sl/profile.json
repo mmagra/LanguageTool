@@ -1,0 +1,28 @@
+{
+  "title": "Moj profil",
+  "editProfile": "Uredi profil",
+  "saveChanges": "Shrani spremembe",
+  "saving": "Shranjevanje ...",
+  "firstName": "Ime",
+  "lastName": "Priimek",
+  "email": "E-poštni naslov",
+  "phone": "Telefonska številka",
+  "grade": "Ocena",
+  "primaryLanguage": "Primarni jezik",
+  "guardianName": "Ime skrbnika",
+  "guardianRelation": "Skrbniški odnos",
+  "selectGrade": "Izberite Ocena",
+  "selectLanguage": "Izberite Jezik",
+  "selectRelation": "Izberite Relation",
+  "studentID": "ID",
+  "role": "študent",
+  "errorLoading": "Napaka pri nalaganju profila",
+  "successUpdate": "Profil je bil uspešno posodobljen!",
+  "errorUpdate": "Profila ni bilo mogoče posodobiti",
+  "genericError": "Prišlo je do napake. prosim poskusite ponovno",
+  "relations": {
+    "father": "Oče",
+    "mother": "mati",
+    "other": "drugo"
+  }
+}

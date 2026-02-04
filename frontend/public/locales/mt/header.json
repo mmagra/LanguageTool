@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Il-Profil Tiegħi",
+  "changePassword": "Ibdel il-Password",
+  "helpSupport": "Għajnuna u Appoġġ",
+  "signOut": "Iffirma",
+  "notifications": {
+    "title": "Notifiki",
+    "unread": "messaġġi mhux moqrija",
+    "empty": "Ebda notifiki ġodda",
+    "viewAll": "Ara l-messaġġi kollha",
+    "newMessage": "Messaġġ ġdid"
+  },
+  "language": {
+    "switchToNative": "Aqleb għal-Lingwa Tiegħek",
+    "switchToEnglish": "Aqleb għall-Ingliż"
+  }
+}

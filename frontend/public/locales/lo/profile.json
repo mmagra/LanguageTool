@@ -1,0 +1,28 @@
+{
+  "title": "ໂປຣໄຟລ໌ຂອງຂ້ອຍ",
+  "editProfile": "ແກ້ໄຂໂປຣໄຟລ໌",
+  "saveChanges": "ບັນທຶກການປ່ຽນແປງ",
+  "saving": "ກຳລັງບັນທຶກ...",
+  "firstName": "ຊື່",
+  "lastName": "ນາມສະກຸນ",
+  "email": "ທີ່ຢູ່ອີເມວ",
+  "phone": "ເບີໂທລະສັບ",
+  "grade": "ເກຣດ",
+  "primaryLanguage": "ພາສາປະຖົມ",
+  "guardianName": "ຊື່ຜູ້ປົກຄອງ",
+  "guardianRelation": "ຄວາມສໍາພັນຜູ້ປົກຄອງ",
+  "selectGrade": "ເລືອກເກຣດ",
+  "selectLanguage": "ເລືອກພາສາ",
+  "selectRelation": "ເລືອກຄວາມສຳພັນ",
+  "studentID": "ID",
+  "role": "ນັກສຶກສາ",
+  "errorLoading": "ເກີດຄວາມຜິດພາດໃນການໂຫລດໂປຣໄຟລ໌",
+  "successUpdate": "ອັບເດດໂປຣໄຟລ໌ສຳເລັດແລ້ວ!",
+  "errorUpdate": "ອັບເດດໂປຣໄຟລ໌ບໍ່ສຳເລັດ",
+  "genericError": "ເກີດຄວາມຜິດພາດຂຶ້ນ. ກະລຸນາລອງອີກຄັ້ງ.",
+  "relations": {
+    "father": "ພໍ່",
+    "mother": "ແມ່",
+    "other": "ອື່ນໆ"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "title": "Ajutor și suport",
+  "description": "Suntem aici pentru a vă ajuta cu orice întrebări sau probleme pe care le puteți întâlni în timpul utilizării aplicației noastre web. Indiferent dacă aveți nevoie de ajutor pentru a începe, dacă aveți o întrebare despre o funcție sau doriți să raportați o eroare, suntem aici pentru a vă ajuta.",
+  "contact": {
+    "title": "Contactați asistența",
+    "emailTitle": "Asistență prin e-mail",
+    "emailDesc": "Ne propunem să răspundem la toate e-mailurile în termen de 24 de ore.",
+    "phoneTitle": "Asistență telefonică",
+    "hours": "Luni-Vineri (9:00 - 17:00)",
+    "footer": "Vă mulțumim că ați ales aplicația noastră web. Ne angajăm să vă facem experiența cât mai plăcută și cât mai plăcută."
+  },
+  "supportedLanguages": {
+    "title": "Lista limbilor acceptate",
+    "headers": {
+      "rank": "#",
+      "language": "Limbă",
+      "translation": "Traducere (aplicație și mobil)",
+      "desktop": "Comunicare personală (desktop)",
+      "mobile": "Comunicare personală (aplicație mobilă)"
+    },
+    "mobileLabels": {
+      "translation": "Mesaje traduse",
+      "desktop": "Desktop în persoană",
+      "mobile": "Mobil în persoană"
+    },
+    "supported": "Sprijinit",
+    "notSupported": "Nu este acceptat"
+  },
+  "detailedFeatures": {
+    "title": "Suport detaliat pentru funcții",
+    "subtitle": "Defalcarea capacităților de introducere vocală și text-to-speech pe dispozitiv.",
+    "headers": {
+      "rank": "#",
+      "language": "Limbă",
+      "translation": "Traducere (toate)",
+      "desktopVersion": "Versiunea desktop",
+      "mobileApp": "Aplicația mobilă",
+      "voiceInput": "Intrare vocală",
+      "tts": "Text-to-Speech"
+    },
+    "mobileHeaders": {
+      "translation": "Traducere",
+      "desktop": "Funcții desktop",
+      "mobile": "Caracteristicile aplicației mobile"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "title": "Awhina me te Tautoko",
+  "description": "Kei konei matou ki te awhina i nga patai me nga raru ka pa ki a koe i a koe e whakamahi ana i ta maatau tono paetukutuku. Ahakoa kei te hiahia awhina koe ki te timata, he patai mo tetahi ahuatanga, kei te pirangi ranei koe ki te ripoata i tetahi pepeha, kei konei matou hei awhina.",
+  "contact": {
+    "title": "Whakapā Tautoko",
+    "emailTitle": "Tautoko Īmēra",
+    "emailDesc": "Ko ta matou hiahia ki te whakautu ki nga imeera katoa i roto i nga haora 24.",
+    "phoneTitle": "Tautoko Waea",
+    "hours": "Mane-Paraire (9am - 5pm)",
+    "footer": "Mauruuru koe mo te whiriwhiri i to maatau tono paetukutuku. Ka whakapau kaha matou ki te whakarite kia maeneene, kia ngahau hoki to wheako."
+  },
+  "supportedLanguages": {
+    "title": "Rarangi o nga Reo Tautokona",
+    "headers": {
+      "rank": "#",
+      "language": "Reo",
+      "translation": "Whakamaoritanga (App me te Waea Pukoro)",
+      "desktop": "Whakawhitiwhiti-a-Tangata (Papamahi)",
+      "mobile": "Whakawhitiwhiti-a-Tangata (Taunoa Waea)"
+    },
+    "mobileLabels": {
+      "translation": "Nga Karere Kua Whakamaoritia",
+      "desktop": "Papamahi-a-Tangata",
+      "mobile": "Waea-a-Tangata"
+    },
+    "supported": "Tautokohia",
+    "notSupported": "Kaore i Tautokona"
+  },
+  "detailedFeatures": {
+    "title": "Tautoko Whakaaturanga Taipitopito",
+    "subtitle": "Te Wehenga o te Whakauru Reo me nga kaha Kuputuhi-ki-Korero mo ia taputapu.",
+    "headers": {
+      "rank": "#",
+      "language": "Reo",
+      "translation": "Whakamaoritanga (Katoa)",
+      "desktopVersion": "Putanga Papamahi",
+      "mobileApp": "Taupānga Pūkoro",
+      "voiceInput": "Whakauru Reo",
+      "tts": "Kuputuhi-ki-Korero"
+    },
+    "mobileHeaders": {
+      "translation": "Whakamaoritanga",
+      "desktop": "Nga waahanga papamahi",
+      "mobile": "Āhuatanga Taupānga Pūkoro"
+    }
+  }
+}

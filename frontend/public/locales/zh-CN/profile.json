@@ -1,0 +1,28 @@
+{
+  "title": "我的个人资料",
+  "editProfile": "编辑个人资料",
+  "saveChanges": "保存更改",
+  "saving": "保存...",
+  "firstName": "名",
+  "lastName": "姓",
+  "email": "电子邮件",
+  "phone": "电话号码",
+  "grade": "年级",
+  "primaryLanguage": "主要语言",
+  "guardianName": "监护人姓名",
+  "guardianRelation": "监护人关系",
+  "selectGrade": "选择年级",
+  "selectLanguage": "选择语言",
+  "selectRelation": "选择关系",
+  "studentID": "ID",
+  "role": "学生",
+  "errorLoading": "加载配置文件时出错",
+  "successUpdate": "个人资料更新成功！",
+  "errorUpdate": "更新个人资料失败",
+  "genericError": "发生错误。请再试一次。",
+  "relations": {
+    "father": "父亲",
+    "mother": "母亲",
+    "other": "其他"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "loading": "Încărcare...",
+  "error": "Eroare",
+  "save": "Salva",
+  "cancel": "Anula",
+  "language": "Limbă",
+  "switchToEnglish": "Comutați la engleză",
+  "switchToNative": "Comutați la {{limba}}",
+  "online": "Online",
+  "offline": "Offline",
+  "notProvided": "Nu este furnizat",
+  "tryAgain": "Încearcă din nou"
+}

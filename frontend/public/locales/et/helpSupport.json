@@ -1,0 +1,47 @@
+{
+  "title": "Abi ja tugi",
+  "description": "Aitame kõigi küsimuste või probleemidega, mis võivad meie veebirakenduse kasutamisel tekkida. Ükskõik, kas vajate alustamisel abi, kui teil on funktsiooni kohta küsimusi või soovite veast teatada, oleme siin, et aidata.",
+  "contact": {
+    "title": "Võtke ühendust tugiteenusega",
+    "emailTitle": "Meili tugi",
+    "emailDesc": "Meie eesmärk on vastata kõikidele meilidele 24 tunni jooksul.",
+    "phoneTitle": "Telefonitugi",
+    "hours": "E-R (9.00-17.00)",
+    "footer": "Täname, et valisite meie veebirakenduse. Oleme pühendunud sellele, et muuta teie kogemus võimalikult sujuvaks ja nauditavaks."
+  },
+  "supportedLanguages": {
+    "title": "Toetatud keelte loend",
+    "headers": {
+      "rank": "#",
+      "language": "Keel",
+      "translation": "Tõlge (rakendus ja mobiil)",
+      "desktop": "Isiklik suhtlus (lauaarvuti)",
+      "mobile": "Isiklik suhtlus (mobiilirakendus)"
+    },
+    "mobileLabels": {
+      "translation": "Tõlgitud sõnumid",
+      "desktop": "Töölaua isiklikult",
+      "mobile": "Mobiilne isiklikult"
+    },
+    "supported": "Toetatud",
+    "notSupported": "Ei toetata"
+  },
+  "detailedFeatures": {
+    "title": "Üksikasjalik funktsioonide tugi",
+    "subtitle": "Häälsisendi ja kõneks muutmise võimaluste jaotus seadme kohta.",
+    "headers": {
+      "rank": "#",
+      "language": "Keel",
+      "translation": "Tõlge (kõik)",
+      "desktopVersion": "Töölaua versioon",
+      "mobileApp": "Mobiilirakendus",
+      "voiceInput": "Häälsisend",
+      "tts": "Tekst kõneks"
+    },
+    "mobileHeaders": {
+      "translation": "Tõlge",
+      "desktop": "Töölaua funktsioonid",
+      "mobile": "Mobiilirakenduse funktsioonid"
+    }
+  }
+}

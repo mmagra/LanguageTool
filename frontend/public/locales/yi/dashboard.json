@@ -1,0 +1,26 @@
+{
+  "title": "תּלמיד דאַשבאָרד",
+  "subtitle": "ברוכים הבאים צוריק! דאָ איז אַן איבערבליק פון דיין פּראָגרעס.",
+  "stats": {
+    "teachers": "נומער פון לערער(ס)",
+    "teachersSubText": "לערערס מיט וואָס איר האָט שמועסן",
+    "conversations": "שמועס(ן)",
+    "conversationsSubText": "גאַנץ אַרטיקלען",
+    "languages": "שטיצט שפּראַכן",
+    "languagesSubText": "געשריבן ({{written}}) | מינדלעך ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "שפּראַך שטיצן סטאַטוס",
+    "primary": "דיין ערשטיק שפּראַך איז",
+    "written": {
+      "title": "געשריבן שטיצן",
+      "available": "בנימצא פֿאַר מעסידזשינג",
+      "unsupported": "ניט געשטיצט"
+    },
+    "verbal": {
+      "title": "מינדלעך שטיצן",
+      "available": "בנימצא פֿאַר לעבן סעשאַנז",
+      "unsupported": "ניט געשטיצט"
+    }
+  }
+}

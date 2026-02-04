@@ -1,0 +1,26 @@
+{
+  "title": "Öğrenci Kontrol Paneli",
+  "subtitle": "Tekrar hoşgeldiniz! İşte ilerlemenizin bir özeti.",
+  "stats": {
+    "teachers": "Öğretmen Sayısı",
+    "teachersSubText": "Sohbet ettiğiniz öğretmenler",
+    "conversations": "Konuşma(lar)",
+    "conversationsSubText": "Toplam Mesajlar",
+    "languages": "Desteklenen Diller",
+    "languagesSubText": "Yazılı ({{written}}) | Sözlü ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Dil Desteği Durumu",
+    "primary": "Ana Diliniz",
+    "written": {
+      "title": "Yazılı Destek",
+      "available": "Mesajlaşma için kullanılabilir",
+      "unsupported": "Desteklenmiyor"
+    },
+    "verbal": {
+      "title": "Sözlü Destek",
+      "available": "Canlı oturumlar için kullanılabilir",
+      "unsupported": "Desteklenmiyor"
+    }
+  }
+}

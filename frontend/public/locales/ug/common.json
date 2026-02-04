@@ -1,0 +1,13 @@
+{
+  "loading": "Loading ...",
+  "error": "خاتالىق",
+  "save": "ساقلاش",
+  "cancel": "بىكار قىلىش",
+  "language": "تىل",
+  "switchToEnglish": "ئىنگلىزچىغا ئالماشتۇرۇڭ",
+  "switchToNative": "{{Language} to غا ئالماشتۇرۇڭ",
+  "online": "توردا",
+  "offline": "تورسىز",
+  "notProvided": "تەمىنلەنمىدى",
+  "tryAgain": "قايتا سىناڭ"
+}

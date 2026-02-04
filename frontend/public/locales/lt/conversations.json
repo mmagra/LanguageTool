@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Žinutės",
+  "searchPlaceholder": "Ieškokite mokytojų...",
+  "noConversations": "Pokalbių dar nėra",
+  "unknownTeacher": "Nežinomas mokytojas",
+  "noMessages": "Pranešimų dar nėra",
+  "typing": "Rašoma...",
+  "typePlaceholder": "Įvesk savo žinutę lietuvių kalba...",
+  "emptyState": {
+    "title": "Jūsų pokalbiai",
+    "desc": "Šoninėje juostoje pasirinkite mokytoją, kad pradėtumėte užduoti klausimus ar aptarti savo pažymius.",
+    "startPrompt": "Pradėkite pokalbį su savo mokytoju"
+  },
+  "refreshList": "Atnaujinti sąrašą"
+}

@@ -1,0 +1,13 @@
+{
+  "loading": "Notiek ielāde...",
+  "error": "Kļūda",
+  "save": "Saglabāt",
+  "cancel": "Atcelt",
+  "language": "Valoda",
+  "switchToEnglish": "Pārslēdzieties uz angļu valodu",
+  "switchToNative": "Pārslēgties uz {{language}}",
+  "online": "Tiešsaistē",
+  "offline": "Bezsaistē",
+  "notProvided": "Nav paredzēts",
+  "tryAgain": "Mēģiniet vēlreiz"
+}

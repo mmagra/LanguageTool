@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Myn profyl",
+  "changePassword": "Feroarje wachtwurd",
+  "helpSupport": "Help & Support",
+  "signOut": "Útmelde",
+  "notifications": {
+    "title": "Notifikaasjes",
+    "unread": "net-lêzen berjochten",
+    "empty": "Gjin nije notifikaasjes",
+    "viewAll": "Besjoch alle berjochten",
+    "newMessage": "Nij berjocht"
+  },
+  "language": {
+    "switchToNative": "Wikselje nei jo taal",
+    "switchToEnglish": "Oerskeakelje nei Ingelsk"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "loading": "Loading...",
+  "error": "Error",
+  "save": "Servare",
+  "cancel": "Cancel",
+  "language": "Linguae",
+  "switchToEnglish": "Vertas Anglis",
+  "switchToNative": "Vertas ad {{linguam}}",
+  "online": "Online",
+  "offline": "Offline",
+  "notProvided": "Non provisum",
+  "tryAgain": "Iterum conare"
+}

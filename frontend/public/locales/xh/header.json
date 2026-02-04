@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Iprofayile yam",
+  "changePassword": "Tshintsha iphasiwedi",
+  "helpSupport": "Uncedo & neNkxaso",
+  "signOut": "Phuma",
+  "notifications": {
+    "title": "Izaziso",
+    "unread": "imiyalezo engafundwanga",
+    "empty": "Akukho zaziso zitsha",
+    "viewAll": "Jonga yonke imiyalezo",
+    "newMessage": "Umyalezo omtsha"
+  },
+  "language": {
+    "switchToNative": "Tshintshela kulwimi lwakho",
+    "switchToEnglish": "Tshintshela kwisiNgesi"
+  }
+}

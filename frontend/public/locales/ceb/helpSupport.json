@@ -1,0 +1,47 @@
+{
+  "title": "Tabang ug Suporta",
+  "description": "Ania kami aron makatabang sa bisan unsang mga pangutana o isyu nga mahimo nimong masugatan samtang gigamit ang among aplikasyon sa web. Kung kinahanglan nimo ang tabang sa pagsugod, adunay pangutana bahin sa usa ka bahin, o gusto nga magreport sa usa ka bug, ania kami aron motabang.",
+  "contact": {
+    "title": "Kontaka ang Suporta",
+    "emailTitle": "Suporta sa Email",
+    "emailDesc": "Kami nagtinguha sa pagtubag sa tanang email sulod sa 24 oras.",
+    "phoneTitle": "Suporta sa Telepono",
+    "hours": "Lun-Biyer (9 am - 5 pm)",
+    "footer": "Salamat sa pagpili sa among web application. Kami pasalig sa paghimo sa imong kasinatian nga hapsay ug makalingaw kutob sa mahimo."
+  },
+  "supportedLanguages": {
+    "title": "Listahan sa Gisuportahan nga mga Pinulongan",
+    "headers": {
+      "rank": "#",
+      "language": "Pinulongan",
+      "translation": "Paghubad (App ug Mobile)",
+      "desktop": "In-Person Communication (Desktop)",
+      "mobile": "In-Person Communication (Mobile App)"
+    },
+    "mobileLabels": {
+      "translation": "Gihubad nga mga Mensahe",
+      "desktop": "Desktop In-Person",
+      "mobile": "Mobile In-Person"
+    },
+    "supported": "Gisuportahan",
+    "notSupported": "Dili Gisuportahan"
+  },
+  "detailedFeatures": {
+    "title": "Detalyadong Suporta sa Feature",
+    "subtitle": "Pagkabungkag sa Voice Input ug Text-to-Speech nga kapabilidad matag device.",
+    "headers": {
+      "rank": "#",
+      "language": "Pinulongan",
+      "translation": "Paghubad (Tanan)",
+      "desktopVersion": "Bersyon sa Desktop",
+      "mobileApp": "Mobile App",
+      "voiceInput": "Input sa Tingog",
+      "tts": "Text-to-Speech"
+    },
+    "mobileHeaders": {
+      "translation": "Paghubad",
+      "desktop": "Mga Feature sa Desktop",
+      "mobile": "Mga Feature sa Mobile App"
+    }
+  }
+}

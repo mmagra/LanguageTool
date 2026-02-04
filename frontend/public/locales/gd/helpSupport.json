@@ -1,0 +1,47 @@
+{
+  "title": "Cuideachadh agus Taic",
+  "description": "Tha sinn an seo gus do chuideachadh le ceistean no cùisean sam bith a choinnicheas tu fhad ‘s a tha thu a’ cleachdadh ar tagradh lìn. Co-dhiù a tha feum agad air cuideachadh airson tòiseachadh, ma tha ceist agad mu fheart, no ma tha thu airson cunntas a thoirt air bug, tha sinn an seo gus do chuideachadh.",
+  "contact": {
+    "title": "Cuir fios gu neach-taic",
+    "emailTitle": "Taic Post-d",
+    "emailDesc": "Tha sinn ag amas air a h-uile post-d a fhreagairt taobh a-staigh 24 uairean.",
+    "phoneTitle": "Taic fòn",
+    "hours": "Diluain-Dihaoine (9m - 5f)",
+    "footer": "Tapadh leibh airson an tagradh lìn againn a thaghadh. Tha sinn dealasach a thaobh do eòlas a dhèanamh cho rèidh agus cho tlachdmhor sa ghabhas."
+  },
+  "supportedLanguages": {
+    "title": "Liosta de chànanan le taic",
+    "headers": {
+      "rank": "#",
+      "language": "Cànain",
+      "translation": "Eadar-theangachadh (App & Mobile)",
+      "desktop": "Conaltradh Pearsanta (Desktop)",
+      "mobile": "Conaltradh pearsanta (app gluasadach)"
+    },
+    "mobileLabels": {
+      "translation": "Teachdaireachdan Eadar-theangaichte",
+      "desktop": "Deasg gu pearsanta",
+      "mobile": "Fòn-làimhe gu pearsanta"
+    },
+    "supported": "Le taic",
+    "notSupported": "Gun taic"
+  },
+  "detailedFeatures": {
+    "title": "Taic Feart mionaideach",
+    "subtitle": "Briseadh sìos air comasan cuir a-steach guth agus teacsa-gu-cainnt gach inneal.",
+    "headers": {
+      "rank": "#",
+      "language": "Cànain",
+      "translation": "Eadar-theangachadh (All)",
+      "desktopVersion": "Tionndadh Deasg",
+      "mobileApp": "App gluasadach",
+      "voiceInput": "Cuir a-steach guth",
+      "tts": "Teacs-gu-Òraid"
+    },
+    "mobileHeaders": {
+      "translation": "Eadar-theangachadh",
+      "desktop": "Feartan deasg",
+      "mobile": "Feartan app gluasadach"
+    }
+  }
+}

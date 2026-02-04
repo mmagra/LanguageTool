@@ -1,0 +1,47 @@
+{
+  "title": "Ubufasha n'inkunga",
+  "description": "Turi hano kugirango dufashe ibibazo cyangwa ibibazo ushobora guhura nabyo mugihe ukoresha urubuga rwacu. Waba ukeneye ubufasha gutangira, gira ikibazo kijyanye nimiterere, cyangwa ushaka kumenyesha ikosa, turi hano kugirango dufashe.",
+  "contact": {
+    "title": "Inkunga",
+    "emailTitle": "Inkunga ya imeri",
+    "emailDesc": "Dufite intego yo gusubiza imeri zose mugihe cyamasaha 24.",
+    "phoneTitle": "Inkunga ya Terefone",
+    "hours": "Ku wa mbere, Kuwa gatanu (9h00 - 5h00)",
+    "footer": "Urakoze guhitamo porogaramu y'urubuga. Twiyemeje gukora uburambe bwawe neza kandi bushimishije bishoboka."
+  },
+  "supportedLanguages": {
+    "title": "Urutonde rwindimi zishyigikiwe",
+    "headers": {
+      "rank": "#",
+      "language": "Ururimi",
+      "translation": "Ubuhinduzi (Porogaramu & Igendanwa)",
+      "desktop": "Itumanaho-Umuntu (Ibiro)",
+      "mobile": "Itumanaho-Umuntu (Porogaramu igendanwa)"
+    },
+    "mobileLabels": {
+      "translation": "Ubutumwa bwahinduwe",
+      "desktop": "Ibiro Byumuntu",
+      "mobile": "Terefone igendanwa"
+    },
+    "supported": "Gushyigikirwa",
+    "notSupported": "Ntabwo Bishyigikiwe"
+  },
+  "detailedFeatures": {
+    "title": "Inkunga irambuye",
+    "subtitle": "Gucamo Ijwi ryinjiza hamwe na Text-to-Speech ubushobozi kuri buri gikoresho.",
+    "headers": {
+      "rank": "#",
+      "language": "Ururimi",
+      "translation": "Ubuhinduzi (Byose)",
+      "desktopVersion": "Ibiro bya desktop",
+      "mobileApp": "Porogaramu igendanwa",
+      "voiceInput": "Ijwi ryinjira",
+      "tts": "Umwandiko-Kuri-Imvugo"
+    },
+    "mobileHeaders": {
+      "translation": "Ubuhinduzi",
+      "desktop": "Ibiranga Ibiro",
+      "mobile": "Ibiranga porogaramu igendanwa"
+    }
+  }
+}

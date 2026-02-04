@@ -1,0 +1,24 @@
+{
+  "name": "language-tool",
+  "version": "1.0.0",
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "install-all": "npm install --prefix backend && npm install --prefix frontend",
+    "backend": "npm start --prefix backend",
+    "frontend": "npm run dev --prefix frontend",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+    "start": "npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.4.23",
+    "lucide-react": "^0.562.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18"
+  }
+}

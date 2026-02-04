@@ -1,0 +1,13 @@
+{
+  "loading": "Kargatzen...",
+  "error": "Errorea",
+  "save": "Gorde",
+  "cancel": "Utzi",
+  "language": "Hizkuntza",
+  "switchToEnglish": "Aldatu ingelesera",
+  "switchToNative": "Aldatu {{hizkuntza}}ra",
+  "online": "Sarean",
+  "offline": "Lineaz kanpo",
+  "notProvided": "Ez da eman",
+  "tryAgain": "Saiatu berriro"
+}

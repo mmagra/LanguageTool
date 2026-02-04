@@ -1,0 +1,28 @@
+{
+  "title": "Mijn profiel",
+  "editProfile": "Profiel bewerken",
+  "saveChanges": "Wijzigingen opslaan",
+  "saving": "Besparing...",
+  "firstName": "Voornaam",
+  "lastName": "Achternaam",
+  "email": "E-mailadres",
+  "phone": "Telefoonnummer",
+  "grade": "Cijfer",
+  "primaryLanguage": "Primaire taal",
+  "guardianName": "Naam van de voogd",
+  "guardianRelation": "Guardian-relatie",
+  "selectGrade": "Selecteer Cijfer",
+  "selectLanguage": "Selecteer Taal",
+  "selectRelation": "Selecteer Relatie",
+  "studentID": "Identiteitskaart",
+  "role": "Student",
+  "errorLoading": "Fout bij laden van profiel",
+  "successUpdate": "Profiel succesvol bijgewerkt!",
+  "errorUpdate": "Kan profiel niet updaten",
+  "genericError": "Er is een fout opgetreden. Probeer het opnieuw.",
+  "relations": {
+    "father": "Vader",
+    "mother": "Moeder",
+    "other": "Ander"
+  }
+}

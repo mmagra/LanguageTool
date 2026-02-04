@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Správy",
+  "searchPlaceholder": "Hľadať učiteľov...",
+  "noConversations": "Zatiaľ žiadne konverzácie",
+  "unknownTeacher": "Neznámy učiteľ",
+  "noMessages": "Zatiaľ žiadne správy",
+  "typing": "Píšem...",
+  "typePlaceholder": "Napíšte správu v slovenčine...",
+  "emptyState": {
+    "title": "Vaše konverzácie",
+    "desc": "Vyberte učiteľa z bočného panela a začnite klásť otázky alebo diskutovať o svojich známkach.",
+    "startPrompt": "Začnite konverzáciu so svojím učiteľom"
+  },
+  "refreshList": "Obnoviť zoznam"
+}

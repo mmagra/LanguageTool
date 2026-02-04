@@ -1,0 +1,26 @@
+{
+  "title": "Studentendashboard",
+  "subtitle": "Welkom terug! Hier vindt u een overzicht van uw voortgang.",
+  "stats": {
+    "teachers": "Aantal docent(en)",
+    "teachersSubText": "Leraren met wie je hebt gepraat",
+    "conversations": "Gesprek(en)",
+    "conversationsSubText": "Totaal aantal berichten",
+    "languages": "Ondersteunde talen",
+    "languagesSubText": "Schriftelijk ({{written}}) | Verbaal ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Taalondersteuningsstatus",
+    "primary": "Je primaire taal is",
+    "written": {
+      "title": "Schriftelijke ondersteuning",
+      "available": "Beschikbaar voor berichten",
+      "unsupported": "Niet ondersteund"
+    },
+    "verbal": {
+      "title": "Verbale ondersteuning",
+      "available": "Beschikbaar voor livesessies",
+      "unsupported": "Niet ondersteund"
+    }
+  }
+}

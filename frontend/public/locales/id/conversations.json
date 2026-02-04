@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Pesan",
+  "searchPlaceholder": "Cari guru...",
+  "noConversations": "Belum ada percakapan",
+  "unknownTeacher": "Guru Tidak Dikenal",
+  "noMessages": "Belum ada pesan",
+  "typing": "Mengetik...",
+  "typePlaceholder": "Ketik pesan Anda dalam bahasa Indonesia...",
+  "emptyState": {
+    "title": "Percakapan Anda",
+    "desc": "Pilih guru dari sidebar untuk mulai mengajukan pertanyaan atau mendiskusikan nilai Anda.",
+    "startPrompt": "Mulailah percakapan dengan guru Anda"
+  },
+  "refreshList": "Segarkan Daftar"
+}

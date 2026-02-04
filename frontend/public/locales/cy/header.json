@@ -1,0 +1,18 @@
+{
+  "title": "LlafarEdge",
+  "myProfile": "Fy Mhroffil",
+  "changePassword": "Newid Cyfrinair",
+  "helpSupport": "Cymorth a Chefnogaeth",
+  "signOut": "Arwyddo allan",
+  "notifications": {
+    "title": "Hysbysiadau",
+    "unread": "negeseuon heb eu darllen",
+    "empty": "Dim hysbysiadau newydd",
+    "viewAll": "Gweld pob neges",
+    "newMessage": "Neges newydd"
+  },
+  "language": {
+    "switchToNative": "Newid i Eich Iaith",
+    "switchToEnglish": "Newid i'r Saesneg"
+  }
+}

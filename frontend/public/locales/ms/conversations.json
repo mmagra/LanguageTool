@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Mesej",
+  "searchPlaceholder": "Cari guru...",
+  "noConversations": "Tiada perbualan lagi",
+  "unknownTeacher": "Guru Tidak Dikenali",
+  "noMessages": "Tiada mesej lagi",
+  "typing": "Menaip...",
+  "typePlaceholder": "Taip mesej anda dalam bahasa Melayu...",
+  "emptyState": {
+    "title": "Perbualan Anda",
+    "desc": "Pilih guru dari bar sisi untuk mula bertanya soalan atau membincangkan gred anda.",
+    "startPrompt": "Mulakan perbualan dengan guru anda"
+  },
+  "refreshList": "Muat semula Senarai"
+}

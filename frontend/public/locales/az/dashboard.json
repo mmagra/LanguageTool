@@ -1,0 +1,26 @@
+{
+  "title": "Tələbə İdarəetmə Paneli",
+  "subtitle": "Yenidən xoş gəlmisiniz! Budur tərəqqinizin icmalı.",
+  "stats": {
+    "teachers": "Müəllim(lər)in sayı",
+    "teachersSubText": "Söhbət etdiyiniz müəllimlər",
+    "conversations": "Söhbət(lər)",
+    "conversationsSubText": "Ümumi Mesajlar",
+    "languages": "Dəstəklənən Dillər",
+    "languagesSubText": "Yazılı ({{written}}) | Şifahi ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Dil Dəstəyi Status",
+    "primary": "Əsas Diliniz",
+    "written": {
+      "title": "Yazılı Dəstək",
+      "available": "Mesajlaşma üçün əlçatandır",
+      "unsupported": "Dəstəklənmir"
+    },
+    "verbal": {
+      "title": "Şifahi Dəstək",
+      "available": "Canlı seanslar üçün mövcuddur",
+      "unsupported": "Dəstəklənmir"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "title": "Pagalba ir palaikymas",
+  "description": "Esame pasiruošę padėti išspręsti visus klausimus ar problemas, su kuriomis galite susidurti naudodami mūsų žiniatinklio programą. Nesvarbu, ar jums reikia pagalbos pradedant, turite klausimų apie funkciją ar norite pranešti apie riktą, mes pasiruošę padėti.",
+  "contact": {
+    "title": "Susisiekite su palaikymo tarnyba",
+    "emailTitle": "Pagalba el. paštu",
+    "emailDesc": "Mes siekiame atsakyti į visus el. laiškus per 24 valandas.",
+    "phoneTitle": "Pagalba telefonu",
+    "hours": "P-P (9-17 val.)",
+    "footer": "Dėkojame, kad pasirinkote mūsų žiniatinklio programą. Esame įsipareigoję, kad jūsų patirtis būtų kuo sklandesnė ir malonesnė."
+  },
+  "supportedLanguages": {
+    "title": "Palaikomų kalbų sąrašas",
+    "headers": {
+      "rank": "#",
+      "language": "Kalba",
+      "translation": "Vertimas (programa ir mobilusis)",
+      "desktop": "Asmeninis bendravimas (stalinis kompiuteris)",
+      "mobile": "Asmeninis bendravimas (programėlė mobiliesiems)"
+    },
+    "mobileLabels": {
+      "translation": "Išversti pranešimai",
+      "desktop": "Desktop In-Person",
+      "mobile": "Mobilusis asmeninis"
+    },
+    "supported": "Palaikoma",
+    "notSupported": "Nepalaikoma"
+  },
+  "detailedFeatures": {
+    "title": "Išsamus funkcijų palaikymas",
+    "subtitle": "Balso įvesties ir teksto į kalbą galimybių suskirstymas pagal įrenginį.",
+    "headers": {
+      "rank": "#",
+      "language": "Kalba",
+      "translation": "Vertimas (visi)",
+      "desktopVersion": "Darbalaukio versija",
+      "mobileApp": "Programėlė mobiliesiems",
+      "voiceInput": "Balso įvestis",
+      "tts": "Tekstas į kalbą"
+    },
+    "mobileHeaders": {
+      "translation": "Vertimas",
+      "desktop": "Darbalaukio funkcijos",
+      "mobile": "Mobiliosios programos funkcijos"
+    }
+  }
+}

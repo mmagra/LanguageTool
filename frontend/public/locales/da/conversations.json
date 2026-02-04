@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Beskeder",
+  "searchPlaceholder": "Søg lærere...",
+  "noConversations": "Ingen samtaler endnu",
+  "unknownTeacher": "Ukendt lærer",
+  "noMessages": "Ingen beskeder endnu",
+  "typing": "Skriver...",
+  "typePlaceholder": "Skriv din besked på dansk...",
+  "emptyState": {
+    "title": "Dine samtaler",
+    "desc": "Vælg en lærer fra sidebjælken for at begynde at stille spørgsmål eller diskutere dine karakterer.",
+    "startPrompt": "Start en samtale med din lærer"
+  },
+  "refreshList": "Opdater liste"
+}

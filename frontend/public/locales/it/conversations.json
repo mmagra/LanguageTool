@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Messaggi",
+  "searchPlaceholder": "Cerca insegnanti...",
+  "noConversations": "Nessuna conversazione ancora",
+  "unknownTeacher": "Insegnante sconosciuto",
+  "noMessages": "Nessun messaggio ancora",
+  "typing": "Digitando...",
+  "typePlaceholder": "Scrivi il tuo messaggio in italiano...",
+  "emptyState": {
+    "title": "Le tue conversazioni",
+    "desc": "Seleziona un insegnante dalla barra laterale per iniziare a porre domande o discutere i tuoi voti.",
+    "startPrompt": "Inizia una conversazione con il tuo insegnante"
+  },
+  "refreshList": "Aggiorna elenco"
+}

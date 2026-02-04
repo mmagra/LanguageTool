@@ -1,0 +1,28 @@
+{
+  "title": "Мој профил",
+  "editProfile": "Уреди профил",
+  "saveChanges": "Сачувај промене",
+  "saving": "Чување...",
+  "firstName": "Име",
+  "lastName": "Презиме",
+  "email": "Адреса е-поште",
+  "phone": "Број телефона",
+  "grade": "Оцена",
+  "primaryLanguage": "Примари Лангуаге",
+  "guardianName": "Име чувара",
+  "guardianRelation": "Гуардиан Релатион",
+  "selectGrade": "Изаберите Оцена",
+  "selectLanguage": "Изаберите Језик",
+  "selectRelation": "Изаберите Релатион",
+  "studentID": "ИД",
+  "role": "Студент",
+  "errorLoading": "Грешка при учитавању профила",
+  "successUpdate": "Профил је успешно ажуриран!",
+  "errorUpdate": "Ажурирање профила није успело",
+  "genericError": "Дошло је до грешке. Покушајте поново.",
+  "relations": {
+    "father": "оче",
+    "mother": "Мајко",
+    "other": "Остало"
+  }
+}

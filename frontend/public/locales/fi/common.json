@@ -1,0 +1,13 @@
+{
+  "loading": "Ladataan...",
+  "error": "Virhe",
+  "save": "Tallentaa",
+  "cancel": "Peruuttaa",
+  "language": "Kieli",
+  "switchToEnglish": "Vaihda englanniksi",
+  "switchToNative": "Vaihda kielelle {{language}}",
+  "online": "verkossa",
+  "offline": "Offline-tilassa",
+  "notProvided": "Ei tarjota",
+  "tryAgain": "Yritä uudelleen"
+}

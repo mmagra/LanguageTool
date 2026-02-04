@@ -1,0 +1,18 @@
+{
+  "title": "Bord parlé",
+  "myProfile": "Mon profil",
+  "changePassword": "Changer le mot de passe",
+  "helpSupport": "Aide et assistance",
+  "signOut": "se déconnecter",
+  "notifications": {
+    "title": "Notifications",
+    "unread": "messages non lus",
+    "empty": "Aucune nouvelle notification",
+    "viewAll": "Afficher tous les messages",
+    "newMessage": "Nouveau message"
+  },
+  "language": {
+    "switchToNative": "Passez à votre langue",
+    "switchToEnglish": "Passer à l'anglais"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Mia Profilo",
+  "changePassword": "Ŝanĝi Pasvorton",
+  "helpSupport": "Helpo & Subteno",
+  "signOut": "Elsaluti",
+  "notifications": {
+    "title": "Sciigoj",
+    "unread": "nelegitaj mesaĝoj",
+    "empty": "Neniuj novaj sciigoj",
+    "viewAll": "Rigardu ĉiujn mesaĝojn",
+    "newMessage": "Nova mesaĝo"
+  },
+  "language": {
+    "switchToNative": "Ŝanĝu al Via Lingvo",
+    "switchToEnglish": "Ŝanĝu al la angla"
+  }
+}

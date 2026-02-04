@@ -1,0 +1,28 @@
+{
+  "title": "Myn profyl",
+  "editProfile": "Profile bewurkje",
+  "saveChanges": "Feroarings bewarje",
+  "saving": "Besparret...",
+  "firstName": "Foarnamme",
+  "lastName": "Efternamme",
+  "email": "E-postadres",
+  "phone": "Tillefoannûmer",
+  "grade": "Klasse",
+  "primaryLanguage": "Primêre taal",
+  "guardianName": "Namme Guardian",
+  "guardianRelation": "Guardian Relaasje",
+  "selectGrade": "Selektearje Grade",
+  "selectLanguage": "Selektearje Taal",
+  "selectRelation": "Selektearje Relaasje",
+  "studentID": "ID",
+  "role": "Studint",
+  "errorLoading": "Flater by it laden fan profyl",
+  "successUpdate": "Profyl is mei súkses bywurke!",
+  "errorUpdate": "It bywurkjen fan profyl mislearre",
+  "genericError": "Der barde in flater. Besykje it nochris.",
+  "relations": {
+    "father": "Heit",
+    "mother": "Mem",
+    "other": "Oar"
+  }
+}

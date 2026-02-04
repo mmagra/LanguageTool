@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Skilaboð",
+  "searchPlaceholder": "Leita að kennurum...",
+  "noConversations": "Engin samtöl ennþá",
+  "unknownTeacher": "Óþekktur kennari",
+  "noMessages": "Engin skilaboð ennþá",
+  "typing": "Er að skrifa...",
+  "typePlaceholder": "Skrifaðu skilaboðin þín á íslensku...",
+  "emptyState": {
+    "title": "Samtölin þín",
+    "desc": "Veldu kennara á hliðarstikunni til að byrja að spyrja spurninga eða ræða einkunnir þínar.",
+    "startPrompt": "Byrjaðu samtal við kennarann ​​þinn"
+  },
+  "refreshList": "Endurnýja lista"
+}

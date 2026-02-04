@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "My profiel",
+  "changePassword": "Verander wagwoord",
+  "helpSupport": "Hulp en ondersteuning",
+  "signOut": "Meld af",
+  "notifications": {
+    "title": "Kennisgewings",
+    "unread": "ongeleesde boodskappe",
+    "empty": "Geen nuwe kennisgewings nie",
+    "viewAll": "Bekyk alle boodskappe",
+    "newMessage": "Nuwe boodskap"
+  },
+  "language": {
+    "switchToNative": "Skakel oor na jou taal",
+    "switchToEnglish": "Skakel oor na Engels"
+  }
+}

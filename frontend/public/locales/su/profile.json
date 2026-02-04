@@ -1,0 +1,28 @@
+{
+  "title": "Profil abdi",
+  "editProfile": "Édit Propil",
+  "saveChanges": "Simpen Parobahan",
+  "saving": "Nyimpen...",
+  "firstName": "Nami payun",
+  "lastName": "Nami pengker",
+  "email": "Alamat email",
+  "phone": "Nomer telepon",
+  "grade": "Kelas",
+  "primaryLanguage": "Basa primér",
+  "guardianName": "Ngaran Wali",
+  "guardianRelation": "Hubungan Wali",
+  "selectGrade": "Pilih Grade",
+  "selectLanguage": "Pilih Basa",
+  "selectRelation": "Pilih Relation",
+  "studentID": "ID",
+  "role": "Murid",
+  "errorLoading": "Kasalahan Ngamuat Propil",
+  "successUpdate": "Propil suksés diropéa!",
+  "errorUpdate": "Gagal ngapdet profil",
+  "genericError": "Aya kasalahan. Mangga cobian deui.",
+  "relations": {
+    "father": "Bapa",
+    "mother": "Ema",
+    "other": "Lain"
+  }
+}

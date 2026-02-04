@@ -1,0 +1,13 @@
+{
+  "loading": "Įkeliama...",
+  "error": "Klaida",
+  "save": "Išsaugoti",
+  "cancel": "Atšaukti",
+  "language": "Kalba",
+  "switchToEnglish": "Perjungti į anglų kalbą",
+  "switchToNative": "Perjungti į {{language}}",
+  "online": "Prisijungę",
+  "offline": "Neprisijungus",
+  "notProvided": "Nepateikta",
+  "tryAgain": "Bandyk dar kartą"
+}

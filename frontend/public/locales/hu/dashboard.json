@@ -1,0 +1,26 @@
+{
+  "title": "Diák irányítópultja",
+  "subtitle": "Üdvözöljük újra! Íme egy áttekintés a fejlődésedről.",
+  "stats": {
+    "teachers": "Tanár(ok) száma",
+    "teachersSubText": "Tanárok, akikkel beszélgettél",
+    "conversations": "Beszélgetés(ek)",
+    "conversationsSubText": "Összes üzenet",
+    "languages": "Támogatott nyelvek",
+    "languagesSubText": "Írott ({{written}}) | Verbális ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Nyelvi támogatás állapota",
+    "primary": "Az Ön elsődleges nyelve",
+    "written": {
+      "title": "Írásbeli támogatás",
+      "available": "Üzenetküldésre használható",
+      "unsupported": "Nem támogatott"
+    },
+    "verbal": {
+      "title": "Verbális támogatás",
+      "available": "Élő előadásokhoz elérhető",
+      "unsupported": "Nem támogatott"
+    }
+  }
+}

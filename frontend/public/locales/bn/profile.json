@@ -1,0 +1,28 @@
+{
+  "title": "আমার প্রোফাইল",
+  "editProfile": "প্রোফাইল সম্পাদনা করুন",
+  "saveChanges": "পরিবর্তনগুলি সংরক্ষণ করুন",
+  "saving": "সংরক্ষণ করা হচ্ছে...",
+  "firstName": "প্রথম নাম",
+  "lastName": "পদবি",
+  "email": "ইমেইল ঠিকানা",
+  "phone": "ফোন নম্বর",
+  "grade": "গ্রেড",
+  "primaryLanguage": "প্রাথমিক ভাষা",
+  "guardianName": "অভিভাবকের নাম",
+  "guardianRelation": "অভিভাবক সম্পর্ক",
+  "selectGrade": "গ্রেড নির্বাচন করুন",
+  "selectLanguage": "ভাষা নির্বাচন করুন",
+  "selectRelation": "সম্পর্ক নির্বাচন করুন",
+  "studentID": "আইডি",
+  "role": "ছাত্র",
+  "errorLoading": "প্রোফাইল লোড করার সময় ত্রুটি৷",
+  "successUpdate": "প্রোফাইল সফলভাবে আপডেট হয়েছে!",
+  "errorUpdate": "প্রোফাইল আপডেট করতে ব্যর্থ হয়েছে",
+  "genericError": "একটি ত্রুটি ঘটেছে. আবার চেষ্টা করুন.",
+  "relations": {
+    "father": "বাবা",
+    "mother": "মা",
+    "other": "অন্যান্য"
+  }
+}

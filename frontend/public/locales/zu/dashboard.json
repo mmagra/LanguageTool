@@ -1,0 +1,26 @@
+{
+  "title": "Ideshibhodi yabafundi",
+  "subtitle": "Siyakwamukela! Nasi isifinyezo sokuqhubeka kwakho.",
+  "stats": {
+    "teachers": "Inombolo yothisha",
+    "teachersSubText": "Othisha oxoxe nabo",
+    "conversations": "Izingxoxo",
+    "conversationsSubText": "Ingqikithi Yemilayezo",
+    "languages": "Izilimi Ezisekelwe",
+    "languagesSubText": "Kubhaliwe ({{written}}) | Ngezwi ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Isimo Sokusekela Ulimi",
+    "primary": "Ulimi Lwakho Oluyinhloko ngu",
+    "written": {
+      "title": "Ukusekela Okubhaliwe",
+      "available": "Itholakalela umlayezo",
+      "unsupported": "Ayisekelwe"
+    },
+    "verbal": {
+      "title": "Ukusekela ngamazwi",
+      "available": "Iyatholakala kumaseshini abukhoma",
+      "unsupported": "Ayisekelwe"
+    }
+  }
+}

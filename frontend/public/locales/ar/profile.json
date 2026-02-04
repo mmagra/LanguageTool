@@ -1,0 +1,28 @@
+{
+  "title": "ملفي الشخصي",
+  "editProfile": "تحرير الملف الشخصي",
+  "saveChanges": "حفظ التغييرات",
+  "saving": "توفير...",
+  "firstName": "الاسم الأول",
+  "lastName": "اسم العائلة",
+  "email": "عنوان البريد الإلكتروني",
+  "phone": "رقم التليفون",
+  "grade": "درجة",
+  "primaryLanguage": "اللغة الأساسية",
+  "guardianName": "اسم الوصي",
+  "guardianRelation": "علاقة الوصي",
+  "selectGrade": "حدد الدرجة",
+  "selectLanguage": "اختر اللغة",
+  "selectRelation": "حدد العلاقة",
+  "studentID": "بطاقة تعريف",
+  "role": "طالب",
+  "errorLoading": "حدث خطأ أثناء تحميل الملف الشخصي",
+  "successUpdate": "تم تحديث الملف الشخصي بنجاح!",
+  "errorUpdate": "فشل في تحديث الملف الشخصي",
+  "genericError": "حدث خطأ. يرجى المحاولة مرة أخرى.",
+  "relations": {
+    "father": "أب",
+    "mother": "الأم",
+    "other": "آخر"
+  }
+}

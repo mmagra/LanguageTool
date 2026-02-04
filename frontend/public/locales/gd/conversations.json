@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Teachdaireachdan",
+  "searchPlaceholder": "Lorg tidsearan...",
+  "noConversations": "Gun chòmhraidhean fhathast",
+  "unknownTeacher": "Neach-teagaisg neo-aithnichte",
+  "noMessages": "Chan eil teachdaireachdan ann fhathast",
+  "typing": "A' sgrìobhadh...",
+  "typePlaceholder": "Sgrìobh do theachdaireachd ann an Gàidhlig na h-Alba...",
+  "emptyState": {
+    "title": "Na còmhraidhean agad",
+    "desc": "Tagh tidsear bhon bhàr-thaobh gus tòiseachadh air ceistean fhaighneachd no bruidhinn mu na comharran agad.",
+    "startPrompt": "Tòisich còmhradh leis an tidsear agad"
+  },
+  "refreshList": "Clàr Ath-nuadhachadh"
+}

@@ -1,0 +1,47 @@
+{
+  "title": "Kōkua a kākoʻo",
+  "description": "Eia mākou e kōkua i nā nīnau a i ʻole nā ​​​​pilikia āu e hālāwai ai i ka wā e hoʻohana ana i kā mākou palapala noi pūnaewele. Inā makemake ʻoe i ke kōkua no ka hoʻomaka ʻana, he nīnau e pili ana i kahi hiʻohiʻona, a makemake paha e hōʻike i kahi bug, aia mākou e kōkua.",
+  "contact": {
+    "title": "Hoʻokaʻaʻike Kākoʻo",
+    "emailTitle": "Kākoʻo leka uila",
+    "emailDesc": "Manaʻo mākou e pane i nā leka uila a pau i loko o 24 mau hola.",
+    "phoneTitle": "Kākoʻo kelepona",
+    "hours": "Pōʻalima (9 am - 5 pm)",
+    "footer": "Mahalo iā ʻoe no ke koho ʻana i kā mākou palapala noi pūnaewele. Ua paʻa mākou i ka hana ʻana i kāu ʻike e like me ka maʻalahi a me ka leʻaleʻa."
+  },
+  "supportedLanguages": {
+    "title": "Papa inoa o nā ʻōlelo i kākoʻo ʻia",
+    "headers": {
+      "rank": "#",
+      "language": "ʻŌlelo",
+      "translation": "Unuhi (App & Mobile)",
+      "desktop": "Kūkākūkā Kūkākūkā (Papaona)",
+      "mobile": "Kūkākūkā Kūloko (App Mobile)"
+    },
+    "mobileLabels": {
+      "translation": "Nā leka i unuhi ʻia",
+      "desktop": "ʻO ka Papakaumaka",
+      "mobile": "Mobile In-Person"
+    },
+    "supported": "Kākoʻo ʻia",
+    "notSupported": "ʻAʻole i kākoʻo ʻia"
+  },
+  "detailedFeatures": {
+    "title": "Kākoʻo hiʻohiʻona kikoʻī",
+    "subtitle": "Hoʻokaʻawale i nā mana hoʻokomo leo a me Text-to-Speech no kēlā me kēia mea.",
+    "headers": {
+      "rank": "#",
+      "language": "ʻŌlelo",
+      "translation": "Unuhi (nā mea a pau)",
+      "desktopVersion": "Palapala Papahana",
+      "mobileApp": "Mobile App",
+      "voiceInput": "Hookomo leo",
+      "tts": "Kikokiko-i-Haʻiʻōlelo"
+    },
+    "mobileHeaders": {
+      "translation": "Unuhi",
+      "desktop": "Nā hiʻohiʻona papapihi",
+      "mobile": "Nā hiʻohiʻona polokalamu kelepona"
+    }
+  }
+}

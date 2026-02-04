@@ -1,0 +1,47 @@
+{
+  "title": "Għajnuna u Appoġġ",
+  "description": "Aħna qegħdin hawn biex ngħinu fi kwalunkwe mistoqsija jew kwistjoni li tista' tiltaqa' magħhom waqt li tuża l-applikazzjoni tal-web tagħna. Kemm jekk għandek bżonn għajnuna biex tibda, jekk ikollok mistoqsija dwar karatteristika, jew tridx tirrapporta bug, aħna qegħdin hawn biex ngħinu.",
+  "contact": {
+    "title": "Ikkuntattja l-Appoġġ",
+    "emailTitle": "Appoġġ bl-Email",
+    "emailDesc": "Aħna nimmiraw li nirrispondu għall-emails kollha fi żmien 24 siegħa.",
+    "phoneTitle": "Appoġġ tat-Telefon",
+    "hours": "Mon-Ġimgħa (9 am – 5 pm)",
+    "footer": "Grazzi talli għażilt l-applikazzjoni tal-web tagħna. Aħna impenjati li nagħmlu l-esperjenza tiegħek bla xkiel u pjaċevoli kemm jista' jkun."
+  },
+  "supportedLanguages": {
+    "title": "Lista ta' Lingwi Appoġġjati",
+    "headers": {
+      "rank": "#",
+      "language": "Lingwa",
+      "translation": "Traduzzjoni (App & Mobile)",
+      "desktop": "Komunikazzjoni In-Persona (Desktop)",
+      "mobile": "Komunikazzjoni In-Person (App mobbli)"
+    },
+    "mobileLabels": {
+      "translation": "Messaġġi tradotti",
+      "desktop": "Desktop In-Person",
+      "mobile": "Mobile In-Person"
+    },
+    "supported": "Appoġġjati",
+    "notSupported": "Mhux Appoġġjata"
+  },
+  "detailedFeatures": {
+    "title": "Appoġġ Dettaljat għall-Karatteristiċi",
+    "subtitle": "Tqassim tal-kapaċitajiet ta' Input tal-Vuċi u Test-to-Speech għal kull apparat.",
+    "headers": {
+      "rank": "#",
+      "language": "Lingwa",
+      "translation": "Traduzzjoni (Kull)",
+      "desktopVersion": "Verżjoni tad-Desktop",
+      "mobileApp": "App mobbli",
+      "voiceInput": "Input tal-Vuċi",
+      "tts": "Test-to-Speech"
+    },
+    "mobileHeaders": {
+      "translation": "Traduzzjoni",
+      "desktop": "Karatteristiċi tad-Desktop",
+      "mobile": "Karatteristiċi tal-App mobbli"
+    }
+  }
+}

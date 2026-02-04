@@ -1,0 +1,18 @@
+{
+  "title": "GesprokenEdge",
+  "myProfile": "Mijn profiel",
+  "changePassword": "Wachtwoord wijzigen",
+  "helpSupport": "Hulp en ondersteuning",
+  "signOut": "Meld u af",
+  "notifications": {
+    "title": "Meldingen",
+    "unread": "ongelezen berichten",
+    "empty": "Geen nieuwe meldingen",
+    "viewAll": "Bekijk alle berichten",
+    "newMessage": "Nieuw bericht"
+  },
+  "language": {
+    "switchToNative": "Schakel over naar uw taal",
+    "switchToEnglish": "Schakel over naar Engels"
+  }
+}

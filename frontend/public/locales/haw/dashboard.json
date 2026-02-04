@@ -1,0 +1,26 @@
+{
+  "title": "Papa Papa Haumana",
+  "subtitle": "Welina hou! Eia kahi hiʻohiʻona o kāu holomua.",
+  "stats": {
+    "teachers": "Ka helu o nā Kumu",
+    "teachersSubText": "Nā kumu āu i kamaʻilio pū ai",
+    "conversations": "Kūkākūkā (mau)",
+    "conversationsSubText": "Huina memo",
+    "languages": "Nā ʻōlelo i kākoʻo ʻia",
+    "languagesSubText": "Kākau ʻia ({{written}}) | ʻŌlelo ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Kūlana Kākoʻo ʻŌlelo",
+    "primary": "ʻO kāu ʻōlelo mua",
+    "written": {
+      "title": "Kākoʻo kākau ʻia",
+      "available": "Loaʻa no ka leka uila",
+      "unsupported": "ʻAʻole i kākoʻo ʻia"
+    },
+    "verbal": {
+      "title": "Kākoʻo waha",
+      "available": "Loaʻa no nā kau ola",
+      "unsupported": "ʻAʻole i kākoʻo ʻia"
+    }
+  }
+}

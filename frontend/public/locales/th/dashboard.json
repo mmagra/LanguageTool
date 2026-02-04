@@ -1,0 +1,26 @@
+{
+  "title": "แดชบอร์ดนักเรียน",
+  "subtitle": "ยินดีต้อนรับกลับมา! นี่คือภาพรวมของความก้าวหน้าของคุณ",
+  "stats": {
+    "teachers": "จำนวนครู",
+    "teachersSubText": "ครูที่คุณสนทนาด้วย",
+    "conversations": "บทสนทนา",
+    "conversationsSubText": "ข้อความทั้งหมด",
+    "languages": "ภาษาที่รองรับ",
+    "languagesSubText": "เขียน ({{written}}) | ทางวาจา ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "สถานะการสนับสนุนภาษา",
+    "primary": "ภาษาหลักของคุณคือ",
+    "written": {
+      "title": "สนับสนุนเป็นลายลักษณ์อักษร",
+      "available": "สามารถส่งข้อความได้",
+      "unsupported": "ไม่รองรับ"
+    },
+    "verbal": {
+      "title": "การสนับสนุนทางวาจา",
+      "available": "พร้อมให้บริการสำหรับเซสชันสด",
+      "unsupported": "ไม่รองรับ"
+    }
+  }
+}

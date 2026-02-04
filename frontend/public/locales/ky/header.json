@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Менин профилим",
+  "changePassword": "Сырсөздү өзгөртүү",
+  "helpSupport": "Жардам & Колдоо",
+  "signOut": "Чыгыңыз",
+  "notifications": {
+    "title": "Эскертмелер",
+    "unread": "окула элек билдирүүлөр",
+    "empty": "Жаңы эскертмелер жок",
+    "viewAll": "Бардык билдирүүлөрдү көрүү",
+    "newMessage": "Жаңы билдирүү"
+  },
+  "language": {
+    "switchToNative": "Өз тилиңизге которулуңуз",
+    "switchToEnglish": "Англис тилине которулуу"
+  }
+}

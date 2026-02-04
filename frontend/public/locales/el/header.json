@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Το προφίλ μου",
+  "changePassword": "Αλλαγή κωδικού πρόσβασης",
+  "helpSupport": "Βοήθεια & Υποστήριξη",
+  "signOut": "Αποσυνδεθείτε",
+  "notifications": {
+    "title": "Ειδοποιήσεις",
+    "unread": "μη αναγνωσμένα μηνύματα",
+    "empty": "Δεν υπάρχουν νέες ειδοποιήσεις",
+    "viewAll": "Προβολή όλων των μηνυμάτων",
+    "newMessage": "Νέο μήνυμα"
+  },
+  "language": {
+    "switchToNative": "Μετάβαση στη Γλώσσα σας",
+    "switchToEnglish": "Μετάβαση στα Αγγλικά"
+  }
+}

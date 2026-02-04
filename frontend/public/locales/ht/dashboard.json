@@ -1,0 +1,26 @@
+{
+  "title": "Dashboard elèv",
+  "subtitle": "Byenvini tounen! Isit la se yon apèsi sou pwogrè ou.",
+  "stats": {
+    "teachers": "Nimewo Pwofesè (yo)",
+    "teachersSubText": "Pwofesè ou te koze avèk yo",
+    "conversations": "Konvèsasyon (yo)",
+    "conversationsSubText": "Total Mesaj",
+    "languages": "Lang ki sipòte",
+    "languagesSubText": "Ekri ({{written}}) | Vèbal ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Estati Sipò Lang",
+    "primary": "Lang prensipal ou se",
+    "written": {
+      "title": "Sipò ekri",
+      "available": "Disponib pou messagerie",
+      "unsupported": "Pa sipòte"
+    },
+    "verbal": {
+      "title": "Sipò vèbal",
+      "available": "Disponib pou sesyon ap viv yo",
+      "unsupported": "Pa sipòte"
+    }
+  }
+}

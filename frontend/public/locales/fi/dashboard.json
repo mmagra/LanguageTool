@@ -1,0 +1,26 @@
+{
+  "title": "Opiskelijoiden hallintapaneeli",
+  "subtitle": "Tervetuloa takaisin! Tässä on yleiskatsaus edistymisestäsi.",
+  "stats": {
+    "teachers": "Opettajien lukumäärä",
+    "teachersSubText": "Opettajat, joiden kanssa keskustelitte",
+    "conversations": "Keskustelu(t)",
+    "conversationsSubText": "Viestejä yhteensä",
+    "languages": "Tuetut kielet",
+    "languagesSubText": "Kirjoitettu ({{written}}) | Sanallinen ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Kielituen tila",
+    "primary": "Ensisijainen kielesi on",
+    "written": {
+      "title": "Kirjallinen tuki",
+      "available": "Saatavilla viestien lähettämiseen",
+      "unsupported": "Ei tuettu"
+    },
+    "verbal": {
+      "title": "Sanallinen tuki",
+      "available": "Saatavilla live-istuntoihin",
+      "unsupported": "Ei tuettu"
+    }
+  }
+}

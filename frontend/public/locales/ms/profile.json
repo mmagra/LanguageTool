@@ -1,0 +1,28 @@
+{
+  "title": "Profil Saya",
+  "editProfile": "Edit Profil",
+  "saveChanges": "Simpan Perubahan",
+  "saving": "Menyimpan...",
+  "firstName": "Nama Pertama",
+  "lastName": "Nama Akhir",
+  "email": "Alamat E-mel",
+  "phone": "Nombor Telefon",
+  "grade": "Gred",
+  "primaryLanguage": "Bahasa Utama",
+  "guardianName": "Nama Penjaga",
+  "guardianRelation": "Hubungan Penjaga",
+  "selectGrade": "Pilih Gred",
+  "selectLanguage": "Pilih Bahasa",
+  "selectRelation": "Pilih Perhubungan",
+  "studentID": "ID",
+  "role": "Pelajar",
+  "errorLoading": "Ralat Memuatkan Profil",
+  "successUpdate": "Profil berjaya dikemas kini!",
+  "errorUpdate": "Gagal mengemas kini profil",
+  "genericError": "Ralat berlaku. Sila cuba lagi.",
+  "relations": {
+    "father": "Bapa",
+    "mother": "ibu",
+    "other": "Lain-lain"
+  }
+}

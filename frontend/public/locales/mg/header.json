@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Ny mombamomba ahy",
+  "changePassword": "Hanova tenimiafina",
+  "helpSupport": "Fanampiana & Fanohanana",
+  "signOut": "hivoaka",
+  "notifications": {
+    "title": "fampahatsiahivana",
+    "unread": "hafatra tsy novakiana",
+    "empty": "Tsy misy fampahafantarana vaovao",
+    "viewAll": "Jereo ny hafatra rehetra",
+    "newMessage": "Hafatra vaovao"
+  },
+  "language": {
+    "switchToNative": "Miverena amin'ny fiteninao",
+    "switchToEnglish": "Hiverina any amin'ny English"
+  }
+}

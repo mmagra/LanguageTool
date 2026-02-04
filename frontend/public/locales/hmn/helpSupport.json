@@ -1,0 +1,47 @@
+{
+  "title": "Pab thiab txhawb nqa",
+  "description": "Peb nyob ntawm no los pab nrog cov lus nug lossis teeb meem koj tuaj yeem ntsib thaum siv peb daim ntawv thov web. Txawm hais tias koj xav tau kev pab pib, muaj lus nug txog qhov tshwj xeeb, lossis xav qhia txog kab laum, peb nyob ntawm no los pab.",
+  "contact": {
+    "title": "Hu rau kev txhawb nqa",
+    "emailTitle": "Email Support",
+    "emailDesc": "Peb lub hom phiaj yuav teb rau txhua tus email hauv 24 teev.",
+    "phoneTitle": "Kev them nyiaj yug xov tooj",
+    "hours": "Monday-Fri (9 teev sawv ntxov - 5 teev tsaus ntuj)",
+    "footer": "Ua tsaug rau koj xaiv peb lub vev xaib thov. Peb tau cog lus tias yuav ua rau koj qhov kev paub zoo li du thiab txaus siab li sai tau."
+  },
+  "supportedLanguages": {
+    "title": "Daim ntawv teev cov lus txhawb",
+    "headers": {
+      "rank": "#",
+      "language": "Lus",
+      "translation": "Txhais lus (App & Mobile)",
+      "desktop": "Kev sib txuas lus hauv tib neeg (Desktop)",
+      "mobile": "Kev sib txuas lus hauv tib neeg (Mobile App)"
+    },
+    "mobileLabels": {
+      "translation": "Cov lus txhais",
+      "desktop": "Desktop Hauv Tus Neeg",
+      "mobile": "Mobile hauv-tus neeg"
+    },
+    "supported": "Txhawb nqa",
+    "notSupported": "Tsis Txhawb"
+  },
+  "detailedFeatures": {
+    "title": "Paub meej Feature Support",
+    "subtitle": "Kev tawg ntawm Lub Suab Input thiab Text-rau-Speech peev xwm ntawm ib lub cuab yeej.",
+    "headers": {
+      "rank": "#",
+      "language": "Lus",
+      "translation": "Txhais lus (Tag nrho)",
+      "desktopVersion": "Desktop Version",
+      "mobileApp": "Mobile App",
+      "voiceInput": "Suab Input",
+      "tts": "Ntawv-rau-hais lus"
+    },
+    "mobileHeaders": {
+      "translation": "Kev txhais lus",
+      "desktop": "Desktop Features",
+      "mobile": "Mobile App nta"
+    }
+  }
+}

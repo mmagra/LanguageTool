@@ -1,0 +1,28 @@
+{
+  "title": "Профили ман",
+  "editProfile": "Таҳрири профил",
+  "saveChanges": "Тағиротро захира кунед",
+  "saving": "Захира...",
+  "firstName": "Ном",
+  "lastName": "Насаб",
+  "email": "Суроғаи имэйл",
+  "phone": "Рақами мобилӣ",
+  "grade": "Синф",
+  "primaryLanguage": "Забони ибтидоӣ",
+  "guardianName": "Номи нигаҳбон",
+  "guardianRelation": "Муносибати парасторӣ",
+  "selectGrade": "Баҳо интихоб кунед",
+  "selectLanguage": "Забонро интихоб кунед",
+  "selectRelation": "Муносибатро интихоб кунед",
+  "studentID": "ID",
+  "role": "Донишҷӯ",
+  "errorLoading": "Хатогӣ ҳангоми боркунии профил",
+  "successUpdate": "Профил бомуваффақият нав карда шуд!",
+  "errorUpdate": "Навсозии профил муваффақ нашуд",
+  "genericError": "Хатогие рух дод. Лутфан бори дигар кӯшиш кунед.",
+  "relations": {
+    "father": "Падар",
+    "mother": "Модар",
+    "other": "Дигар"
+  }
+}

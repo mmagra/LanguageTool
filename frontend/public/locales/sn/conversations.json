@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Mharidzo",
+  "searchPlaceholder": "Tsvaga vadzidzisi...",
+  "noConversations": "Hapana nhaurirano parizvino",
+  "unknownTeacher": "Mudzidzisi Asingazivikanwi",
+  "noMessages": "Hapana mameseji parizvino",
+  "typing": "Kunyora...",
+  "typePlaceholder": "Nyora meseji yako neShona...",
+  "emptyState": {
+    "title": "Hurukuro Dzako",
+    "desc": "Sarudza mudzidzisi kubva padivi pekuti utange kubvunza mibvunzo kana kukurukura nezvemagiredhi ako.",
+    "startPrompt": "Tanga kukurukura nemudzidzisi wako"
+  },
+  "refreshList": "Refresh List"
+}

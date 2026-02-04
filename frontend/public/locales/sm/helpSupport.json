@@ -1,0 +1,47 @@
+{
+  "title": "Fesoasoani ma Lagolago",
+  "description": "Matou te i ai iinei e fesoasoani i soʻo se fesili poʻo ni faʻafitauli e te ono feagai aʻo faʻaogaina la matou upega tafaʻilagi. Pe e te manaʻomia se fesoasoani e amata ai, fai sau fesili e uiga i se vaega, pe manaʻo e lipotia se bug, matou te i ai iinei e fesoasoani.",
+  "contact": {
+    "title": "Faafesoota'i le Lagolago",
+    "emailTitle": "Email Lagolago",
+    "emailDesc": "Matou te faʻamoemoe e tali atu i imeli uma i totonu ole 24 itula.",
+    "phoneTitle": "Lagolago Telefoni",
+    "hours": "Aso Faraile (9 i le taeao – 5 i le afiafi)",
+    "footer": "Fa'afetai mo le filifilia o la matou 'upega tafa'ilagi. Matou te tuuto atu i le faia o lou poto masani ia lamolemole ma fiafia e mafai."
+  },
+  "supportedLanguages": {
+    "title": "Lisi o Gagana Lagolago",
+    "headers": {
+      "rank": "#",
+      "language": "Gagana",
+      "translation": "Fa'aliliuga (App & Mobile)",
+      "desktop": "Feso'ota'iga Fa'atagata-Tagata (Desktop)",
+      "mobile": "Feso'ota'iga i Tagata (Talosaga Fe'avea'i)"
+    },
+    "mobileLabels": {
+      "translation": "Savali Faaliliu",
+      "desktop": "Desktop i-Tagata",
+      "mobile": "Fe'avea'i Fa'aletagata"
+    },
+    "supported": "Lagolagoina",
+    "notSupported": "Le Lagolagoina"
+  },
+  "detailedFeatures": {
+    "title": "Lagolago Fa'amatalaga Auiliili",
+    "subtitle": "Fa'amavaega o le fa'aogaina o le leo ma le fa'amatalaga-i-tulaga agava'a i le masini.",
+    "headers": {
+      "rank": "#",
+      "language": "Gagana",
+      "translation": "Fa'aliliuga (All)",
+      "desktopVersion": "Fa'aliliuga Papamaa",
+      "mobileApp": "Telefoni feavea'i",
+      "voiceInput": "Lagolago leo",
+      "tts": "Tusi-i-Lauga"
+    },
+    "mobileHeaders": {
+      "translation": "Fa'aliliuga",
+      "desktop": "Fa'ailoga Papamaa",
+      "mobile": "Fetuuna'i App Fe'avea'i"
+    }
+  }
+}

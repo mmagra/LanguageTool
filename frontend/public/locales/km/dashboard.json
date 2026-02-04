@@ -1,0 +1,26 @@
+{
+  "title": "ផ្ទាំងគ្រប់គ្រងសិស្ស",
+  "subtitle": "សូមស្វាគមន៍ការត្រឡប់មកវិញ! នេះជាទិដ្ឋភាពទូទៅនៃវឌ្ឍនភាពរបស់អ្នក។",
+  "stats": {
+    "teachers": "លេខគ្រូ",
+    "teachersSubText": "គ្រូដែលអ្នកបានជជែកជាមួយ",
+    "conversations": "ការសន្ទនា",
+    "conversationsSubText": "សារសរុប",
+    "languages": "ភាសាដែលគាំទ្រ",
+    "languagesSubText": "សរសេរ ({{written}}) | ពាក្យសំដី ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "ស្ថានភាពគាំទ្រភាសា",
+    "primary": "ភាសាចម្បងរបស់អ្នកគឺ",
+    "written": {
+      "title": "ការគាំទ្រជាលាយលក្ខណ៍អក្សរ",
+      "available": "មានសម្រាប់ការផ្ញើសារ",
+      "unsupported": "មិនគាំទ្រ"
+    },
+    "verbal": {
+      "title": "ការគាំទ្រពាក្យសំដី",
+      "available": "មានសម្រាប់វគ្គបន្តផ្ទាល់",
+      "unsupported": "មិនគាំទ្រ"
+    }
+  }
+}

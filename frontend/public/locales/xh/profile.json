@@ -1,0 +1,28 @@
+{
+  "title": "Iprofayile yam",
+  "editProfile": "Hlengahlengisa iprofayile yakho",
+  "saveChanges": "Gcina Utshintsho",
+  "saving": "Iyagcina...",
+  "firstName": "Igama lakho",
+  "lastName": "Ifani",
+  "email": "Idilesi yemeyile",
+  "phone": "Inombolo yomnxeba",
+  "grade": "IBanga",
+  "primaryLanguage": "Ulwimi olusisiseko",
+  "guardianName": "Igama lomlondolozi",
+  "guardianRelation": "Guardian Relation",
+  "selectGrade": "Khetha iBanga",
+  "selectLanguage": "Khetha ulwimi",
+  "selectRelation": "Khetha Unxulumano",
+  "studentID": "Isazisi",
+  "role": "Umfundi",
+  "errorLoading": "Imposiso yokulayisha iProfayile",
+  "successUpdate": "Iprofayile ihlaziywe ngempumelelo!",
+  "errorUpdate": "Isilele ukuhlaziya iprofayile",
+  "genericError": "Impazamo yenzekile. Nceda zama kwakhona.",
+  "relations": {
+    "father": "Utata",
+    "mother": "Umama",
+    "other": "Okunye"
+  }
+}

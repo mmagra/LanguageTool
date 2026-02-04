@@ -1,0 +1,13 @@
+{
+  "loading": "Laai tans...",
+  "error": "Fout",
+  "save": "Stoor",
+  "cancel": "Kanselleer",
+  "language": "Taal",
+  "switchToEnglish": "Skakel oor na Engels",
+  "switchToNative": "Skakel oor na {{taal}}",
+  "online": "Aanlyn",
+  "offline": "Vanlyn",
+  "notProvided": "Nie verskaf nie",
+  "tryAgain": "Probeer weer"
+}

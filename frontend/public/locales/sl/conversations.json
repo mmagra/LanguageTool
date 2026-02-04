@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Sporočila",
+  "searchPlaceholder": "Iskanje učiteljev ...",
+  "noConversations": "Pogovorov še ni",
+  "unknownTeacher": "Neznani učitelj",
+  "noMessages": "Še ni sporočil",
+  "typing": "Tipkanje ...",
+  "typePlaceholder": "Napiši sporočilo v slovenščini...",
+  "emptyState": {
+    "title": "Vaši pogovori",
+    "desc": "V stranski vrstici izberite učitelja, da začnete postavljati vprašanja ali razpravljati o svojih ocenah.",
+    "startPrompt": "Začnite pogovor s svojim učiteljem"
+  },
+  "refreshList": "Osveži seznam"
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Studenta Panelo",
+  "subtitle": "Bonvenon reen! Jen superrigardo de via progreso.",
+  "stats": {
+    "teachers": "No. de instruisto(j)",
+    "teachersSubText": "Instruistoj kun kiuj vi babilis",
+    "conversations": "Konversacio(j)",
+    "conversationsSubText": "Tutaj Mesaĝoj",
+    "languages": "Subtenataj Lingvoj",
+    "languagesSubText": "Skribita ({{written}}) | Parola ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Lingva Subtena Statuso",
+    "primary": "Via Primara Lingvo estas",
+    "written": {
+      "title": "Skriba Subteno",
+      "available": "Disponebla por mesaĝado",
+      "unsupported": "Ne subtenata"
+    },
+    "verbal": {
+      "title": "Parola Subteno",
+      "available": "Havebla por vivaj sesioj",
+      "unsupported": "Ne subtenata"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Papan Pemuka Pelajar",
+  "subtitle": "Selamat kembali! Berikut ialah gambaran keseluruhan kemajuan anda.",
+  "stats": {
+    "teachers": "Bilangan Guru",
+    "teachersSubText": "Guru yang anda bersembang",
+    "conversations": "Perbualan",
+    "conversationsSubText": "Jumlah Mesej",
+    "languages": "Bahasa yang Disokong",
+    "languagesSubText": "Ditulis ({{written}}) | Lisan ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Status Sokongan Bahasa",
+    "primary": "Bahasa Utama anda ialah",
+    "written": {
+      "title": "Sokongan Bertulis",
+      "available": "Tersedia untuk pemesejan",
+      "unsupported": "Tidak disokong"
+    },
+    "verbal": {
+      "title": "Sokongan Lisan",
+      "available": "Tersedia untuk sesi langsung",
+      "unsupported": "Tidak disokong"
+    }
+  }
+}

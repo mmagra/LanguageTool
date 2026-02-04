@@ -1,0 +1,28 @@
+{
+  "title": "Profili im",
+  "editProfile": "Redakto profilin",
+  "saveChanges": "Ruaj Ndryshimet",
+  "saving": "Po ruan...",
+  "firstName": "Emri",
+  "lastName": "Mbiemri",
+  "email": "Adresa e emailit",
+  "phone": "Numri i telefonit",
+  "grade": "notë",
+  "primaryLanguage": "Gjuha fillore",
+  "guardianName": "Emri i kujdestarit",
+  "guardianRelation": "Marrëdhënia e kujdestarit",
+  "selectGrade": "Zgjidhni notën",
+  "selectLanguage": "Zgjidhni gjuhën",
+  "selectRelation": "Zgjidhni Lidhjen",
+  "studentID": "ID",
+  "role": "Studenti",
+  "errorLoading": "Gabim gjatë ngarkimit të profilit",
+  "successUpdate": "Profili u përditësua me sukses!",
+  "errorUpdate": "Përditësimi i profilit dështoi",
+  "genericError": "Ndodhi një gabim. Ju lutemi provoni përsëri.",
+  "relations": {
+    "father": "Babai",
+    "mother": "Nëna",
+    "other": "Të tjera"
+  }
+}

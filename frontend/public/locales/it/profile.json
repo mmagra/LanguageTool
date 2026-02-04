@@ -1,0 +1,28 @@
+{
+  "title": "Il mio profilo",
+  "editProfile": "Modifica profilo",
+  "saveChanges": "Salva modifiche",
+  "saving": "Risparmio...",
+  "firstName": "Nome di battesimo",
+  "lastName": "Cognome",
+  "email": "Indirizzo e-mail",
+  "phone": "Numero di telefono",
+  "grade": "Grado",
+  "primaryLanguage": "Lingua primaria",
+  "guardianName": "Nome del guardiano",
+  "guardianRelation": "Rapporto Guardiano",
+  "selectGrade": "Seleziona Grado",
+  "selectLanguage": "Seleziona lingua",
+  "selectRelation": "Seleziona Relazione",
+  "studentID": "ID",
+  "role": "Studente",
+  "errorLoading": "Errore durante il caricamento del profilo",
+  "successUpdate": "Profilo aggiornato con successo!",
+  "errorUpdate": "Impossibile aggiornare il profilo",
+  "genericError": "Si è verificato un errore. Per favore riprova.",
+  "relations": {
+    "father": "Padre",
+    "mother": "Madre",
+    "other": "Altro"
+  }
+}

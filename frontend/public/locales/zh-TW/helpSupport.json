@@ -1,0 +1,47 @@
+{
+  "title": "幫助與支持",
+  "description": "我們隨時為您提供幫助，解決您在使用我們的網絡應用程序時可能遇到的任何問題。無論您需要入門幫助、對功能有疑問還是想要報告錯誤，我們都會隨時為您提供幫助。",
+  "contact": {
+    "title": "聯繫支持人員",
+    "emailTitle": "電子郵件支持",
+    "emailDesc": "我們的目標是在 24 小時內回复所有電子郵件。",
+    "phoneTitle": "電話支持",
+    "hours": "週一至週五（上午 9 點至下午 5 點）",
+    "footer": "感謝您選擇我們的網絡應用程序。我們致力於讓您的體驗盡可能順利和愉快。"
+  },
+  "supportedLanguages": {
+    "title": "支持的語言列表",
+    "headers": {
+      "rank": "#",
+      "language": "語言",
+      "translation": "翻譯（應用程序和移動設備）",
+      "desktop": "面對面交流（桌面）",
+      "mobile": "面對面溝通（移動應用程序）"
+    },
+    "mobileLabels": {
+      "translation": "翻譯後的消息",
+      "desktop": "桌面面對面",
+      "mobile": "移動面對面"
+    },
+    "supported": "支持",
+    "notSupported": "不支持"
+  },
+  "detailedFeatures": {
+    "title": "詳細的功能支持",
+    "subtitle": "每個設備的語音輸入和文本轉語音功能的細分。",
+    "headers": {
+      "rank": "#",
+      "language": "語言",
+      "translation": "翻譯(全部)",
+      "desktopVersion": "桌面版",
+      "mobileApp": "手機應用程序",
+      "voiceInput": "語音輸入",
+      "tts": "文字轉語音"
+    },
+    "mobileHeaders": {
+      "translation": "翻譯",
+      "desktop": "桌面功能",
+      "mobile": "移動應用程序功能"
+    }
+  }
+}

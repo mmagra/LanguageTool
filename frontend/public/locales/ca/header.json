@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "El meu perfil",
+  "changePassword": "Canvia la contrasenya",
+  "helpSupport": "Ajuda i Suport",
+  "signOut": "Tanca la sessió",
+  "notifications": {
+    "title": "Notificacions",
+    "unread": "missatges no llegits",
+    "empty": "No hi ha notificacions noves",
+    "viewAll": "Veure tots els missatges",
+    "newMessage": "Nou missatge"
+  },
+  "language": {
+    "switchToNative": "Canvia al teu idioma",
+    "switchToEnglish": "Canvia a l'anglès"
+  }
+}

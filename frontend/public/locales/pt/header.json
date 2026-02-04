@@ -1,0 +1,18 @@
+{
+  "title": "Borda falada",
+  "myProfile": "Meu perfil",
+  "changePassword": "Alterar a senha",
+  "helpSupport": "Ajuda e suporte",
+  "signOut": "sair",
+  "notifications": {
+    "title": "Notificações",
+    "unread": "mensagens não lidas",
+    "empty": "Nenhuma nova notificação",
+    "viewAll": "Ver todas as mensagens",
+    "newMessage": "Nova mensagem"
+  },
+  "language": {
+    "switchToNative": "Mude para o seu idioma",
+    "switchToEnglish": "Mudar para inglês"
+  }
+}

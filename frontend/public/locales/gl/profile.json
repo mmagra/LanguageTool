@@ -1,0 +1,28 @@
+{
+  "title": "O meu perfil",
+  "editProfile": "Editar perfil",
+  "saveChanges": "Gardar cambios",
+  "saving": "Gardando...",
+  "firstName": "Nome",
+  "lastName": "Apelido",
+  "email": "Enderezo de correo electrónico",
+  "phone": "Número de teléfono",
+  "grade": "Grao",
+  "primaryLanguage": "Lingua primaria",
+  "guardianName": "Nome do gardián",
+  "guardianRelation": "Relación de gardián",
+  "selectGrade": "Seleccione Grao",
+  "selectLanguage": "Seleccione Idioma",
+  "selectRelation": "Seleccione Relación",
+  "studentID": "ID",
+  "role": "Estudante",
+  "errorLoading": "Erro ao cargar o perfil",
+  "successUpdate": "Perfil actualizado correctamente!",
+  "errorUpdate": "Produciuse un erro ao actualizar o perfil",
+  "genericError": "Produciuse un erro. Téntao de novo.",
+  "relations": {
+    "father": "Pai",
+    "mother": "Nai",
+    "other": "Outros"
+  }
+}

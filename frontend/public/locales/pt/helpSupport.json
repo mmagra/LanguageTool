@@ -1,0 +1,47 @@
+{
+  "title": "Ajuda e suporte",
+  "description": "Estamos aqui para ajudar com quaisquer dúvidas ou problemas que você possa encontrar ao usar nosso aplicativo web. Se você precisa de ajuda para começar, tem alguma dúvida sobre um recurso ou deseja relatar um bug, estamos aqui para ajudar.",
+  "contact": {
+    "title": "Contate o suporte",
+    "emailTitle": "Suporte por e-mail",
+    "emailDesc": "Nosso objetivo é responder a todos os e-mails dentro de 24 horas.",
+    "phoneTitle": "Suporte por telefone",
+    "hours": "Seg a Sex (9h às 17h)",
+    "footer": "Obrigado por escolher nosso aplicativo web. Estamos empenhados em tornar a sua experiência o mais tranquila e agradável possível."
+  },
+  "supportedLanguages": {
+    "title": "Lista de idiomas suportados",
+    "headers": {
+      "rank": "#",
+      "language": "Linguagem",
+      "translation": "Tradução (aplicativo e celular)",
+      "desktop": "Comunicação presencial (desktop)",
+      "mobile": "Comunicação presencial (aplicativo móvel)"
+    },
+    "mobileLabels": {
+      "translation": "Mensagens traduzidas",
+      "desktop": "Desktop pessoalmente",
+      "mobile": "Móvel pessoalmente"
+    },
+    "supported": "Suportado",
+    "notSupported": "Não compatível"
+  },
+  "detailedFeatures": {
+    "title": "Suporte detalhado a recursos",
+    "subtitle": "Detalhamento dos recursos de entrada de voz e conversão de texto em fala por dispositivo.",
+    "headers": {
+      "rank": "#",
+      "language": "Linguagem",
+      "translation": "Tradução (todas)",
+      "desktopVersion": "Versão para desktop",
+      "mobileApp": "Aplicativo móvel",
+      "voiceInput": "Entrada de voz",
+      "tts": "Conversão de texto para fala"
+    },
+    "mobileHeaders": {
+      "translation": "Tradução",
+      "desktop": "Recursos da área de trabalho",
+      "mobile": "Recursos de aplicativos móveis"
+    }
+  }
+}

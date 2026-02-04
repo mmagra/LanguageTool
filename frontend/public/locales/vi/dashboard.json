@@ -1,0 +1,26 @@
+{
+  "title": "Bảng thông tin sinh viên",
+  "subtitle": "Chào mừng trở lại! Dưới đây là tổng quan về sự tiến bộ của bạn.",
+  "stats": {
+    "teachers": "Số giáo viên",
+    "teachersSubText": "Giáo viên bạn đã trò chuyện cùng",
+    "conversations": "(Các) cuộc trò chuyện",
+    "conversationsSubText": "Tổng số tin nhắn",
+    "languages": "Ngôn ngữ được hỗ trợ",
+    "languagesSubText": "Đã viết ({{written}}) | Bằng lời nói ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Trạng thái hỗ trợ ngôn ngữ",
+    "primary": "Ngôn ngữ chính của bạn là",
+    "written": {
+      "title": "Hỗ trợ bằng văn bản",
+      "available": "Có sẵn để nhắn tin",
+      "unsupported": "Không được hỗ trợ"
+    },
+    "verbal": {
+      "title": "Hỗ trợ bằng lời nói",
+      "available": "Có sẵn cho các phiên trực tiếp",
+      "unsupported": "Không được hỗ trợ"
+    }
+  }
+}

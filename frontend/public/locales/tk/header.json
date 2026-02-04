@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Meniň profilim",
+  "changePassword": "Paroly üýtgetmek",
+  "helpSupport": "Kömek we goldaw",
+  "signOut": "Hasabyňyzdan çykyň",
+  "notifications": {
+    "title": "Duýduryşlar",
+    "unread": "okalmadyk habarlar",
+    "empty": "Täze bildiriş ýok",
+    "viewAll": "Messageshli habarlary görüň",
+    "newMessage": "Täze habar"
+  },
+  "language": {
+    "switchToNative": "Diliňize geçiň",
+    "switchToEnglish": "Iňlis diline geçiň"
+  }
+}

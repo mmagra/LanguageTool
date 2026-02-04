@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Mesaĝoj",
+  "searchPlaceholder": "Serĉu instruistojn...",
+  "noConversations": "Ankoraŭ neniuj konversacioj",
+  "unknownTeacher": "Nekonata Instruisto",
+  "noMessages": "Ankoraŭ neniuj mesaĝoj",
+  "typing": "Tajpanta...",
+  "typePlaceholder": "Tajpu vian mesaĝon en Esperanto...",
+  "emptyState": {
+    "title": "Viaj Konversacioj",
+    "desc": "Elektu instruiston el la flanka kolumno por komenci demandi aŭ diskuti viajn notojn.",
+    "startPrompt": "Komencu konversacion kun via instruisto"
+  },
+  "refreshList": "Refreŝigi Listo"
+}

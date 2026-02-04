@@ -1,0 +1,13 @@
+{
+  "loading": "Φόρτωση...",
+  "error": "Σφάλμα",
+  "save": "Εκτός",
+  "cancel": "Ματαίωση",
+  "language": "Γλώσσα",
+  "switchToEnglish": "Μετάβαση στα Αγγλικά",
+  "switchToNative": "Εναλλαγή σε {{language}}",
+  "online": "Διαδικτυακά",
+  "offline": "Εκτός σύνδεσης",
+  "notProvided": "Δεν παρέχεται",
+  "tryAgain": "Δοκιμάστε ξανά"
+}

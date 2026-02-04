@@ -1,0 +1,26 @@
+{
+  "title": "Оюутны хяналтын самбар",
+  "subtitle": "Эргээд тавтай морил! Энд таны ахиц дэвшлийн тойм байна.",
+  "stats": {
+    "teachers": "Багш(ууд)-ын тоо",
+    "teachersSubText": "Таны чатлаж байсан багш нар",
+    "conversations": "Харилцаа(ууд)",
+    "conversationsSubText": "Нийт мессеж",
+    "languages": "Дэмжигдсэн хэлүүд",
+    "languagesSubText": "Бичсэн ({{written}}) | Амаар ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Хэлний дэмжлэгийн статус",
+    "primary": "Таны үндсэн хэл",
+    "written": {
+      "title": "Бичгийн дэмжлэг",
+      "available": "Мессеж бичих боломжтой",
+      "unsupported": "Дэмжигдээгүй"
+    },
+    "verbal": {
+      "title": "Аман дэмжлэг",
+      "available": "Шууд хуралдаанд ашиглах боломжтой",
+      "unsupported": "Дэмжигдээгүй"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "loading": "Се вчитува...",
+  "error": "Грешка",
+  "save": "Зачувај",
+  "cancel": "Откажи",
+  "language": "Јазик",
+  "switchToEnglish": "Префрли се на англиски",
+  "switchToNative": "Префрли се на {{јазик}}",
+  "online": "Онлајн",
+  "offline": "Офлајн",
+  "notProvided": "Не е обезбедено",
+  "tryAgain": "Обидете се повторно"
+}

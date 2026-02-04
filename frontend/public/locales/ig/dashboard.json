@@ -1,0 +1,26 @@
+{
+  "title": "Dashboard ụmụ akwụkwọ",
+  "subtitle": "Nnọọ! Nke a bụ ntụle maka ọganihu gị.",
+  "stats": {
+    "teachers": "Nọmba nke Onye nkuzi(s)",
+    "teachersSubText": "Ndị nkuzi gị na ha kparịtara ụka",
+    "conversations": "Mkparịta ụka",
+    "conversationsSubText": "Mgbakọta ozi",
+    "languages": "Asụsụ akwadoro",
+    "languagesSubText": "Edere ya ({{written}}) | Ọnụ ọnụ ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Ọkwa Nkwado Asụsụ",
+    "primary": "Asụsụ mbụ gị bụ",
+    "written": {
+      "title": "Nkwado Edere",
+      "available": "Dị maka izipu ozi",
+      "unsupported": "akwadoghị"
+    },
+    "verbal": {
+      "title": "Nkwado Okwu",
+      "available": "Dị maka nnọkọ ndụ",
+      "unsupported": "akwadoghị"
+    }
+  }
+}

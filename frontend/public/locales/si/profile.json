@@ -1,0 +1,28 @@
+{
+  "title": "මගේ පැතිකඩ",
+  "editProfile": "පැතිකඩ සංස්කරණය කරන්න",
+  "saveChanges": "වෙනස්කම් සුරකින්න",
+  "saving": "සුරකිමින්...",
+  "firstName": "මුල් නම",
+  "lastName": "අවසන් නම",
+  "email": "ඊතැපැල් ලිපිනය",
+  "phone": "දුරකථන අංකය",
+  "grade": "ශ්රේණිය",
+  "primaryLanguage": "ප්‍රාථමික භාෂාව",
+  "guardianName": "භාරකරුගේ නම",
+  "guardianRelation": "ගාඩියන් සම්බන්ධය",
+  "selectGrade": "ශ්රේණිය තෝරන්න",
+  "selectLanguage": "භාෂාව තෝරන්න",
+  "selectRelation": "සම්බන්ධතාවය තෝරන්න",
+  "studentID": "හැඳුනුම්පත",
+  "role": "ශිෂ්යයා",
+  "errorLoading": "පැතිකඩ පූරණය කිරීමේ දෝෂයකි",
+  "successUpdate": "පැතිකඩ සාර්ථකව යාවත්කාලීන කරන ලදී!",
+  "errorUpdate": "පැතිකඩ යාවත්කාලීන කිරීමට අසමත් විය",
+  "genericError": "දෝෂයක් සිදු විය. කරුණාකර නැවත උත්සාහ කරන්න.",
+  "relations": {
+    "father": "තාත්තා",
+    "mother": "අම්මා",
+    "other": "වෙනත්"
+  }
+}

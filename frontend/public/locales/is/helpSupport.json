@@ -1,0 +1,47 @@
+{
+  "title": "Hjálp og stuðningur",
+  "description": "Við erum hér til að aðstoða með allar spurningar eða vandamál sem þú gætir lent í þegar þú notar vefforritið okkar. Hvort sem þú þarft hjálp við að byrja, hefur spurningu um eiginleika eða vilt tilkynna villu, þá erum við hér til að hjálpa.",
+  "contact": {
+    "title": "Hafðu samband við þjónustudeild",
+    "emailTitle": "Stuðningur með tölvupósti",
+    "emailDesc": "Við stefnum að því að svara öllum tölvupóstum innan 24 klukkustunda.",
+    "phoneTitle": "Stuðningur í síma",
+    "hours": "mán-fös (9:00 - 17:00)",
+    "footer": "Þakka þér fyrir að velja vefforritið okkar. Við erum staðráðin í að gera upplifun þína eins mjúka og skemmtilega og mögulegt er."
+  },
+  "supportedLanguages": {
+    "title": "Listi yfir studd tungumál",
+    "headers": {
+      "rank": "#",
+      "language": "Tungumál",
+      "translation": "Þýðing (app og farsími)",
+      "desktop": "Persónuleg samskipti (skrifborð)",
+      "mobile": "Samskipti í eigin persónu (farsímaforrit)"
+    },
+    "mobileLabels": {
+      "translation": "Þýdd skilaboð",
+      "desktop": "Sjálfvirkt skrifborð",
+      "mobile": "Mobile In-Person"
+    },
+    "supported": "Stuðningur",
+    "notSupported": "Ekki stutt"
+  },
+  "detailedFeatures": {
+    "title": "Nákvæm stuðningur við eiginleika",
+    "subtitle": "Sundurliðun raddinnsláttar og texta-í-talmöguleika fyrir hvert tæki.",
+    "headers": {
+      "rank": "#",
+      "language": "Tungumál",
+      "translation": "Þýðing (Allt)",
+      "desktopVersion": "Skrifborðsútgáfa",
+      "mobileApp": "Farsímaforrit",
+      "voiceInput": "Raddinntak",
+      "tts": "Texti í tal"
+    },
+    "mobileHeaders": {
+      "translation": "Þýðing",
+      "desktop": "Desktop eiginleikar",
+      "mobile": "Mobile App Eiginleikar"
+    }
+  }
+}

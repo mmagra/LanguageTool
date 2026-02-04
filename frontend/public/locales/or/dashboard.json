@@ -1,0 +1,26 @@
+{
+  "title": "ଛାତ୍ର ଡ୍ୟାସବୋର୍ଡ |",
+  "subtitle": "ସ୍ Welcome ାଗତ! ଏଠାରେ ତୁମର ଅଗ୍ରଗତିର ଏକ ସମୀକ୍ଷା |",
+  "stats": {
+    "teachers": "ଶିକ୍ଷକ (ମାନଙ୍କ) ର ସଂଖ୍ୟା",
+    "teachersSubText": "ଶିକ୍ଷକମାନଙ୍କ ସହିତ ଆପଣ ଚାଟ୍ କରିଛନ୍ତି |",
+    "conversations": "ବାର୍ତ୍ତାଳାପ",
+    "conversationsSubText": "ସମୁଦାୟ ବାର୍ତ୍ତା |",
+    "languages": "ସମର୍ଥିତ ଭାଷା |",
+    "languagesSubText": "ଲିଖିତ ({{written}}) | | ମ bal ଖିକ ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "ଭାଷା ସମର୍ଥନ ସ୍ଥିତି",
+    "primary": "ତୁମର ପ୍ରାଥମିକ ଭାଷା ହେଉଛି |",
+    "written": {
+      "title": "ଲିଖିତ ସମର୍ଥନ",
+      "available": "ମେସେଜିଂ ପାଇଁ ଉପଲବ୍ଧ |",
+      "unsupported": "ସମର୍ଥିତ ନୁହେଁ |"
+    },
+    "verbal": {
+      "title": "ମ bal ଖିକ ସମର୍ଥନ |",
+      "available": "ଲାଇଭ୍ ଅଧିବେଶନ ପାଇଁ ଉପଲବ୍ଧ |",
+      "unsupported": "ସମର୍ଥିତ ନୁହେଁ |"
+    }
+  }
+}

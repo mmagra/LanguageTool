@@ -1,0 +1,13 @@
+{
+  "loading": "Tikutsegula...",
+  "error": "Cholakwika",
+  "save": "Sungani",
+  "cancel": "Letsani",
+  "language": "Chiyankhulo",
+  "switchToEnglish": "Sinthani ku Chingerezi",
+  "switchToNative": "Pitani ku {{language}}",
+  "online": "Pa intaneti",
+  "offline": "Zopanda intaneti",
+  "notProvided": "Osaperekedwa",
+  "tryAgain": "Yesaninso"
+}

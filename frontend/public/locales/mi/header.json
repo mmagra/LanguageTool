@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Taku Kōtaha",
+  "changePassword": "Huri Kupuhipa",
+  "helpSupport": "Āwhina & Tautoko",
+  "signOut": "Waitohu atu",
+  "notifications": {
+    "title": "Whakamōhiotanga",
+    "unread": "nga karere kaore ano kia panuitia",
+    "empty": "Kaore he panui hou",
+    "viewAll": "Tirohia nga karere katoa",
+    "newMessage": "Karere hou"
+  },
+  "language": {
+    "switchToNative": "Hurihia ki To Reo",
+    "switchToEnglish": "Hurihia ki te reo Ingarihi"
+  }
+}

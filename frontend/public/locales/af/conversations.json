@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Boodskappe",
+  "searchPlaceholder": "Soek onderwysers...",
+  "noConversations": "Nog geen gesprekke nie",
+  "unknownTeacher": "Onbekende onderwyser",
+  "noMessages": "Nog geen boodskappe nie",
+  "typing": "Tik tans …",
+  "typePlaceholder": "Tik jou boodskap in Afrikaans...",
+  "emptyState": {
+    "title": "Jou gesprekke",
+    "desc": "Kies 'n onderwyser uit die kantbalk om vrae te begin vra of jou punte te bespreek.",
+    "startPrompt": "Begin 'n gesprek met jou onderwyser"
+  },
+  "refreshList": "Herlaai lys"
+}

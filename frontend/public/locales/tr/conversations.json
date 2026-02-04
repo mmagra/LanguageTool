@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Mesajlar",
+  "searchPlaceholder": "Öğretmenleri arayın...",
+  "noConversations": "Henüz görüşme yok",
+  "unknownTeacher": "Bilinmeyen Öğretmen",
+  "noMessages": "Henüz mesaj yok",
+  "typing": "Yazılıyor...",
+  "typePlaceholder": "Mesajınızı Türkçe yazın...",
+  "emptyState": {
+    "title": "Konuşmalarınız",
+    "desc": "Soru sormaya veya notlarınızı tartışmaya başlamak için kenar çubuğundan bir öğretmen seçin.",
+    "startPrompt": "Öğretmeninizle bir konuşma başlatın"
+  },
+  "refreshList": "Listeyi Yenile"
+}

@@ -1,0 +1,18 @@
+{
+  "title": "SpeakenEdge",
+  "myProfile": "ប្រវត្តិរូបរបស់ខ្ញុំ",
+  "changePassword": "ផ្លាស់ប្តូរពាក្យសម្ងាត់",
+  "helpSupport": "ជំនួយ និងគាំទ្រ",
+  "signOut": "ចេញ",
+  "notifications": {
+    "title": "ការជូនដំណឹង",
+    "unread": "សារមិនទាន់អាន",
+    "empty": "មិនមានការជូនដំណឹងថ្មីទេ។",
+    "viewAll": "មើលសារទាំងអស់។",
+    "newMessage": "សារថ្មី។"
+  },
+  "language": {
+    "switchToNative": "ប្តូរទៅភាសារបស់អ្នក។",
+    "switchToEnglish": "ប្តូរទៅជាភាសាអង់គ្លេស"
+  }
+}

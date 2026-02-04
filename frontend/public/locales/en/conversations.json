@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Messages",
+  "searchPlaceholder": "Search teachers...",
+  "noConversations": "No conversations yet",
+  "unknownTeacher": "Unknown Teacher",
+  "noMessages": "No messages yet",
+  "typing": "Typing...",
+  "typePlaceholder": "Type your message in English...",
+  "emptyState": {
+    "title": "Your Conversations",
+    "desc": "Select a teacher from the sidebar to start asking questions or discussing your grades.",
+    "startPrompt": "Start a conversation with your teacher"
+  },
+  "refreshList": "Refresh List"
+}

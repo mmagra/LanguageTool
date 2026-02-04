@@ -1,0 +1,13 @@
+{
+  "loading": "Lueden...",
+  "error": "Feeler",
+  "save": "Spueren",
+  "cancel": "Ofbriechen",
+  "language": "Sprooch",
+  "switchToEnglish": "Wiesselt op Englesch",
+  "switchToNative": "Wiesselt op {{sprooch}}",
+  "online": "Online",
+  "offline": "Offline",
+  "notProvided": "Net virgesinn",
+  "tryAgain": "Probéiert nach eng Kéier"
+}

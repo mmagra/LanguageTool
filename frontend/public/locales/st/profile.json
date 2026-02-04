@@ -1,0 +1,28 @@
+{
+  "title": "Boemo ba ka",
+  "editProfile": "Fetola Profile",
+  "saveChanges": "Boloka Liphetoho",
+  "saving": "E boloka...",
+  "firstName": "Lebitso la pele",
+  "lastName": "Fane",
+  "email": "Aterese ea imeile",
+  "phone": "Nomoro ea mohala",
+  "grade": "Kereiti",
+  "primaryLanguage": "Puo ea Mathomo",
+  "guardianName": "Lebitso la Mohlokomeli",
+  "guardianRelation": "Kamano ea Mohlokomeli",
+  "selectGrade": "Kgetha Kereiti",
+  "selectLanguage": "Kgetha Puo",
+  "selectRelation": "Khetha Kamano",
+  "studentID": "ID",
+  "role": "Moithuti",
+  "errorLoading": "Phoso ea ho Kenya Profaele",
+  "successUpdate": "Boemo bo ntlafalitsoe ka katleho!",
+  "errorUpdate": "E hlolehile ho ntlafatsa boemo",
+  "genericError": "Phoso e etsahetse. Ka kopo, leka hape.",
+  "relations": {
+    "father": "Ntate",
+    "mother": "Mme",
+    "other": "Tse ding"
+  }
+}

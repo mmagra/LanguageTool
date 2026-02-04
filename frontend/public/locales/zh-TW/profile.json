@@ -1,0 +1,28 @@
+{
+  "title": "我的個人資料",
+  "editProfile": "編輯個人資料",
+  "saveChanges": "保存更改",
+  "saving": "保存...",
+  "firstName": "名",
+  "lastName": "姓",
+  "email": "電子郵件",
+  "phone": "電話號碼",
+  "grade": "年級",
+  "primaryLanguage": "主要語言",
+  "guardianName": "監護人姓名",
+  "guardianRelation": "監護人關係",
+  "selectGrade": "選擇年級",
+  "selectLanguage": "選擇語言",
+  "selectRelation": "選擇關係",
+  "studentID": "ID",
+  "role": "學生",
+  "errorLoading": "加載配置文件時出錯",
+  "successUpdate": "個人資料更新成功！",
+  "errorUpdate": "更新個人資料失敗",
+  "genericError": "發生錯誤。請再試一次。",
+  "relations": {
+    "father": "父親",
+    "mother": "母親",
+    "other": "其他"
+  }
+}

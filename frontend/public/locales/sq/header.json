@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Profili im",
+  "changePassword": "Ndrysho fjalëkalimin",
+  "helpSupport": "Ndihmë & Mbështetje",
+  "signOut": "Dilni",
+  "notifications": {
+    "title": "Njoftimet",
+    "unread": "mesazhe të palexuara",
+    "empty": "Nuk ka njoftime të reja",
+    "viewAll": "Shiko të gjitha mesazhet",
+    "newMessage": "Mesazh i ri"
+  },
+  "language": {
+    "switchToNative": "Kaloni në gjuhën tuaj",
+    "switchToEnglish": "Kalo në anglisht"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "title": "Ndihmë dhe Mbështetje",
+  "description": "Ne jemi këtu për t'ju ndihmuar me çdo pyetje ose problem që mund të hasni gjatë përdorimit të aplikacionit tonë të internetit. Pavarësisht nëse keni nevojë për ndihmë për të filluar, keni një pyetje në lidhje me një veçori ose dëshironi të raportoni një defekt, ne jemi këtu për t'ju ndihmuar.",
+  "contact": {
+    "title": "Kontaktoni mbështetjen",
+    "emailTitle": "Mbështetje me email",
+    "emailDesc": "Ne synojmë t'u përgjigjemi të gjitha emaileve brenda 24 orëve.",
+    "phoneTitle": "Mbështetje telefonike",
+    "hours": "Hënë-Premte (09:00 - 17:00)",
+    "footer": "Faleminderit që zgjodhët aplikacionin tonë të internetit. Ne jemi të përkushtuar për ta bërë përvojën tuaj sa më të qetë dhe të këndshme që të jetë e mundur."
+  },
+  "supportedLanguages": {
+    "title": "Lista e gjuhëve të mbështetura",
+    "headers": {
+      "rank": "#",
+      "language": "Gjuha",
+      "translation": "Përkthimi (Aplikacioni dhe celulari)",
+      "desktop": "Komunikimi Personal (Desktop)",
+      "mobile": "Komunikimi personal (Aplikacion celular)"
+    },
+    "mobileLabels": {
+      "translation": "Mesazhe të përkthyera",
+      "desktop": "Desktop personalisht",
+      "mobile": "Celular personalisht"
+    },
+    "supported": "Mbështetur",
+    "notSupported": "Nuk mbështetet"
+  },
+  "detailedFeatures": {
+    "title": "Mbështetje e detajuar e veçorive",
+    "subtitle": "Përbërja e aftësive të hyrjes zanore dhe tekstit në të folur për pajisje.",
+    "headers": {
+      "rank": "#",
+      "language": "Gjuha",
+      "translation": "Përkthimi (Të gjitha)",
+      "desktopVersion": "Versioni i desktopit",
+      "mobileApp": "Aplikacioni celular",
+      "voiceInput": "Hyrja zanore",
+      "tts": "Tekst në të folur"
+    },
+    "mobileHeaders": {
+      "translation": "Përkthimi",
+      "desktop": "Karakteristikat e desktopit",
+      "mobile": "Karakteristikat e aplikacionit celular"
+    }
+  }
+}

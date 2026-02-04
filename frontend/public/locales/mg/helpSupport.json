@@ -1,0 +1,47 @@
+{
+  "title": "Fanampiana sy fanohanana",
+  "description": "Eto izahay hanampy amin'ny fanontaniana na olana mety hitranga amin'ny fampiasana ny fampiharana tranonkala. Na mila fanampiana amin'ny fanombohana ianao, na manana fanontaniana momba ny endri-javatra iray, na te hitatitra bibikely, eto izahay hanampy.",
+  "contact": {
+    "title": "Contact Support",
+    "emailTitle": "Email Support",
+    "emailDesc": "Kendrenay ny hamaly ny mailaka rehetra ao anatin'ny 24 ora.",
+    "phoneTitle": "Fanohanana an-telefaona",
+    "hours": "Alatsinainy-Zoma (9 maraina - 5 hariva)",
+    "footer": "Misaotra anao nifidy ny fampiharana tranonkalanay. Nanolo-tena izahay hanao ny traikefanao ho malama sy hahafinaritra araka izay tratra."
+  },
+  "supportedLanguages": {
+    "title": "Lisitry ny fiteny tohanana",
+    "headers": {
+      "rank": "#",
+      "language": "Fiteny",
+      "translation": "Dikanteny (App & Mobile)",
+      "desktop": "Fifandraisana amin'ny olona (Desktop)",
+      "mobile": "Fifandraisana amin'ny olona (App Mobile)"
+    },
+    "mobileLabels": {
+      "translation": "Hafatra voadika",
+      "desktop": "Desktop In-Person",
+      "mobile": "Mobile In-Person"
+    },
+    "supported": "Tohanana",
+    "notSupported": "Tsy tohanana"
+  },
+  "detailedFeatures": {
+    "title": "Fanohanana amin'ny antsipiriany",
+    "subtitle": "Fizarana ny fahaiza-miditra feo sy Text-to-Speech isaky ny fitaovana.",
+    "headers": {
+      "rank": "#",
+      "language": "Fiteny",
+      "translation": "Dikanteny (rehetra)",
+      "desktopVersion": "Desktop Version",
+      "mobileApp": "Mobile App",
+      "voiceInput": "Fampidirana feo",
+      "tts": "Text-to-miteny"
+    },
+    "mobileHeaders": {
+      "translation": "Translation",
+      "desktop": "Desktop Features",
+      "mobile": "Fampiharana finday"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Akong Profile",
+  "changePassword": "Usba ang Password",
+  "helpSupport": "Tabang & Suporta",
+  "signOut": "Pag-sign out",
+  "notifications": {
+    "title": "Mga pahibalo",
+    "unread": "wala mabasa nga mga mensahe",
+    "empty": "Walay bag-ong mga pahibalo",
+    "viewAll": "Tan-awa ang tanang mensahe",
+    "newMessage": "Bag-ong mensahe"
+  },
+  "language": {
+    "switchToNative": "Pagbalhin sa Imong Pinulongan",
+    "switchToEnglish": "Pagbalhin sa English"
+  }
+}

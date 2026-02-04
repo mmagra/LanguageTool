@@ -1,0 +1,28 @@
+{
+  "title": "Kuv Profile",
+  "editProfile": "Kho kom raug Profile",
+  "saveChanges": "Txuag Hloov",
+  "saving": "Txuag...",
+  "firstName": "Lub Npe",
+  "lastName": "Lub Npe",
+  "email": "Email Chaw Nyob",
+  "phone": "Xov tooj",
+  "grade": "Qib",
+  "primaryLanguage": "Thawj Hom Lus",
+  "guardianName": "Tus Saib Xyuas Lub Npe",
+  "guardianRelation": "Tus Saib Xyuas Kev Sib Raug Zoo",
+  "selectGrade": "Xaiv Qib",
+  "selectLanguage": "Xaiv hom lus",
+  "selectRelation": "Xaiv Kev Sib Raug Zoo",
+  "studentID": "ID",
+  "role": "Tub kawm",
+  "errorLoading": "yuam kev Loading Profile",
+  "successUpdate": "Hloov kho qhov profile tiav!",
+  "errorUpdate": "Ua tsis tau tejyam hloov tshiab profile",
+  "genericError": "Ib qho yuam kev tshwm sim. Thov rov sim dua.",
+  "relations": {
+    "father": "Txiv",
+    "mother": "Niam",
+    "other": "Lwm yam"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "title": "Yordam va qo'llab-quvvatlash",
+  "description": "Biz veb-ilovamizdan foydalanishda duch keladigan har qanday savol yoki muammolarga yordam berish uchun shu yerdamiz. Ishni boshlashda yordam kerakmi, biror funksiya haqida savolingiz bormi yoki xato haqida xabar bermoqchimisiz, biz yordam berishga tayyormiz.",
+  "contact": {
+    "title": "Qo‘llab-quvvatlash xizmatiga murojaat qiling",
+    "emailTitle": "Elektron pochta yordami",
+    "emailDesc": "Biz barcha elektron pochta xabarlariga 24 soat ichida javob berishni maqsad qilganmiz.",
+    "phoneTitle": "Telefon qo'llab-quvvatlash",
+    "hours": "Dushanba-Jum (9:00 - 17:00)",
+    "footer": "Bizning veb-ilovani tanlaganingiz uchun tashakkur. Tajribangizni iloji boricha silliq va zavqli qilishga intilamiz."
+  },
+  "supportedLanguages": {
+    "title": "Qo'llab-quvvatlanadigan tillar ro'yxati",
+    "headers": {
+      "rank": "#",
+      "language": "Til",
+      "translation": "Tarjima (ilova va mobil)",
+      "desktop": "Shaxsan muloqot (ish stoli)",
+      "mobile": "Shaxsan muloqot (mobil ilova)"
+    },
+    "mobileLabels": {
+      "translation": "Tarjima qilingan xabarlar",
+      "desktop": "Shaxsan ish stoli",
+      "mobile": "Mobil shaxsan"
+    },
+    "supported": "Qo'llab-quvvatlanadi",
+    "notSupported": "Qo'llab-quvvatlanmaydi"
+  },
+  "detailedFeatures": {
+    "title": "Batafsil xususiyatni qo'llab-quvvatlash",
+    "subtitle": "Har bir qurilma uchun Ovozli kiritish va matndan nutqqa funksiyalarining taqsimlanishi.",
+    "headers": {
+      "rank": "#",
+      "language": "Til",
+      "translation": "Tarjima (barchasi)",
+      "desktopVersion": "Ish stoli versiyasi",
+      "mobileApp": "Mobil ilova",
+      "voiceInput": "Ovozli kiritish",
+      "tts": "Matndan nutqqa"
+    },
+    "mobileHeaders": {
+      "translation": "Tarjima",
+      "desktop": "Ish stoli xususiyatlari",
+      "mobile": "Mobil ilova xususiyatlari"
+    }
+  }
+}

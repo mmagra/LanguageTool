@@ -1,0 +1,26 @@
+{
+  "title": "Študentska nadzorna plošča",
+  "subtitle": "dobrodošli nazaj! Tukaj je pregled vašega napredka.",
+  "stats": {
+    "teachers": "Št. učiteljev",
+    "teachersSubText": "Učitelji, s katerimi ste klepetali",
+    "conversations": "Pogovor(i)",
+    "conversationsSubText": "Skupno število sporočil",
+    "languages": "Podprti jeziki",
+    "languagesSubText": "Napisano ({{written}}) | Verbalno ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Status jezikovne podpore",
+    "primary": "Vaš primarni jezik je",
+    "written": {
+      "title": "Pisna podpora",
+      "available": "Na voljo za pošiljanje sporočil",
+      "unsupported": "Ni podprto"
+    },
+    "verbal": {
+      "title": "Verbalna podpora",
+      "available": "Na voljo za seje v živo",
+      "unsupported": "Ni podprto"
+    }
+  }
+}

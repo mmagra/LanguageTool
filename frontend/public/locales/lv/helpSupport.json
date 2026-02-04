@@ -1,0 +1,47 @@
+{
+  "title": "Palīdzība un atbalsts",
+  "description": "Mēs esam šeit, lai palīdzētu atrisināt visus jautājumus vai problēmas, kas jums var rasties, izmantojot mūsu tīmekļa lietojumprogrammu. Neatkarīgi no tā, vai jums ir nepieciešama palīdzība darba sākšanā, jums ir jautājumi par kādu funkciju vai vēlaties ziņot par kļūdu, mēs esam šeit, lai palīdzētu.",
+  "contact": {
+    "title": "Sazinieties ar atbalsta dienestu",
+    "emailTitle": "E-pasta atbalsts",
+    "emailDesc": "Mūsu mērķis ir atbildēt uz visiem e-pastiem 24 stundu laikā.",
+    "phoneTitle": "Atbalsts pa tālruni",
+    "hours": "No pirmdienas līdz piektdienai (9:00–17:00)",
+    "footer": "Paldies, ka izvēlējāties mūsu tīmekļa lietojumprogrammu. Mēs esam apņēmušies padarīt jūsu pieredzi pēc iespējas vienmērīgāku un patīkamāku."
+  },
+  "supportedLanguages": {
+    "title": "Atbalstīto valodu saraksts",
+    "headers": {
+      "rank": "#",
+      "language": "Valoda",
+      "translation": "Tulkošana (lietotnē un mobilajās ierīcēs)",
+      "desktop": "Personiskā saziņa (galddators)",
+      "mobile": "Saziņa klātienē (mobilā lietotne)"
+    },
+    "mobileLabels": {
+      "translation": "Tulkotās ziņas",
+      "desktop": "Darbvirsma klātienē",
+      "mobile": "Mobilais klātienē"
+    },
+    "supported": "Atbalstīts",
+    "notSupported": "Nav atbalstīts"
+  },
+  "detailedFeatures": {
+    "title": "Detalizēts funkciju atbalsts",
+    "subtitle": "Balss ievades un teksta pārvēršanas runā iespēju sadalījums katrā ierīcē.",
+    "headers": {
+      "rank": "#",
+      "language": "Valoda",
+      "translation": "Tulkojums (viss)",
+      "desktopVersion": "Darbvirsmas versija",
+      "mobileApp": "Mobilā lietotne",
+      "voiceInput": "Balss ievade",
+      "tts": "Teksta pārvēršana runā"
+    },
+    "mobileHeaders": {
+      "translation": "Tulkošana",
+      "desktop": "Darbvirsmas līdzekļi",
+      "mobile": "Mobilās lietotnes funkcijas"
+    }
+  }
+}

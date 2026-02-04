@@ -1,0 +1,26 @@
+{
+  "title": "Studentu informācijas panelis",
+  "subtitle": "Laipni lūdzam atpakaļ! Šeit ir jūsu progresa pārskats.",
+  "stats": {
+    "teachers": "Skolotāja(-u) skaits",
+    "teachersSubText": "Skolotāji, ar kuriem tērzējāt",
+    "conversations": "Saruna(s)",
+    "conversationsSubText": "Kopējais ziņojumu skaits",
+    "languages": "Atbalstītās valodas",
+    "languagesSubText": "Rakstīts ({{written}}) | Verbāls ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Valodas atbalsta statuss",
+    "primary": "Jūsu primārā valoda ir",
+    "written": {
+      "title": "Rakstisks atbalsts",
+      "available": "Pieejams ziņojumapmaiņai",
+      "unsupported": "Nav atbalstīts"
+    },
+    "verbal": {
+      "title": "Verbālais atbalsts",
+      "available": "Pieejams tiešraides sesijām",
+      "unsupported": "Nav atbalstīts"
+    }
+  }
+}

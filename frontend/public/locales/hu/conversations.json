@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Üzenetek",
+  "searchPlaceholder": "Tanárok keresése...",
+  "noConversations": "Még nincsenek beszélgetések",
+  "unknownTeacher": "Ismeretlen Tanár",
+  "noMessages": "Még nincsenek üzenetek",
+  "typing": "Gépelés...",
+  "typePlaceholder": "Írja be üzenetét magyarul...",
+  "emptyState": {
+    "title": "Az Ön beszélgetései",
+    "desc": "Válasszon ki egy tanárt az oldalsávról, hogy elkezdjen kérdéseket feltenni vagy megbeszélni az érdemjegyeit.",
+    "startPrompt": "Kezdjen beszélgetést tanárával"
+  },
+  "refreshList": "Lista frissítése"
+}

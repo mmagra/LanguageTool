@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Mäi Profil",
+  "changePassword": "Passwuert änneren",
+  "helpSupport": "Hëllef & Ënnerstëtzung",
+  "signOut": "Zeechen aus",
+  "notifications": {
+    "title": "Notifikatiounen",
+    "unread": "ongelies Messagen",
+    "empty": "Keng nei Notifikatiounen",
+    "viewAll": "Gesinn all Messagen",
+    "newMessage": "Neie Message"
+  },
+  "language": {
+    "switchToNative": "Wiesselt op Är Sprooch",
+    "switchToEnglish": "Wiesselt op Englesch"
+  }
+}

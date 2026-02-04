@@ -1,0 +1,18 @@
+{
+  "title": "స్పోకెన్ ఎడ్జ్",
+  "myProfile": "నా ప్రొఫైల్",
+  "changePassword": "పాస్‌వర్డ్ మార్చండి",
+  "helpSupport": "సహాయం & మద్దతు",
+  "signOut": "సైన్ అవుట్ చేయండి",
+  "notifications": {
+    "title": "నోటిఫికేషన్‌లు",
+    "unread": "చదవని సందేశాలు",
+    "empty": "కొత్త నోటిఫికేషన్‌లు లేవు",
+    "viewAll": "అన్ని సందేశాలను వీక్షించండి",
+    "newMessage": "కొత్త సందేశం"
+  },
+  "language": {
+    "switchToNative": "మీ భాషకు మారండి",
+    "switchToEnglish": "ఆంగ్లానికి మారండి"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "loading": "Laadimine...",
+  "error": "Viga",
+  "save": "Salvesta",
+  "cancel": "Tühista",
+  "language": "Keel",
+  "switchToEnglish": "Lülituge inglise keelele",
+  "switchToNative": "Lülitu keelele {{language}}",
+  "online": "Internetis",
+  "offline": "Võrguühenduseta",
+  "notProvided": "Ei ole ette nähtud",
+  "tryAgain": "Proovige uuesti"
+}

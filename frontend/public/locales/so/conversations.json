@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Fariimaha",
+  "searchPlaceholder": "Raadi macallimiinta...",
+  "noConversations": "Weli wada hadal ma jiraan",
+  "unknownTeacher": "Macallin aan la garanayn",
+  "noMessages": "Weli fariimo ma jiraan",
+  "typing": "Ku qora...",
+  "typePlaceholder": "Ku qor fariintaada Af-Soomaali...",
+  "emptyState": {
+    "title": "Sheekadaada",
+    "desc": "Ka dooro macalin dhinaca bar-side si aad u bilawdo su'aalo weydiinta ama ka doodista dhibcahaaga.",
+    "startPrompt": "La bilow wada hadal macalinkaaga"
+  },
+  "refreshList": "Liiska Cusbooneysii"
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Dashboard Siswa",
+  "subtitle": "Sugeng rawuh! Punika ringkesan kemajuan panjenengan.",
+  "stats": {
+    "teachers": "Jumlah Guru (s)",
+    "teachersSubText": "Guru-guru sing dijak ngobrol",
+    "conversations": "Obrolan",
+    "conversationsSubText": "Total Pesen",
+    "languages": "Basa sing Didhukung",
+    "languagesSubText": "Ditulis ({{written}}) | Verbal ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Status Dhukungan Basa",
+    "primary": "Basa utami sampeyan yaiku",
+    "written": {
+      "title": "Dhukungan Ditulis",
+      "available": "Kasedhiya kanggo olahpesen",
+      "unsupported": "Ora didhukung"
+    },
+    "verbal": {
+      "title": "Dhukungan Verbal",
+      "available": "Kasedhiya kanggo sesi langsung",
+      "unsupported": "Ora didhukung"
+    }
+  }
+}

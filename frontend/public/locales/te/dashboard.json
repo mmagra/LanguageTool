@@ -1,0 +1,26 @@
+{
+  "title": "విద్యార్థి డాష్‌బోర్డ్",
+  "subtitle": "తిరిగి స్వాగతం! మీ పురోగతి యొక్క అవలోకనం ఇక్కడ ఉంది.",
+  "stats": {
+    "teachers": "ఉపాధ్యాయుల సంఖ్య",
+    "teachersSubText": "మీరు చాట్ చేసిన ఉపాధ్యాయులు",
+    "conversations": "సంభాషణ(లు)",
+    "conversationsSubText": "మొత్తం సందేశాలు",
+    "languages": "మద్దతు ఉన్న భాషలు",
+    "languagesSubText": "వ్రాసిన ({{written}}) | మౌఖిక ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "భాషా మద్దతు స్థితి",
+    "primary": "మీ ప్రాథమిక భాష",
+    "written": {
+      "title": "వ్రాతపూర్వక మద్దతు",
+      "available": "సందేశం కోసం అందుబాటులో ఉంది",
+      "unsupported": "మద్దతు లేదు"
+    },
+    "verbal": {
+      "title": "వెర్బల్ మద్దతు",
+      "available": "ప్రత్యక్ష సెషన్‌ల కోసం అందుబాటులో ఉంది",
+      "unsupported": "మద్దతు లేదు"
+    }
+  }
+}

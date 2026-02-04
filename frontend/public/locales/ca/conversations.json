@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Missatges",
+  "searchPlaceholder": "Cerca professors...",
+  "noConversations": "Encara no hi ha converses",
+  "unknownTeacher": "Mestre desconegut",
+  "noMessages": "Encara no hi ha missatges",
+  "typing": "Escrivint...",
+  "typePlaceholder": "Escriu el teu missatge en català...",
+  "emptyState": {
+    "title": "Les teves converses",
+    "desc": "Seleccioneu un professor de la barra lateral per començar a fer preguntes o a discutir les vostres notes.",
+    "startPrompt": "Inicia una conversa amb el teu professor"
+  },
+  "refreshList": "Actualitza la llista"
+}

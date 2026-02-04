@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Pesen",
+  "searchPlaceholder": "Golek guru...",
+  "noConversations": "Durung ana obrolan",
+  "unknownTeacher": "Guru sing ora dingerteni",
+  "noMessages": "Durung pesen",
+  "typing": "Ngetik...",
+  "typePlaceholder": "Ketik pesen nganggo basa jawa...",
+  "emptyState": {
+    "title": "Obrolan Panjenengan",
+    "desc": "Pilih guru saka sidebar kanggo miwiti takon utawa ngrembug biji sampeyan.",
+    "startPrompt": "Miwiti obrolan karo gurumu"
+  },
+  "refreshList": "Refresh Daftar"
+}

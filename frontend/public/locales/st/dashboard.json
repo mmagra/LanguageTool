@@ -1,0 +1,26 @@
+{
+  "title": "Seithuti sa Dashboard",
+  "subtitle": "Rea u amohela hape! Mona ke kakaretso ea tsoelo-pele ea hau.",
+  "stats": {
+    "teachers": "Nomoro ea matichere",
+    "teachersSubText": "Matichere ao u buisaneng le 'ona",
+    "conversations": "Moqoqo",
+    "conversationsSubText": "Kakaretso ea Melaetsa",
+    "languages": "Lipuo tse Tšehetsoeng",
+    "languagesSubText": "E ngotsoe ({{written}}) | Mantsoe ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Boemo ba Tšehetso ea Puo",
+    "primary": "Puo ea hau ea mantlha ke",
+    "written": {
+      "title": "Tšehetso e Ngotsoeng",
+      "available": "E fumaneha bakeng sa melaetsa",
+      "unsupported": "Ha e tšehetsoe"
+    },
+    "verbal": {
+      "title": "Tšehetso ea Mantsoe",
+      "available": "E teng bakeng sa mananeo a phelang",
+      "unsupported": "Ha e tšehetsoe"
+    }
+  }
+}

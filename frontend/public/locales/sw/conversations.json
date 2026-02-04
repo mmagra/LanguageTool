@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Ujumbe",
+  "searchPlaceholder": "Tafuta walimu...",
+  "noConversations": "Hakuna mazungumzo bado",
+  "unknownTeacher": "Mwalimu asiyejulikana",
+  "noMessages": "Hakuna ujumbe bado",
+  "typing": "Inaandika...",
+  "typePlaceholder": "Andika ujumbe wako kwa kiswahili...",
+  "emptyState": {
+    "title": "Mazungumzo Yako",
+    "desc": "Chagua mwalimu kutoka kwa utepe ili kuanza kuuliza maswali au kujadili alama zako.",
+    "startPrompt": "Anza mazungumzo na mwalimu wako"
+  },
+  "refreshList": "Onyesha upya Orodha"
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Ikibaho cyabanyeshuri",
+  "subtitle": "Murakaza neza! Dore incamake yiterambere ryawe.",
+  "stats": {
+    "teachers": "Oya.",
+    "teachersSubText": "Abarimu mwaganiriye",
+    "conversations": "Ikiganiro (s)",
+    "conversationsSubText": "Ubutumwa Bwuzuye",
+    "languages": "Indimi Zishyigikiwe",
+    "languagesSubText": "Byanditswe ({{written}}) | Mu magambo ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Imiterere yo Gufasha Ururimi",
+    "primary": "Ururimi rwawe rwibanze ni",
+    "written": {
+      "title": "Inkunga yanditse",
+      "available": "Birashoboka kubutumwa",
+      "unsupported": "Ntabwo ashyigikiwe"
+    },
+    "verbal": {
+      "title": "Inkunga mu magambo",
+      "available": "Birashoboka kubiganiro bizima",
+      "unsupported": "Ntabwo ashyigikiwe"
+    }
+  }
+}

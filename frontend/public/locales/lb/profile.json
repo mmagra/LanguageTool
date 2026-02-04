@@ -1,0 +1,28 @@
+{
+  "title": "Mäi Profil",
+  "editProfile": "Profil änneren",
+  "saveChanges": "Ännerunge späicheren",
+  "saving": "Spuert ...",
+  "firstName": "Virnumm",
+  "lastName": "Familljennumm",
+  "email": "Email Adress",
+  "phone": "Telefonsnummer",
+  "grade": "Grad",
+  "primaryLanguage": "Primär Sprooch",
+  "guardianName": "Numm Guardian",
+  "guardianRelation": "Guardian Relatioun",
+  "selectGrade": "Wielt Grad",
+  "selectLanguage": "Wielt Sprooch",
+  "selectRelation": "Wielt Relatioun",
+  "studentID": "ID",
+  "role": "Student",
+  "errorLoading": "Feeler beim Luede Profil",
+  "successUpdate": "Profil erfollegräich aktualiséiert!",
+  "errorUpdate": "Ausgefall Profil ze aktualiséieren",
+  "genericError": "E Feeler ass geschitt. Probéiert w.e.g. nach eng Kéier.",
+  "relations": {
+    "father": "Papp",
+    "mother": "Mamm",
+    "other": "Aner"
+  }
+}

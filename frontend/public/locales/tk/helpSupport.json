@@ -1,0 +1,47 @@
+{
+  "title": "Kömek we goldaw",
+  "description": "Web programmamyzy ulananyňyzda ýüze çykyp biljek soraglaryňyza ýa-da meseleleriňize kömek etmek üçin geldik. Başlamak üçin kömek gerekmi, bir aýratynlyk hakda soragyňyz barmy ýa-da bir näsazlyk barada habar bermek isleseňiz, kömek etmek üçin geldik.",
+  "contact": {
+    "title": "Goldaw goldawy",
+    "emailTitle": "E-poçta goldawy",
+    "emailDesc": "Emailhli e-poçta jogaplaryna 24 sagadyň dowamynda jogap bermegi maksat edinýäris.",
+    "phoneTitle": "Telefon goldawy",
+    "hours": "Duşenbe-Juma (ir sagat 9-dan agşam 5)",
+    "footer": "Web programmamyzy saýlanyňyz üçin sag boluň. Tejribäňizi mümkin boldugyça rahat we lezzetli etmäge borçlanýarys."
+  },
+  "supportedLanguages": {
+    "title": "Goldanýan dilleriň sanawy",
+    "headers": {
+      "rank": "#",
+      "language": "Dil",
+      "translation": "Terjime (Programma we ykjam)",
+      "desktop": "Şahsy habarlaşma (Iş stoly)",
+      "mobile": "Şahsy aragatnaşyk (ykjam programma)"
+    },
+    "mobileLabels": {
+      "translation": "Terjime edilen habarlar",
+      "desktop": "Iş stoly",
+      "mobile": "Jübi telefony"
+    },
+    "supported": "Goldaw",
+    "notSupported": "Goldaw berilmeýär"
+  },
+  "detailedFeatures": {
+    "title": "Jikme-jik aýratynlyk goldawy",
+    "subtitle": "Her enjamda ses giriş we tekstden sözleýiş mümkinçilikleriniň bölünişi.",
+    "headers": {
+      "rank": "#",
+      "language": "Dil",
+      "translation": "Terjime (Hemmesi)",
+      "desktopVersion": "Iş stoly wersiýasy",
+      "mobileApp": "Jübi programmasy",
+      "voiceInput": "Ses giriş",
+      "tts": "Tekstden söz"
+    },
+    "mobileHeaders": {
+      "translation": "Terjime",
+      "desktop": "Iş stolunyň aýratynlyklary",
+      "mobile": "Jübi programma aýratynlyklary"
+    }
+  }
+}

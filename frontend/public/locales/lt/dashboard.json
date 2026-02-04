@@ -1,0 +1,26 @@
+{
+  "title": "Studentų prietaisų skydelis",
+  "subtitle": "Sveiki sugrįžę! Čia yra jūsų pažangos apžvalga.",
+  "stats": {
+    "teachers": "Mokytojo (-ų) skaičius",
+    "teachersSubText": "Mokytojai, su kuriais bendravote",
+    "conversations": "Pokalbis (-ai)",
+    "conversationsSubText": "Iš viso pranešimų",
+    "languages": "Palaikomos kalbos",
+    "languagesSubText": "Parašyta ({{written}}) | Žodinis ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Kalbos palaikymo būsena",
+    "primary": "Jūsų pagrindinė kalba yra",
+    "written": {
+      "title": "Rašytinė pagalba",
+      "available": "Galima susirašinėti",
+      "unsupported": "Nepalaikoma"
+    },
+    "verbal": {
+      "title": "Žodinis palaikymas",
+      "available": "Galima tiesioginėms sesijoms",
+      "unsupported": "Nepalaikoma"
+    }
+  }
+}

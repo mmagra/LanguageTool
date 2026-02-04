@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "ମୋର ପ୍ରୋଫାଇଲ୍",
+  "changePassword": "ପାସୱାର୍ଡ ପରିବର୍ତ୍ତନ କରନ୍ତୁ |",
+  "helpSupport": "ସହାୟତା ଏବଂ ସମର୍ଥନ",
+  "signOut": "ସାଇନ୍ ଆଉଟ୍ କରନ୍ତୁ |",
+  "notifications": {
+    "title": "ବିଜ୍ଞପ୍ତିଗୁଡିକ",
+    "unread": "ପ read ି ନଥିବା ବାର୍ତ୍ତା |",
+    "empty": "କ new ଣସି ନୂତନ ବିଜ୍ଞପ୍ତି ନାହିଁ |",
+    "viewAll": "ସମସ୍ତ ବାର୍ତ୍ତା ଦେଖନ୍ତୁ |",
+    "newMessage": "ନୂତନ ବାର୍ତ୍ତା |"
+  },
+  "language": {
+    "switchToNative": "ତୁମ ଭାଷାକୁ ସୁଇଚ୍ କର |",
+    "switchToEnglish": "ଇଂରାଜୀକୁ ସୁଇଚ୍ କରନ୍ତୁ |"
+  }
+}

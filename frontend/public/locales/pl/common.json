@@ -1,0 +1,13 @@
+{
+  "loading": "Załadunek...",
+  "error": "Błąd",
+  "save": "Ratować",
+  "cancel": "Anulować",
+  "language": "Język",
+  "switchToEnglish": "Przełącz na angielski",
+  "switchToNative": "Przełącz na {{język}}",
+  "online": "W Internecie",
+  "offline": "Nieaktywny",
+  "notProvided": "Nie podano",
+  "tryAgain": "Spróbuj ponownie"
+}

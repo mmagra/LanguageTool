@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "ကျွန်တော့် Profile",
+  "changePassword": "စကားဝှက်ကိုပြောင်းရန်",
+  "helpSupport": "အကူအညီ & ပံ့ပိုးမှု",
+  "signOut": "ဆိုင်းအောက်",
+  "notifications": {
+    "title": "အသိပေးချက်များ",
+    "unread": "မဖတ်ရသေးသောစာများ",
+    "empty": "အကြောင်းကြားချက်အသစ်မရှိပါ။",
+    "viewAll": "မက်ဆေ့ဂျ်အားလုံးကို ကြည့်ရှုပါ။",
+    "newMessage": "မက်ဆေ့ခ်ျအသစ်"
+  },
+  "language": {
+    "switchToNative": "သင့်ဘာသာစကားသို့ ပြောင်းပါ။",
+    "switchToEnglish": "အင်္ဂလိပ်သို့ပြောင်းပါ။"
+  }
+}

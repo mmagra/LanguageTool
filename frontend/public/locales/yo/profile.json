@@ -1,0 +1,28 @@
+{
+  "title": "Profaili Mi",
+  "editProfile": "Profaili Ṣatunkọ",
+  "saveChanges": "Fipamọ awọn iyipada",
+  "saving": "Nfipamọ...",
+  "firstName": "Orukọ akọkọ",
+  "lastName": "Oruko idile",
+  "email": "Adirẹsi imeeli",
+  "phone": "Nomba fonu",
+  "grade": "Ipele",
+  "primaryLanguage": "Ede Akọbẹrẹ",
+  "guardianName": "Oruko Oluso",
+  "guardianRelation": "Oluso Relation",
+  "selectGrade": "Yan Ite",
+  "selectLanguage": "Yan Ede",
+  "selectRelation": "Yan Ibasepo",
+  "studentID": "ID",
+  "role": "Omo ile iwe",
+  "errorLoading": "Aṣiṣe Gbigbe Profaili",
+  "successUpdate": "Profaili imudojuiwọn ni aṣeyọri!",
+  "errorUpdate": "Kuna lati mu profaili dojuiwọn",
+  "genericError": "Aṣiṣe kan ṣẹlẹ. Jọwọ gbiyanju lẹẹkansi.",
+  "relations": {
+    "father": "Baba",
+    "mother": "Iya",
+    "other": "Omiiran"
+  }
+}

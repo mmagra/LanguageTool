@@ -1,0 +1,28 @@
+{
+  "title": "Менің профилім",
+  "editProfile": "Профильді өңдеу",
+  "saveChanges": "Өзгерістерді сақтау",
+  "saving": "Сақталуда...",
+  "firstName": "Аты",
+  "lastName": "Фамилия",
+  "email": "Электрондық поштаның адресі",
+  "phone": "Телефон нөмірі",
+  "grade": "Баға",
+  "primaryLanguage": "Негізгі тіл",
+  "guardianName": "Қамқоршы аты",
+  "guardianRelation": "Қамқоршылық қатынас",
+  "selectGrade": "Баға таңдаңыз",
+  "selectLanguage": "Тіл таңдаңыз",
+  "selectRelation": "Қатынас таңдаңыз",
+  "studentID": "ID",
+  "role": "студент",
+  "errorLoading": "Профильді жүктеу қатесі",
+  "successUpdate": "Профиль сәтті жаңартылды!",
+  "errorUpdate": "Профильді жаңарту мүмкін болмады",
+  "genericError": "Қате орын алды. Қайталап көріңіз.",
+  "relations": {
+    "father": "Әке",
+    "mother": "Ана",
+    "other": "Басқа"
+  }
+}

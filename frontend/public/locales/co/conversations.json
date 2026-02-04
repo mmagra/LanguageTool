@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Missaghji",
+  "searchPlaceholder": "Cerca i prufessori...",
+  "noConversations": "Nisuna conversazione ancora",
+  "unknownTeacher": "Maestru inconnu",
+  "noMessages": "Nisun messagiu ancora",
+  "typing": "Scrivendu...",
+  "typePlaceholder": "Scrivite u vostru missaghju in lingua corsa...",
+  "emptyState": {
+    "title": "I vostri cunversazioni",
+    "desc": "Selezziunate un maestru da a barra laterale per cumincià à fà dumande o discutendu i vostri gradi.",
+    "startPrompt": "Cumincià una conversazione cù u vostru maestru"
+  },
+  "refreshList": "Refresh List"
+}

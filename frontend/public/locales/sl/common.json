@@ -1,0 +1,13 @@
+{
+  "loading": "Nalaganje...",
+  "error": "Napaka",
+  "save": "Shrani",
+  "cancel": "Prekliči",
+  "language": "Jezik",
+  "switchToEnglish": "Preklopi na angleščino",
+  "switchToNative": "Preklopi na {{jezik}}",
+  "online": "Na spletu",
+  "offline": "Brez povezave",
+  "notProvided": "Ni na voljo",
+  "tryAgain": "Poskusi znova"
+}

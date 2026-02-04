@@ -1,0 +1,26 @@
+{
+  "title": "Dashboard Xwendekarê",
+  "subtitle": "Duabre bixêr bên! Li vir nêrînek pêşkeftina we ye.",
+  "stats": {
+    "teachers": "Hejmara mamoste(yan)",
+    "teachersSubText": "Mamosteyên ku we bi wan re sohbet kir",
+    "conversations": "Axaftin(an)",
+    "conversationsSubText": "Tevahiya Mesajên",
+    "languages": "Zimanên Piştgirî",
+    "languagesSubText": "Nivîsand ({{written}}) | Devokî ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Rewşa Piştgiriya Ziman",
+    "primary": "Zimanê we yê seretayî ye",
+    "written": {
+      "title": "Piştgiriya nivîskî",
+      "available": "Ji bo mesajê heye",
+      "unsupported": "Ne piştgirî kirin"
+    },
+    "verbal": {
+      "title": "Piştgiriya devkî",
+      "available": "Ji bo danişînên zindî hene",
+      "unsupported": "Ne piştgirî kirin"
+    }
+  }
+}

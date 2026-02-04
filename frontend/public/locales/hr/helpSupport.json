@@ -1,0 +1,47 @@
+{
+  "title": "Pomoć i podrška",
+  "description": "Ovdje smo da vam pomognemo sa svim pitanjima ili problemima na koje možete naići tijekom korištenja naše web aplikacije. Bez obzira trebate li pomoć za početak, imate pitanje o značajci ili želite prijaviti grešku, tu smo da vam pomognemo.",
+  "contact": {
+    "title": "Obratite se podršci",
+    "emailTitle": "Podrška e-poštom",
+    "emailDesc": "Nastojimo odgovoriti na sve e-poruke u roku od 24 sata.",
+    "phoneTitle": "Telefonska podrška",
+    "hours": "Pon – pet (9 – 17 sati)",
+    "footer": "Zahvaljujemo što ste odabrali našu web aplikaciju. Predani smo tome da vaše iskustvo učinimo što lakšim i ugodnijim."
+  },
+  "supportedLanguages": {
+    "title": "Popis podržanih jezika",
+    "headers": {
+      "rank": "#",
+      "language": "Jezik",
+      "translation": "Prijevod (aplikacija i mobitel)",
+      "desktop": "Komunikacija uživo (stolno računalo)",
+      "mobile": "Komunikacija uživo (mobilna aplikacija)"
+    },
+    "mobileLabels": {
+      "translation": "Prevedene poruke",
+      "desktop": "Osobno na stolnom računalu",
+      "mobile": "Mobilno osobno"
+    },
+    "supported": "Podržano",
+    "notSupported": "Nije podržano"
+  },
+  "detailedFeatures": {
+    "title": "Detaljna podrška za značajke",
+    "subtitle": "Raščlamba mogućnosti glasovnog unosa i pretvaranja teksta u govor po uređaju.",
+    "headers": {
+      "rank": "#",
+      "language": "Jezik",
+      "translation": "Prijevod (sve)",
+      "desktopVersion": "Desktop verzija",
+      "mobileApp": "Mobilna aplikacija",
+      "voiceInput": "Glasovni unos",
+      "tts": "Tekst u govor"
+    },
+    "mobileHeaders": {
+      "translation": "Prijevod",
+      "desktop": "Značajke stolnog računala",
+      "mobile": "Značajke mobilne aplikacije"
+    }
+  }
+}

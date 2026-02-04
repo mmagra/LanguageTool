@@ -1,0 +1,26 @@
+{
+  "title": "Cruscotto degli studenti",
+  "subtitle": "Bentornato! Ecco una panoramica dei tuoi progressi.",
+  "stats": {
+    "teachers": "N. di insegnanti",
+    "teachersSubText": "Insegnanti con cui hai chattato",
+    "conversations": "Conversazioni",
+    "conversationsSubText": "Messaggi totali",
+    "languages": "Lingue supportate",
+    "languagesSubText": "Scritto ({{written}}) | Verbale ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Stato del supporto linguistico",
+    "primary": "La tua lingua principale è",
+    "written": {
+      "title": "Supporto scritto",
+      "available": "Disponibile per la messaggistica",
+      "unsupported": "Non supportato"
+    },
+    "verbal": {
+      "title": "Supporto verbale",
+      "available": "Disponibile per sessioni dal vivo",
+      "unsupported": "Non supportato"
+    }
+  }
+}

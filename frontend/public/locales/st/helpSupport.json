@@ -1,0 +1,47 @@
+{
+  "title": "Thuso le Tšehetso",
+  "description": "Re mona ho u thusa ka lipotso kapa mathata afe kapa afe ao u ka kopanang le 'ona ha u ntse u sebelisa sesebelisoa sa rona sa Marang-rang. Hore na o hloka thuso ho qala, o na le potso mabapi le karolo e itseng, kapa o batla ho tlaleha bothata, re mona ho u thusa.",
+  "contact": {
+    "title": "Ikopanye le Tšehetso",
+    "emailTitle": "Email Support",
+    "emailDesc": "Re ikemiselitse ho araba mangolo-tsoibila kaofela nakong ea lihora tse 24.",
+    "phoneTitle": "Tšehetso ea Mohala",
+    "hours": "Mantaha-Labohlano (9 hoseng - 5 pm)",
+    "footer": "Rea leboha ka ho khetha ts'ebeliso ea rona ea Marang-rang. Re ikemiselitse ho etsa hore boiphihlelo ba hau bo be bonolo le bo monate kamoo ho ka khonehang."
+  },
+  "supportedLanguages": {
+    "title": "Lethathamo la Lipuo Tse Tšehetsoeng",
+    "headers": {
+      "rank": "#",
+      "language": "Puo",
+      "translation": "Phetolelo (App & Mobile)",
+      "desktop": "Puisano le Motho (Desktop)",
+      "mobile": "Puisano ka-Motho (Mobile App)"
+    },
+    "mobileLabels": {
+      "translation": "Melaetsa e Fetoletsoeng",
+      "desktop": "Desktop ka Motho",
+      "mobile": "Mobile Ka Motho"
+    },
+    "supported": "E tšehelitsoe",
+    "notSupported": "Ha e Tšehetsoe"
+  },
+  "detailedFeatures": {
+    "title": "Ts'ehetso e qaqileng ea Tšobotsi",
+    "subtitle": "Karohano ea Moputso oa Lentsoe le bokhoni ba ho Temana ho ea ho Puo ka sesebelisoa ka seng.",
+    "headers": {
+      "rank": "#",
+      "language": "Puo",
+      "translation": "Phetolelo (Kaofela)",
+      "desktopVersion": "Desktop Version",
+      "mobileApp": "Mobile App",
+      "voiceInput": "Kenyo ya Lentswe",
+      "tts": "Mongolo ho ea ho Puo"
+    },
+    "mobileHeaders": {
+      "translation": "Phetolelo",
+      "desktop": "Likarolo tsa Desktop",
+      "mobile": "Mobile App Features"
+    }
+  }
+}

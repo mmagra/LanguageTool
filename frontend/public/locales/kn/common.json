@@ -1,0 +1,13 @@
+{
+  "loading": "ಲೋಡ್ ಆಗುತ್ತಿದೆ...",
+  "error": "ದೋಷ",
+  "save": "ಉಳಿಸಿ",
+  "cancel": "ರದ್ದುಮಾಡಿ",
+  "language": "ಭಾಷೆ",
+  "switchToEnglish": "ಇಂಗ್ಲಿಷ್‌ಗೆ ಬದಲಿಸಿ",
+  "switchToNative": "{{ಭಾಷೆ}} ಗೆ ಬದಲಿಸಿ",
+  "online": "ಆನ್ಲೈನ್",
+  "offline": "ಆಫ್‌ಲೈನ್",
+  "notProvided": "ಒದಗಿಸಿಲ್ಲ",
+  "tryAgain": "ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ"
+}

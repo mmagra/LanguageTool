@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Saját profil",
+  "changePassword": "Jelszó módosítása",
+  "helpSupport": "Súgó és támogatás",
+  "signOut": "Jelentkezzen ki",
+  "notifications": {
+    "title": "Értesítések",
+    "unread": "olvasatlan üzenetek",
+    "empty": "Nincsenek új értesítések",
+    "viewAll": "Az összes üzenet megtekintése",
+    "newMessage": "Új üzenet"
+  },
+  "language": {
+    "switchToNative": "Váltson a Saját nyelvre",
+    "switchToEnglish": "Váltson angolra"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Իմ պրոֆիլը",
+  "editProfile": "Խմբագրել պրոֆիլը",
+  "saveChanges": "Պահպանել փոփոխությունները",
+  "saving": "Պահվում է...",
+  "firstName": "Անուն",
+  "lastName": "Ազգանուն",
+  "email": "Էլփոստի հասցե",
+  "phone": "Հեռախոսահամար",
+  "grade": "Դասարան",
+  "primaryLanguage": "Հիմնական լեզու",
+  "guardianName": "Պահապանի անունը",
+  "guardianRelation": "Պահապանի հարաբերություններ",
+  "selectGrade": "Ընտրեք Դասարան",
+  "selectLanguage": "Ընտրեք Լեզուն",
+  "selectRelation": "Ընտրեք Հարաբերություն",
+  "studentID": "ID",
+  "role": "Ուսանող",
+  "errorLoading": "Սխալ՝ պրոֆիլը բեռնելիս",
+  "successUpdate": "Պրոֆիլը հաջողությամբ թարմացվեց:",
+  "errorUpdate": "Չհաջողվեց թարմացնել պրոֆիլը",
+  "genericError": "Սխալ է տեղի ունեցել: Խնդրում ենք կրկին փորձել:",
+  "relations": {
+    "father": "Հայրիկ",
+    "mother": "Մայրիկ",
+    "other": "Այլ"
+  }
+}

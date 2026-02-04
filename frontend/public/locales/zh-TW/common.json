@@ -1,0 +1,13 @@
+{
+  "loading": "載入中...",
+  "error": "錯誤",
+  "save": "節省",
+  "cancel": "取消",
+  "language": "語言",
+  "switchToEnglish": "切換到英語",
+  "switchToNative": "切換到{{語言}}",
+  "online": "在線的",
+  "offline": "離線",
+  "notProvided": "未提供",
+  "tryAgain": "再試一次"
+}

@@ -1,0 +1,47 @@
+{
+  "title": "Pitulung lan Dhukungan",
+  "description": "Kita ing kene kanggo nulungi pitakon utawa masalah sing sampeyan temoni nalika nggunakake aplikasi web. Apa sampeyan butuh bantuan kanggo miwiti, duwe pitakonan babagan fitur, utawa pengin nglaporake bug, kita kene kanggo mbantu.",
+  "contact": {
+    "title": "Kontak Dhukungan",
+    "emailTitle": "Dhukungan Email",
+    "emailDesc": "Kita ngarahake nanggapi kabeh email sajrone 24 jam.",
+    "phoneTitle": "Dhukungan telpon",
+    "hours": "Sen-Jum (9 am - 5 pm)",
+    "footer": "Matur nuwun kanggo milih aplikasi web kita. Kita setya nggawe pengalaman sampeyan dadi lancar lan nyenengake."
+  },
+  "supportedLanguages": {
+    "title": "Dhaptar Basa sing Didhukung",
+    "headers": {
+      "rank": "#",
+      "language": "Basa",
+      "translation": "Terjemahan (Aplikasi & Seluler)",
+      "desktop": "Komunikasi Pribadi (Desktop)",
+      "mobile": "Komunikasi Pribadi (Aplikasi Seluler)"
+    },
+    "mobileLabels": {
+      "translation": "Pesen sing Diterjemahake",
+      "desktop": "Desktop Pribadi",
+      "mobile": "Mobile In-Person"
+    },
+    "supported": "Didhukung",
+    "notSupported": "Ora Didhukung"
+  },
+  "detailedFeatures": {
+    "title": "Dhukungan Fitur rinci",
+    "subtitle": "Rincian Kapabilitas Input Swara lan Text-to-Speech saben piranti.",
+    "headers": {
+      "rank": "#",
+      "language": "Basa",
+      "translation": "Terjemahan (Kabeh)",
+      "desktopVersion": "Versi Desktop",
+      "mobileApp": "Aplikasi seluler",
+      "voiceInput": "Input Swara",
+      "tts": "Text-to-Speech"
+    },
+    "mobileHeaders": {
+      "translation": "Terjemahan",
+      "desktop": "Fitur Desktop",
+      "mobile": "Fitur Aplikasi Seluler"
+    }
+  }
+}

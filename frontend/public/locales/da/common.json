@@ -1,0 +1,13 @@
+{
+  "loading": "Indlæser...",
+  "error": "Fejl",
+  "save": "Spare",
+  "cancel": "Ophæve",
+  "language": "Sprog",
+  "switchToEnglish": "Skift til engelsk",
+  "switchToNative": "Skift til {{language}}",
+  "online": "Online",
+  "offline": "Offline",
+  "notProvided": "Ikke oplyst",
+  "tryAgain": "Prøv igen"
+}

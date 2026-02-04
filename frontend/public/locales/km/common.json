@@ -1,0 +1,13 @@
+{
+  "loading": "កំពុង​ផ្ទុក...",
+  "error": "កំហុស",
+  "save": "រក្សាទុក",
+  "cancel": "បោះបង់",
+  "language": "ភាសា",
+  "switchToEnglish": "ប្តូរទៅជាភាសាអង់គ្លេស",
+  "switchToNative": "ប្តូរទៅ {{ភាសា}}",
+  "online": "អនឡាញ",
+  "offline": "ក្រៅបណ្តាញ",
+  "notProvided": "មិនបានផ្តល់",
+  "tryAgain": "ព្យាយាមម្តងទៀត"
+}

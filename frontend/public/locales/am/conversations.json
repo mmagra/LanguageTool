@@ -1,0 +1,15 @@
+{
+  "myTeachers": "መልዕክቶች",
+  "searchPlaceholder": "አስተማሪዎች ፈልግ...",
+  "noConversations": "እስካሁን ምንም ንግግሮች የሉም",
+  "unknownTeacher": "ያልታወቀ መምህር",
+  "noMessages": "እስካሁን ምንም መልዕክቶች የሉም",
+  "typing": "በመተየብ ላይ...",
+  "typePlaceholder": "መልእክትህን በአማርኛ ፃፍ...",
+  "emptyState": {
+    "title": "የእርስዎ ውይይቶች",
+    "desc": "ጥያቄዎችን ለመጠየቅ ወይም ስለ ውጤትዎ ለመወያየት ከጎን አሞሌው ውስጥ አስተማሪ ይምረጡ።",
+    "startPrompt": "ከአስተማሪዎ ጋር ውይይት ይጀምሩ"
+  },
+  "refreshList": "ዝርዝር አድስ"
+}

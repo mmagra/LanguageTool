@@ -1,0 +1,26 @@
+{
+  "title": "Табло за студенти",
+  "subtitle": "Добре дошли отново! Ето преглед на вашия напредък.",
+  "stats": {
+    "teachers": "Брой учители",
+    "teachersSubText": "Учителите, с които сте разговаряли",
+    "conversations": "Разговор(и)",
+    "conversationsSubText": "Общо съобщения",
+    "languages": "Поддържани езици",
+    "languagesSubText": "Написано ({{written}}) | Вербален ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Състояние на езикова поддръжка",
+    "primary": "Вашият основен език е",
+    "written": {
+      "title": "Писмена подкрепа",
+      "available": "Предлага се за съобщения",
+      "unsupported": "Не се поддържа"
+    },
+    "verbal": {
+      "title": "Вербална подкрепа",
+      "available": "Предлага се за сесии на живо",
+      "unsupported": "Не се поддържа"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Το προφίλ μου",
+  "editProfile": "Επεξεργασία προφίλ",
+  "saveChanges": "Αποθήκευση αλλαγών",
+  "saving": "Οικονομία...",
+  "firstName": "Ονομα",
+  "lastName": "Επώνυμο",
+  "email": "Διεύθυνση Email",
+  "phone": "Αριθμός τηλεφώνου",
+  "grade": "Βαθμός",
+  "primaryLanguage": "Πρωτοβάθμια Γλώσσα",
+  "guardianName": "Όνομα κηδεμόνα",
+  "guardianRelation": "Σχέση φύλακα",
+  "selectGrade": "Επιλέξτε Βαθμός",
+  "selectLanguage": "Επιλέξτε Γλώσσα",
+  "selectRelation": "Επιλέξτε Σχέση",
+  "studentID": "ταυτότητα",
+  "role": "Φοιτητής",
+  "errorLoading": "Σφάλμα κατά τη φόρτωση προφίλ",
+  "successUpdate": "Το προφίλ ενημερώθηκε με επιτυχία!",
+  "errorUpdate": "Η ενημέρωση του προφίλ απέτυχε",
+  "genericError": "Παρουσιάστηκε σφάλμα. Δοκιμάστε ξανά.",
+  "relations": {
+    "father": "Πατέρας",
+    "mother": "Μητέρα",
+    "other": "Αλλος"
+  }
+}

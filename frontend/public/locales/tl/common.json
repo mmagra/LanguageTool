@@ -1,0 +1,13 @@
+{
+  "loading": "Naglo-load...",
+  "error": "Error",
+  "save": "I-save",
+  "cancel": "Kanselahin",
+  "language": "Wika",
+  "switchToEnglish": "Lumipat sa English",
+  "switchToNative": "Lumipat sa {{wika}}",
+  "online": "Online",
+  "offline": "Offline",
+  "notProvided": "Hindi ibinigay",
+  "tryAgain": "Subukan Muli"
+}

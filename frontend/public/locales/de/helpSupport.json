@@ -1,0 +1,47 @@
+{
+  "title": "Hilfe und Support",
+  "description": "Wir helfen Ihnen gerne bei allen Fragen oder Problemen, die bei der Nutzung unserer Webanwendung auftreten können. Egal, ob Sie Hilfe beim Einstieg benötigen, eine Frage zu einer Funktion haben oder einen Fehler melden möchten, wir helfen Ihnen gerne weiter.",
+  "contact": {
+    "title": "Kontaktieren Sie den Support",
+    "emailTitle": "E-Mail-Support",
+    "emailDesc": "Unser Ziel ist es, alle E-Mails innerhalb von 24 Stunden zu beantworten.",
+    "phoneTitle": "Telefonsupport",
+    "hours": "Mo-Fr (9:00 – 17:00 Uhr)",
+    "footer": "Vielen Dank, dass Sie sich für unsere Webanwendung entschieden haben. Wir sind bestrebt, Ihr Erlebnis so reibungslos und angenehm wie möglich zu gestalten."
+  },
+  "supportedLanguages": {
+    "title": "Liste der unterstützten Sprachen",
+    "headers": {
+      "rank": "#",
+      "language": "Sprache",
+      "translation": "Übersetzung (App & Mobile)",
+      "desktop": "Persönliche Kommunikation (Desktop)",
+      "mobile": "Persönliche Kommunikation (mobile App)"
+    },
+    "mobileLabels": {
+      "translation": "Übersetzte Nachrichten",
+      "desktop": "Persönlich am Desktop",
+      "mobile": "Mobil persönlich"
+    },
+    "supported": "Unterstützt",
+    "notSupported": "Nicht unterstützt"
+  },
+  "detailedFeatures": {
+    "title": "Detaillierte Funktionsunterstützung",
+    "subtitle": "Aufschlüsselung der Spracheingabe- und Text-to-Speech-Funktionen pro Gerät.",
+    "headers": {
+      "rank": "#",
+      "language": "Sprache",
+      "translation": "Übersetzung (Alle)",
+      "desktopVersion": "Desktop-Version",
+      "mobileApp": "Mobile App",
+      "voiceInput": "Spracheingabe",
+      "tts": "Text-to-Speech"
+    },
+    "mobileHeaders": {
+      "translation": "Übersetzung",
+      "desktop": "Desktop-Funktionen",
+      "mobile": "Funktionen mobiler Apps"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "title": "โปรไฟล์ของฉัน",
+  "editProfile": "แก้ไขโปรไฟล์",
+  "saveChanges": "บันทึกการเปลี่ยนแปลง",
+  "saving": "ประหยัด...",
+  "firstName": "ชื่อ",
+  "lastName": "นามสกุล",
+  "email": "ที่อยู่อีเมล",
+  "phone": "หมายเลขโทรศัพท์",
+  "grade": "ระดับ",
+  "primaryLanguage": "ภาษาหลัก",
+  "guardianName": "ชื่อผู้พิทักษ์",
+  "guardianRelation": "ความสัมพันธ์ของผู้ปกครอง",
+  "selectGrade": "เลือกเกรด",
+  "selectLanguage": "เลือกภาษา",
+  "selectRelation": "เลือกความสัมพันธ์",
+  "studentID": "บัตรประจำตัวประชาชน",
+  "role": "นักเรียน",
+  "errorLoading": "เกิดข้อผิดพลาดในการโหลดโปรไฟล์",
+  "successUpdate": "อัปเดตโปรไฟล์สำเร็จแล้ว!",
+  "errorUpdate": "ไม่สามารถอัปเดตโปรไฟล์ได้",
+  "genericError": "เกิดข้อผิดพลาด โปรดลองอีกครั้ง",
+  "relations": {
+    "father": "พ่อ",
+    "mother": "แม่",
+    "other": "อื่น"
+  }
+}

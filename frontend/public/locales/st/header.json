@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Boemo ba ka",
+  "changePassword": "Fetola senotlolo",
+  "helpSupport": "Thuso & Tšehetso",
+  "signOut": "tsoaha",
+  "notifications": {
+    "title": "Litsebiso",
+    "unread": "melaetsa e sa baloang",
+    "empty": "Ha ho litsebiso tse ncha",
+    "viewAll": "Sheba melaetsa eohle",
+    "newMessage": "Molaetsa o mocha"
+  },
+  "language": {
+    "switchToNative": "Fetolela Puong ea Hao",
+    "switchToEnglish": "Fetolela ho Senyesemane"
+  }
+}

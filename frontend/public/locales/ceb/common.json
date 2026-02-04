@@ -1,0 +1,13 @@
+{
+  "loading": "Nagkarga...",
+  "error": "Sayop",
+  "save": "Tipigi",
+  "cancel": "Pagkanselar",
+  "language": "Pinulongan",
+  "switchToEnglish": "Pagbalhin sa English",
+  "switchToNative": "Pagbalhin sa {{pinulongan}}",
+  "online": "Online",
+  "offline": "Offline",
+  "notProvided": "Wala gihatag",
+  "tryAgain": "Sulayi Pag-usab"
+}

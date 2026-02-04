@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "ملفي الشخصي",
+  "changePassword": "تغيير كلمة المرور",
+  "helpSupport": "المساعدة والدعم",
+  "signOut": "تسجيل الخروج",
+  "notifications": {
+    "title": "إشعارات",
+    "unread": "رسائل غير مقروءة",
+    "empty": "لا توجد إشعارات جديدة",
+    "viewAll": "عرض جميع الرسائل",
+    "newMessage": "رسالة جديدة"
+  },
+  "language": {
+    "switchToNative": "قم بالتبديل إلى لغتك",
+    "switchToEnglish": "التبديل إلى اللغة الإنجليزية"
+  }
+}

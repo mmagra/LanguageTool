@@ -1,0 +1,18 @@
+{
+  "title": "I-SpokenEdge",
+  "myProfile": "Iphrofayela Yami",
+  "changePassword": "SHINTSHA iphasiwedi",
+  "helpSupport": "Usizo Nosekelo",
+  "signOut": "Phuma ngemvume",
+  "notifications": {
+    "title": "Izaziso",
+    "unread": "imiyalezo engafundiwe",
+    "empty": "Azikho izaziso ezintsha",
+    "viewAll": "Buka yonke imilayezo",
+    "newMessage": "Umlayezo omusha"
+  },
+  "language": {
+    "switchToNative": "Shintshela Ulimi Lwakho",
+    "switchToEnglish": "Shintshela kwisiNgisi"
+  }
+}

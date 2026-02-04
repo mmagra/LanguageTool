@@ -1,0 +1,26 @@
+{
+  "title": "Papatohu Tauira",
+  "subtitle": "Nau mai hoki mai! Anei he tirohanga whanui mo to ahunga whakamua.",
+  "stats": {
+    "teachers": "Nama o (ng) Kaiako",
+    "teachersSubText": "Kaiako i korerorero koe",
+    "conversations": "Kōrerorero",
+    "conversationsSubText": "Karere Tapeke",
+    "languages": "Nga Reo Tautokona",
+    "languagesSubText": "Tuhituhi ({{written}}) | Korero ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Tūnga Tautoko Reo",
+    "primary": "Ko to Reo Tuatahi",
+    "written": {
+      "title": "Tautoko Tuhituhi",
+      "available": "Wātea mō te karere",
+      "unsupported": "Kaore i tautokona"
+    },
+    "verbal": {
+      "title": "Tautoko Kupu",
+      "available": "E waatea ana mo nga huihuinga ora",
+      "unsupported": "Kaore i tautokona"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "title": "学生ダッシュボード",
+  "subtitle": "おかえり！ここでは進捗状況の概要を示します。",
+  "stats": {
+    "teachers": "教師の数",
+    "teachersSubText": "チャットした先生たち",
+    "conversations": "会話",
+    "conversationsSubText": "合計メッセージ数",
+    "languages": "サポートされている言語",
+    "languagesSubText": "書いた ({{written}}) |口頭 ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "言語サポート状況",
+    "primary": "あなたの主言語は次のとおりです",
+    "written": {
+      "title": "書面によるサポート",
+      "available": "メッセージングが可能",
+      "unsupported": "サポートされていません"
+    },
+    "verbal": {
+      "title": "口頭によるサポート",
+      "available": "ライブセッションで利用可能",
+      "unsupported": "サポートされていません"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "title": "Aiutu è Supportu",
+  "description": "Semu quì per aiutà cù qualsiasi dumande o prublemi chì pudete scontru mentre utilizate a nostra applicazione web. Sè avete bisognu di aiutu per inizià, avete una quistione nantu à una funzione, o vulete signalà un bug, simu quì per aiutà.",
+  "contact": {
+    "title": "Cuntattate u Supportu",
+    "emailTitle": "Supportu per email",
+    "emailDesc": "Avemu u scopu di risponde à tutti i email in 24 ore.",
+    "phoneTitle": "Assistenza telefonica",
+    "hours": "Lun-Ven (9h-17h)",
+    "footer": "Grazie per avè sceltu a nostra applicazione web. Semu impegnati à rende a vostra sperienza u più liscia è piacevule pussibule."
+  },
+  "supportedLanguages": {
+    "title": "Lista di Lingue Supportate",
+    "headers": {
+      "rank": "#",
+      "language": "Lingua",
+      "translation": "Traduzzione (App & Mobile)",
+      "desktop": "Comunicazione in persona (desktop)",
+      "mobile": "Comunicazione in persona (App mobile)"
+    },
+    "mobileLabels": {
+      "translation": "Messaggi tradutti",
+      "desktop": "Desktop in persona",
+      "mobile": "Mobile In-Persona"
+    },
+    "supported": "Supportatu",
+    "notSupported": "Micca Supportatu"
+  },
+  "detailedFeatures": {
+    "title": "Supportu di Funzioni Dettagliata",
+    "subtitle": "Ripartizione di e capacità di input di voce è di testu à voce per dispusitivu.",
+    "headers": {
+      "rank": "#",
+      "language": "Lingua",
+      "translation": "traduzzione (tutti)",
+      "desktopVersion": "Versione Desktop",
+      "mobileApp": "App mobile",
+      "voiceInput": "Input di voce",
+      "tts": "Text-to-Speech"
+    },
+    "mobileHeaders": {
+      "translation": "Traduzzione",
+      "desktop": "Funzioni di u Desktop",
+      "mobile": "Funzioni di l'app mobile"
+    }
+  }
+}

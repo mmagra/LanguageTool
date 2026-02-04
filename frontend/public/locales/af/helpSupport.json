@@ -1,0 +1,47 @@
+{
+  "title": "Hulp en Ondersteuning",
+  "description": "Ons is hier om te help met enige vrae of probleme wat u mag teëkom tydens die gebruik van ons webtoepassing. Of jy hulp nodig het om te begin, 'n vraag oor 'n kenmerk het of 'n fout wil rapporteer, ons is hier om te help.",
+  "contact": {
+    "title": "Kontak ondersteuning",
+    "emailTitle": "E-pos ondersteuning",
+    "emailDesc": "Ons poog om binne 24 uur op alle e-posse te reageer.",
+    "phoneTitle": "Telefoniese ondersteuning",
+    "hours": "Ma-Vry (9 vm. - 5 nm.)",
+    "footer": "Dankie dat u ons webtoepassing gekies het. Ons is daartoe verbind om jou ervaring so glad en aangenaam as moontlik te maak."
+  },
+  "supportedLanguages": {
+    "title": "Lys van ondersteunde tale",
+    "headers": {
+      "rank": "#",
+      "language": "Taal",
+      "translation": "Vertaling (toepassing en selfoon)",
+      "desktop": "Persoonlike kommunikasie (rekenaar)",
+      "mobile": "Persoonlike kommunikasie (mobiele toepassing)"
+    },
+    "mobileLabels": {
+      "translation": "Vertaalde boodskappe",
+      "desktop": "Persoonlike lessenaar",
+      "mobile": "Selfoon self"
+    },
+    "supported": "Ondersteun",
+    "notSupported": "Nie ondersteun nie"
+  },
+  "detailedFeatures": {
+    "title": "Gedetailleerde kenmerkondersteuning",
+    "subtitle": "Uiteensetting van steminvoer en teks-na-spraak-vermoëns per toestel.",
+    "headers": {
+      "rank": "#",
+      "language": "Taal",
+      "translation": "Vertaling (alles)",
+      "desktopVersion": "Desktop weergawe",
+      "mobileApp": "Mobiele toepassing",
+      "voiceInput": "Steminvoer",
+      "tts": "Teks-na-spraak"
+    },
+    "mobileHeaders": {
+      "translation": "Vertaling",
+      "desktop": "Werkskermkenmerke",
+      "mobile": "Mobiele toepassing-kenmerke"
+    }
+  }
+}

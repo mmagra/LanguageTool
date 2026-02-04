@@ -1,0 +1,13 @@
+{
+  "loading": "Laster inn...",
+  "error": "Feil",
+  "save": "Spare",
+  "cancel": "Kansellere",
+  "language": "Språk",
+  "switchToEnglish": "Bytt til engelsk",
+  "switchToNative": "Bytt til {{language}}",
+  "online": "Online",
+  "offline": "Frakoblet",
+  "notProvided": "Ikke gitt",
+  "tryAgain": "Prøv igjen"
+}

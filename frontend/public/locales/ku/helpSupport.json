@@ -1,0 +1,47 @@
+{
+  "title": "Alîkarî û Piştgirî",
+  "description": "Em li vir in ku ji bo pirs û pirsgirêkên ku hûn di dema karanîna serîlêdana meya webê de pê re rû bi rû bibin re bibin alîkar. Ji bo destpêkirina we hewceyê alîkariyê be, pirsek li ser taybetmendiyekê hebe, an jî hûn dixwazin xeletiyek rapor bikin, em li vir in ku alîkariyê bikin.",
+  "contact": {
+    "title": "Têkilî Piştgiriyê",
+    "emailTitle": "Piştgiriya E-nameyê",
+    "emailDesc": "Em armanc dikin ku di nav 24 demjimêran de bersiva hemî e-nameyê bidin.",
+    "phoneTitle": "Piştgiriya Telefonê",
+    "hours": "Duşem- În (9.00 - 17.00)",
+    "footer": "Spas ji bo hilbijartina serîlêdana meya webê. Em pabend in ku ezmûna we bi qasî ku pêkan xweş û xweş be."
+  },
+  "supportedLanguages": {
+    "title": "Lîsteya Zimanên Piştgirî",
+    "headers": {
+      "rank": "#",
+      "language": "Ziman",
+      "translation": "Werger (App & Mobile)",
+      "desktop": "Têkiliya Kesane (Sermaseyê)",
+      "mobile": "Têkiliya Kesane (Serlêdana Mobîl)"
+    },
+    "mobileLabels": {
+      "translation": "Peyamên Wergerandî",
+      "desktop": "Sermaseya In-Person",
+      "mobile": "Mobile In-Person"
+    },
+    "supported": "Piştgirî kirin",
+    "notSupported": "Piştgirî nekiriye"
+  },
+  "detailedFeatures": {
+    "title": "Piştgiriya Taybetmendiya Berfireh",
+    "subtitle": "Dabeşkirina kapasîteyên Ketina Deng û Nivîsar-bi-Axaftin li ser cîhazê.",
+    "headers": {
+      "rank": "#",
+      "language": "Ziman",
+      "translation": "Werger (Hemû)",
+      "desktopVersion": "Guhertoya Sermaseyê",
+      "mobileApp": "Mobile App",
+      "voiceInput": "Input Deng",
+      "tts": "Text-to-Speech"
+    },
+    "mobileHeaders": {
+      "translation": "Werger",
+      "desktop": "Taybetmendiyên Sermaseyê",
+      "mobile": "Taybetmendiyên App Mobile"
+    }
+  }
+}

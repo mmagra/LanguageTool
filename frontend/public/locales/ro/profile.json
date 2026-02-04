@@ -1,0 +1,28 @@
+{
+  "title": "Profilul meu",
+  "editProfile": "Editați profilul",
+  "saveChanges": "Salvați modificările",
+  "saving": "Economisire...",
+  "firstName": "Prenume",
+  "lastName": "Nume",
+  "email": "Adresa de e-mail",
+  "phone": "Număr de telefon",
+  "grade": "Nota",
+  "primaryLanguage": "Limba primară",
+  "guardianName": "Nume tutore",
+  "guardianRelation": "Relația de gardian",
+  "selectGrade": "Selectați Nota",
+  "selectLanguage": "Selectați Limbă",
+  "selectRelation": "Selectați Relație",
+  "studentID": "ID",
+  "role": "Student",
+  "errorLoading": "Eroare la încărcarea profilului",
+  "successUpdate": "Profil actualizat cu succes!",
+  "errorUpdate": "Nu s-a putut actualiza profilul",
+  "genericError": "A apărut o eroare. Vă rugăm să încercați din nou.",
+  "relations": {
+    "father": "tată",
+    "mother": "Mamă",
+    "other": "Alte"
+  }
+}

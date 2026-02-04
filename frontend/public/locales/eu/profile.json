@@ -1,0 +1,28 @@
+{
+  "title": "Nire profila",
+  "editProfile": "Editatu profila",
+  "saveChanges": "Gorde aldaketak",
+  "saving": "Gordetzen...",
+  "firstName": "Izena",
+  "lastName": "Abizena",
+  "email": "Helbide elektronikoa",
+  "phone": "Telefono zenbakia",
+  "grade": "Kalifikazioa",
+  "primaryLanguage": "Lehen Hizkuntza",
+  "guardianName": "Zaindariaren izena",
+  "guardianRelation": "Zaindariaren Harremana",
+  "selectGrade": "Hautatu Kalifikazioa",
+  "selectLanguage": "Hautatu Hizkuntza",
+  "selectRelation": "Hautatu Erlazioa",
+  "studentID": "ID",
+  "role": "Ikaslea",
+  "errorLoading": "Errore bat gertatu da profila kargatzean",
+  "successUpdate": "Profila behar bezala eguneratu da!",
+  "errorUpdate": "Ezin izan da eguneratu profila",
+  "genericError": "Errore bat gertatu da. Mesedez, saiatu berriro.",
+  "relations": {
+    "father": "Aita",
+    "mother": "Ama",
+    "other": "Bestela"
+  }
+}

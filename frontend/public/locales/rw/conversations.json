@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Ubutumwa",
+  "searchPlaceholder": "Shakisha abarimu ...",
+  "noConversations": "Nta biganiro",
+  "unknownTeacher": "Umwigisha utazwi",
+  "noMessages": "Nta butumwa",
+  "typing": "Kwandika ...",
+  "typePlaceholder": "Andika ubutumwa bwawe muri Kinyarwanda ...",
+  "emptyState": {
+    "title": "Ibiganiro byawe",
+    "desc": "Hitamo umwarimu kuva kuruhande kugirango utangire kubaza ibibazo cyangwa kuganira kumanota yawe.",
+    "startPrompt": "Tangira ikiganiro na mwarimu wawe"
+  },
+  "refreshList": "Kuvugurura urutonde"
+}

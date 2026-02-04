@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Mga mensahe",
+  "searchPlaceholder": "Pangitaa ang mga magtutudlo...",
+  "noConversations": "Wala pa'y mga panag-istoryahanay",
+  "unknownTeacher": "Wala mailhi nga Magtutudlo",
+  "noMessages": "Wala pay mensahe",
+  "typing": "Pag-type...",
+  "typePlaceholder": "I-type ang imong mensahe sa Cebuano...",
+  "emptyState": {
+    "title": "Imong mga Pakigsulti",
+    "desc": "Pagpili og magtutudlo gikan sa sidebar aron magsugod sa pagpangutana o paghisgot sa imong mga grado.",
+    "startPrompt": "Pagsugod ug panag-istoryahanay uban sa imong magtutudlo"
+  },
+  "refreshList": "I-refresh ang Listahan"
+}

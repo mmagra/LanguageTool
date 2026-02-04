@@ -1,0 +1,28 @@
+{
+  "title": "Mo Phróifíl",
+  "editProfile": "Cuir Próifíl in Eagar",
+  "saveChanges": "Sábháil Athruithe",
+  "saving": "Ag sábháil...",
+  "firstName": "Céad Ainm",
+  "lastName": "Sloinne",
+  "email": "Seoladh Ríomhphoist",
+  "phone": "Uimhir Theileafóin",
+  "grade": "Grád",
+  "primaryLanguage": "Teanga Bhunscoile",
+  "guardianName": "Ainm Caomhnóra",
+  "guardianRelation": "Gaol Caomhnóra",
+  "selectGrade": "Roghnaigh Grád",
+  "selectLanguage": "Roghnaigh Teanga",
+  "selectRelation": "Roghnaigh Gaol",
+  "studentID": "ID",
+  "role": "Dalta",
+  "errorLoading": "Earráid agus Próifíl á Luchtú",
+  "successUpdate": "D'éirigh leis an bpróifíl a nuashonrú!",
+  "errorUpdate": "Theip ar an bpróifíl a nuashonrú",
+  "genericError": "Tharla earráid. Bain triail eile as.",
+  "relations": {
+    "father": "Athair",
+    "mother": "Máthair",
+    "other": "Eile"
+  }
+}

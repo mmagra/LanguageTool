@@ -1,0 +1,47 @@
+{
+  "title": "Trợ giúp và hỗ trợ",
+  "description": "Chúng tôi sẵn sàng trợ giúp nếu bạn có bất kỳ câu hỏi hoặc vấn đề nào bạn có thể gặp phải khi sử dụng ứng dụng web của chúng tôi. Cho dù bạn cần trợ giúp để bắt đầu, có câu hỏi về một tính năng hay muốn báo cáo lỗi, chúng tôi luôn sẵn sàng trợ giúp.",
+  "contact": {
+    "title": "Liên hệ hỗ trợ",
+    "emailTitle": "Hỗ trợ qua email",
+    "emailDesc": "Chúng tôi mong muốn trả lời tất cả các email trong vòng 24 giờ.",
+    "phoneTitle": "Hỗ trợ qua điện thoại",
+    "hours": "Thứ Hai-Thứ Sáu (9 giờ sáng – 5 giờ chiều)",
+    "footer": "Cảm ơn bạn đã chọn ứng dụng web của chúng tôi. Chúng tôi cam kết mang đến cho bạn trải nghiệm mượt mà và thú vị nhất có thể."
+  },
+  "supportedLanguages": {
+    "title": "Danh sách các ngôn ngữ được hỗ trợ",
+    "headers": {
+      "rank": "#",
+      "language": "Ngôn ngữ",
+      "translation": "Dịch thuật (Ứng dụng & Di động)",
+      "desktop": "Giao tiếp trực tiếp (Máy tính để bàn)",
+      "mobile": "Giao tiếp trực tiếp (Ứng dụng di động)"
+    },
+    "mobileLabels": {
+      "translation": "Tin nhắn đã dịch",
+      "desktop": "Máy tính để bàn trực tiếp",
+      "mobile": "Trực tiếp trên thiết bị di động"
+    },
+    "supported": "Được hỗ trợ",
+    "notSupported": "Không được hỗ trợ"
+  },
+  "detailedFeatures": {
+    "title": "Hỗ trợ tính năng chi tiết",
+    "subtitle": "Phân tích khả năng Nhập liệu bằng giọng nói và Chuyển văn bản thành giọng nói trên mỗi thiết bị.",
+    "headers": {
+      "rank": "#",
+      "language": "Ngôn ngữ",
+      "translation": "Bản dịch (Tất cả)",
+      "desktopVersion": "Phiên bản dành cho máy tính để bàn",
+      "mobileApp": "Ứng dụng di động",
+      "voiceInput": "Nhập liệu bằng giọng nói",
+      "tts": "Chuyển văn bản thành giọng nói"
+    },
+    "mobileHeaders": {
+      "translation": "Dịch thuật",
+      "desktop": "Tính năng máy tính để bàn",
+      "mobile": "Tính năng ứng dụng di động"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Discipulus Dashboard",
+  "subtitle": "Recipe retro! Haec progressio progressionis tuae est.",
+  "stats": {
+    "teachers": "No. Magistri (s)",
+    "teachersSubText": "Magistri fabulabatur",
+    "conversations": "Colloquium",
+    "conversationsSubText": "Summa Messages",
+    "languages": "Supported Linguae",
+    "languagesSubText": "Scriptum ({{written}}) | Verbale ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Lingua Support Status",
+    "primary": "Tua Prima Lingua est",
+    "written": {
+      "title": "Scriptum Support",
+      "available": "Praesto ad quantitatem",
+      "unsupported": "Non praebetur"
+    },
+    "verbal": {
+      "title": "Verborum Support",
+      "available": "Praesto pro vivere sessiones",
+      "unsupported": "Non praebetur"
+    }
+  }
+}

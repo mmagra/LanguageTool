@@ -1,0 +1,26 @@
+{
+  "title": "Studenten-Dashboard",
+  "subtitle": "Willkommen zurück! Hier finden Sie eine Übersicht über Ihre Fortschritte.",
+  "stats": {
+    "teachers": "Anzahl der Lehrer",
+    "teachersSubText": "Lehrer, mit denen Sie gechattet haben",
+    "conversations": "Gespräch(e)",
+    "conversationsSubText": "Gesamtnachrichten",
+    "languages": "Unterstützte Sprachen",
+    "languagesSubText": "Geschrieben ({{written}}) | Verbal ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Status der Sprachunterstützung",
+    "primary": "Ihre Hauptsprache ist",
+    "written": {
+      "title": "Schriftliche Unterstützung",
+      "available": "Verfügbar für Nachrichten",
+      "unsupported": "Nicht unterstützt"
+    },
+    "verbal": {
+      "title": "Verbale Unterstützung",
+      "available": "Verfügbar für Live-Sitzungen",
+      "unsupported": "Nicht unterstützt"
+    }
+  }
+}

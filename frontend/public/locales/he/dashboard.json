@@ -1,0 +1,26 @@
+{
+  "title": "לוח מחוונים לסטודנטים",
+  "subtitle": "ברוך שובך! הנה סקירה כללית של ההתקדמות שלך.",
+  "stats": {
+    "teachers": "מספר מורים",
+    "teachersSubText": "מורים שאיתם שוחחת",
+    "conversations": "שיחות",
+    "conversationsSubText": "סך הכל הודעות",
+    "languages": "שפות נתמכות",
+    "languagesSubText": "כתוב ({{written}}) | מילולי ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "סטטוס תמיכת שפה",
+    "primary": "השפה העיקרית שלך היא",
+    "written": {
+      "title": "תמיכה בכתב",
+      "available": "זמין להעברת הודעות",
+      "unsupported": "לא נתמך"
+    },
+    "verbal": {
+      "title": "תמיכה מילולית",
+      "available": "זמין למפגשים חיים",
+      "unsupported": "לא נתמך"
+    }
+  }
+}

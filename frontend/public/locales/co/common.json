@@ -1,0 +1,13 @@
+{
+  "loading": "Caricamentu...",
+  "error": "Errore",
+  "save": "Salvà",
+  "cancel": "Cancella",
+  "language": "Lingua",
+  "switchToEnglish": "Cambia à l'inglese",
+  "switchToNative": "Cambia à {{ lingua}}",
+  "online": "In linea",
+  "offline": "Offline",
+  "notProvided": "Ùn furnite micca",
+  "tryAgain": "Prova dinò"
+}

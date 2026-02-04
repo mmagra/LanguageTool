@@ -1,0 +1,26 @@
+{
+  "title": "Dashboard sa Estudyante",
+  "subtitle": "Maayong pagbalik! Ania ang usa ka overview sa imong pag-uswag.",
+  "stats": {
+    "teachers": "Numero sa (mga) Magtutudlo",
+    "teachersSubText": "Mga magtutudlo nga imong gika-chat",
+    "conversations": "(mga) panag-istoryahanay",
+    "conversationsSubText": "Total nga mga Mensahe",
+    "languages": "Gisuportahan nga mga Pinulongan",
+    "languagesSubText": "Gisulat ({{written}}) | Verbal ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Status sa Pagsuporta sa Pinulongan",
+    "primary": "Ang imong Panguna nga Pinulongan mao ang",
+    "written": {
+      "title": "Gisulat nga Suporta",
+      "available": "Anaa alang sa pagmemensahe",
+      "unsupported": "Wala gisuportahan"
+    },
+    "verbal": {
+      "title": "Verbal nga Suporta",
+      "available": "Anaa alang sa mga live session",
+      "unsupported": "Wala gisuportahan"
+    }
+  }
+}

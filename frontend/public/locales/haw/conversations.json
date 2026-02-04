@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Nā memo",
+  "searchPlaceholder": "Huli i nā kumu...",
+  "noConversations": "ʻAʻohe kamaʻilio i kēia manawa",
+  "unknownTeacher": "Kumu ʻike ʻole ʻia",
+  "noMessages": "ʻAʻohe memo i kēia manawa",
+  "typing": "Ke kikokiko ʻana...",
+  "typePlaceholder": "Kākau i kāu memo ma ka ʻōlelo Hawaiʻi...",
+  "emptyState": {
+    "title": "ʻO kāu mau kamaʻilio",
+    "desc": "E koho i kumu mai ka ʻaoʻao ʻaoʻao e hoʻomaka i ka nīnau ʻana a i ʻole ke kūkākūkā ʻana i kāu mau māka.",
+    "startPrompt": "E hoʻomaka i kahi kamaʻilio me kāu kumu"
+  },
+  "refreshList": "Hōʻano hou i ka papa inoa"
+}

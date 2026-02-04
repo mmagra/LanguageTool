@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Berjochten",
+  "searchPlaceholder": "Sykje leararen...",
+  "noConversations": "Noch gjin petearen",
+  "unknownTeacher": "Unbekende learaar",
+  "noMessages": "Noch gjin berjochten",
+  "typing": "Typen...",
+  "typePlaceholder": "Typ jo berjocht yn it Frysk...",
+  "emptyState": {
+    "title": "Jo konversaasjes",
+    "desc": "Selektearje in learaar fan 'e sydbalke om te begjinnen mei it stellen fan fragen of it besprekken fan jo sifers.",
+    "startPrompt": "Begjin in petear mei jo learaar"
+  },
+  "refreshList": "Ferfarskje List"
+}

@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "My Profile",
+  "changePassword": "Mutatio Password",
+  "helpSupport": "Auxilium & Support",
+  "signOut": "Exire",
+  "notifications": {
+    "title": "Acta Vicimediorum",
+    "unread": "illectum nuntia",
+    "empty": "Nulla nova notificationes",
+    "viewAll": "Omnes epistulae",
+    "newMessage": "Novus nuntius"
+  },
+  "language": {
+    "switchToNative": "Switch ad linguam tuam",
+    "switchToEnglish": "Vertas Anglis"
+  }
+}

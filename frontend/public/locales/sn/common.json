@@ -1,0 +1,13 @@
+{
+  "loading": "Loading...",
+  "error": "Error",
+  "save": "Sevha",
+  "cancel": "Cancel",
+  "language": "Mutauro",
+  "switchToEnglish": "Chinja kuChirungu",
+  "switchToNative": "Chinja kuenda ku{{mutauro}}",
+  "online": "Online",
+  "offline": "Offline",
+  "notProvided": "Haana kupihwa",
+  "tryAgain": "Edza zvakare"
+}

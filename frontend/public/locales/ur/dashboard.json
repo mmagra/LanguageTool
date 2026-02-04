@@ -1,0 +1,26 @@
+{
+  "title": "اسٹوڈنٹ ڈیش بورڈ",
+  "subtitle": "خوش آمدید واپس! آپ کی پیشرفت کا ایک جائزہ یہ ہے۔",
+  "stats": {
+    "teachers": "اساتذہ کی تعداد (زبانیں)",
+    "teachersSubText": "اساتذہ جن کے ساتھ آپ چیٹ کرتے ہیں",
+    "conversations": "گفتگو (زبانیں)",
+    "conversationsSubText": "کل پیغامات",
+    "languages": "تائید شدہ زبانیں",
+    "languagesSubText": "تحریری (__ph_0__) | زبانی (__ph_1__)"
+  },
+  "languageStatus": {
+    "title": "زبان کی حمایت کی حیثیت",
+    "primary": "آپ کی بنیادی زبان ہے",
+    "written": {
+      "title": "تحریری مدد",
+      "available": "پیغام رسانی کے لئے دستیاب ہے",
+      "unsupported": "تائید نہیں"
+    },
+    "verbal": {
+      "title": "زبانی مدد",
+      "available": "براہ راست سیشن کے لئے دستیاب ہے",
+      "unsupported": "تائید نہیں"
+    }
+  }
+}

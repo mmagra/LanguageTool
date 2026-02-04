@@ -1,0 +1,28 @@
+{
+  "title": "Meu perfil",
+  "editProfile": "Editar perfil",
+  "saveChanges": "Salvar alterações",
+  "saving": "Salvando...",
+  "firstName": "Primeiro nome",
+  "lastName": "Sobrenome",
+  "email": "Endereço de email",
+  "phone": "Número de telefone",
+  "grade": "Nota",
+  "primaryLanguage": "Idioma principal",
+  "guardianName": "Nome do Guardião",
+  "guardianRelation": "Relação Guardiã",
+  "selectGrade": "Selecione a nota",
+  "selectLanguage": "Selecione o idioma",
+  "selectRelation": "Selecione Relação",
+  "studentID": "EU IA",
+  "role": "Estudante",
+  "errorLoading": "Erro ao carregar perfil",
+  "successUpdate": "Perfil atualizado com sucesso!",
+  "errorUpdate": "Falha ao atualizar o perfil",
+  "genericError": "Ocorreu um erro. Por favor, tente novamente.",
+  "relations": {
+    "father": "Pai",
+    "mother": "Mãe",
+    "other": "Outro"
+  }
+}

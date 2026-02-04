@@ -1,0 +1,28 @@
+{
+  "title": "Mans profils",
+  "editProfile": "Rediģēt profilu",
+  "saveChanges": "Saglabāt izmaiņas",
+  "saving": "Notiek saglabāšana...",
+  "firstName": "Vārds",
+  "lastName": "Uzvārds",
+  "email": "E-pasta adrese",
+  "phone": "Tālruņa numurs",
+  "grade": "Novērtējums",
+  "primaryLanguage": "Primārā valoda",
+  "guardianName": "Aizbildņa vārds",
+  "guardianRelation": "Aizbildņu attiecības",
+  "selectGrade": "Atlasiet Novērtējums",
+  "selectLanguage": "Izvēlieties valodu",
+  "selectRelation": "Atlasiet Relācija",
+  "studentID": "ID",
+  "role": "Students",
+  "errorLoading": "Ielādējot profilu, radās kļūda",
+  "successUpdate": "Profils veiksmīgi atjaunināts!",
+  "errorUpdate": "Neizdevās atjaunināt profilu",
+  "genericError": "Radās kļūda. Lūdzu, mēģiniet vēlreiz.",
+  "relations": {
+    "father": "Tēvs",
+    "mother": "Māte",
+    "other": "Cits"
+  }
+}

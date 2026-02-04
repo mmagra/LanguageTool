@@ -1,0 +1,13 @@
+{
+  "loading": "Բեռնվում է...",
+  "error": "Սխալ",
+  "save": "Պահպանել",
+  "cancel": "Չեղարկել",
+  "language": "Լեզու",
+  "switchToEnglish": "Անցում անգլերենի",
+  "switchToNative": "Անցնել {{language}}",
+  "online": "Առցանց",
+  "offline": "Անցանց",
+  "notProvided": "Չի տրամադրվում",
+  "tryAgain": "Կրկին փորձեք"
+}

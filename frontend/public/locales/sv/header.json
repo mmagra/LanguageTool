@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Min profil",
+  "changePassword": "Ändra lösenord",
+  "helpSupport": "Hjälp & Support",
+  "signOut": "Logga ut",
+  "notifications": {
+    "title": "Aviseringar",
+    "unread": "olästa meddelanden",
+    "empty": "Inga nya aviseringar",
+    "viewAll": "Visa alla meddelanden",
+    "newMessage": "Nytt meddelande"
+  },
+  "language": {
+    "switchToNative": "Byt till ditt språk",
+    "switchToEnglish": "Byt till engelska"
+  }
+}

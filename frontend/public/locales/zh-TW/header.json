@@ -1,0 +1,18 @@
+{
+  "title": "口語邊緣",
+  "myProfile": "我的個人資料",
+  "changePassword": "更改密碼",
+  "helpSupport": "幫助與支持",
+  "signOut": "登出",
+  "notifications": {
+    "title": "通知",
+    "unread": "未讀消息",
+    "empty": "沒有新通知",
+    "viewAll": "查看所有消息",
+    "newMessage": "新消息"
+  },
+  "language": {
+    "switchToNative": "切換到您的語言",
+    "switchToEnglish": "切換到英語"
+  }
+}

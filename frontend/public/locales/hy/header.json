@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Իմ պրոֆիլը",
+  "changePassword": "Փոխել գաղտնաբառը",
+  "helpSupport": "Օգնություն և աջակցություն",
+  "signOut": "Դուրս գալ",
+  "notifications": {
+    "title": "Ծանուցումներ",
+    "unread": "չկարդացված հաղորդագրություններ",
+    "empty": "Նոր ծանուցումներ չկան",
+    "viewAll": "Դիտել բոլոր հաղորդագրությունները",
+    "newMessage": "Նոր հաղորդագրություն"
+  },
+  "language": {
+    "switchToNative": "Անցեք ձեր լեզվին",
+    "switchToEnglish": "Անցում անգլերենի"
+  }
+}

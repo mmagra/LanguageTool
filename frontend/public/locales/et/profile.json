@@ -1,0 +1,28 @@
+{
+  "title": "Minu profiil",
+  "editProfile": "Redigeeri profiili",
+  "saveChanges": "Salvesta muudatused",
+  "saving": "Salvestamine...",
+  "firstName": "Eesnimi",
+  "lastName": "Perekonnanimi",
+  "email": "E-posti aadress",
+  "phone": "Telefoninumber",
+  "grade": "Hinne",
+  "primaryLanguage": "Esmane keel",
+  "guardianName": "Eestkostja nimi",
+  "guardianRelation": "Eestkostja suhe",
+  "selectGrade": "Valige Hinne",
+  "selectLanguage": "Valige keel",
+  "selectRelation": "Valige suhe",
+  "studentID": "ID",
+  "role": "Üliõpilane",
+  "errorLoading": "Viga profiili laadimisel",
+  "successUpdate": "Profiili värskendamine õnnestus!",
+  "errorUpdate": "Profiili värskendamine ebaõnnestus",
+  "genericError": "Ilmnes viga. Palun proovi uuesti.",
+  "relations": {
+    "father": "Isa",
+    "mother": "Ema",
+    "other": "muud"
+  }
+}

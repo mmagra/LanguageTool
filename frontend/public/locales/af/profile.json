@@ -1,0 +1,28 @@
+{
+  "title": "My profiel",
+  "editProfile": "Wysig profiel",
+  "saveChanges": "Stoor veranderinge",
+  "saving": "Stoor tans …",
+  "firstName": "Voornaam",
+  "lastName": "Van",
+  "email": "E-posadres",
+  "phone": "Telefoonnommer",
+  "grade": "Graad",
+  "primaryLanguage": "Primêre Taal",
+  "guardianName": "Naam voog",
+  "guardianRelation": "Voog Verhouding",
+  "selectGrade": "Kies Graad",
+  "selectLanguage": "Kies Taal",
+  "selectRelation": "Kies Verhouding",
+  "studentID": "ID",
+  "role": "Student",
+  "errorLoading": "Kon nie profiel laai nie",
+  "successUpdate": "Profiel suksesvol opgedateer!",
+  "errorUpdate": "Kon nie profiel opdateer nie",
+  "genericError": "'n Fout het voorgekom. Probeer asseblief weer.",
+  "relations": {
+    "father": "Vader",
+    "mother": "Moeder",
+    "other": "Ander"
+  }
+}

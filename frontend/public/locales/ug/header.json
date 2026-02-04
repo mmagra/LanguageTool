@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "مېنىڭ ئارخىپىم",
+  "changePassword": "پارولنى ئۆزگەرتىش",
+  "helpSupport": "ياردەم ۋە ياردەم",
+  "signOut": "چېكىنىش",
+  "notifications": {
+    "title": "ئۇقتۇرۇش",
+    "unread": "ئوقۇلمىغان ئۇچۇرلار",
+    "empty": "يېڭى ئۇقتۇرۇش يوق",
+    "viewAll": "بارلىق ئۇچۇرلارنى كۆرۈش",
+    "newMessage": "يېڭى ئۇچۇر"
+  },
+  "language": {
+    "switchToNative": "تىلىڭىزغا ئالماشتۇرۇڭ",
+    "switchToEnglish": "ئىنگلىزچىغا ئالماشتۇرۇڭ"
+  }
+}

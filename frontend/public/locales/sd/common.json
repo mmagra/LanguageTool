@@ -1,0 +1,13 @@
+{
+  "loading": "لوڊ ٿي رهيو آهي...",
+  "error": "نقص",
+  "save": "بچايو",
+  "cancel": "منسوخ ڪريو",
+  "language": "ٻولي",
+  "switchToEnglish": "انگريزي ۾ تبديل ڪريو",
+  "switchToNative": "{{language}} ڏانھن وڃو",
+  "online": "آن لائن",
+  "offline": "آف لائن",
+  "notProvided": "مهيا نه ڪيو ويو",
+  "tryAgain": "ٻيهر ڪوشش ڪريو"
+}

@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Profile-kayga",
+  "changePassword": "Beddel erayga sirta ah",
+  "helpSupport": "Caawinta & Taageerada",
+  "signOut": "Saxiix",
+  "notifications": {
+    "title": "Ogeysiisyada",
+    "unread": "fariimaha aan la akhriyin",
+    "empty": "Ma jiro wargelin cusub",
+    "viewAll": "Daawo dhamaan fariimaha",
+    "newMessage": "Farriin cusub"
+  },
+  "language": {
+    "switchToNative": "U beddel luqadaada",
+    "switchToEnglish": "U beddelo Ingiriisiga"
+  }
+}

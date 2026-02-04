@@ -1,0 +1,26 @@
+{
+  "title": "Dasibodu ọmọ ile-iwe",
+  "subtitle": "Ku aabọ pada! Eyi jẹ awotẹlẹ ti ilọsiwaju rẹ.",
+  "stats": {
+    "teachers": "Nọmba ti Olukọni (awọn)",
+    "teachersSubText": "Awọn olukọ ti o ba sọrọ",
+    "conversations": "Awọn ibaraẹnisọrọ (awọn)",
+    "conversationsSubText": "Lapapọ Awọn ifiranṣẹ",
+    "languages": "Awọn ede atilẹyin",
+    "languagesSubText": "Kọ ({{written}}) | Isọ ọrọ ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Ipo Atilẹyin Ede",
+    "primary": "Ede akọkọ rẹ jẹ",
+    "written": {
+      "title": "Atilẹyin kikọ",
+      "available": "Wa fun fifiranṣẹ",
+      "unsupported": "Ko ṣe atilẹyin"
+    },
+    "verbal": {
+      "title": "Isorosi Support",
+      "available": "Wa fun awọn akoko ifiwe",
+      "unsupported": "Ko ṣe atilẹyin"
+    }
+  }
+}

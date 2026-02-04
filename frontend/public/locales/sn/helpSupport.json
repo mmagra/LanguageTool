@@ -1,0 +1,47 @@
+{
+  "title": "Rubatsiro uye Tsigiro",
+  "description": "Isu tiri pano kuti tibatsire chero mibvunzo kana nyaya dzaungasangana nazvo paunenge uchishandisa yedu webhu application. Kunyangwe uchida rubatsiro kuti utange, iva nemubvunzo nezvechimwe chinhu, kana kuti uchida kumhan'ara tsikidzi, tiripo kuti tikubatsire.",
+  "contact": {
+    "title": "Bata Rutsigiro",
+    "emailTitle": "Email Support",
+    "emailDesc": "Isu tine chinangwa chekupindura kune ese maemail mukati meawa makumi maviri nemana.",
+    "phoneTitle": "Rutsigiro rwefoni",
+    "hours": "Muvhuro-Chishanu (9 am - 5 pm)",
+    "footer": "Maita basa nekusarudza yedu web application. Takazvipira kuita kuti ruzivo rwako ruve rwakatsetseka uye runakidze sezvinobvira."
+  },
+  "supportedLanguages": {
+    "title": "Rondedzero Yemitauro Inotsigirwa",
+    "headers": {
+      "rank": "#",
+      "language": "Mutauro",
+      "translation": "Shanduro (App & Mobile)",
+      "desktop": "Mu-Munhu Kukurukurirana (Desktop)",
+      "mobile": "Mu-Munhu Kukurukurirana (Mobile App)"
+    },
+    "mobileLabels": {
+      "translation": "Mharidzo Yakaturikirwa",
+      "desktop": "Desktop Mu-Munhu",
+      "mobile": "Mobile In-Munhu"
+    },
+    "supported": "Inotsigirwa",
+    "notSupported": "Not Supported"
+  },
+  "detailedFeatures": {
+    "title": "Detailed Feature Support",
+    "subtitle": "Kupatsanurwa kweIzwi Kupinza uye Mavara-kune-Kutaura kugona pamudziyo wega wega.",
+    "headers": {
+      "rank": "#",
+      "language": "Mutauro",
+      "translation": "Shanduro (Zvose)",
+      "desktopVersion": "Desktop Version",
+      "mobileApp": "Mobile App",
+      "voiceInput": "Voice Input",
+      "tts": "Chinyorwa-ku-Kutaura"
+    },
+    "mobileHeaders": {
+      "translation": "Shanduro",
+      "desktop": "Desktop Features",
+      "mobile": "Mobile App Features"
+    }
+  }
+}

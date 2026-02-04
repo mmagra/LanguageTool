@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Bayanan Bayani na",
+  "changePassword": "Canza kalmar shiga",
+  "helpSupport": "Taimako & Taimako",
+  "signOut": "Fita",
+  "notifications": {
+    "title": "Sanarwa",
+    "unread": "saƙonnin da ba a karanta ba",
+    "empty": "Babu sabon sanarwa",
+    "viewAll": "Duba duk saƙonni",
+    "newMessage": "Sabon sako"
+  },
+  "language": {
+    "switchToNative": "Canja zuwa Harshenku",
+    "switchToEnglish": "Canja zuwa Turanci"
+  }
+}

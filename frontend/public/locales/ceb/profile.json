@@ -1,0 +1,28 @@
+{
+  "title": "Akong Profile",
+  "editProfile": "Usba ang Profile",
+  "saveChanges": "I-save ang mga Kausaban",
+  "saving": "Nagtipig...",
+  "firstName": "Unang Ngalan",
+  "lastName": "Apelyido",
+  "email": "Email Address",
+  "phone": "Numero sa Telepono",
+  "grade": "Grado",
+  "primaryLanguage": "Panguna nga Pinulongan",
+  "guardianName": "Ngalan sa Tigbantay",
+  "guardianRelation": "Relasyon sa Tigbantay",
+  "selectGrade": "Pilia ang Grado",
+  "selectLanguage": "Pilia ang Pinulongan",
+  "selectRelation": "Pilia ang Relasyon",
+  "studentID": "ID",
+  "role": "Estudyante",
+  "errorLoading": "Sayop sa Pagkarga sa Profile",
+  "successUpdate": "Malampusong na-update ang profile!",
+  "errorUpdate": "Napakyas sa pag-update sa profile",
+  "genericError": "Usa ka sayup ang nahitabo. Palihug sulayi pag-usab.",
+  "relations": {
+    "father": "Amahan",
+    "mother": "Inahan",
+    "other": "Ang uban"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "loading": "Yükleniyor...",
+  "error": "Hata",
+  "save": "Kaydetmek",
+  "cancel": "İptal etmek",
+  "language": "Dil",
+  "switchToEnglish": "İngilizceye geç",
+  "switchToNative": "{{language}} diline geç",
+  "online": "Çevrimiçi",
+  "offline": "Çevrimdışı",
+  "notProvided": "Sağlanmadı",
+  "tryAgain": "Tekrar deneyin"
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Минем профиль",
+  "editProfile": "Профильне үзгәртү",
+  "saveChanges": "Esзгәрешләрне саклагыз",
+  "saving": "Саклау ...",
+  "firstName": "Фамилия",
+  "lastName": "Фамилия",
+  "email": "Электрон почта адресы",
+  "phone": "Телефон номеры",
+  "grade": "Сыйфат",
+  "primaryLanguage": "Башлангыч тел",
+  "guardianName": "Саклаучы исеме",
+  "guardianRelation": "Попечительлек мөнәсәбәтләре",
+  "selectGrade": "Сыйфатны сайлагыз",
+  "selectLanguage": "Телне сайлагыз",
+  "selectRelation": "Бәйләнешне сайлагыз",
+  "studentID": "ID",
+  "role": "Студент",
+  "errorLoading": "Профильне йөкләүдә хата",
+  "successUpdate": "Профиль уңышлы яңартылды!",
+  "errorUpdate": "Профильне яңарта алмады",
+  "genericError": "Хата килеп чыкты. Зинһар, кабатлап карагыз.",
+  "relations": {
+    "father": "Әти",
+    "mother": "Әни",
+    "other": "Бүтәннәр"
+  }
+}

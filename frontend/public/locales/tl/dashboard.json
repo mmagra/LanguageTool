@@ -1,0 +1,26 @@
+{
+  "title": "Dashboard ng Mag-aaral",
+  "subtitle": "Maligayang pagbabalik! Narito ang isang pangkalahatang-ideya ng iyong pag-unlad.",
+  "stats": {
+    "teachers": "Bilang ng (mga) Guro",
+    "teachersSubText": "Mga gurong naka-chat mo",
+    "conversations": "(mga) pag-uusap",
+    "conversationsSubText": "Kabuuang Mga Mensahe",
+    "languages": "Mga Sinusuportahang Wika",
+    "languagesSubText": "Nakasulat ({{written}}) | Berbal ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Katayuan ng Suporta sa Wika",
+    "primary": "Ang iyong Pangunahing Wika ay",
+    "written": {
+      "title": "Nakasulat na Suporta",
+      "available": "Magagamit para sa pagmemensahe",
+      "unsupported": "Hindi suportado"
+    },
+    "verbal": {
+      "title": "Verbal Support",
+      "available": "Available para sa mga live na session",
+      "unsupported": "Hindi suportado"
+    }
+  }
+}

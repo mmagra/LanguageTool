@@ -1,0 +1,28 @@
+{
+  "title": "Profîla min",
+  "editProfile": "Profîl biguherîne",
+  "saveChanges": "Save Changes",
+  "saving": "Sazkirin...",
+  "firstName": "Nav",
+  "lastName": "Paşnav",
+  "email": "Navnîşana emailê",
+  "phone": "Jimare telefon",
+  "grade": "Sinif",
+  "primaryLanguage": "Zimanê seretayî",
+  "guardianName": "Navê Guardian",
+  "guardianRelation": "Têkiliya Guardian",
+  "selectGrade": "Nota Hilbijêre",
+  "selectLanguage": "Ziman hilbijêrin",
+  "selectRelation": "Têkilî hilbijêre",
+  "studentID": "ID",
+  "role": "Zankoyî",
+  "errorLoading": "Çewtiya Barkirina Profîlê",
+  "successUpdate": "Profîl bi serkeftî hate nûve kirin!",
+  "errorUpdate": "Nûvekirina profîlê bi ser neket",
+  "genericError": "Çewtiyek derket. Ji kerema xwe dîsa biceribîne.",
+  "relations": {
+    "father": "Bav",
+    "mother": "Dê",
+    "other": "Yên din"
+  }
+}

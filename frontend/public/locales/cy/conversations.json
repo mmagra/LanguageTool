@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Negeseuon",
+  "searchPlaceholder": "Chwilio am athrawon...",
+  "noConversations": "Dim sgyrsiau eto",
+  "unknownTeacher": "Athro Anhysbys",
+  "noMessages": "Dim negeseuon eto",
+  "typing": "Wrthi'n teipio...",
+  "typePlaceholder": "Teipiwch eich neges yn Gymraeg...",
+  "emptyState": {
+    "title": "Eich Sgyrsiau",
+    "desc": "Dewiswch athro o'r bar ochr i ddechrau gofyn cwestiynau neu drafod eich graddau.",
+    "startPrompt": "Dechreuwch sgwrs gyda'ch athro"
+  },
+  "refreshList": "Rhestr Adnewyddu"
+}

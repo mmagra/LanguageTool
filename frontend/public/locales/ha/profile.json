@@ -1,0 +1,28 @@
+{
+  "title": "Bayanan Bayani na",
+  "editProfile": "Shirya Bayanan martaba",
+  "saveChanges": "Ajiye Canje-canje",
+  "saving": "Ana ajiyewa...",
+  "firstName": "Sunan rana",
+  "lastName": "Sunan mahaifa",
+  "email": "Adireshin i-mel",
+  "phone": "Lambar tarho",
+  "grade": "Daraja",
+  "primaryLanguage": "Harshen Farko",
+  "guardianName": "Sunan Mai gadi",
+  "guardianRelation": "Dangantakar Mai Gadi",
+  "selectGrade": "Zaɓi Daraja",
+  "selectLanguage": "Zaɓi Harshe",
+  "selectRelation": "Zaɓi Dangantaka",
+  "studentID": "ID",
+  "role": "dalibi",
+  "errorLoading": "Kuskuren Load da Bayanan Bayanai",
+  "successUpdate": "An sabunta bayanin martaba cikin nasara!",
+  "errorUpdate": "An kasa sabunta bayanan martaba",
+  "genericError": "An sami kuskure Da fatan za a sake gwadawa.",
+  "relations": {
+    "father": "Uba",
+    "mother": "Uwa",
+    "other": "Sauran"
+  }
+}

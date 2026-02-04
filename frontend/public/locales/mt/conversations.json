@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Messaġġi",
+  "searchPlaceholder": "Fittex l-għalliema...",
+  "noConversations": "Għadu l-ebda konversazzjonijiet",
+  "unknownTeacher": "Għalliem mhux magħruf",
+  "noMessages": "Għadu l-ebda messaġġ",
+  "typing": "Ittajpjar...",
+  "typePlaceholder": "Ittajpja l-messaġġ tiegħek bil-Malti...",
+  "emptyState": {
+    "title": "Il-Konversazzjonijiet Tiegħek",
+    "desc": "Agħżel għalliem mill-sidebar biex tibda tistaqsi mistoqsijiet jew tiddiskuti l-gradi tiegħek.",
+    "startPrompt": "Ibda konversazzjoni mal-għalliem tiegħek"
+  },
+  "refreshList": "Aġġorna l-Lista"
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Ученичка табла",
+  "subtitle": "Добредојдовте назад! Еве преглед на вашиот напредок.",
+  "stats": {
+    "teachers": "Број на наставник(и)",
+    "teachersSubText": "Наставници со кои разговаравте",
+    "conversations": "Разговор(и)",
+    "conversationsSubText": "Вкупно пораки",
+    "languages": "Поддржани јазици",
+    "languagesSubText": "Напишано ({{written}}) | Вербална ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Статус на јазична поддршка",
+    "primary": "Вашиот примарен јазик е",
+    "written": {
+      "title": "Писмена поддршка",
+      "available": "Достапно за пораки",
+      "unsupported": "Не е поддржано"
+    },
+    "verbal": {
+      "title": "Вербална поддршка",
+      "available": "Достапно за сесии во живо",
+      "unsupported": "Не е поддржано"
+    }
+  }
+}

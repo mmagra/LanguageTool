@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Tin nhắn",
+  "searchPlaceholder": "Tìm kiếm giáo viên...",
+  "noConversations": "Chưa có cuộc trò chuyện nào",
+  "unknownTeacher": "Giáo viên không xác định",
+  "noMessages": "Chưa có tin nhắn nào",
+  "typing": "Đang gõ...",
+  "typePlaceholder": "Gõ tin nhắn bằng tiếng Việt...",
+  "emptyState": {
+    "title": "Cuộc trò chuyện của bạn",
+    "desc": "Chọn một giáo viên từ thanh bên để bắt đầu đặt câu hỏi hoặc thảo luận về điểm số của bạn.",
+    "startPrompt": "Bắt đầu cuộc trò chuyện với giáo viên của bạn"
+  },
+  "refreshList": "Làm mới danh sách"
+}

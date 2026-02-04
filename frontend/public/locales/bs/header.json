@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Moj profil",
+  "changePassword": "Promijeni lozinku",
+  "helpSupport": "Pomoć i podrška",
+  "signOut": "Odjavi se",
+  "notifications": {
+    "title": "Obavještenja",
+    "unread": "nepročitane poruke",
+    "empty": "Nema novih obavještenja",
+    "viewAll": "Pogledaj sve poruke",
+    "newMessage": "Nova poruka"
+  },
+  "language": {
+    "switchToNative": "Prebacite se na Vaš jezik",
+    "switchToEnglish": "Prebacite se na engleski"
+  }
+}

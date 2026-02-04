@@ -1,0 +1,28 @@
+{
+  "title": "Mano profilis",
+  "editProfile": "Redaguoti profilį",
+  "saveChanges": "Išsaugoti pakeitimus",
+  "saving": "Išsaugoma...",
+  "firstName": "Vardas",
+  "lastName": "Pavardė",
+  "email": "El. pašto adresas",
+  "phone": "Telefono numeris",
+  "grade": "Įvertinimas",
+  "primaryLanguage": "Pirminė kalba",
+  "guardianName": "Globėjo vardas",
+  "guardianRelation": "Santykiai su globėjais",
+  "selectGrade": "Pasirinkite Įvertinimas",
+  "selectLanguage": "Pasirinkite Kalba",
+  "selectRelation": "Pasirinkite Ryšys",
+  "studentID": "ID",
+  "role": "Studentas",
+  "errorLoading": "Klaida įkeliant profilį",
+  "successUpdate": "Profilis sėkmingai atnaujintas!",
+  "errorUpdate": "Nepavyko atnaujinti profilio",
+  "genericError": "Įvyko klaida. Bandykite dar kartą.",
+  "relations": {
+    "father": "tėvas",
+    "mother": "Motina",
+    "other": "Kita"
+  }
+}

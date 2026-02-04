@@ -1,0 +1,26 @@
+{
+  "title": "Studint Dashboard",
+  "subtitle": "Opnij wolkom! Hjir is in oersjoch fan jo foarútgong.",
+  "stats": {
+    "teachers": "Oantal learkrêft(en)",
+    "teachersSubText": "Leararen mei wa't jo petearden",
+    "conversations": "Konversaasje(n)",
+    "conversationsSubText": "Totaal Berjochten",
+    "languages": "Stipe talen",
+    "languagesSubText": "Skreaun ({{written}}) | Ferbaal ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Taal Support Status",
+    "primary": "Jo primêre taal is",
+    "written": {
+      "title": "Skriftlike stipe",
+      "available": "Beskikber foar messaging",
+      "unsupported": "Net stipe"
+    },
+    "verbal": {
+      "title": "Ferbale stipe",
+      "available": "Beskikber foar live sesjes",
+      "unsupported": "Net stipe"
+    }
+  }
+}

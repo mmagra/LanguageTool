@@ -1,0 +1,26 @@
+{
+  "title": "Dangosfwrdd Myfyrwyr",
+  "subtitle": "Croeso nôl! Dyma drosolwg o'ch cynnydd.",
+  "stats": {
+    "teachers": "Nifer yr Athro(ion)",
+    "teachersSubText": "Athrawon y buoch chi'n sgwrsio â nhw",
+    "conversations": "sgwrs(s)",
+    "conversationsSubText": "Cyfanswm Negeseuon",
+    "languages": "Ieithoedd â Chymorth",
+    "languagesSubText": "Ysgrifenedig ({{written}}) | Llafar ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Statws Cefnogi Iaith",
+    "primary": "Eich Iaith Gynradd yw",
+    "written": {
+      "title": "Cefnogaeth Ysgrifenedig",
+      "available": "Ar gael ar gyfer negeseuon",
+      "unsupported": "Heb ei gefnogi"
+    },
+    "verbal": {
+      "title": "Cefnogaeth Lafar",
+      "available": "Ar gael ar gyfer sesiynau byw",
+      "unsupported": "Heb ei gefnogi"
+    }
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "title": "Pomoc a podpora",
+  "description": "Sme tu, aby sme vám pomohli s akýmikoľvek otázkami alebo problémami, s ktorými sa môžete stretnúť pri používaní našej webovej aplikácie. Či už potrebujete pomoc so začiatkom, máte otázku týkajúcu sa funkcie alebo chcete nahlásiť chybu, sme tu, aby sme vám pomohli.",
+  "contact": {
+    "title": "Kontaktujte podporu",
+    "emailTitle": "E-mailová podpora",
+    "emailDesc": "Naším cieľom je odpovedať na všetky e-maily do 24 hodín.",
+    "phoneTitle": "Telefonická podpora",
+    "hours": "Po – Pia (9:00 – 17:00)",
+    "footer": "Ďakujeme, že ste si vybrali našu webovú aplikáciu. Zaviazali sme sa, že váš zážitok bude čo najhladší a najpríjemnejší."
+  },
+  "supportedLanguages": {
+    "title": "Zoznam podporovaných jazykov",
+    "headers": {
+      "rank": "#",
+      "language": "Jazyk",
+      "translation": "Preklad (aplikácia a mobil)",
+      "desktop": "Osobná komunikácia (počítač)",
+      "mobile": "Osobná komunikácia (mobilná aplikácia)"
+    },
+    "mobileLabels": {
+      "translation": "Preložené správy",
+      "desktop": "Osobný počítač",
+      "mobile": "Osobný mobilný telefón"
+    },
+    "supported": "Podporované",
+    "notSupported": "Nie je podporované"
+  },
+  "detailedFeatures": {
+    "title": "Podrobná podpora funkcií",
+    "subtitle": "Rozdelenie možností hlasového vstupu a prevodu textu na reč podľa zariadenia.",
+    "headers": {
+      "rank": "#",
+      "language": "Jazyk",
+      "translation": "Preklad (všetky)",
+      "desktopVersion": "Verzia pre stolné počítače",
+      "mobileApp": "Mobilná aplikácia",
+      "voiceInput": "Hlasový vstup",
+      "tts": "Prevod textu na reč"
+    },
+    "mobileHeaders": {
+      "translation": "Preklad",
+      "desktop": "Funkcie pracovnej plochy",
+      "mobile": "Funkcie mobilnej aplikácie"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "loading": "Йөкләү ...",
+  "error": "Хата",
+  "save": "Саклагыз",
+  "cancel": "Баш тарту",
+  "language": "Тел",
+  "switchToEnglish": "Инглиз теленә күчү",
+  "switchToNative": "{{Тел}} күчә",
+  "online": "Онлайн",
+  "offline": "Оффлайн",
+  "notProvided": "Бирелмәгән",
+  "tryAgain": "Кабатлап карагыз"
+}

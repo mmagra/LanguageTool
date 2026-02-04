@@ -1,0 +1,47 @@
+{
+  "title": "Tulong at Suporta",
+  "description": "Nandito kami upang tumulong sa anumang mga katanungan o isyu na maaari mong makaharap habang ginagamit ang aming web application. Kung kailangan mo ng tulong sa pagsisimula, may tanong tungkol sa isang feature, o gusto mong mag-ulat ng bug, nandito kami para tumulong.",
+  "contact": {
+    "title": "Makipag-ugnayan sa Suporta",
+    "emailTitle": "Suporta sa Email",
+    "emailDesc": "Layunin naming tumugon sa lahat ng email sa loob ng 24 na oras.",
+    "phoneTitle": "Suporta sa Telepono",
+    "hours": "Lun-Biy (9 am - 5 pm)",
+    "footer": "Salamat sa pagpili ng aming web application. Nakatuon kami na gawing maayos at kasiya-siya ang iyong karanasan hangga't maaari."
+  },
+  "supportedLanguages": {
+    "title": "Listahan ng mga Sinusuportahang Wika",
+    "headers": {
+      "rank": "#",
+      "language": "Wika",
+      "translation": "Pagsasalin (App at Mobile)",
+      "desktop": "In-Person Communication (Desktop)",
+      "mobile": "In-Person Communication (Mobile App)"
+    },
+    "mobileLabels": {
+      "translation": "Mga Na-translate na Mensahe",
+      "desktop": "Desktop In-Person",
+      "mobile": "Mobile na In-Person"
+    },
+    "supported": "Sinusuportahan",
+    "notSupported": "Hindi Sinusuportahan"
+  },
+  "detailedFeatures": {
+    "title": "Detalyadong Suporta sa Tampok",
+    "subtitle": "Breakdown ng Voice Input at Text-to-Speech na mga kakayahan sa bawat device.",
+    "headers": {
+      "rank": "#",
+      "language": "Wika",
+      "translation": "Pagsasalin (Lahat)",
+      "desktopVersion": "Bersyon ng Desktop",
+      "mobileApp": "Mobile App",
+      "voiceInput": "Input ng Boses",
+      "tts": "Text-to-Speech"
+    },
+    "mobileHeaders": {
+      "translation": "Pagsasalin",
+      "desktop": "Mga Tampok sa Desktop",
+      "mobile": "Mga Tampok ng Mobile App"
+    }
+  }
+}

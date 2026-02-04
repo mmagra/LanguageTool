@@ -1,0 +1,13 @@
+{
+  "loading": "Loading...",
+  "error": "yuam kev",
+  "save": "Txuag",
+  "cancel": "Tso tseg",
+  "language": "Lus",
+  "switchToEnglish": "Hloov mus rau lus Askiv",
+  "switchToNative": "Hloov mus rau {{language}}",
+  "online": "Online",
+  "offline": "Offline",
+  "notProvided": "Tsis muab",
+  "tryAgain": "Sim dua"
+}

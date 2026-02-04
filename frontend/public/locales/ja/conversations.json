@@ -1,0 +1,15 @@
+{
+  "myTeachers": "メッセージ",
+  "searchPlaceholder": "教師を検索...",
+  "noConversations": "まだ会話はありません",
+  "unknownTeacher": "不明な先生",
+  "noMessages": "まだメッセージはありません",
+  "typing": "タイピング...",
+  "typePlaceholder": "メッセージを日本語で入力してください...",
+  "emptyState": {
+    "title": "あなたの会話",
+    "desc": "サイドバーから教師を選択して、質問したり、成績について話し合ったりしてください。",
+    "startPrompt": "先生と会話を始めましょう"
+  },
+  "refreshList": "リストを更新"
+}

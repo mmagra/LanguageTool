@@ -1,0 +1,28 @@
+{
+  "title": "Min profil",
+  "editProfile": "Rediger profil",
+  "saveChanges": "Lagre endringer",
+  "saving": "Lagrer...",
+  "firstName": "Fornavn",
+  "lastName": "Etternavn",
+  "email": "E-postadresse",
+  "phone": "Telefonnummer",
+  "grade": "Karakter",
+  "primaryLanguage": "Primærspråk",
+  "guardianName": "Foresattes navn",
+  "guardianRelation": "Vergeforhold",
+  "selectGrade": "Velg Karakter",
+  "selectLanguage": "Velg Språk",
+  "selectRelation": "Velg Relasjon",
+  "studentID": "ID",
+  "role": "Student",
+  "errorLoading": "Feil ved lasting av profil",
+  "successUpdate": "Profilen er oppdatert!",
+  "errorUpdate": "Kunne ikke oppdatere profilen",
+  "genericError": "Det oppsto en feil. Vennligst prøv igjen.",
+  "relations": {
+    "father": "Far",
+    "mother": "Mor",
+    "other": "Annen"
+  }
+}

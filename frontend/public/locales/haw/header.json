@@ -1,0 +1,18 @@
+{
+  "title": "ʻO SpokenEdge",
+  "myProfile": "ʻO kaʻu moʻolelo",
+  "changePassword": "Hoʻololi i ka ʻōlelo huna",
+  "helpSupport": "Kōkua & Kākoʻo",
+  "signOut": "E haʻalele",
+  "notifications": {
+    "title": "Hoolaha",
+    "unread": "nā memo i heluhelu ʻole ʻia",
+    "empty": "ʻAʻohe hoʻolaha hou",
+    "viewAll": "Nānā i nā memo a pau",
+    "newMessage": "Memo hou"
+  },
+  "language": {
+    "switchToNative": "E hoʻololi i kāu ʻōlelo",
+    "switchToEnglish": "E hoʻololi i ka ʻōlelo Pelekania"
+  }
+}

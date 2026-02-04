@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Xabarlar",
+  "searchPlaceholder": "O'qituvchilarni qidirish...",
+  "noConversations": "Hozircha suhbat yoʻq",
+  "unknownTeacher": "Noma'lum o'qituvchi",
+  "noMessages": "Hali hech qanday xabar yo'q",
+  "typing": "Yozilmoqda...",
+  "typePlaceholder": "Xabaringizni oʻzbek tilida yozing...",
+  "emptyState": {
+    "title": "Suhbatlaringiz",
+    "desc": "Savol berishni yoki baholaringizni muhokama qilishni boshlash uchun yon paneldan o'qituvchini tanlang.",
+    "startPrompt": "O'qituvchingiz bilan suhbatni boshlang"
+  },
+  "refreshList": "Roʻyxatni yangilash"
+}

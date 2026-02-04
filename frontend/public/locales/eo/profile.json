@@ -1,0 +1,28 @@
+{
+  "title": "Mia Profilo",
+  "editProfile": "Redakti Profilon",
+  "saveChanges": "Konservu Ŝanĝojn",
+  "saving": "Konservante...",
+  "firstName": "Antaŭnomo",
+  "lastName": "Familia Nomo",
+  "email": "Retpoŝta Adreso",
+  "phone": "Telefonnumero",
+  "grade": "Grado",
+  "primaryLanguage": "Primara Lingvo",
+  "guardianName": "Nomo de la gardisto",
+  "guardianRelation": "Rilato de Gardanto",
+  "selectGrade": "Elektu Gradon",
+  "selectLanguage": "Elektu Lingvon",
+  "selectRelation": "Elektu Rilaton",
+  "studentID": "ID",
+  "role": "Studento",
+  "errorLoading": "Eraro Ŝarĝante Profilon",
+  "successUpdate": "Profilo ĝisdatigita sukcese!",
+  "errorUpdate": "Malsukcesis ĝisdatigi profilon",
+  "genericError": "Eraro okazis. Bonvolu provi denove.",
+  "relations": {
+    "father": "Patro",
+    "mother": "Patrino",
+    "other": "Aliaj"
+  }
+}

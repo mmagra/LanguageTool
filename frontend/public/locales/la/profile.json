@@ -1,0 +1,28 @@
+{
+  "title": "My Profile",
+  "editProfile": "Edit Profile",
+  "saveChanges": "Servare Mutationes",
+  "saving": "Salvis...",
+  "firstName": "Praenomen",
+  "lastName": "Nomen",
+  "email": "Inscriptio electronica",
+  "phone": "Numerus telephonicus",
+  "grade": "Gradus",
+  "primaryLanguage": "Lingua prima",
+  "guardianName": "Custos nominis",
+  "guardianRelation": "Custos relationis",
+  "selectGrade": "Select Grade",
+  "selectLanguage": "Linguae Selectae",
+  "selectRelation": "Lego Relatio",
+  "studentID": "ID",
+  "role": "Student",
+  "errorLoading": "Error Loading Profile",
+  "successUpdate": "Profile updated feliciter!",
+  "errorUpdate": "Deficio ad update profile",
+  "genericError": "Error occurrit. Quaeso, iterum conare.",
+  "relations": {
+    "father": "Pater",
+    "mother": "Mater",
+    "other": "Other"
+  }
+}

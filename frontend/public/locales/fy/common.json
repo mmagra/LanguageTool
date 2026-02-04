@@ -1,0 +1,13 @@
+{
+  "loading": "Loading...",
+  "error": "Fersin",
+  "save": "Rêde",
+  "cancel": "Ofbrekke",
+  "language": "Taal",
+  "switchToEnglish": "Oerskeakelje nei Ingelsk",
+  "switchToNative": "Wikselje nei {{taal}}",
+  "online": "Online",
+  "offline": "Offline",
+  "notProvided": "Net foarsjoen",
+  "tryAgain": "Besykje opnij"
+}

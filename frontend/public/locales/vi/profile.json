@@ -1,0 +1,28 @@
+{
+  "title": "Hồ sơ của tôi",
+  "editProfile": "Chỉnh sửa hồ sơ",
+  "saveChanges": "Lưu thay đổi",
+  "saving": "Đang lưu...",
+  "firstName": "Tên",
+  "lastName": "Họ",
+  "email": "Địa chỉ email",
+  "phone": "Số điện thoại",
+  "grade": "Cấp",
+  "primaryLanguage": "Ngôn ngữ chính",
+  "guardianName": "Tên người giám hộ",
+  "guardianRelation": "Quan hệ giám hộ",
+  "selectGrade": "Chọn lớp",
+  "selectLanguage": "Chọn ngôn ngữ",
+  "selectRelation": "Chọn mối quan hệ",
+  "studentID": "NHẬN DẠNG",
+  "role": "Học sinh",
+  "errorLoading": "Lỗi tải hồ sơ",
+  "successUpdate": "Hồ sơ được cập nhật thành công!",
+  "errorUpdate": "Không thể cập nhật hồ sơ",
+  "genericError": "Đã xảy ra lỗi. Vui lòng thử lại.",
+  "relations": {
+    "father": "Bố",
+    "mother": "Mẹ",
+    "other": "Khác"
+  }
+}

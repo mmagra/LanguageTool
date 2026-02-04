@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Nachrichten",
+  "searchPlaceholder": "Lehrer suchen...",
+  "noConversations": "Noch keine Gespräche",
+  "unknownTeacher": "Unbekannter Lehrer",
+  "noMessages": "Noch keine Nachrichten",
+  "typing": "Tippen...",
+  "typePlaceholder": "Geben Sie Ihre Nachricht auf Deutsch ein...",
+  "emptyState": {
+    "title": "Ihre Gespräche",
+    "desc": "Wählen Sie in der Seitenleiste einen Lehrer aus, um Fragen zu stellen oder Ihre Noten zu besprechen.",
+    "startPrompt": "Beginnen Sie ein Gespräch mit Ihrem Lehrer"
+  },
+  "refreshList": "Liste aktualisieren"
+}

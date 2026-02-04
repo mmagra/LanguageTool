@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Teachtaireachtaí",
+  "searchPlaceholder": "Cuardaigh múinteoirí...",
+  "noConversations": "Níl aon chomhrá fós",
+  "unknownTeacher": "Múinteoir Anaithnid",
+  "noMessages": "Níl aon teachtaireachtaí fós",
+  "typing": "Ag clóscríobh...",
+  "typePlaceholder": "Clóscríobh do theachtaireacht i nGaeilge...",
+  "emptyState": {
+    "title": "Do Chomhráite",
+    "desc": "Roghnaigh múinteoir ón taobhbharra chun tosú ag cur ceisteanna nó ag plé do ghráid.",
+    "startPrompt": "Cuir tús le comhrá le do mhúinteoir"
+  },
+  "refreshList": "Liosta Athnuaigh"
+}

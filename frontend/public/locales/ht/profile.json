@@ -1,0 +1,28 @@
+{
+  "title": "Profil mwen an",
+  "editProfile": "Edit Profile",
+  "saveChanges": "Sove Chanjman yo",
+  "saving": "Ekonomize...",
+  "firstName": "Premye Non",
+  "lastName": "Siyati",
+  "email": "Adrès Imèl",
+  "phone": "Nimewo Telefòn",
+  "grade": "Klas",
+  "primaryLanguage": "Lang Prensipal",
+  "guardianName": "Non gadyen an",
+  "guardianRelation": "Relasyon Gadyen",
+  "selectGrade": "Chwazi Klas",
+  "selectLanguage": "Chwazi Lang",
+  "selectRelation": "Chwazi Relasyon",
+  "studentID": "ID",
+  "role": "Elèv",
+  "errorLoading": "Erè chaje pwofil",
+  "successUpdate": "Pwofil mete ajou avèk siksè!",
+  "errorUpdate": "Echwe pou mete ajou pwofil la",
+  "genericError": "Yon erè te fèt. Tanpri eseye ankò.",
+  "relations": {
+    "father": "Papa",
+    "mother": "Manman",
+    "other": "Lòt"
+  }
+}

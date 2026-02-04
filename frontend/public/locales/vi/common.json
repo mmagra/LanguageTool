@@ -1,0 +1,13 @@
+{
+  "loading": "Đang tải...",
+  "error": "Lỗi",
+  "save": "Cứu",
+  "cancel": "Hủy bỏ",
+  "language": "Ngôn ngữ",
+  "switchToEnglish": "Chuyển sang tiếng Anh",
+  "switchToNative": "Chuyển sang {{ngôn ngữ}}",
+  "online": "Trực tuyến",
+  "offline": "Ngoại tuyến",
+  "notProvided": "Không được cung cấp",
+  "tryAgain": "Thử lại"
+}

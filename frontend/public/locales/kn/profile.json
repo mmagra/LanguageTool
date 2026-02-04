@@ -1,0 +1,28 @@
+{
+  "title": "ನನ್ನ ಪ್ರೊಫೈಲ್",
+  "editProfile": "ಪ್ರೊಫೈಲ್ ಸಂಪಾದಿಸಿ",
+  "saveChanges": "ಬದಲಾವಣೆಗಳನ್ನು ಉಳಿಸಿ",
+  "saving": "ಉಳಿಸಲಾಗುತ್ತಿದೆ...",
+  "firstName": "ಮೊದಲ ಹೆಸರು",
+  "lastName": "ಕೊನೆಯ ಹೆಸರು",
+  "email": "ಇಮೇಲ್ ವಿಳಾಸ",
+  "phone": "ದೂರವಾಣಿ ಸಂಖ್ಯೆ",
+  "grade": "ಗ್ರೇಡ್",
+  "primaryLanguage": "ಪ್ರಾಥಮಿಕ ಭಾಷೆ",
+  "guardianName": "ಗಾರ್ಡಿಯನ್ ಹೆಸರು",
+  "guardianRelation": "ಗಾರ್ಡಿಯನ್ ಸಂಬಂಧ",
+  "selectGrade": "ಗ್ರೇಡ್ ಆಯ್ಕೆಮಾಡಿ",
+  "selectLanguage": "ಭಾಷೆಯನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+  "selectRelation": "ಸಂಬಂಧವನ್ನು ಆಯ್ಕೆಮಾಡಿ",
+  "studentID": "ID",
+  "role": "ವಿದ್ಯಾರ್ಥಿ",
+  "errorLoading": "ಪ್ರೊಫೈಲ್ ಲೋಡ್ ಮಾಡುವಲ್ಲಿ ದೋಷ",
+  "successUpdate": "ಪ್ರೊಫೈಲ್ ಅನ್ನು ಯಶಸ್ವಿಯಾಗಿ ನವೀಕರಿಸಲಾಗಿದೆ!",
+  "errorUpdate": "ಪ್ರೊಫೈಲ್ ಅನ್ನು ನವೀಕರಿಸಲು ವಿಫಲವಾಗಿದೆ",
+  "genericError": "ದೋಷ ಸಂಭವಿಸಿದೆ. ದಯವಿಟ್ಟು ಮತ್ತೆ ಪ್ರಯತ್ನಿಸಿ.",
+  "relations": {
+    "father": "ತಂದೆ",
+    "mother": "ತಾಯಿ",
+    "other": "ಇತರೆ"
+  }
+}

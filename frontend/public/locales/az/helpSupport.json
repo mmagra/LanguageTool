@@ -1,0 +1,47 @@
+{
+  "title": "Kömək və Dəstək",
+  "description": "Veb tətbiqimizdən istifadə edərkən qarşılaşa biləcəyiniz hər hansı sual və ya problemlə bağlı kömək etmək üçün buradayıq. Başlamaq üçün köməyə ehtiyacınız olub-olmamasından, funksiya ilə bağlı sualınız olub-olmamasından və ya səhv barədə məlumat vermək istəsəniz, biz kömək etmək üçün buradayıq.",
+  "contact": {
+    "title": "Dəstək ilə əlaqə saxlayın",
+    "emailTitle": "E-poçt dəstəyi",
+    "emailDesc": "Bütün e-poçtlara 24 saat ərzində cavab verməyi hədəfləyirik.",
+    "phoneTitle": "Telefon dəstəyi",
+    "hours": "Bazar ertəsi-Cümə (9:00 - 17:00)",
+    "footer": "Veb tətbiqimizi seçdiyiniz üçün təşəkkür edirik. Biz sizin təcrübənizi mümkün qədər hamar və zövqlü etməyə sadiqik."
+  },
+  "supportedLanguages": {
+    "title": "Dəstəklənən Dillərin Siyahısı",
+    "headers": {
+      "rank": "#",
+      "language": "Dil",
+      "translation": "Tərcümə (Tətbiq və Mobil)",
+      "desktop": "Şəxsi Əlaqə (Masaüstü)",
+      "mobile": "Şəxsi Əlaqə (Mobil Tətbiq)"
+    },
+    "mobileLabels": {
+      "translation": "Tərcümə edilmiş Mesajlar",
+      "desktop": "Desktop In-Şəxs",
+      "mobile": "Mobil şəxsən"
+    },
+    "supported": "Dəstəklənir",
+    "notSupported": "Dəstəklənmir"
+  },
+  "detailedFeatures": {
+    "title": "Ətraflı Xüsusiyyət Dəstəyi",
+    "subtitle": "Hər cihaz üçün Səs Daxiletmə və Mətndən Nitqə imkanların bölgüsü.",
+    "headers": {
+      "rank": "#",
+      "language": "Dil",
+      "translation": "Tərcümə (hamısı)",
+      "desktopVersion": "Masaüstü versiyası",
+      "mobileApp": "Mobil Proqram",
+      "voiceInput": "Səs daxiletmə",
+      "tts": "Mətndən nitqə"
+    },
+    "mobileHeaders": {
+      "translation": "Tərcümə",
+      "desktop": "Masaüstü Xüsusiyyətləri",
+      "mobile": "Mobil Tətbiq Xüsusiyyətləri"
+    }
+  }
+}

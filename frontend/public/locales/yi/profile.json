@@ -1,0 +1,28 @@
+{
+  "title": "מייַן פּראָפיל",
+  "editProfile": "רעדאַגירן פּראָפיל",
+  "saveChanges": "היט ענדערונגען",
+  "saving": "שפּאָרן...",
+  "firstName": "ערשטער נאָמען",
+  "lastName": "לעצטע נאָמען",
+  "email": "בליצפּאָסט אַדרעס",
+  "phone": "טעלעפאָן נומער",
+  "grade": "גראַדע",
+  "primaryLanguage": "ערשטיק שפּראַך",
+  "guardianName": "גאַרדיאַן נאָמען",
+  "guardianRelation": "גאַרדיאַן באַציונג",
+  "selectGrade": "אויסקלייַבן גראַדע",
+  "selectLanguage": "אויסקלייַבן שפּראַך",
+  "selectRelation": "אויסקלייַבן שייכות",
+  "studentID": "ID",
+  "role": "תּלמיד",
+  "errorLoading": "טעות לאָודינג פּראָפיל",
+  "successUpdate": "פּראָפיל דערהייַנטיקט הצלחה!",
+  "errorUpdate": "ניט אַנדערש צו דערהייַנטיקן פּראָפיל",
+  "genericError": "א טעות איז פארגעקומען. ביטע פּרוּווט ווידער.",
+  "relations": {
+    "father": "פאטער",
+    "mother": "מוטער",
+    "other": "אנדערע"
+  }
+}

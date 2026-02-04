@@ -1,0 +1,47 @@
+{
+  "title": "Èd ak sipò",
+  "description": "Nou la pou ede ak nenpòt kesyon oswa pwoblèm ou ka rankontre pandan w ap itilize aplikasyon entènèt nou an. Kit ou bezwen èd pou kòmanse, si ou gen yon kesyon sou yon karakteristik, oswa ou vle rapòte yon ensèk, nou la pou ede.",
+  "contact": {
+    "title": "Kontakte Sipò",
+    "emailTitle": "Sipò Imèl",
+    "emailDesc": "Nou vize pou reponn tout imèl nan 24 èdtan.",
+    "phoneTitle": "Sipò pou Telefòn",
+    "hours": "Lendi-Vandredi (9 am - 5 pm)",
+    "footer": "Mèsi paske w chwazi aplikasyon entènèt nou an. Nou pran angajman pou fè eksperyans ou kòm lis ak agreyab ke posib."
+  },
+  "supportedLanguages": {
+    "title": "Lis lang ki sipòte yo",
+    "headers": {
+      "rank": "#",
+      "language": "Lang",
+      "translation": "Tradiksyon (aplikasyon ak mobil)",
+      "desktop": "Kominikasyon an pèsòn (Desktop)",
+      "mobile": "Kominikasyon an pèsòn (aplikasyon mobil)"
+    },
+    "mobileLabels": {
+      "translation": "Mesaj tradui",
+      "desktop": "Desktop an pèsòn",
+      "mobile": "Mobile an pèsòn"
+    },
+    "supported": "Sipòte",
+    "notSupported": "Pa sipòte"
+  },
+  "detailedFeatures": {
+    "title": "Sipò pou karakteristik detaye",
+    "subtitle": "Dekonpozisyon nan kapasite Antre vwa ak tèks-a-lapawòl pou chak aparèy.",
+    "headers": {
+      "rank": "#",
+      "language": "Lang",
+      "translation": "Tradiksyon (Tout)",
+      "desktopVersion": "Desktop vèsyon",
+      "mobileApp": "Aplikasyon mobil",
+      "voiceInput": "Antre vwa",
+      "tts": "Tèks-a-Lapawòl"
+    },
+    "mobileHeaders": {
+      "translation": "Tradiksyon",
+      "desktop": "Karakteristik Desktop",
+      "mobile": "Karakteristik aplikasyon mobil"
+    }
+  }
+}

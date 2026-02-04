@@ -1,0 +1,26 @@
+{
+  "title": "Tauler de control de l'estudiant",
+  "subtitle": "Benvingut de nou! Aquí teniu una visió general del vostre progrés.",
+  "stats": {
+    "teachers": "Nº de professor(s)",
+    "teachersSubText": "Professors amb els quals heu xatejat",
+    "conversations": "Converses",
+    "conversationsSubText": "Total de missatges",
+    "languages": "Idiomes admesos",
+    "languagesSubText": "Escrit ({{written}}) | Verbal ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Estat de suport lingüístic",
+    "primary": "La teva llengua principal és",
+    "written": {
+      "title": "Suport escrit",
+      "available": "Disponible per a missatgeria",
+      "unsupported": "No s'admet"
+    },
+    "verbal": {
+      "title": "Suport verbal",
+      "available": "Disponible per a sessions en directe",
+      "unsupported": "No s'admet"
+    }
+  }
+}

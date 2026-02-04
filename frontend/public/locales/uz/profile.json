@@ -1,0 +1,28 @@
+{
+  "title": "Mening profilim",
+  "editProfile": "Profilni tahrirlash",
+  "saveChanges": "O'zgarishlarni saqlash",
+  "saving": "Saqlanmoqda...",
+  "firstName": "Ism",
+  "lastName": "Familiya",
+  "email": "E-pochta manzili",
+  "phone": "Telefon raqami",
+  "grade": "Baho",
+  "primaryLanguage": "Asosiy til",
+  "guardianName": "Qo'riqchi nomi",
+  "guardianRelation": "Qo'riqchi munosabatlari",
+  "selectGrade": "Bahoni tanlang",
+  "selectLanguage": "Tilni tanlang",
+  "selectRelation": "Aloqa-ni tanlang",
+  "studentID": "ID",
+  "role": "Talaba",
+  "errorLoading": "Profilni yuklashda xatolik yuz berdi",
+  "successUpdate": "Profil muvaffaqiyatli yangilandi!",
+  "errorUpdate": "Profilni yangilab bo‘lmadi",
+  "genericError": "Xatolik yuz berdi. Iltimos, qayta urinib koʻring.",
+  "relations": {
+    "father": "Ota",
+    "mother": "Ona",
+    "other": "Boshqa"
+  }
+}

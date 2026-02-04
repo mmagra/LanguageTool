@@ -1,0 +1,26 @@
+{
+  "title": "Panel de estudiantes",
+  "subtitle": "¡Bienvenido de nuevo! Aquí tienes un resumen de tu progreso.",
+  "stats": {
+    "teachers": "No. de Maestro(s)",
+    "teachersSubText": "Profesores con los que charlaste",
+    "conversations": "Conversaciones",
+    "conversationsSubText": "Mensajes totales",
+    "languages": "Idiomas admitidos",
+    "languagesSubText": "Escrito ({{written}}) | Verbal ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Estado de soporte de idiomas",
+    "primary": "Tu idioma principal es",
+    "written": {
+      "title": "Soporte escrito",
+      "available": "Disponible para mensajería",
+      "unsupported": "No compatible"
+    },
+    "verbal": {
+      "title": "Apoyo verbal",
+      "available": "Disponible para sesiones en vivo",
+      "unsupported": "No compatible"
+    }
+  }
+}

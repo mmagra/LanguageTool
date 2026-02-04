@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Mesaje",
+  "searchPlaceholder": "Cauta profesori...",
+  "noConversations": "Nicio conversație încă",
+  "unknownTeacher": "Profesor necunoscut",
+  "noMessages": "Încă nu există mesaje",
+  "typing": "Tastând...",
+  "typePlaceholder": "Introduceti mesajul in romana...",
+  "emptyState": {
+    "title": "Conversațiile voastre",
+    "desc": "Selectați un profesor din bara laterală pentru a începe să puneți întrebări sau să discutați despre notele dvs.",
+    "startPrompt": "Începeți o conversație cu profesorul dvs"
+  },
+  "refreshList": "Actualizează lista"
+}

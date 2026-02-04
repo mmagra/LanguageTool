@@ -1,0 +1,28 @@
+{
+  "title": "El meu perfil",
+  "editProfile": "Edita el perfil",
+  "saveChanges": "Desa els canvis",
+  "saving": "S'està desant...",
+  "firstName": "Nom",
+  "lastName": "Cognoms",
+  "email": "Adreça de correu electrònic",
+  "phone": "Número de telèfon",
+  "grade": "Grau",
+  "primaryLanguage": "Llengua Primària",
+  "guardianName": "Nom del tutor",
+  "guardianRelation": "Relació de Guardians",
+  "selectGrade": "Seleccioneu Qualificació",
+  "selectLanguage": "Seleccioneu Idioma",
+  "selectRelation": "Seleccioneu Relació",
+  "studentID": "ID",
+  "role": "Estudiant",
+  "errorLoading": "S'ha produït un error en carregar el perfil",
+  "successUpdate": "El perfil s'ha actualitzat correctament!",
+  "errorUpdate": "No s'ha pogut actualitzar el perfil",
+  "genericError": "S'ha produït un error. Si us plau, torna-ho a provar.",
+  "relations": {
+    "father": "Pare",
+    "mother": "Mare",
+    "other": "Altres"
+  }
+}

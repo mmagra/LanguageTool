@@ -1,0 +1,47 @@
+{
+  "title": "Caawinta iyo Taageerada",
+  "description": "Waxaan halkaan u joognaa inaan kaa caawino wixii su'aalo ah ama arrimo ah oo aad la kulmi karto markaad isticmaaleyso codsigayaga shabakadda. Haddii aad u baahan tahay caawimo bilawga, aad hayso su'aal ku saabsan sifo, ama aad rabto inaad ka warbixiso cayayaanka, waxaanu halkan u joognaa inaanu ku caawino.",
+  "contact": {
+    "title": "Taageerada Xiriirka",
+    "emailTitle": "Taageerada iimaylka",
+    "emailDesc": "Waxaan higsaneynaa inaan kaga jawaabno dhammaan iimayllada 24 saacadood gudahood.",
+    "phoneTitle": "Taageerada Taleefanka",
+    "hours": "Isniin-Jimco (9 subaxnimo - 5 galabnimo)",
+    "footer": "Waad ku mahadsan tahay doorashada webkayaga. Waxaa naga go'an inaan khibradaada ka dhigno mid sahlan oo lagu raaxaysto intii suurtagal ah."
+  },
+  "supportedLanguages": {
+    "title": "Liiska Luuqadaha Taageersan",
+    "headers": {
+      "rank": "#",
+      "language": "Luuqad",
+      "translation": "Turjumaada (App & Mobile)",
+      "desktop": "Isgaadhsiinta Shakhsi ahaaneed (Desktop)",
+      "mobile": "Isgaadhsiinta Shakhsi ahaaneed (App Mobile)"
+    },
+    "mobileLabels": {
+      "translation": "Farriimaha la turjumay",
+      "desktop": "Shakhsi ahaan Desktop",
+      "mobile": "Shaqsi ahaan Mobile"
+    },
+    "supported": "Taageeray",
+    "notSupported": "Lama Taageero"
+  },
+  "detailedFeatures": {
+    "title": "Taageerada Muuqaalka oo faahfaahsan",
+    "subtitle": "Burburinta Cod gelinta iyo qoraalka-ku-hadalka awoodaha qalabkiiba.",
+    "headers": {
+      "rank": "#",
+      "language": "Luuqad",
+      "translation": "Turjumaada (Dhammaan)",
+      "desktopVersion": "Nooca Desktop",
+      "mobileApp": "Mobile App",
+      "voiceInput": "Codka Gelida",
+      "tts": "Qoraal-ku-hadal"
+    },
+    "mobileHeaders": {
+      "translation": "Turjumaada",
+      "desktop": "Tilmaamaha Desktop",
+      "mobile": "Tilmaamaha App Mobile"
+    }
+  }
+}

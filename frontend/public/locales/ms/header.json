@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Profil Saya",
+  "changePassword": "Tukar Kata Laluan",
+  "helpSupport": "Bantuan & Sokongan",
+  "signOut": "Log keluar",
+  "notifications": {
+    "title": "Pemberitahuan",
+    "unread": "mesej yang belum dibaca",
+    "empty": "Tiada pemberitahuan baharu",
+    "viewAll": "Lihat semua mesej",
+    "newMessage": "Mesej baharu"
+  },
+  "language": {
+    "switchToNative": "Tukar kepada Bahasa Anda",
+    "switchToEnglish": "Tukar kepada bahasa Inggeris"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Cov lus",
+  "searchPlaceholder": "Nrhiav cov xibfwb...",
+  "noConversations": "Tseem tsis tau muaj kev sib tham",
+  "unknownTeacher": "Tsis paub Xib Fwb",
+  "noMessages": "Tseem tsis tau muaj lus",
+  "typing": "Typing...",
+  "typePlaceholder": "Sau koj cov lus ua lus Hmoob...",
+  "emptyState": {
+    "title": "Koj Cov Kev Sib Tham",
+    "desc": "Xaiv tus kws qhia ntawv los ntawm lub sidebar los pib nug cov lus nug lossis sib tham txog koj cov qib.",
+    "startPrompt": "Pib sib tham nrog koj tus kws qhia ntawv"
+  },
+  "refreshList": "Refresh List"
+}

@@ -1,0 +1,18 @@
+{
+  "title": "ಸ್ಪೋಕನ್ ಎಡ್ಜ್",
+  "myProfile": "ನನ್ನ ಪ್ರೊಫೈಲ್",
+  "changePassword": "ಪಾಸ್ವರ್ಡ್ ಬದಲಾಯಿಸಿ",
+  "helpSupport": "ಸಹಾಯ ಮತ್ತು ಬೆಂಬಲ",
+  "signOut": "ಸೈನ್ ಔಟ್ ಮಾಡಿ",
+  "notifications": {
+    "title": "ಅಧಿಸೂಚನೆಗಳು",
+    "unread": "ಓದದ ಸಂದೇಶಗಳು",
+    "empty": "ಯಾವುದೇ ಹೊಸ ಅಧಿಸೂಚನೆಗಳಿಲ್ಲ",
+    "viewAll": "ಎಲ್ಲಾ ಸಂದೇಶಗಳನ್ನು ವೀಕ್ಷಿಸಿ",
+    "newMessage": "ಹೊಸ ಸಂದೇಶ"
+  },
+  "language": {
+    "switchToNative": "ನಿಮ್ಮ ಭಾಷೆಗೆ ಬದಲಿಸಿ",
+    "switchToEnglish": "ಇಂಗ್ಲಿಷ್‌ಗೆ ಬದಲಿಸಿ"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "loading": "Načítání...",
+  "error": "Chyba",
+  "save": "Uložit",
+  "cancel": "Zrušit",
+  "language": "Jazyk",
+  "switchToEnglish": "Přepnout do angličtiny",
+  "switchToNative": "Přepnout na {{language}}",
+  "online": "Online",
+  "offline": "Offline",
+  "notProvided": "Není poskytnuto",
+  "tryAgain": "Zkuste to znovu"
+}

@@ -1,0 +1,47 @@
+{
+  "title": "Ayuda y soporte",
+  "description": "Estamos aquí para ayudarle con cualquier pregunta o problema que pueda encontrar al utilizar nuestra aplicación web. Si necesita ayuda para comenzar, tiene alguna pregunta sobre una función o desea informar un error, estamos aquí para ayudarlo.",
+  "contact": {
+    "title": "Contactar con soporte",
+    "emailTitle": "Soporte por correo electrónico",
+    "emailDesc": "Nuestro objetivo es responder a todos los correos electrónicos dentro de las 24 horas.",
+    "phoneTitle": "Soporte telefónico",
+    "hours": "Lunes a viernes (9 a. m. a 5 p. m.)",
+    "footer": "Gracias por elegir nuestra aplicación web. Estamos comprometidos a hacer que su experiencia sea lo más fluida y placentera posible."
+  },
+  "supportedLanguages": {
+    "title": "Lista de idiomas admitidos",
+    "headers": {
+      "rank": "#",
+      "language": "Idioma",
+      "translation": "Traducción (aplicación y móvil)",
+      "desktop": "Comunicación en persona (escritorio)",
+      "mobile": "Comunicación en persona (aplicación móvil)"
+    },
+    "mobileLabels": {
+      "translation": "Mensajes traducidos",
+      "desktop": "Escritorio en persona",
+      "mobile": "Móvil en persona"
+    },
+    "supported": "Apoyado",
+    "notSupported": "No compatible"
+  },
+  "detailedFeatures": {
+    "title": "Soporte detallado de funciones",
+    "subtitle": "Desglose de las capacidades de entrada de voz y texto a voz por dispositivo.",
+    "headers": {
+      "rank": "#",
+      "language": "Idioma",
+      "translation": "Traducción (Todos)",
+      "desktopVersion": "Versión de escritorio",
+      "mobileApp": "Aplicación móvil",
+      "voiceInput": "Entrada de voz",
+      "tts": "Texto a voz"
+    },
+    "mobileHeaders": {
+      "translation": "Traducción",
+      "desktop": "Funciones de escritorio",
+      "mobile": "Funciones de la aplicación móvil"
+    }
+  }
+}

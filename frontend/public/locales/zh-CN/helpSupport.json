@@ -1,0 +1,47 @@
+{
+  "title": "帮助与支持",
+  "description": "我们随时为您提供帮助，解决您在使用我们的网络应用程序时可能遇到的任何问题。无论您需要入门帮助、对功能有疑问还是想要报告错误，我们都会随时为您提供帮助。",
+  "contact": {
+    "title": "联系支持人员",
+    "emailTitle": "电子邮件支持",
+    "emailDesc": "我们的目标是在 24 小时内回复所有电子邮件。",
+    "phoneTitle": "电话支持",
+    "hours": "周一至周五（上午 9 点至下午 5 点）",
+    "footer": "感谢您选择我们的网络应用程序。我们致力于让您的体验尽可能顺利和愉快。"
+  },
+  "supportedLanguages": {
+    "title": "支持的语言列表",
+    "headers": {
+      "rank": "#",
+      "language": "语言",
+      "translation": "翻译（应用程序和移动设备）",
+      "desktop": "面对面交流（桌面）",
+      "mobile": "面对面沟通（移动应用程序）"
+    },
+    "mobileLabels": {
+      "translation": "翻译后的消息",
+      "desktop": "桌面面对面",
+      "mobile": "移动面对面"
+    },
+    "supported": "支持",
+    "notSupported": "不支持"
+  },
+  "detailedFeatures": {
+    "title": "详细的功能支持",
+    "subtitle": "每个设备的语音输入和文本转语音功能的细分。",
+    "headers": {
+      "rank": "#",
+      "language": "语言",
+      "translation": "翻译(全部)",
+      "desktopVersion": "桌面版",
+      "mobileApp": "手机应用程序",
+      "voiceInput": "语音输入",
+      "tts": "文字转语音"
+    },
+    "mobileHeaders": {
+      "translation": "翻译",
+      "desktop": "桌面功能",
+      "mobile": "移动应用程序功能"
+    }
+  }
+}

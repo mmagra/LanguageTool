@@ -1,0 +1,28 @@
+{
+  "title": "O'u Tala'aga",
+  "editProfile": "Fa'atonu Tala'aga",
+  "saveChanges": "Faasaoina Suiga",
+  "saving": "Fa'asaoina...",
+  "firstName": "Igoa muamua",
+  "lastName": "Fa'aiu",
+  "email": "Imeli tuatusi",
+  "phone": "Numera telefoni",
+  "grade": "Vasega",
+  "primaryLanguage": "Gagana Muamua",
+  "guardianName": "Igoa Leoleo",
+  "guardianRelation": "Sootaga Leoleo",
+  "selectGrade": "Filifili Vasega",
+  "selectLanguage": "Filifili Gagana",
+  "selectRelation": "Filifili Fesootaiga",
+  "studentID": "ID",
+  "role": "Tamaiti aoga",
+  "errorLoading": "Sese le utaina o Fa'amatalaga",
+  "successUpdate": "Fa'afou manuia!",
+  "errorUpdate": "Ua le mafai ona fa'afou fa'amatalaga",
+  "genericError": "Ua tupu se mea sese. Fa'amolemole toe taumafai.",
+  "relations": {
+    "father": "Tama",
+    "mother": "Tina",
+    "other": "Isi"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "title": "Wasifu Wangu",
+  "editProfile": "Badilisha Wasifu",
+  "saveChanges": "Hifadhi Mabadiliko",
+  "saving": "Inahifadhi...",
+  "firstName": "Jina la kwanza",
+  "lastName": "Jina la mwisho",
+  "email": "Anwani ya Barua Pepe",
+  "phone": "Nambari ya Simu",
+  "grade": "Daraja",
+  "primaryLanguage": "Lugha ya Msingi",
+  "guardianName": "Jina la Mlezi",
+  "guardianRelation": "Uhusiano wa Mlezi",
+  "selectGrade": "Chagua Daraja",
+  "selectLanguage": "Chagua Lugha",
+  "selectRelation": "Chagua Uhusiano",
+  "studentID": "ID",
+  "role": "Mwanafunzi",
+  "errorLoading": "Hitilafu katika Kupakia Wasifu",
+  "successUpdate": "Wasifu umesasishwa!",
+  "errorUpdate": "Imeshindwa kusasisha wasifu",
+  "genericError": "Hitilafu imetokea. Tafadhali jaribu tena.",
+  "relations": {
+    "father": "Baba",
+    "mother": "Mama",
+    "other": "Nyingine"
+  }
+}

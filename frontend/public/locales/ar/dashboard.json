@@ -1,0 +1,26 @@
+{
+  "title": "لوحة تحكم الطالب",
+  "subtitle": "مرحبًا بعودتك! هنا لمحة عامة عن التقدم المحرز الخاص بك.",
+  "stats": {
+    "teachers": "عدد المعلمين",
+    "teachersSubText": "المعلمين الذين تحدثت معهم",
+    "conversations": "المحادثة (المحادثات)",
+    "conversationsSubText": "إجمالي الرسائل",
+    "languages": "اللغات المدعومة",
+    "languagesSubText": "مكتوب ({{written}}) | لفظي ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "حالة دعم اللغة",
+    "primary": "لغتك الأساسية هي",
+    "written": {
+      "title": "الدعم الكتابي",
+      "available": "متاح للرسائل",
+      "unsupported": "غير معتمد"
+    },
+    "verbal": {
+      "title": "الدعم اللفظي",
+      "available": "متاح للجلسات الحية",
+      "unsupported": "غير معتمد"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "loading": "Iyalayisha...",
+  "error": "Iphutha",
+  "save": "Londoloza",
+  "cancel": "Khansela",
+  "language": "Ulimi",
+  "switchToEnglish": "Shintshela kwisiNgisi",
+  "switchToNative": "Shintshela ku-{{language}}",
+  "online": "Ku-inthanethi",
+  "offline": "Okungaxhunyiwe ku-inthanethi",
+  "notProvided": "Akuhlinzekiwe",
+  "tryAgain": "Zama futhi"
+}

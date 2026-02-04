@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Минем профиль",
+  "changePassword": "Серсүзне үзгәртү",
+  "helpSupport": "Ярдәм һәм ярдәм",
+  "signOut": "Чыгу",
+  "notifications": {
+    "title": "Хәбәрләр",
+    "unread": "укылмаган хәбәрләр",
+    "empty": "Яңа хәбәрләр юк",
+    "viewAll": "Барлык хәбәрләрне карау",
+    "newMessage": "Яңа хәбәр"
+  },
+  "language": {
+    "switchToNative": "Сезнең телегезгә күчә",
+    "switchToEnglish": "Инглиз теленә күчү"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Panel studenta",
+  "subtitle": "Witamy ponownie! Oto przegląd Twoich postępów.",
+  "stats": {
+    "teachers": "Liczba nauczycieli",
+    "teachersSubText": "Nauczyciele, z którymi rozmawiałeś",
+    "conversations": "Rozmowa(y)",
+    "conversationsSubText": "Wszystkie wiadomości",
+    "languages": "Obsługiwane języki",
+    "languagesSubText": "Napisane ({{written}}) | Werbalne ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Stan obsługi języka",
+    "primary": "Twoim głównym językiem jest",
+    "written": {
+      "title": "Wsparcie pisemne",
+      "available": "Dostępne do przesyłania wiadomości",
+      "unsupported": "Nieobsługiwane"
+    },
+    "verbal": {
+      "title": "Wsparcie werbalne",
+      "available": "Dostępne w sesjach na żywo",
+      "unsupported": "Nieobsługiwane"
+    }
+  }
+}

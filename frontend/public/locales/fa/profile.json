@@ -1,0 +1,28 @@
+{
+  "title": "نمایه من",
+  "editProfile": "ویرایش نمایه",
+  "saveChanges": "ذخیره تغییرات",
+  "saving": "در حال ذخیره...",
+  "firstName": "نام",
+  "lastName": "نام خانوادگی",
+  "email": "آدرس ایمیل",
+  "phone": "شماره تلفن",
+  "grade": "درجه",
+  "primaryLanguage": "زبان اصلی",
+  "guardianName": "نام نگهبان",
+  "guardianRelation": "رابطه نگهبان",
+  "selectGrade": "درجه را انتخاب کنید",
+  "selectLanguage": "زبان را انتخاب کنید",
+  "selectRelation": "رابطه را انتخاب کنید",
+  "studentID": "شناسه",
+  "role": "دانشجو",
+  "errorLoading": "خطا در بارگیری نمایه",
+  "successUpdate": "نمایه با موفقیت به روز شد!",
+  "errorUpdate": "نمایه به‌روزرسانی نشد",
+  "genericError": "خطایی رخ داد. لطفا دوباره امتحان کنید.",
+  "relations": {
+    "father": "پدر",
+    "mother": "مادر",
+    "other": "دیگر"
+  }
+}

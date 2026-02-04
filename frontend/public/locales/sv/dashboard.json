@@ -1,0 +1,26 @@
+{
+  "title": "Student Dashboard",
+  "subtitle": "Välkommen tillbaka! Här är en översikt över dina framsteg.",
+  "stats": {
+    "teachers": "Antal lärare",
+    "teachersSubText": "Lärare du chattade med",
+    "conversations": "Konversation(er)",
+    "conversationsSubText": "Totalt antal meddelanden",
+    "languages": "Språk som stöds",
+    "languagesSubText": "Skrivet ({{written}}) | Verbal ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Språksupportstatus",
+    "primary": "Ditt primära språk är",
+    "written": {
+      "title": "Skriftlig support",
+      "available": "Tillgänglig för meddelanden",
+      "unsupported": "Stöds inte"
+    },
+    "verbal": {
+      "title": "Verbal support",
+      "available": "Tillgänglig för livesessioner",
+      "unsupported": "Stöds inte"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "title": "הפרופיל שלי",
+  "editProfile": "ערוך פרופיל",
+  "saveChanges": "שמור שינויים",
+  "saving": "חִסָכוֹן...",
+  "firstName": "שֵׁם פְּרַטִי",
+  "lastName": "שֵׁם מִשׁפָּחָה",
+  "email": "כתובת אימייל",
+  "phone": "מספר טלפון",
+  "grade": "צִיוּן",
+  "primaryLanguage": "שפה ראשית",
+  "guardianName": "שם השומר",
+  "guardianRelation": "קשר אפוטרופוס",
+  "selectGrade": "בחר ציון",
+  "selectLanguage": "בחר שפה",
+  "selectRelation": "בחר קשר",
+  "studentID": "תְעוּדַת זֶהוּת",
+  "role": "סטוּדֶנט",
+  "errorLoading": "שגיאה בטעינת הפרופיל",
+  "successUpdate": "הפרופיל עודכן בהצלחה!",
+  "errorUpdate": "עדכון הפרופיל נכשל",
+  "genericError": "אירעה שגיאה. אנא נסה שוב.",
+  "relations": {
+    "father": "אַבָּא",
+    "mother": "אִמָא",
+    "other": "אַחֵר"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "title": "Yardım ve Destek",
+  "description": "Web uygulamamızı kullanırken karşılaşabileceğiniz her türlü soru veya sorunda size yardımcı olmak için buradayız. Başlamak için yardıma ihtiyacınız varsa, bir özellikle ilgili sorunuz varsa veya bir hatayı bildirmek istiyorsanız, size yardımcı olmak için buradayız.",
+  "contact": {
+    "title": "Desteğe Başvurun",
+    "emailTitle": "E-posta Desteği",
+    "emailDesc": "Tüm e-postalara 24 saat içinde yanıt vermeyi hedefliyoruz.",
+    "phoneTitle": "Telefon Desteği",
+    "hours": "Pazartesi-Cuma (9:00 – 17:00)",
+    "footer": "Web uygulamamızı seçtiğiniz için teşekkür ederiz. Deneyiminizi mümkün olduğunca sorunsuz ve keyifli hale getirmeye kararlıyız."
+  },
+  "supportedLanguages": {
+    "title": "Desteklenen Dillerin Listesi",
+    "headers": {
+      "rank": "#",
+      "language": "Dil",
+      "translation": "Çeviri (Uygulama ve Mobil)",
+      "desktop": "Şahsen İletişim (Masaüstü)",
+      "mobile": "Şahsen İletişim (Mobil Uygulama)"
+    },
+    "mobileLabels": {
+      "translation": "Çevrilmiş Mesajlar",
+      "desktop": "Masaüstü Şahsen",
+      "mobile": "Mobil Şahsen"
+    },
+    "supported": "Destekleniyor",
+    "notSupported": "Desteklenmiyor"
+  },
+  "detailedFeatures": {
+    "title": "Ayrıntılı Özellik Desteği",
+    "subtitle": "Cihaz başına Ses Girişi ve Metinden Konuşmaya özelliklerinin dökümü.",
+    "headers": {
+      "rank": "#",
+      "language": "Dil",
+      "translation": "Çeviri (Tümü)",
+      "desktopVersion": "Masaüstü Sürümü",
+      "mobileApp": "Mobil Uygulama",
+      "voiceInput": "Ses Girişi",
+      "tts": "Metinden Konuşmaya"
+    },
+    "mobileHeaders": {
+      "translation": "Çeviri",
+      "desktop": "Masaüstü Özellikleri",
+      "mobile": "Mobil Uygulama Özellikleri"
+    }
+  }
+}

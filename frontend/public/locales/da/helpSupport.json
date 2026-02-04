@@ -1,0 +1,47 @@
+{
+  "title": "Hjælp og support",
+  "description": "Vi er her for at hjælpe med eventuelle spørgsmål eller problemer, du måtte støde på, mens du bruger vores webapplikation. Uanset om du har brug for hjælp til at komme i gang, har et spørgsmål om en funktion eller vil rapportere en fejl, er vi her for at hjælpe.",
+  "contact": {
+    "title": "Kontakt support",
+    "emailTitle": "E-mail support",
+    "emailDesc": "Vi bestræber os på at svare på alle e-mails inden for 24 timer.",
+    "phoneTitle": "Telefonsupport",
+    "hours": "man-fre (9.00-17.00)",
+    "footer": "Tak fordi du valgte vores webapplikation. Vi er forpligtet til at gøre din oplevelse så glat og behagelig som muligt."
+  },
+  "supportedLanguages": {
+    "title": "Liste over understøttede sprog",
+    "headers": {
+      "rank": "#",
+      "language": "Sprog",
+      "translation": "Oversættelse (app og mobil)",
+      "desktop": "Personlig kommunikation (desktop)",
+      "mobile": "Personlig kommunikation (mobilapp)"
+    },
+    "mobileLabels": {
+      "translation": "Oversatte meddelelser",
+      "desktop": "Personlig skrivebord",
+      "mobile": "Mobil personlig"
+    },
+    "supported": "Understøttet",
+    "notSupported": "Ikke understøttet"
+  },
+  "detailedFeatures": {
+    "title": "Detaljeret funktionssupport",
+    "subtitle": "Opdeling af stemmeinput og tekst-til-tale-funktioner pr. enhed.",
+    "headers": {
+      "rank": "#",
+      "language": "Sprog",
+      "translation": "Oversættelse (alle)",
+      "desktopVersion": "Desktop version",
+      "mobileApp": "Mobil App",
+      "voiceInput": "Stemmeinput",
+      "tts": "Tekst-til-tale"
+    },
+    "mobileHeaders": {
+      "translation": "Oversættelse",
+      "desktop": "Desktop funktioner",
+      "mobile": "Mobil app funktioner"
+    }
+  }
+}

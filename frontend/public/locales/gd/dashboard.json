@@ -1,0 +1,26 @@
+{
+  "title": "Deas-bhòrd nan Oileanach",
+  "subtitle": "Fàilte air ais! Seo sealladh farsaing den adhartas agad.",
+  "stats": {
+    "teachers": "Àireamh de thidsear(ean)",
+    "teachersSubText": "Luchd-teagaisg ris an do bhruidhinn thu",
+    "conversations": "Còmhradh(an)",
+    "conversationsSubText": "Teachdaireachdan Iomlan",
+    "languages": "Cànanan le taic",
+    "languagesSubText": "Sgrìobhte ({{written}}) | Aithris ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Inbhe Taic Cànain",
+    "primary": "Is e do phrìomh chànan",
+    "written": {
+      "title": "Taic Sgrìobhte",
+      "available": "Ri fhaighinn airson teachdaireachdan",
+      "unsupported": "Gun taic"
+    },
+    "verbal": {
+      "title": "Taic Aithris",
+      "available": "Ri fhaighinn airson seiseanan beò",
+      "unsupported": "Gun taic"
+    }
+  }
+}

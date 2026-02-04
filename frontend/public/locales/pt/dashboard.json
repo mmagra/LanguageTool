@@ -1,0 +1,26 @@
+{
+  "title": "Painel do Aluno",
+  "subtitle": "Bem vindo de volta! Aqui está uma visão geral do seu progresso.",
+  "stats": {
+    "teachers": "Nº de Professor(es)",
+    "teachersSubText": "Professores com quem você conversou",
+    "conversations": "Conversa(s)",
+    "conversationsSubText": "Total de mensagens",
+    "languages": "Idiomas Suportados",
+    "languagesSubText": "Escrito ({{written}}) | Verbal ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Status de suporte a idiomas",
+    "primary": "Seu idioma principal é",
+    "written": {
+      "title": "Suporte escrito",
+      "available": "Disponível para mensagens",
+      "unsupported": "Não compatível"
+    },
+    "verbal": {
+      "title": "Apoio Verbal",
+      "available": "Disponível para sessões ao vivo",
+      "unsupported": "Não compatível"
+    }
+  }
+}

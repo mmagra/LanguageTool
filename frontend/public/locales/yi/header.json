@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "מייַן פּראָפיל",
+  "changePassword": "טוישן שפּריכוואָרט",
+  "helpSupport": "הילף & שטיצן",
+  "signOut": "צייכן אויס",
+  "notifications": {
+    "title": "נאָוטאַפאַקיישאַנז",
+    "unread": "אומגעלייענט אַרטיקלען",
+    "empty": "קיין נייַע נאָוטאַפאַקיישאַנז",
+    "viewAll": "זען אַלע אַרטיקלען",
+    "newMessage": "נייַ אָנזאָג"
+  },
+  "language": {
+    "switchToNative": "באַשטימען צו דיין שפּראַך",
+    "switchToEnglish": "באַשטימען צו ענגליש"
+  }
+}

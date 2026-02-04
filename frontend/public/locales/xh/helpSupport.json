@@ -1,0 +1,47 @@
+{
+  "title": "Uncedo kunye neNkxaso",
+  "description": "Silapha ukunceda ngayo nayiphi na imibuzo okanye imiba onokudibana nayo ngelixa usebenzisa usetyenziso lwethu lwewebhu. Nokuba ufuna uncedo lokuqalisa, unombuzo malunga nefitsha, okanye ufuna ukuxela isiphene, silapha ukukunceda.",
+  "contact": {
+    "title": "Qhagamshelana neNkxaso",
+    "emailTitle": "Inkxaso ye-imeyile",
+    "emailDesc": "Sijonge ukuphendula kuzo zonke ii-imeyile kwiiyure ezingama-24.",
+    "phoneTitle": "Inkxaso yefowuni",
+    "hours": "Mvulo-Lwesihlanu (9 am - 5pm)",
+    "footer": "Enkosi ngokukhetha usetyenziso lwethu lwewebhu. Sizimisele ukwenza amava akho agudileyo kwaye onwabe kangangoko."
+  },
+  "supportedLanguages": {
+    "title": "Uluhlu lweeLwimi ezixhaswayo",
+    "headers": {
+      "rank": "#",
+      "language": "Ulwimi",
+      "translation": "Uguqulo (usetyenziso kunye neselfowuni)",
+      "desktop": "Unxibelelwano phakathi komntu (kwi-Desktop)",
+      "mobile": "Unxibelelwano phakathi koMntu (i-Mobile App)"
+    },
+    "mobileLabels": {
+      "translation": "Imiyalezo eGuquliweyo",
+      "desktop": "Desktop NgoMntu",
+      "mobile": "Iselula NgoMntu"
+    },
+    "supported": "Ixhasiwe",
+    "notSupported": "Ayixhaswa"
+  },
+  "detailedFeatures": {
+    "title": "INkxaso yeMpawu eneenkcukacha",
+    "subtitle": "Ukwahlulwa koFakelo lweLizwi kunye neTeksti-ukuya-kwiNtetho yobunakho ngesixhobo ngasinye.",
+    "headers": {
+      "rank": "#",
+      "language": "Ulwimi",
+      "translation": "Uguqulo (Konke)",
+      "desktopVersion": "Inguqulelo yeDesktop",
+      "mobileApp": "Mobile App",
+      "voiceInput": "Ukufakwa kwelizwi",
+      "tts": "Isiqendu-ukuya-kwiNtetho"
+    },
+    "mobileHeaders": {
+      "translation": "Uguqulo",
+      "desktop": "Iimpawu zeDesktop",
+      "mobile": "Iimpawu ze-Mobile App"
+    }
+  }
+}

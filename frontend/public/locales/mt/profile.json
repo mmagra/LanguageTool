@@ -1,0 +1,28 @@
+{
+  "title": "Il-Profil Tiegħi",
+  "editProfile": "Editja Profil",
+  "saveChanges": "Ħlief Bidliet",
+  "saving": "Iffrankar...",
+  "firstName": "L-Isem",
+  "lastName": "Kunjom",
+  "email": "Indirizz elettroniku",
+  "phone": "Numru tat-Telefon",
+  "grade": "Grad",
+  "primaryLanguage": "Lingwa Primarja",
+  "guardianName": "Isem tal-Gwardjan",
+  "guardianRelation": "Relazzjoni tal-Gwardjan",
+  "selectGrade": "Agħżel il-Grad",
+  "selectLanguage": "Agħżel Lingwa",
+  "selectRelation": "Agħżel Relazzjoni",
+  "studentID": "ID",
+  "role": "Student",
+  "errorLoading": "Żball fit-Tagħbija tal-Profil",
+  "successUpdate": "Profil aġġornat b'suċċess!",
+  "errorUpdate": "Naqas milli jaġġorna l-profil",
+  "genericError": "Sar żball. Jekk jogħġbok erġa' pprova.",
+  "relations": {
+    "father": "Missier",
+    "mother": "Omm",
+    "other": "Oħrajn"
+  }
+}

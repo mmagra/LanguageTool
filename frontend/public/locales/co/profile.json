@@ -1,0 +1,28 @@
+{
+  "title": "U mo prufilu",
+  "editProfile": "Edit Profile",
+  "saveChanges": "Salvà i cambiamenti",
+  "saving": "Salvà...",
+  "firstName": "Nome",
+  "lastName": "Casata",
+  "email": "Indirizzu mail",
+  "phone": "Numeru di telefonu",
+  "grade": "Grade",
+  "primaryLanguage": "Lingua primaria",
+  "guardianName": "Nome di u Guardianu",
+  "guardianRelation": "Relazione Guardian",
+  "selectGrade": "Selezziunà Grade",
+  "selectLanguage": "Selezziunà a lingua",
+  "selectRelation": "Sceglite Relazione",
+  "studentID": "ID",
+  "role": "Studiente",
+  "errorLoading": "Errore durante a carica di u prufilu",
+  "successUpdate": "U prufilu aghjurnatu cun successu!",
+  "errorUpdate": "Impossibile à aghjurnà u prufilu",
+  "genericError": "Un errore hè accadutu. Per piacè pruvate di novu.",
+  "relations": {
+    "father": "Babbu",
+    "mother": "Mamma",
+    "other": "Altru"
+  }
+}

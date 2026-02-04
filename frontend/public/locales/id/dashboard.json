@@ -1,0 +1,26 @@
+{
+  "title": "Dasbor Siswa",
+  "subtitle": "Selamat Datang kembali! Berikut ini ikhtisar kemajuan Anda.",
+  "stats": {
+    "teachers": "Jumlah Guru",
+    "teachersSubText": "Guru yang Anda ajak ngobrol",
+    "conversations": "Percakapan",
+    "conversationsSubText": "Jumlah Pesan",
+    "languages": "Bahasa yang Didukung",
+    "languagesSubText": "Tertulis ({{written}}) | Lisan ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Status Dukungan Bahasa",
+    "primary": "Bahasa Utama Anda adalah",
+    "written": {
+      "title": "Dukungan Tertulis",
+      "available": "Tersedia untuk pengiriman pesan",
+      "unsupported": "Tidak didukung"
+    },
+    "verbal": {
+      "title": "Dukungan Verbal",
+      "available": "Tersedia untuk sesi langsung",
+      "unsupported": "Tidak didukung"
+    }
+  }
+}

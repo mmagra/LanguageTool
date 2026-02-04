@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Meddelanden",
+  "searchPlaceholder": "Sök lärare...",
+  "noConversations": "Inga konversationer än",
+  "unknownTeacher": "Okänd lärare",
+  "noMessages": "Inga meddelanden än",
+  "typing": "Skriver...",
+  "typePlaceholder": "Skriv ditt meddelande på svenska...",
+  "emptyState": {
+    "title": "Dina konversationer",
+    "desc": "Välj en lärare från sidofältet för att börja ställa frågor eller diskutera dina betyg.",
+    "startPrompt": "Starta en konversation med din lärare"
+  },
+  "refreshList": "Uppdatera listan"
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Mælaborð nemenda",
+  "subtitle": "Velkomin aftur! Hér er yfirlit yfir framfarir þínar.",
+  "stats": {
+    "teachers": "Fjöldi kennara",
+    "teachersSubText": "Kennarar sem þú spjallaðir við",
+    "conversations": "Samtal(ir)",
+    "conversationsSubText": "Samtals skilaboð",
+    "languages": "Tungumál studd",
+    "languagesSubText": "Skrifað ({{written}}) | Munnleg ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Staða tungumálastuðnings",
+    "primary": "Aðaltungumálið þitt er",
+    "written": {
+      "title": "Skriflegur stuðningur",
+      "available": "Í boði fyrir skilaboð",
+      "unsupported": "Ekki stutt"
+    },
+    "verbal": {
+      "title": "Munnlegur stuðningur",
+      "available": "Í boði fyrir lifandi fundi",
+      "unsupported": "Ekki stutt"
+    }
+  }
+}

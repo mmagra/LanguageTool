@@ -1,0 +1,18 @@
+{
+  "title": "بولنے والا",
+  "myProfile": "میرا پروفائل",
+  "changePassword": "پاس ورڈ تبدیل کریں",
+  "helpSupport": "مدد اور مدد",
+  "signOut": "سائن آؤٹ",
+  "notifications": {
+    "title": "اطلاعات",
+    "unread": "غیر پڑھے ہوئے پیغامات",
+    "empty": "کوئی نئی اطلاعات نہیں",
+    "viewAll": "تمام پیغامات دیکھیں",
+    "newMessage": "نیا پیغام"
+  },
+  "language": {
+    "switchToNative": "اپنی زبان پر جائیں",
+    "switchToEnglish": "انگریزی میں سوئچ کریں"
+  }
+}

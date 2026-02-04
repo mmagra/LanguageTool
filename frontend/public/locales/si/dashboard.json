@@ -1,0 +1,26 @@
+{
+  "title": "ශිෂ්‍ය උපකරණ පුවරුව",
+  "subtitle": "ආපසු සාදරයෙන් පිළිගනිමු! මෙන්න ඔබේ ප්‍රගතිය පිළිබඳ දළ විශ්ලේෂණයක්.",
+  "stats": {
+    "teachers": "ගුරුවරුන් සංඛ්‍යාව",
+    "teachersSubText": "ඔබ සමඟ කතාබස් කළ ගුරුවරුන්",
+    "conversations": "සංවාදය(ය)",
+    "conversationsSubText": "සම්පූර්ණ පණිවිඩ",
+    "languages": "සහාය දක්වන භාෂා",
+    "languagesSubText": "ලිඛිත ({{written}}) | වාචික ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "භාෂා ආධාරක තත්ත්වය",
+    "primary": "ඔබේ ප්‍රාථමික භාෂාව වේ",
+    "written": {
+      "title": "ලිඛිත සහාය",
+      "available": "පණිවිඩ යැවීම සඳහා තිබේ",
+      "unsupported": "සහාය නොදක්වයි"
+    },
+    "verbal": {
+      "title": "වාචික සහාය",
+      "available": "සජීවී සැසි සඳහා තිබේ",
+      "unsupported": "සහාය නොදක්වයි"
+    }
+  }
+}

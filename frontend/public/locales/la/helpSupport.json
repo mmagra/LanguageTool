@@ -1,0 +1,47 @@
+{
+  "title": "Auxilium et auxilium",
+  "description": "Adsumus adiuvare cum quibusvis quaestionibus vel quaestionibus, quas forte occurrant dum applicatione nostra interreti utendo. Utrum auxilio initii opus sit, quaestionem de pluma habes, an cimex nuntiare velis, hic sumus adiuvare.",
+  "contact": {
+    "title": "Contactus Support",
+    "emailTitle": "Email Support",
+    "emailDesc": "Nos studemus respondere omnibus emails intra 24 horas.",
+    "phoneTitle": "Phone Support",
+    "hours": "Mon-Fri (9 am – 5 pm)",
+    "footer": "Tibi gratias ago pro applicatione nostra interreti eligendo. Commissi sumus ut experientiam tuam quam maxime lenis et iucundam efficias."
+  },
+  "supportedLanguages": {
+    "title": "Index Linguarum Supported",
+    "headers": {
+      "rank": "#",
+      "language": "Linguae",
+      "translation": "Translatio (App & Mobilis)",
+      "desktop": "In Communication (Desktop)",
+      "mobile": "In Communication Persona (Mobilis App)"
+    },
+    "mobileLabels": {
+      "translation": "Nuntii translati",
+      "desktop": "Desktop in-personam",
+      "mobile": "Mobile in-persona"
+    },
+    "supported": "Supported",
+    "notSupported": "Non suffulti"
+  },
+  "detailedFeatures": {
+    "title": "Detailed Feature Support",
+    "subtitle": "Naufragii Vocis Input et Text-ut-Sermonis facultates per machinam.",
+    "headers": {
+      "rank": "#",
+      "language": "Linguae",
+      "translation": "Translation (All)",
+      "desktopVersion": "Desktop Version",
+      "mobileApp": "Mobile App",
+      "voiceInput": "Vox Input",
+      "tts": "cum textu ad Orationem"
+    },
+    "mobileHeaders": {
+      "translation": "Translation",
+      "desktop": "Desktop Features",
+      "mobile": "Mobile App Features"
+    }
+  }
+}

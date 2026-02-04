@@ -1,0 +1,13 @@
+{
+  "loading": "טְעִינָה...",
+  "error": "שְׁגִיאָה",
+  "save": "לְהַצִיל",
+  "cancel": "לְבַטֵל",
+  "language": "שָׂפָה",
+  "switchToEnglish": "עבור לאנגלית",
+  "switchToNative": "עבור אל {{language}}",
+  "online": "באינטרנט",
+  "offline": "לא מקוון",
+  "notProvided": "לא מסופק",
+  "tryAgain": "נסה שוב"
+}

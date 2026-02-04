@@ -1,0 +1,26 @@
+{
+  "title": "विद्यार्थी ड्यासबोर्ड",
+  "subtitle": "फेरि स्वागत छ! यहाँ तपाइँको प्रगति को एक सिंहावलोकन छ।",
+  "stats": {
+    "teachers": "शिक्षक (हरू) को संख्या",
+    "teachersSubText": "तपाईंले कुराकानी गर्नुभएका शिक्षकहरू",
+    "conversations": "कुराकानी(हरू)",
+    "conversationsSubText": "कुल सन्देशहरू",
+    "languages": "समर्थित भाषाहरू",
+    "languagesSubText": "लिखित ({{written}}) | मौखिक ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "भाषा समर्थन स्थिति",
+    "primary": "तपाईको प्राथमिक भाषा हो",
+    "written": {
+      "title": "लिखित समर्थन",
+      "available": "सन्देशको लागि उपलब्ध छ",
+      "unsupported": "समर्थित छैन"
+    },
+    "verbal": {
+      "title": "मौखिक समर्थन",
+      "available": "प्रत्यक्ष सत्रहरूको लागि उपलब्ध",
+      "unsupported": "समर्थित छैन"
+    }
+  }
+}

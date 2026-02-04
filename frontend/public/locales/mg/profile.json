@@ -1,0 +1,28 @@
+{
+  "title": "Ny mombamomba ahy",
+  "editProfile": "Ahitsio ny mombamomba",
+  "saveChanges": "Save Changes",
+  "saving": "Mitahiry...",
+  "firstName": "Fanampin'anarana",
+  "lastName": "Anarana",
+  "email": "Adiresy mailaka",
+  "phone": "Nomeraon-telefaona",
+  "grade": "kilasy",
+  "primaryLanguage": "Fiteny Kilonga",
+  "guardianName": "Anaran'ny mpiambina",
+  "guardianRelation": "Fifandraisana mpiambina",
+  "selectGrade": "Fidio Naoty",
+  "selectLanguage": "Select Language",
+  "selectRelation": "Select Relation",
+  "studentID": "ID",
+  "role": "NIANATRA",
+  "errorLoading": "Error Loading Profile",
+  "successUpdate": "Nohavaozina soa aman-tsara ny mombamomba!",
+  "errorUpdate": "Tsy nahomby ny fanavaozana ny mombamomba azy",
+  "genericError": "Nisy hadisoana nitranga. Andramo indray azafady.",
+  "relations": {
+    "father": "Ray",
+    "mother": "rENY",
+    "other": "hafa"
+  }
+}

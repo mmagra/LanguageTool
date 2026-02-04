@@ -1,0 +1,13 @@
+{
+  "loading": "Ŝarĝante...",
+  "error": "Eraro",
+  "save": "Konservu",
+  "cancel": "Nuligi",
+  "language": "Lingvo",
+  "switchToEnglish": "Ŝanĝu al la angla",
+  "switchToNative": "Ŝanĝu al {{ lingvo }}",
+  "online": "Rete",
+  "offline": "Senrete",
+  "notProvided": "Ne provizita",
+  "tryAgain": "Provu Denove"
+}

@@ -1,0 +1,15 @@
+{
+  "myTeachers": "Feau",
+  "searchPlaceholder": "Su'e faiaoga...",
+  "noConversations": "E leai ni talanoaga",
+  "unknownTeacher": "Faiaoga Leiloa",
+  "noMessages": "E le'i iai ni fe'au",
+  "typing": "Lomitusi...",
+  "typePlaceholder": "Tusi lau fe'au ile gagana Samoa...",
+  "emptyState": {
+    "title": "Lau Talanoaga",
+    "desc": "Filifili se faiaoga mai le itu i luma e amata fai ai fesili pe talanoaina au togi.",
+    "startPrompt": "Amata se talanoaga ma lou faiaoga"
+  },
+  "refreshList": "Toe fa'afouina Lisi"
+}

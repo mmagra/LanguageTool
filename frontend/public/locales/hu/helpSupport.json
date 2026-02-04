@@ -1,0 +1,47 @@
+{
+  "title": "Segítség és támogatás",
+  "description": "Azért vagyunk itt, hogy segítsünk a webalkalmazásunk használata során felmerülő kérdésekben vagy problémákban. Ha segítségre van szüksége a kezdéshez, kérdése van egy funkcióval kapcsolatban, vagy hibát szeretne jelenteni, készséggel állunk rendelkezésére.",
+  "contact": {
+    "title": "Lépjen kapcsolatba az ügyfélszolgálattal",
+    "emailTitle": "Támogatás e-mailben",
+    "emailDesc": "Célunk, hogy minden e-mailre 24 órán belül válaszoljunk.",
+    "phoneTitle": "Telefonos támogatás",
+    "hours": "H-P (9-17 óráig)",
+    "footer": "Köszönjük, hogy webalkalmazásunkat választotta. Elkötelezettek vagyunk amellett, hogy élményét a lehető legzökkenőmentesebbé és élvezetesebbé tegyük."
+  },
+  "supportedLanguages": {
+    "title": "A támogatott nyelvek listája",
+    "headers": {
+      "rank": "#",
+      "language": "Nyelv",
+      "translation": "Fordítás (alkalmazás és mobil)",
+      "desktop": "Személyes kommunikáció (asztali számítógépen)",
+      "mobile": "Személyes kommunikáció (mobilalkalmazás)"
+    },
+    "mobileLabels": {
+      "translation": "Lefordított üzenetek",
+      "desktop": "Asztali személyesen",
+      "mobile": "Mobil személyesen"
+    },
+    "supported": "Támogatott",
+    "notSupported": "Nem támogatott"
+  },
+  "detailedFeatures": {
+    "title": "Részletes szolgáltatástámogatás",
+    "subtitle": "A hangbeviteli és szövegfelolvasó képességek eszközenkénti bontása.",
+    "headers": {
+      "rank": "#",
+      "language": "Nyelv",
+      "translation": "Fordítás (összes)",
+      "desktopVersion": "Asztali verzió",
+      "mobileApp": "Mobilalkalmazás",
+      "voiceInput": "Hangbemenet",
+      "tts": "Szövegfelolvasó"
+    },
+    "mobileHeaders": {
+      "translation": "Fordítás",
+      "desktop": "Asztali funkciók",
+      "mobile": "Mobilalkalmazás jellemzői"
+    }
+  }
+}

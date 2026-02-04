@@ -1,0 +1,28 @@
+{
+  "title": "Мій профіль",
+  "editProfile": "Редагувати профіль",
+  "saveChanges": "Зберегти зміни",
+  "saving": "Збереження...",
+  "firstName": "Ім'я",
+  "lastName": "Прізвище",
+  "email": "Адреса електронної пошти",
+  "phone": "Номер телефону",
+  "grade": "Оцінка",
+  "primaryLanguage": "Основна мова",
+  "guardianName": "Ім'я опікуна",
+  "guardianRelation": "Відносини опікуна",
+  "selectGrade": "Виберіть Оцінка",
+  "selectLanguage": "Виберіть мову",
+  "selectRelation": "Виберіть Відношення",
+  "studentID": "ID",
+  "role": "студент",
+  "errorLoading": "Помилка завантаження профілю",
+  "successUpdate": "Профіль успішно оновлено!",
+  "errorUpdate": "Не вдалося оновити профіль",
+  "genericError": "Сталася помилка. Спробуйте ще раз.",
+  "relations": {
+    "father": "батько",
+    "mother": "мати",
+    "other": "інше"
+  }
+}

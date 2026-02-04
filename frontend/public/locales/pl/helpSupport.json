@@ -1,0 +1,47 @@
+{
+  "title": "Pomoc i wsparcie",
+  "description": "Jesteśmy tutaj, aby pomóc w przypadku jakichkolwiek pytań lub problemów, które możesz napotkać podczas korzystania z naszej aplikacji internetowej. Niezależnie od tego, czy potrzebujesz pomocy w rozpoczęciu pracy, masz pytanie dotyczące funkcji lub chcesz zgłosić błąd, jesteśmy tu, aby Ci pomóc.",
+  "contact": {
+    "title": "Skontaktuj się z pomocą techniczną",
+    "emailTitle": "Wsparcie e-mailowe",
+    "emailDesc": "Staramy się odpowiadać na wszystkie e-maile w ciągu 24 godzin.",
+    "phoneTitle": "Wsparcie telefoniczne",
+    "hours": "Pon.-pt. (9:00 – 17:00)",
+    "footer": "Dziękujemy za wybranie naszej aplikacji internetowej. Dokładamy wszelkich starań, aby Twoje doświadczenie było tak płynne i przyjemne, jak to tylko możliwe."
+  },
+  "supportedLanguages": {
+    "title": "Lista obsługiwanych języków",
+    "headers": {
+      "rank": "#",
+      "language": "Język",
+      "translation": "Tłumaczenie (aplikacja i urządzenie mobilne)",
+      "desktop": "Komunikacja osobista (komputer stacjonarny)",
+      "mobile": "Komunikacja osobista (aplikacja mobilna)"
+    },
+    "mobileLabels": {
+      "translation": "Przetłumaczone wiadomości",
+      "desktop": "Komputer stacjonarny osobiście",
+      "mobile": "Mobilnie osobiście"
+    },
+    "supported": "Utrzymany",
+    "notSupported": "Nieobsługiwane"
+  },
+  "detailedFeatures": {
+    "title": "Szczegółowa obsługa funkcji",
+    "subtitle": "Podział funkcji wprowadzania głosowego i zamiany tekstu na mowę według urządzenia.",
+    "headers": {
+      "rank": "#",
+      "language": "Język",
+      "translation": "Tłumaczenie (wszystkie)",
+      "desktopVersion": "Wersja na komputer stacjonarny",
+      "mobileApp": "Aplikacja mobilna",
+      "voiceInput": "Wprowadzanie głosowe",
+      "tts": "Zamiana tekstu na mowę"
+    },
+    "mobileHeaders": {
+      "translation": "Tłumaczenie",
+      "desktop": "Funkcje pulpitu",
+      "mobile": "Funkcje aplikacji mobilnej"
+    }
+  }
+}

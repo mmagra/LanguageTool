@@ -1,0 +1,13 @@
+{
+  "loading": "ဖွင့်နေသည်...",
+  "error": "အမှား",
+  "save": "သိမ်းဆည်းပါ။",
+  "cancel": "မလုပ်တော့",
+  "language": "ဘာသာစကား",
+  "switchToEnglish": "အင်္ဂလိပ်သို့ပြောင်းပါ။",
+  "switchToNative": "{{language}} သို့ပြောင်းပါ",
+  "online": "အွန်လိုင်း",
+  "offline": "အော့ဖ်လိုင်း",
+  "notProvided": "မပေးထားပါ။",
+  "tryAgain": "ထပ်စမ်းကြည့်ပါ။"
+}

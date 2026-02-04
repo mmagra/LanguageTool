@@ -1,0 +1,28 @@
+{
+  "title": "Prófíllinn minn",
+  "editProfile": "Breyta prófíl",
+  "saveChanges": "Vista breytingar",
+  "saving": "Vistar...",
+  "firstName": "Fornafn",
+  "lastName": "Eftirnafn",
+  "email": "Netfang",
+  "phone": "Símanúmer",
+  "grade": "Einkunn",
+  "primaryLanguage": "Aðalmál",
+  "guardianName": "Nafn forráðamanns",
+  "guardianRelation": "Forráðamannasamband",
+  "selectGrade": "Veldu Einkunn",
+  "selectLanguage": "Veldu Tungumál",
+  "selectRelation": "Veldu Tengsl",
+  "studentID": "auðkenni",
+  "role": "Nemandi",
+  "errorLoading": "Villa við að hlaða prófíl",
+  "successUpdate": "Prófíll uppfærður!",
+  "errorUpdate": "Mistókst að uppfæra prófíl",
+  "genericError": "Villa kom upp. Vinsamlegast reyndu aftur.",
+  "relations": {
+    "father": "Faðir",
+    "mother": "Móðir",
+    "other": "Annað"
+  }
+}

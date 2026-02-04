@@ -1,0 +1,13 @@
+{
+  "loading": "Memuat...",
+  "error": "Kesalahan",
+  "save": "Menyimpan",
+  "cancel": "Membatalkan",
+  "language": "Bahasa",
+  "switchToEnglish": "Beralih ke bahasa Inggris",
+  "switchToNative": "Beralih ke {{bahasa}}",
+  "online": "On line",
+  "offline": "Luring",
+  "notProvided": "Tidak disediakan",
+  "tryAgain": "Coba Lagi"
+}

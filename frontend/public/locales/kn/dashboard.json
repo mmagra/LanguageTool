@@ -1,0 +1,26 @@
+{
+  "title": "ವಿದ್ಯಾರ್ಥಿ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್",
+  "subtitle": "ಮರಳಿ ಸ್ವಾಗತ! ನಿಮ್ಮ ಪ್ರಗತಿಯ ಅವಲೋಕನ ಇಲ್ಲಿದೆ.",
+  "stats": {
+    "teachers": "ಶಿಕ್ಷಕರ ಸಂಖ್ಯೆ",
+    "teachersSubText": "ನೀವು ಚಾಟ್ ಮಾಡಿದ ಶಿಕ್ಷಕರು",
+    "conversations": "ಸಂಭಾಷಣೆ(ಗಳು)",
+    "conversationsSubText": "ಒಟ್ಟು ಸಂದೇಶಗಳು",
+    "languages": "ಬೆಂಬಲಿತ ಭಾಷೆಗಳು",
+    "languagesSubText": "ಬರೆಯಲಾಗಿದೆ ({{written}}) | ಮೌಖಿಕ ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "ಭಾಷಾ ಬೆಂಬಲ ಸ್ಥಿತಿ",
+    "primary": "ನಿಮ್ಮ ಪ್ರಾಥಮಿಕ ಭಾಷೆ",
+    "written": {
+      "title": "ಲಿಖಿತ ಬೆಂಬಲ",
+      "available": "ಸಂದೇಶ ಕಳುಹಿಸಲು ಲಭ್ಯವಿದೆ",
+      "unsupported": "ಬೆಂಬಲಿತವಾಗಿಲ್ಲ"
+    },
+    "verbal": {
+      "title": "ಮೌಖಿಕ ಬೆಂಬಲ",
+      "available": "ಲೈವ್ ಸೆಷನ್‌ಗಳಿಗೆ ಲಭ್ಯವಿದೆ",
+      "unsupported": "ಬೆಂಬಲಿತವಾಗಿಲ್ಲ"
+    }
+  }
+}

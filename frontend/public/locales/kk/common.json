@@ -1,0 +1,13 @@
+{
+  "loading": "Жүктелуде...",
+  "error": "Қате",
+  "save": "Сақтау",
+  "cancel": "Болдырмау",
+  "language": "Тіл",
+  "switchToEnglish": "Ағылшын тіліне ауысу",
+  "switchToNative": "{{language}} тіліне ауысу",
+  "online": "Онлайн",
+  "offline": "Офлайн",
+  "notProvided": "Берілмеген",
+  "tryAgain": "Қайтадан байқап көріңіз"
+}

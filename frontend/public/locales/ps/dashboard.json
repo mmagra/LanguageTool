@@ -1,0 +1,26 @@
+{
+  "title": "د زده کونکي ډشبورډ",
+  "subtitle": "بیرته پخیر راغلې! دلته ستاسو د پرمختګ یوه عمومي کتنه ده.",
+  "stats": {
+    "teachers": "د ښوونکو شمېر",
+    "teachersSubText": "هغه ښوونکي چې تاسو ورسره خبرې کولې",
+    "conversations": "خبرې اترې",
+    "conversationsSubText": "ټول پیغامونه",
+    "languages": "ملاتړ شوي ژبې",
+    "languagesSubText": "لیکل شوی ({{written}}) | لفظي ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "د ژبې ملاتړ حالت",
+    "primary": "ستاسو لومړنۍ ژبه ده",
+    "written": {
+      "title": "لیکلي ملاتړ",
+      "available": "د پیغام رسولو لپاره شتون لري",
+      "unsupported": "نه ملاتړ شوی"
+    },
+    "verbal": {
+      "title": "لفظي ملاتړ",
+      "available": "د ژوندی غونډو لپاره شتون لري",
+      "unsupported": "نه ملاتړ شوی"
+    }
+  }
+}

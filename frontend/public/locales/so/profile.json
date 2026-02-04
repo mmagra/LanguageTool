@@ -1,0 +1,28 @@
+{
+  "title": "Profile-kayga",
+  "editProfile": "Wax ka beddel xogta",
+  "saveChanges": "Badbaadada isbedelada",
+  "saving": "Keydinaya...",
+  "firstName": "Magaca Hore",
+  "lastName": "Magaca Dambe",
+  "email": "Ciwaanka iimaylka",
+  "phone": "Lambarka Taleefanka",
+  "grade": "Darajo",
+  "primaryLanguage": "Luuqada aasaasiga ah",
+  "guardianName": "Magaca Masuulka",
+  "guardianRelation": "Xiriirka Ilaaliyaha",
+  "selectGrade": "Dooro Darajada",
+  "selectLanguage": "Dooro Luuqad",
+  "selectRelation": "Dooro Xidhiidhka",
+  "studentID": "Aqoonsiga",
+  "role": "Ardayga",
+  "errorLoading": "Cilad Soodejistii Xogta",
+  "successUpdate": "Xogta si guul leh ayaa loo cusboonaysiiyay!",
+  "errorUpdate": "Ku guuldareystay in la cusboonaysiiyo astaanta guud",
+  "genericError": "Khalad ayaa dhacay Fadlan isku day mar kale",
+  "relations": {
+    "father": "Aabe",
+    "mother": "Hooyo",
+    "other": "Mid kale"
+  }
+}

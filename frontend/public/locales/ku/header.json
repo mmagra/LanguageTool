@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Profîla min",
+  "changePassword": "Şîfre biguherînin",
+  "helpSupport": "Alîkarî & Piştgirî",
+  "signOut": "Guhê xwe nedene",
+  "notifications": {
+    "title": "Notifications",
+    "unread": "peyamên nexwendî",
+    "empty": "No notifications nû",
+    "viewAll": "Hemî peyaman bibînin",
+    "newMessage": "Peyama nû"
+  },
+  "language": {
+    "switchToNative": "Biguhere ser Zimanê xwe",
+    "switchToEnglish": "Switch to English"
+  }
+}

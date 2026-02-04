@@ -1,0 +1,13 @@
+{
+  "loading": "Ngamuat...",
+  "error": "Kasalahan",
+  "save": "Simpen",
+  "cancel": "Ngabolaykeun",
+  "language": "Basa",
+  "switchToEnglish": "Pindah ka Inggris",
+  "switchToNative": "Pindah ka {{basa}}",
+  "online": "Online",
+  "offline": "Offline",
+  "notProvided": "Teu disadiakeun",
+  "tryAgain": "Cobian deui"
+}

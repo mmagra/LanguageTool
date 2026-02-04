@@ -1,0 +1,47 @@
+{
+  "title": "ヘルプとサポート",
+  "description": "当社の Web アプリケーションの使用中に発生する可能性のある質問や問題についてお手伝いいたします。開始する際にサポートが必要な場合でも、機能について質問がある場合でも、バグを報告したい場合でも、私たちがお手伝いいたします。",
+  "contact": {
+    "title": "サポートに連絡する",
+    "emailTitle": "電子メールサポート",
+    "emailDesc": "すべてのメールには 24 時間以内に返信するよう努めております。",
+    "phoneTitle": "電話サポート",
+    "hours": "月曜～金曜（午前9時～午後5時）",
+    "footer": "当社の Web アプリケーションをお選びいただきありがとうございます。私たちは、お客様の体験を可能な限りスムーズで楽しいものにすることに尽力しています。"
+  },
+  "supportedLanguages": {
+    "title": "サポートされている言語のリスト",
+    "headers": {
+      "rank": "#",
+      "language": "言語",
+      "translation": "翻訳 (アプリとモバイル)",
+      "desktop": "対面コミュニケーション (デスクトップ)",
+      "mobile": "対面コミュニケーション (モバイルアプリ)"
+    },
+    "mobileLabels": {
+      "translation": "翻訳されたメッセージ",
+      "desktop": "デスクトップ対面",
+      "mobile": "モバイル対面式"
+    },
+    "supported": "サポートされています",
+    "notSupported": "サポートされていません"
+  },
+  "detailedFeatures": {
+    "title": "詳細な機能サポート",
+    "subtitle": "デバイスごとの音声入力およびテキスト読み上げ機能の内訳。",
+    "headers": {
+      "rank": "#",
+      "language": "言語",
+      "translation": "翻訳(全て)",
+      "desktopVersion": "デスクトップ版",
+      "mobileApp": "モバイルアプリ",
+      "voiceInput": "音声入力",
+      "tts": "テキスト読み上げ"
+    },
+    "mobileHeaders": {
+      "translation": "翻訳",
+      "desktop": "デスクトップの機能",
+      "mobile": "モバイルアプリの機能"
+    }
+  }
+}

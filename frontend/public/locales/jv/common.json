@@ -1,0 +1,13 @@
+{
+  "loading": "Loading...",
+  "error": "kesalahan",
+  "save": "Simpen",
+  "cancel": "Batal",
+  "language": "Basa",
+  "switchToEnglish": "Ngalih menyang Inggris",
+  "switchToNative": "Ganti menyang {{basa}}",
+  "online": "Online",
+  "offline": "Offline",
+  "notProvided": "Ora kasedhiya",
+  "tryAgain": "Coba maneh"
+}

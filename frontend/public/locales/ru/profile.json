@@ -1,0 +1,28 @@
+{
+  "title": "Мой профиль",
+  "editProfile": "Редактировать профиль",
+  "saveChanges": "Сохранить изменения",
+  "saving": "Сохранение...",
+  "firstName": "Имя",
+  "lastName": "Фамилия",
+  "email": "Адрес электронной почты",
+  "phone": "Номер телефона",
+  "grade": "Оценка",
+  "primaryLanguage": "Основной язык",
+  "guardianName": "Имя опекуна",
+  "guardianRelation": "Отношения с хранителями",
+  "selectGrade": "Выберите оценку",
+  "selectLanguage": "Выберите язык",
+  "selectRelation": "Выберите отношение",
+  "studentID": "ИДЕНТИФИКАТОР",
+  "role": "Студент",
+  "errorLoading": "Ошибка загрузки профиля",
+  "successUpdate": "Профиль успешно обновлен!",
+  "errorUpdate": "Не удалось обновить профиль",
+  "genericError": "Произошла ошибка. Пожалуйста, попробуйте еще раз.",
+  "relations": {
+    "father": "Отец",
+    "mother": "Мать",
+    "other": "Другой"
+  }
+}

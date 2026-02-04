@@ -1,0 +1,13 @@
+{
+  "loading": "Memuatkan...",
+  "error": "ralat",
+  "save": "Jimat",
+  "cancel": "Batal",
+  "language": "Bahasa",
+  "switchToEnglish": "Tukar kepada bahasa Inggeris",
+  "switchToNative": "Tukar kepada {{bahasa}}",
+  "online": "dalam talian",
+  "offline": "Luar talian",
+  "notProvided": "Tidak disediakan",
+  "tryAgain": "Cuba Lagi"
+}

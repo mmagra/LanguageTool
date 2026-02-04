@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Mening profilim",
+  "changePassword": "Parolni o'zgartirish",
+  "helpSupport": "Yordam va qoʻllab-quvvatlash",
+  "signOut": "tizimdan chiqish",
+  "notifications": {
+    "title": "Bildirishnomalar",
+    "unread": "o'qilmagan xabarlar",
+    "empty": "Yangi bildirishnomalar yo'q",
+    "viewAll": "Barcha xabarlarni ko'rish",
+    "newMessage": "Yangi xabar"
+  },
+  "language": {
+    "switchToNative": "O'z tilingizga o'ting",
+    "switchToEnglish": "Ingliz tiliga o'tish"
+  }
+}

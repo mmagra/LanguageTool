@@ -1,0 +1,26 @@
+{
+  "title": "Student Dashboard",
+  "subtitle": "خۇش كەپسىز! بۇ يەردە ئىلگىرىلەشلىرىڭىزنىڭ ئومۇمىي ئەھۋالى بار.",
+  "stats": {
+    "teachers": "ئوقۇتقۇچى (لار) نىڭ نومۇرى",
+    "teachersSubText": "سىز پاراڭلاشقان ئوقۇتقۇچىلار",
+    "conversations": "سۆھبەت (لار)",
+    "conversationsSubText": "ئومۇمىي ئۇچۇرلار",
+    "languages": "قوللايدىغان تىللار",
+    "languagesSubText": "يېزىلغان ({{written}}) | ئاغزاكى ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "تىل قوللاش ھالىتى",
+    "primary": "باشلانغۇچ تىلىڭىز",
+    "written": {
+      "title": "يازما قوللاش",
+      "available": "ئۇچۇر يوللاشقا بولىدۇ",
+      "unsupported": "قوللىمايدۇ"
+    },
+    "verbal": {
+      "title": "ئاغزاكى قوللاش",
+      "available": "نەق مەيدان يىغىنلىرىنى ئىشلەتكىلى بولىدۇ",
+      "unsupported": "قوللىمايدۇ"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "زما پروفایل",
+  "changePassword": "پټ نوم بدل کړی",
+  "helpSupport": "مرسته او ملاتړ",
+  "signOut": "ننوتل",
+  "notifications": {
+    "title": "خبرتیاوې",
+    "unread": "نه لوستل شوي پیغامونه",
+    "empty": "هیڅ نوي خبرتیاوې نشته",
+    "viewAll": "ټول پیغامونه وګورئ",
+    "newMessage": "نوی پیغام"
+  },
+  "language": {
+    "switchToNative": "خپلې ژبې ته لاړ شئ",
+    "switchToEnglish": "انګلیسي ته واړوئ"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "title": "Aide et support",
+  "description": "Nous sommes là pour vous aider avec toutes les questions ou problèmes que vous pourriez rencontrer lors de l'utilisation de notre application Web. Que vous ayez besoin d'aide pour démarrer, que vous ayez une question sur une fonctionnalité ou que vous souhaitiez signaler un bug, nous sommes là pour vous aider.",
+  "contact": {
+    "title": "Contacter l'assistance",
+    "emailTitle": "Assistance par e-mail",
+    "emailDesc": "Notre objectif est de répondre à tous les e-mails dans les 24 heures.",
+    "phoneTitle": "Assistance téléphonique",
+    "hours": "Du lundi au vendredi (9h – 17h)",
+    "footer": "Merci d'avoir choisi notre application Web. Nous nous engageons à rendre votre expérience aussi fluide et agréable que possible."
+  },
+  "supportedLanguages": {
+    "title": "Liste des langues prises en charge",
+    "headers": {
+      "rank": "#",
+      "language": "Langue",
+      "translation": "Traduction (application et mobile)",
+      "desktop": "Communication en personne (ordinateur de bureau)",
+      "mobile": "Communication en personne (application mobile)"
+    },
+    "mobileLabels": {
+      "translation": "Messages traduits",
+      "desktop": "Bureau en personne",
+      "mobile": "Mobile en personne"
+    },
+    "supported": "Soutenu",
+    "notSupported": "Non pris en charge"
+  },
+  "detailedFeatures": {
+    "title": "Prise en charge détaillée des fonctionnalités",
+    "subtitle": "Répartition des capacités de saisie vocale et de synthèse vocale par appareil.",
+    "headers": {
+      "rank": "#",
+      "language": "Langue",
+      "translation": "Traduction (Toutes)",
+      "desktopVersion": "Version de bureau",
+      "mobileApp": "Application mobile",
+      "voiceInput": "Entrée vocale",
+      "tts": "Synthèse vocale"
+    },
+    "mobileHeaders": {
+      "translation": "Traduction",
+      "desktop": "Fonctionnalités du bureau",
+      "mobile": "Fonctionnalités de l'application mobile"
+    }
+  }
+}

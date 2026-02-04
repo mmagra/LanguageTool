@@ -1,0 +1,28 @@
+{
+  "title": "Mein Profil",
+  "editProfile": "Profil bearbeiten",
+  "saveChanges": "Änderungen speichern",
+  "saving": "Sparen...",
+  "firstName": "Vorname",
+  "lastName": "Nachname",
+  "email": "E-Mail-Adresse",
+  "phone": "Telefonnummer",
+  "grade": "Grad",
+  "primaryLanguage": "Primärsprache",
+  "guardianName": "Name des Wächters",
+  "guardianRelation": "Wächterbeziehung",
+  "selectGrade": "Wählen Sie Note aus",
+  "selectLanguage": "Wählen Sie Sprache aus",
+  "selectRelation": "Wählen Sie Beziehung aus",
+  "studentID": "AUSWEIS",
+  "role": "Student",
+  "errorLoading": "Fehler beim Laden des Profils",
+  "successUpdate": "Profil erfolgreich aktualisiert!",
+  "errorUpdate": "Profil konnte nicht aktualisiert werden",
+  "genericError": "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut.",
+  "relations": {
+    "father": "Vater",
+    "mother": "Mutter",
+    "other": "Andere"
+  }
+}

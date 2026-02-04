@@ -1,0 +1,13 @@
+{
+  "loading": "Belastning...",
+  "error": "Fel",
+  "save": "Spara",
+  "cancel": "Avboka",
+  "language": "Språk",
+  "switchToEnglish": "Byt till engelska",
+  "switchToNative": "Byt till {{language}}",
+  "online": "Online",
+  "offline": "Off-line",
+  "notProvided": "Ej tillhandahållen",
+  "tryAgain": "Försök igen"
+}

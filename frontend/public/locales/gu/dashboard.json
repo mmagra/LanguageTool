@@ -1,0 +1,26 @@
+{
+  "title": "વિદ્યાર્થી ડેશબોર્ડ",
+  "subtitle": "ફરી સ્વાગત છે! અહીં તમારી પ્રગતિની ઝાંખી છે.",
+  "stats": {
+    "teachers": "શિક્ષક(ઓ) ની સંખ્યા",
+    "teachersSubText": "શિક્ષકો જેની સાથે તમે ચેટ કરી હતી",
+    "conversations": "વાતચીત(ઓ)",
+    "conversationsSubText": "કુલ સંદેશાઓ",
+    "languages": "સમર્થિત ભાષાઓ",
+    "languagesSubText": "લખાયેલ ({{written}}) | મૌખિક ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "ભાષા સમર્થન સ્થિતિ",
+    "primary": "તમારી પ્રાથમિક ભાષા છે",
+    "written": {
+      "title": "લેખિત આધાર",
+      "available": "મેસેજિંગ માટે ઉપલબ્ધ છે",
+      "unsupported": "આધારભૂત નથી"
+    },
+    "verbal": {
+      "title": "મૌખિક આધાર",
+      "available": "જીવંત સત્રો માટે ઉપલબ્ધ",
+      "unsupported": "આધારભૂત નથી"
+    }
+  }
+}

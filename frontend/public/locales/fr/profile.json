@@ -1,0 +1,28 @@
+{
+  "title": "Mon profil",
+  "editProfile": "Modifier le profil",
+  "saveChanges": "Enregistrer les modifications",
+  "saving": "Économie...",
+  "firstName": "Prénom",
+  "lastName": "Nom de famille",
+  "email": "Adresse email",
+  "phone": "Numéro de téléphone",
+  "grade": "Grade",
+  "primaryLanguage": "Langue principale",
+  "guardianName": "Nom du tuteur",
+  "guardianRelation": "Relation tuteur",
+  "selectGrade": "Sélectionnez la note",
+  "selectLanguage": "Sélectionnez la langue",
+  "selectRelation": "Sélectionner une relation",
+  "studentID": "IDENTIFIANT",
+  "role": "Étudiant",
+  "errorLoading": "Erreur de chargement du profil",
+  "successUpdate": "Profil mis à jour avec succès !",
+  "errorUpdate": "Échec de la mise à jour du profil",
+  "genericError": "Une erreur s'est produite. Veuillez réessayer.",
+  "relations": {
+    "father": "Père",
+    "mother": "Mère",
+    "other": "Autre"
+  }
+}

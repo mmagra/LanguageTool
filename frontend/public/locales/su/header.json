@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Profil abdi",
+  "changePassword": "Gentos kecap konci",
+  "helpSupport": "Pitulung & Rojongan",
+  "signOut": "kaluar",
+  "notifications": {
+    "title": "Bewara",
+    "unread": "talatah can dibaca",
+    "empty": "Taya bewara anyar",
+    "viewAll": "Tingali sadaya pesen",
+    "newMessage": "Pesen anyar"
+  },
+  "language": {
+    "switchToNative": "Pindah ka Basa Anjeun",
+    "switchToEnglish": "Pindah ka Inggris"
+  }
+}

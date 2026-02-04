@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Mans profils",
+  "changePassword": "Mainīt paroli",
+  "helpSupport": "Palīdzība un atbalsts",
+  "signOut": "Izrakstīties",
+  "notifications": {
+    "title": "Paziņojumi",
+    "unread": "nelasītas ziņas",
+    "empty": "Nav jaunu paziņojumu",
+    "viewAll": "Skatīt visus ziņojumus",
+    "newMessage": "Jauna ziņa"
+  },
+  "language": {
+    "switchToNative": "Pārslēdzieties uz savu valodu",
+    "switchToEnglish": "Pārslēdzieties uz angļu valodu"
+  }
+}

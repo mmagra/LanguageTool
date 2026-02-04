@@ -1,0 +1,18 @@
+{
+  "title": "Hais lusEdge",
+  "myProfile": "Kuv Profile",
+  "changePassword": "Hloov Password",
+  "helpSupport": "Pab & Txhawb nqa",
+  "signOut": "Sau npe tawm",
+  "notifications": {
+    "title": "Kev ceeb toom",
+    "unread": "cov lus tsis tau nyeem",
+    "empty": "Tsis muaj ntawv ceeb toom tshiab",
+    "viewAll": "Saib tag nrho cov lus",
+    "newMessage": "Xov xwm tshiab"
+  },
+  "language": {
+    "switchToNative": "Hloov mus rau Koj Hom Lus",
+    "switchToEnglish": "Hloov mus rau lus Askiv"
+  }
+}

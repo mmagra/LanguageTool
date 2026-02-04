@@ -1,0 +1,26 @@
+{
+  "title": "Dashibodi ya Wanafunzi",
+  "subtitle": "Karibu tena! Huu hapa ni muhtasari wa maendeleo yako.",
+  "stats": {
+    "teachers": "Idadi ya Walimu",
+    "teachersSubText": "Walimu uliozungumza nao",
+    "conversations": "Mazungumzo",
+    "conversationsSubText": "Jumla ya Ujumbe",
+    "languages": "Lugha Zinazotumika",
+    "languagesSubText": "Imeandikwa ({{written}}) | Maneno ({{verbal}})"
+  },
+  "languageStatus": {
+    "title": "Hali ya Usaidizi wa Lugha",
+    "primary": "Lugha yako ya Msingi ni",
+    "written": {
+      "title": "Msaada wa maandishi",
+      "available": "Inapatikana kwa ujumbe",
+      "unsupported": "Haitumiki"
+    },
+    "verbal": {
+      "title": "Msaada wa Maneno",
+      "available": "Inapatikana kwa vipindi vya moja kwa moja",
+      "unsupported": "Haitumiki"
+    }
+  }
+}

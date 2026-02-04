@@ -1,0 +1,18 @@
+{
+  "title": "Tepi Lisan",
+  "myProfile": "Profil Saya",
+  "changePassword": "Ubah Kata Sandi",
+  "helpSupport": "Bantuan & Dukungan",
+  "signOut": "Keluar",
+  "notifications": {
+    "title": "Pemberitahuan",
+    "unread": "pesan yang belum dibaca",
+    "empty": "Tidak ada notifikasi baru",
+    "viewAll": "Lihat semua pesan",
+    "newMessage": "Pesan baru"
+  },
+  "language": {
+    "switchToNative": "Beralih ke Bahasa Anda",
+    "switchToEnglish": "Beralih ke bahasa Inggris"
+  }
+}

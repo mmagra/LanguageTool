@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "نمایه من",
+  "changePassword": "رمز عبور را تغییر دهید",
+  "helpSupport": "راهنما و پشتیبانی",
+  "signOut": "از سیستم خارج شوید",
+  "notifications": {
+    "title": "اطلاعیه ها",
+    "unread": "پیام های خوانده نشده",
+    "empty": "اعلان جدیدی وجود ندارد",
+    "viewAll": "مشاهده همه پیام ها",
+    "newMessage": "پیام جدید"
+  },
+  "language": {
+    "switchToNative": "به زبان خود تغییر دهید",
+    "switchToEnglish": "به انگلیسی تغییر دهید"
+  }
+}

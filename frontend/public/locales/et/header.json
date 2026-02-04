@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Minu profiil",
+  "changePassword": "Muuda parooli",
+  "helpSupport": "Abi ja tugi",
+  "signOut": "Logi välja",
+  "notifications": {
+    "title": "Märguanded",
+    "unread": "lugemata sõnumid",
+    "empty": "Uusi teateid pole",
+    "viewAll": "Vaata kõiki sõnumeid",
+    "newMessage": "Uus sõnum"
+  },
+  "language": {
+    "switchToNative": "Lülituge oma keelele",
+    "switchToEnglish": "Lülituge inglise keelele"
+  }
+}

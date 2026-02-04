@@ -1,0 +1,18 @@
+{
+  "title": "SpokenEdge",
+  "myProfile": "Profil Kula",
+  "changePassword": "Ganti Sandi",
+  "helpSupport": "Pitulung & Dhukungan",
+  "signOut": "Mlebu metu",
+  "notifications": {
+    "title": "Kabar",
+    "unread": "pesen sing durung diwaca",
+    "empty": "Ora ana kabar anyar",
+    "viewAll": "Deleng kabeh pesen",
+    "newMessage": "Pesen anyar"
+  },
+  "language": {
+    "switchToNative": "Ngalih menyang Basa Panjenengan",
+    "switchToEnglish": "Ngalih menyang Inggris"
+  }
+}
