@@ -3,10 +3,19 @@ module.exports = {
     PENDING: 'pending',
     APPROVED: 'approved',
     REJECTED: 'rejected',
-    ACTIVE: 'active'
+    ACTIVE: 'active',
+    ALLOWED: 'allowed'
   },
-  
+
   USER_ROLES: {
+    SUPER_ADMIN: 'super admin',
+    ADMIN: 'admin',
+    TEACHER: 'teacher',
+    STUDENT: 'student'
+  },
+
+  ROLES: {
+    SUPER_ADMIN: 'super admin',
     ADMIN: 'admin',
     TEACHER: 'teacher',
     STUDENT: 'student'

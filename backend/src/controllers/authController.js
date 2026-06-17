@@ -1,9 +1,21 @@
 const jwt = require('jsonwebtoken');
+const crypto = require('crypto');
+const bcrypt = require('bcryptjs');
 const config = require('../config/config');
 const User = require('../models/User');
 const Student = require('../models/Student');
 const Teacher = require('../models/Teacher');
-const { registerValidation, loginValidation } = require('../middleware/validation');
+const {
+  registerValidation,
+  loginValidation,
+  changePasswordValidation,
+  resetPasswordValidation,
+  forgotPasswordValidation,
+} = require('../middleware/validation');
+const { ROLES, USER_STATUS } = require('../utils/constants');
+const { logAction } = require('./auditController');
+const { pool } = require('../config/database');
+const { sendPasswordResetEmail } = require('../utils/emailService');
 
 // @desc    Register a user
 // @route   POST /api/auth/register
@@ -113,6 +125,10 @@ exports.register = async (req, res) => {
       data: userResponse
     });
 
+    try {
+      logAction(user.id, user.email, 'REGISTER', 'auth', user.id, { role: user.role, email: user.email }, req);
+    } catch (auditErr) { console.error('Audit Log Error', auditErr); }
+
   } catch (error) {
     console.error('Registration error:', error);
     res.status(500).json({
@@ -147,11 +163,15 @@ exports.login = async (req, res) => {
       });
     }
 
-    // Check if user is approved
-    if (user.status !== 'approved' && user.status !== 'active') {
+    // Check if user is approved — also allow 'allowed' status
+    const allowedStatuses = [USER_STATUS.APPROVED, USER_STATUS.ACTIVE, USER_STATUS.ALLOWED];
+    if (!allowedStatuses.includes(user.status)) {
+      const isPending = user.status === USER_STATUS.PENDING;
       return res.status(403).json({
         success: false,
-        message: 'Your account is pending approval by admin'
+        message: isPending
+          ? 'Your account is pending approval by admin'
+          : 'Your account has been rejected or is inactive. Please contact support.'
       });
     }
 
@@ -172,7 +192,6 @@ exports.login = async (req, res) => {
 
     // Set user online in database
     await User.setOnlineStatus(user.id, true);
-    console.log(`User ${user.email} set to online in database`);
 
     // Create JWT token
     const token = jwt.sign(
@@ -183,14 +202,13 @@ exports.login = async (req, res) => {
         lastName: user.last_name,
         role: user.role,
         status: user.status,
-        school_id: user.school_id
+        school_id: user.school_id,
+        is_super_admin: user.role === ROLES.SUPER_ADMIN
       },
       config.jwt.secret,
       { expiresIn: config.jwt.expire }
     );
 
-    console.log('Generated token for user:', user.email);
-    console.log('Token expires in:', config.jwt.expire);
 
     // Prepare user response data
     let userResponseData = {
@@ -224,6 +242,10 @@ exports.login = async (req, res) => {
       }
     });
 
+    try {
+      logAction(user.id, user.email, 'LOGIN', 'auth', user.id, { role: user.role, email: user.email }, req);
+    } catch (auditErr) { console.error('Audit Log Error', auditErr); }
+
   } catch (error) {
     console.error('Login error:', error);
     res.status(500).json({
@@ -242,7 +264,10 @@ exports.logout = async (req, res) => {
 
     // Set user offline in database
     await User.setOnlineStatus(userId, false);
-    console.log(`User ${req.user.email} set to offline in database`);
+
+    try {
+      logAction(userId, req.user.email, 'LOGOUT', 'auth', userId, { email: req.user.email }, req);
+    } catch (auditErr) { console.error('Audit Log Error', auditErr); }
 
     res.json({
       success: true,
@@ -317,11 +342,12 @@ exports.changePassword = async (req, res) => {
   try {
     const { currentPassword, newPassword } = req.body;
 
-    // Validate input
-    if (!currentPassword || !newPassword) {
+    // Validate input (enforces shared password policy on newPassword)
+    const { error } = changePasswordValidation(req.body);
+    if (error) {
       return res.status(400).json({
         success: false,
-        message: 'Please provide current and new password'
+        message: error.details[0].message
       });
     }
 
@@ -344,8 +370,8 @@ exports.changePassword = async (req, res) => {
     }
 
     // Hash new password
-    const salt = await require('bcryptjs').genSalt(10);
-    const hashedPassword = await require('bcryptjs').hash(newPassword, salt);
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(newPassword, salt);
 
     // Update password
     await User.updatePassword(user.id, hashedPassword);
@@ -360,7 +386,8 @@ exports.changePassword = async (req, res) => {
         lastName: user.last_name,
         role: user.role,
         status: user.status,
-        school_id: user.school_id
+        school_id: user.school_id,
+        is_super_admin: user.role === ROLES.SUPER_ADMIN
       },
       config.jwt.secret,
       { expiresIn: config.jwt.expire }
@@ -438,5 +465,100 @@ exports.updateProfile = async (req, res) => {
       success: false,
       message: 'Server error'
     });
+  }
+};
+
+// @desc    Request password reset email
+// @route   POST /api/auth/forgot-password
+// @access  Public
+exports.forgotPassword = async (req, res) => {
+  try {
+    const { email } = req.body;
+    const { error } = forgotPasswordValidation(req.body);
+    if (error) {
+      return res.status(400).json({ success: false, message: error.details[0].message });
+    }
+
+    const user = await User.findByEmail(email);
+
+    // Always return the same response to prevent email enumeration
+    const successMsg = 'If an account with that email exists, a reset link has been sent.';
+
+    if (!user) {
+      return res.json({ success: true, message: successMsg });
+    }
+
+    // Delete any existing unused tokens for this user
+    await pool.query('DELETE FROM password_reset_tokens WHERE user_id = $1', [user.id]);
+
+    // Generate secure random token; store only its SHA-256 hash so a DB leak
+    // does not expose usable reset tokens. The raw token goes only to the user's email.
+    const rawToken = crypto.randomBytes(32).toString('hex');
+    const tokenHash = crypto.createHash('sha256').update(rawToken).digest('hex');
+    const expiresAt = new Date(Date.now() + 60 * 60 * 1000); // 1 hour
+
+    await pool.query(
+      'INSERT INTO password_reset_tokens (user_id, token, expires_at) VALUES ($1, $2, $3)',
+      [user.id, tokenHash, expiresAt]
+    );
+
+    const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:5173';
+    const resetLink = `${frontendUrl}/reset-password?token=${rawToken}`;
+
+    try {
+      await sendPasswordResetEmail(user.email, resetLink, user.first_name);
+    } catch (emailErr) {
+      console.error('Failed to send reset email:', emailErr);
+      return res.status(500).json({ success: false, message: 'Failed to send reset email. Please try again later.' });
+    }
+
+    res.json({ success: true, message: successMsg });
+  } catch (error) {
+    console.error('Forgot password error:', error);
+    res.status(500).json({ success: false, message: 'Server error' });
+  }
+};
+
+// @desc    Reset password with token
+// @route   POST /api/auth/reset-password
+// @access  Public
+exports.resetPassword = async (req, res) => {
+  try {
+    const { token, newPassword } = req.body;
+
+    // Enforce shared password policy (presence + strength)
+    const { error } = resetPasswordValidation(req.body);
+    if (error) {
+      return res.status(400).json({ success: false, message: error.details[0].message });
+    }
+
+    // Look up by the SHA-256 hash of the supplied token (tokens are stored hashed)
+    const tokenHash = crypto.createHash('sha256').update(token).digest('hex');
+    const result = await pool.query(
+      `SELECT * FROM password_reset_tokens
+       WHERE token = $1 AND used = false AND expires_at > NOW()`,
+      [tokenHash]
+    );
+
+    if (result.rows.length === 0) {
+      return res.status(400).json({ success: false, message: 'Invalid or expired reset token' });
+    }
+
+    const resetRecord = result.rows[0];
+
+    // Hash new password
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(newPassword, salt);
+
+    // Update password
+    await User.updatePassword(resetRecord.user_id, hashedPassword);
+
+    // Mark token as used
+    await pool.query('UPDATE password_reset_tokens SET used = true WHERE id = $1', [resetRecord.id]);
+
+    res.json({ success: true, message: 'Password reset successfully. You can now log in.' });
+  } catch (error) {
+    console.error('Reset password error:', error);
+    res.status(500).json({ success: false, message: 'Server error' });
   }
 };

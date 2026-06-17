@@ -1,25 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {
-    TrendingUp, DollarSign, Building2, Users, AlertTriangle,
-    Loader2, Calendar, Activity, Mail, ArrowRight
+    TrendingUp, DollarSign, Building2, Users,
+    Calendar, Activity, ArrowRight, Globe, FileText, CreditCard
 } from 'lucide-react';
+import LoadingState from '../../components/common/LoadingState';
+import ErrorState from '../../components/common/ErrorState';
 import {
     AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
-    PieChart, Pie, Cell, Legend, Label
+    PieChart, Pie, Cell
 } from 'recharts';
 import api from '../../services/api';
 import { toast } from 'react-hot-toast';
+import { useAuth } from '../../context/AuthContext';
 
 const COLORS = {
-    basic: '#4ade80',     // Green
-    pro: '#3b82f6',       // Blue
-    enterprise: '#a855f7', // Purple
-    custom: '#9ca3af'     // Gray
+    basic: '#2563eb',      // Blue
+    pro: '#1d4ed8',        // Darker blue
+    enterprise: '#7c3aed', // Violet
+    custom: '#94a3b8'      // Slate
 };
 
 const SuperAdminDashboard = () => {
     const navigate = useNavigate();
+    const { user } = useAuth();
+    const firstName = user?.firstName || user?.first_name || 'there';
     const [loading, setLoading] = useState(true);
     const [analytics, setAnalytics] = useState(null);
 
@@ -42,21 +47,9 @@ const SuperAdminDashboard = () => {
         }
     };
 
-    if (loading) {
-        return (
-            <div className="flex h-96 items-center justify-center">
-                <Loader2 className="animate-spin text-indigo-600" size={48} />
-            </div>
-        );
-    }
+    if (loading) return <LoadingState />;
 
-    if (!analytics) {
-        return (
-            <div className="text-center p-10">
-                <p className="text-gray-500">No analytics data available</p>
-            </div>
-        );
-    }
+    if (!analytics) return <ErrorState message="No analytics data available." onRetry={fetchAnalytics} />;
 
     // Plan Distribution Data for Recharts
     const planData = [
@@ -100,17 +93,52 @@ const SuperAdminDashboard = () => {
         }
     });
 
+    const quickActions = [
+        {
+            title: 'Manage Schools',
+            label: 'Tenants',
+            description: 'Review schools, plan status, usage, and administrators.',
+            icon: Building2,
+            path: '/super-admin/schools',
+            tone: 'bg-blue-50 text-blue-600'
+        },
+        {
+            title: 'Billing',
+            label: 'Revenue',
+            description: 'Monitor platform billing, payments, and access status.',
+            icon: CreditCard,
+            path: '/super-admin/billing',
+            tone: 'bg-emerald-50 text-emerald-600'
+        },
+        {
+            title: 'Languages',
+            label: 'Catalog',
+            description: 'Control available written and live conversation languages.',
+            icon: Globe,
+            path: '/super-admin/languages',
+            tone: 'bg-primary-50 text-primary-600'
+        },
+        {
+            title: 'Audit Logs',
+            label: 'Security',
+            description: 'Trace admin activity and platform-level changes.',
+            icon: FileText,
+            path: '/super-admin/audit-logs',
+            tone: 'bg-amber-50 text-amber-600'
+        },
+    ];
+
     return (
         <div className="space-y-6 font-inter animate-fade-in">
             {/* Header */}
-            <div className="flex justify-between items-center mb-6">
+            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 mb-6">
                 <div>
-                    <h1 className="text-3xl font-bold text-gray-800 tracking-tight">
-                        Super Admin Dashboard
+                    <h1 className="text-xl font-semibold tracking-tight text-slate-900 dark:text-slate-50">
+                        Welcome back, {firstName}
                     </h1>
-                    <p className="text-gray-500 text-sm mt-1">System-wide performance and statistics</p>
+                    <p className="text-slate-500 dark:text-slate-400 text-sm mt-1">System-wide performance and statistics</p>
                 </div>
-                <div className="text-sm font-medium text-gray-600 bg-white px-4 py-2 rounded-xl shadow-sm border border-gray-200/60">
+                <div className="app-date-pill self-start sm:self-auto">
                     {new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
                 </div>
             </div>
@@ -118,88 +146,122 @@ const SuperAdminDashboard = () => {
             {/* KPI Cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {/* Revenue Card */}
-                <div className="bg-white rounded-2xl p-6 shadow-xl shadow-gray-200/50 border border-gray-100 hover:shadow-2xl transition-shadow">
+                <div className="app-card app-card-hover p-6">
                     <div className="flex items-start justify-between mb-4">
-                        <div className="p-3 bg-emerald-50 rounded-xl text-emerald-600">
-                            <DollarSign size={24} />
+                        <div className="app-icon-tile bg-emerald-50 text-emerald-600">
+                            <DollarSign size={20} />
                         </div>
-                        <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">Revenue</span>
+                        <span className="app-eyebrow">Revenue</span>
                     </div>
                     <div className="mb-4">
-                        <h3 className="text-3xl font-bold text-gray-900 mb-1">
+                        <h3 className="text-2xl font-semibold text-slate-900 dark:text-slate-50 mb-1">
                             ${analytics.revenue.total.toLocaleString()}
                         </h3>
 
                     </div>
-                    <div className="pt-4 border-t border-gray-50 text-xs text-gray-500 font-medium">
-                        Paid: <span className="text-gray-900">${analytics.revenue.paid.toLocaleString()}</span> |
-                        Pending: <span className="text-gray-900">${analytics.revenue.pending.toLocaleString()}</span>
+                    <div className="pt-4 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400 font-medium">
+                        Paid: <span className="text-slate-900 dark:text-slate-100">${analytics.revenue.paid.toLocaleString()}</span> |
+                        Pending: <span className="text-slate-900 dark:text-slate-100">${analytics.revenue.pending.toLocaleString()}</span>
                     </div>
                 </div>
 
                 {/* Schools Card */}
-                <div className="bg-white rounded-2xl p-6 shadow-xl shadow-gray-200/50 border border-gray-100 hover:shadow-2xl transition-shadow">
+                <div className="app-card app-card-hover p-6">
                     <div className="flex items-start justify-between mb-4">
-                        <div className="p-3 bg-blue-50 rounded-xl text-blue-600">
-                            <Building2 size={24} />
+                        <div className="app-icon-tile bg-blue-50 text-blue-600">
+                            <Building2 size={20} />
                         </div>
-                        <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">Schools</span>
+                        <span className="app-eyebrow">Schools</span>
                     </div>
                     <div className="mb-4">
-                        <h3 className="text-3xl font-bold text-gray-900 mb-1">
+                        <h3 className="text-2xl font-semibold text-slate-900 dark:text-slate-50 mb-1">
                             {analytics.schools.total}
                         </h3>
                     </div>
-                    <div className="pt-4 border-t border-gray-50 text-xs text-gray-500 font-medium">
-                        Active: <span className="text-gray-900">{analytics.schools.active}</span> |
-                        Total: <span className="text-gray-900">{analytics.schools.total}</span>
+                    <div className="pt-4 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400 font-medium">
+                        Active: <span className="text-slate-900 dark:text-slate-100">{analytics.schools.active}</span> |
+                        Total: <span className="text-slate-900 dark:text-slate-100">{analytics.schools.total}</span>
                     </div>
                 </div>
 
                 {/* Students Card */}
-                <div className="bg-white rounded-2xl p-6 shadow-xl shadow-gray-200/50 border border-gray-100 hover:shadow-2xl transition-shadow">
+                <div className="app-card app-card-hover p-6">
                     <div className="flex items-start justify-between mb-4">
-                        <div className="p-3 bg-purple-50 rounded-xl text-purple-600">
-                            <Users size={24} />
+                        <div className="app-icon-tile bg-purple-50 text-purple-600">
+                            <Users size={20} />
                         </div>
-                        <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">Students</span>
+                        <span className="app-eyebrow">Students</span>
                     </div>
                     <div className="mb-4">
-                        <h3 className="text-3xl font-bold text-gray-900 mb-1">
+                        <h3 className="text-2xl font-semibold text-slate-900 dark:text-slate-50 mb-1">
                             {analytics.users.students.toLocaleString()}
                         </h3>
                     </div>
-                    <div className="pt-4 border-t border-gray-50 text-xs text-gray-500 font-medium">
-                        Teachers: <span className="text-gray-900">{analytics.users.teachers}</span> |
-                        Admins: <span className="text-gray-900">{analytics.users.admins}</span>
+                    <div className="pt-4 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400 font-medium">
+                        Teachers: <span className="text-slate-900 dark:text-slate-100">{analytics.users.teachers}</span> |
+                        Admins: <span className="text-slate-900 dark:text-slate-100">{analytics.users.admins}</span>
                     </div>
                 </div>
 
                 {/* Minutes Card */}
-                <div className="bg-white rounded-2xl p-6 shadow-xl shadow-gray-200/50 border border-gray-100 hover:shadow-2xl transition-shadow">
+                <div className="app-card app-card-hover p-6">
                     <div className="flex items-start justify-between mb-4">
-                        <div className="p-3 bg-orange-50 rounded-xl text-orange-600">
-                            <Activity size={24} />
+                        <div className="app-icon-tile bg-orange-50 text-orange-600">
+                            <Activity size={20} />
                         </div>
-                        <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">Minutes Used</span>
+                        <span className="app-eyebrow">Minutes Used</span>
                     </div>
                     <div className="mb-4">
-                        <h3 className="text-3xl font-bold text-gray-900 mb-1">
+                        <h3 className="text-2xl font-semibold text-slate-900 dark:text-slate-50 mb-1">
                             {analytics.minutesUsage.percentage}%
                         </h3>
                     </div>
-                    <div className="pt-4 border-t border-gray-50 text-xs text-gray-500 font-medium whitespace-nowrap overflow-hidden text-ellipsis">
-                        <span className="text-gray-900">{analytics.minutesUsage.used.toLocaleString()}</span> / {analytics.minutesUsage.limit.toLocaleString()} min
+                    <div className="pt-4 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400 font-medium whitespace-nowrap overflow-hidden text-ellipsis">
+                        <span className="text-slate-900 dark:text-slate-100">{analytics.minutesUsage.used.toLocaleString()}</span> / {analytics.minutesUsage.limit.toLocaleString()} min
                     </div>
                 </div>
+            </div>
+
+            <div>
+                <div className="mb-4">
+                    <p className="app-eyebrow">Shortcuts</p>
+                    <h2 className="app-section-title mt-1">Platform operations</h2>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+                    {quickActions.map((action) => {
+                        const Icon = action.icon;
+                        return (
+                            <button
+                                key={action.title}
+                                type="button"
+                                onClick={() => navigate(action.path)}
+                                className="app-card app-card-hover p-5 text-left"
+                            >
+                                <div className="flex items-start justify-between gap-4">
+                                    <div className={`app-icon-tile ${action.tone}`}>
+                                        <Icon size={20} />
+                                    </div>
+                                    <span className="app-eyebrow">{action.label}</span>
+                                </div>
+                                <h3 className="mt-5 text-sm font-semibold text-slate-900">{action.title}</h3>
+                                <p className="mt-1 text-sm text-slate-500 leading-relaxed">{action.description}</p>
+                            </button>
+                        );
+                    })}
+                </div>
+            </div>
+
+            <div>
+                <p className="app-eyebrow">Analytics</p>
+                <h2 className="app-section-title mt-1">Platform performance</h2>
             </div>
 
             {/* Charts Section */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {/* Revenue Trend */}
-                <div className="bg-white rounded-2xl p-6 shadow-xl shadow-gray-200/50 border border-gray-100">
+                <div className="app-card p-6">
                     <div className="flex justify-between items-center mb-6">
-                        <h3 className="text-base font-bold text-gray-900 flex items-center gap-2">
+                        <h3 className="app-section-title flex items-center gap-2">
                             <TrendingUp size={18} className="text-emerald-600" />
                             Revenue Trend (Last 6 Months)
                         </h3>
@@ -217,18 +279,18 @@ const SuperAdminDashboard = () => {
                                             <stop offset="95%" stopColor="#10b981" stopOpacity={0} />
                                         </linearGradient>
                                     </defs>
-                                    <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f3f4f6" />
+                                    <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#e2e8f0" />
                                     <XAxis
                                         dataKey="month"
                                         axisLine={false}
                                         tickLine={false}
-                                        tick={{ fill: '#9ca3af', fontSize: 11 }}
+                                        tick={{ fill: '#94a3b8', fontSize: 11 }}
                                         dy={8}
                                     />
                                     <YAxis
                                         axisLine={false}
                                         tickLine={false}
-                                        tick={{ fill: '#9ca3af', fontSize: 11 }}
+                                        tick={{ fill: '#94a3b8', fontSize: 11 }}
                                         tickFormatter={(value) => `$${value}`}
                                         domain={[0, 'auto']}
                                     />
@@ -276,16 +338,16 @@ const SuperAdminDashboard = () => {
                                 </AreaChart>
                             </ResponsiveContainer>
                         ) : (
-                            <div className="h-full flex items-center justify-center text-gray-400">No data available</div>
+                            <div className="h-full flex items-center justify-center text-slate-400">No data available</div>
                         )}
                     </div>
                 </div>
 
                 {/* Plan Distribution */}
-                <div className="bg-white rounded-2xl p-6 shadow-xl shadow-gray-200/50 border border-gray-100">
-                    <h3 className="text-base font-bold text-gray-900 mb-6 flex items-center gap-2">
-                        <div className="w-4 h-4 rounded-full border-2 border-indigo-600 flex items-center justify-center">
-                            <div className="w-1.5 h-1.5 bg-indigo-600 rounded-full" />
+                <div className="app-card p-6">
+                    <h3 className="app-section-title mb-6 flex items-center gap-2">
+                        <div className="w-4 h-4 rounded-full border-2 border-primary-600 flex items-center justify-center">
+                            <div className="w-1.5 h-1.5 bg-primary-600 rounded-full" />
                         </div>
                         Plan Distribution
                     </h3>
@@ -321,8 +383,8 @@ const SuperAdminDashboard = () => {
                                 </ResponsiveContainer>
                                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                                     <div className="text-center">
-                                        <div className="text-2xl font-bold text-gray-900">{analytics.schools.active}</div>
-                                        <div className="text-[10px] text-gray-500 font-medium uppercase tracking-wide">Schools</div>
+                                        <div className="text-2xl font-bold text-slate-900">{analytics.schools.active}</div>
+                                        <div className="text-xs text-slate-500 font-medium uppercase tracking-wide">Schools</div>
                                     </div>
                                 </div>
                             </div>
@@ -334,13 +396,13 @@ const SuperAdminDashboard = () => {
                                         <div key={index} className="flex flex-col gap-1.5 group cursor-default">
                                             <div className="flex items-center justify-between">
                                                 <div className="flex items-center gap-2">
-                                                    <span className="text-sm font-semibold text-gray-700 capitalize">{entry.name}</span>
+                                                    <span className="text-sm font-semibold text-slate-700 capitalize">{entry.name}</span>
                                                 </div>
-                                                <span className="text-sm font-bold text-gray-900">
+                                                <span className="text-sm font-bold text-slate-900">
                                                     {percentage}%
                                                 </span>
                                             </div>
-                                            <div className="w-full h-1.5 bg-gray-100 rounded-full overflow-hidden">
+                                            <div className="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
                                                 <div
                                                     className="h-full rounded-full transition-all duration-500"
                                                     style={{ width: `${percentage}%`, backgroundColor: entry.color }}
@@ -356,44 +418,44 @@ const SuperAdminDashboard = () => {
             </div>
 
             {/* Expiring Subscriptions Table */}
-            <div className="bg-white rounded-2xl shadow-xl shadow-gray-200/50 border border-gray-100 overflow-hidden">
-                <div className="p-6 border-b border-gray-100">
-                    <h3 className="text-lg font-bold text-gray-900 flex items-center gap-2">
-                        <Calendar size={20} className="text-gray-400" />
+            <div className="app-card overflow-hidden">
+                <div className="p-6 border-b border-slate-100 dark:border-slate-800">
+                    <h3 className="app-section-title flex items-center gap-2">
+                        <Calendar size={20} className="text-slate-400" />
                         Expiring Subscriptions (Next 30 Days)
                     </h3>
                 </div>
 
                 {analytics.expiringSchools.length > 0 ? (
                     <div className="overflow-x-auto">
-                        <table className="w-full">
-                            <thead className="bg-gray-50/50">
+                        <table className="app-table">
+                            <thead>
                                 <tr>
-                                    <th className="text-left py-4 px-6 text-xs font-bold text-gray-500 uppercase tracking-wider">School</th>
-                                    <th className="text-left py-4 px-6 text-xs font-bold text-gray-500 uppercase tracking-wider">Plan</th>
-                                    <th className="text-left py-4 px-6 text-xs font-bold text-gray-500 uppercase tracking-wider">Expiry Date</th>
-                                    <th className="text-left py-4 px-6 text-xs font-bold text-gray-500 uppercase tracking-wider">Days Remaining</th>
-                                    <th className="text-right py-4 px-6 text-xs font-bold text-gray-500 uppercase tracking-wider">Action</th>
+                                    <th>School</th>
+                                    <th>Plan</th>
+                                    <th>Expiry Date</th>
+                                    <th>Days Remaining</th>
+                                    <th className="text-right">Action</th>
                                 </tr>
                             </thead>
-                            <tbody className="divide-y divide-gray-100">
+                            <tbody>
                                 {analytics.expiringSchools.map((school) => (
-                                    <tr key={school.id} className="hover:bg-gray-50/80 transition-colors">
-                                        <td className="py-4 px-6">
-                                            <div className="font-semibold text-gray-900">{school.name}</div>
+                                    <tr key={school.id}>
+                                        <td>
+                                            <div className="font-semibold text-slate-900 dark:text-slate-50">{school.name}</div>
                                         </td>
-                                        <td className="py-4 px-6">
+                                        <td>
                                             <span className={`px-3 py-1 text-xs font-bold uppercase rounded-full 
                                                 ${school.plan_tier === 'basic' ? 'bg-green-100 text-green-700' :
                                                     school.plan_tier === 'pro' ? 'bg-blue-100 text-blue-700' :
-                                                        school.plan_tier === 'enterprise' ? 'bg-purple-100 text-purple-700' : 'bg-gray-100 text-gray-700'}`}>
+                                                        school.plan_tier === 'enterprise' ? 'bg-purple-100 text-purple-700' : 'bg-slate-100 text-slate-700'}`}>
                                                 {school.plan_tier}
                                             </span>
                                         </td>
-                                        <td className="py-4 px-6 text-sm text-gray-600 font-medium">
+                                        <td className="font-medium">
                                             {new Date(school.valid_until).toLocaleDateString()}
                                         </td>
-                                        <td className="py-4 px-6">
+                                        <td>
                                             <span className={`px-3 py-1 text-xs font-bold rounded-lg ${school.days_remaining <= 7 ? 'bg-red-50 text-red-600 border border-red-100' :
                                                 school.days_remaining <= 30 ? 'bg-orange-50 text-orange-600 border border-orange-100' :
                                                     'bg-yellow-50 text-yellow-600 border border-yellow-100'
@@ -401,14 +463,11 @@ const SuperAdminDashboard = () => {
                                                 {school.days_remaining} days
                                             </span>
                                         </td>
-                                        <td className="py-4 px-6">
+                                        <td>
                                             <div className="flex items-center justify-end gap-2">
-                                                <button className="flex items-center gap-1.5 px-3 py-1.5 bg-white border border-gray-200 text-gray-600 rounded-lg text-xs font-semibold hover:bg-gray-50 transition-colors">
-                                                    <Mail size={14} /> Send Reminder
-                                                </button>
                                                 <button
                                                     onClick={() => navigate(`/super-admin/schools/${school.id}`)}
-                                                    className="flex items-center gap-1.5 px-3 py-1.5 bg-indigo-600 text-white rounded-lg text-xs font-semibold hover:bg-indigo-700 transition-colors shadow-sm shadow-indigo-100"
+                                                    className="flex items-center gap-1.5 px-3 py-1.5 bg-primary-600 text-white rounded-lg text-xs font-semibold hover:bg-primary-700 transition-colors shadow-sm shadow-primary-100"
                                                 >
                                                     View Details <ArrowRight size={14} />
                                                 </button>
@@ -421,9 +480,9 @@ const SuperAdminDashboard = () => {
                     </div>
                 ) : (
                     <div className="text-center py-12">
-                        <Calendar size={48} className="mx-auto text-gray-200 mb-4" />
-                        <h4 className="text-gray-900 font-medium">No expiring subscriptions</h4>
-                        <p className="text-gray-500 text-sm mt-1">All schools have more than 30 days remaining.</p>
+                        <Calendar size={48} className="mx-auto text-slate-200 mb-4" />
+                        <h4 className="text-slate-900 font-medium">No expiring subscriptions</h4>
+                        <p className="text-slate-500 text-sm mt-1">All schools have more than 30 days remaining.</p>
                     </div>
                 )}
             </div>

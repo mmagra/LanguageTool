@@ -133,7 +133,7 @@ const RichTextEditor = ({ value, onChange, onSend, isSending, placeholder = "Typ
             title={title}
             className={`p-1.5 rounded-lg transition-all duration-200 ${active
                 ? 'bg-primary-50 text-primary-600 shadow-sm ring-1 ring-primary-100'
-                : 'text-gray-500 hover:bg-white hover:text-primary-600 hover:shadow-sm'
+                : 'text-slate-500 hover:bg-white hover:text-primary-600 hover:shadow-sm'
                 }`}
         >
             <Icon size={16} strokeWidth={active ? 2.5 : 2} />
@@ -141,18 +141,18 @@ const RichTextEditor = ({ value, onChange, onSend, isSending, placeholder = "Typ
     );
 
     const Separator = () => (
-        <div className="w-px h-4 bg-gray-200 mx-1 self-center"></div>
+        <div className="w-px h-4 bg-slate-200 mx-1 self-center"></div>
     );
 
     return (
-        <div className="flex flex-col h-full border border-gray-200 rounded-xl bg-white transition-all shadow-sm overflow-hidden group">
+        <div className="flex flex-col h-full border border-slate-200 rounded-xl bg-white transition-all shadow-sm overflow-hidden group">
 
             {/* Editor Input Area (Top) */}
             <div className="flex-1 relative cursor-text min-h-[80px] bg-white" onClick={() => editorRef.current?.focus()}>
                 <div
                     ref={editorRef}
                     contentEditable
-                    className="w-full h-full p-4 outline-none text-sm leading-6 text-gray-700 font-normal prose prose-sm max-w-none 
+                    className="w-full h-full p-4 outline-none text-sm leading-6 text-slate-700 font-normal prose prose-sm max-w-none 
                     [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:my-2 
                     [&_ol]:list-decimal [&_ol]:pl-5 [&_ol]:my-2
                     [&_p]:my-1 custom-scrollbar"
@@ -171,35 +171,35 @@ const RichTextEditor = ({ value, onChange, onSend, isSending, placeholder = "Typ
                     style={{ whiteSpace: 'pre-wrap', maxHeight: '300px', overflowY: 'auto' }}
                 />
                 {!value && !isListening && (
-                    <div className="absolute top-4 left-4 text-gray-400 pointer-events-none text-sm select-none">
+                    <div className="absolute top-4 left-4 text-slate-400 pointer-events-none text-sm select-none">
                         {placeholder}
                     </div>
                 )}
             </div>
 
             {/* Bottom Toolbar & Actions */}
-            <div className="flex items-center justify-between px-3 py-2 border-t border-gray-50 bg-gray-50/50">
+            <div className="flex items-center justify-between px-3 py-2 border-t border-slate-50 bg-slate-50/50">
 
                 {/* Left: Formatting Tools - Responsive */}
                 <div className="flex items-center gap-1 flex-wrap">
-                    <div className="hidden sm:flex items-center gap-0.5 bg-gray-100/50 p-0.5 rounded-lg border border-gray-100">
+                    <div className="hidden sm:flex items-center gap-0.5 bg-slate-100/50 p-0.5 rounded-lg border border-slate-100">
                         <ToolbarButton onClick={() => execCommand('undo')} icon={RotateCcw} title="Undo" />
                         <ToolbarButton onClick={() => execCommand('redo')} icon={RotateCw} title="Redo" />
                     </div>
                     <Separator />
-                    <div className="flex items-center gap-0.5 bg-gray-100/50 p-0.5 rounded-lg border border-gray-100">
+                    <div className="flex items-center gap-0.5 bg-slate-100/50 p-0.5 rounded-lg border border-slate-100">
                         <ToolbarButton active={activeFormats.includes('bold')} onClick={() => execCommand('bold')} icon={Bold} title="Bold" />
                         <ToolbarButton active={activeFormats.includes('italic')} onClick={() => execCommand('italic')} icon={Italic} title="Italic" />
                         <ToolbarButton active={activeFormats.includes('underline')} onClick={() => execCommand('underline')} icon={Underline} title="Underline" />
                     </div>
                     <Separator />
-                    <div className="hidden md:flex items-center gap-0.5 bg-gray-100/50 p-0.5 rounded-lg border border-gray-100">
+                    <div className="hidden md:flex items-center gap-0.5 bg-slate-100/50 p-0.5 rounded-lg border border-slate-100">
                         <ToolbarButton active={activeFormats.includes('justifyLeft')} onClick={() => execCommand('justifyLeft')} icon={AlignLeft} title="Align Left" />
                         <ToolbarButton active={activeFormats.includes('justifyCenter')} onClick={() => execCommand('justifyCenter')} icon={AlignCenter} title="Align Center" />
                         <ToolbarButton active={activeFormats.includes('justifyRight')} onClick={() => execCommand('justifyRight')} icon={AlignRight} title="Align Right" />
                     </div>
                     <Separator />
-                    <div className="flex items-center gap-0.5 bg-gray-100/50 p-0.5 rounded-lg border border-gray-100">
+                    <div className="flex items-center gap-0.5 bg-slate-100/50 p-0.5 rounded-lg border border-slate-100">
                         <ToolbarButton active={activeFormats.includes('insertUnorderedList')} onClick={() => execCommand('insertUnorderedList')} icon={List} title="Bullet List" />
                         <ToolbarButton active={activeFormats.includes('insertOrderedList')} onClick={() => execCommand('insertOrderedList')} icon={ListOrdered} title="Numbered List" />
                     </div>
@@ -214,7 +214,7 @@ const RichTextEditor = ({ value, onChange, onSend, isSending, placeholder = "Typ
                         onClick={toggleListening}
                         className={`p-2 rounded-full transition-all duration-300 ${isListening
                             ? 'bg-red-100 text-red-600 animate-pulse ring-2 ring-red-200'
-                            : 'hover:bg-gray-200 text-gray-500 hover:text-primary-600'
+                            : 'hover:bg-slate-200 text-slate-500 hover:text-primary-600'
                             }`}
                         title="Voice Input"
                     >
@@ -229,7 +229,7 @@ const RichTextEditor = ({ value, onChange, onSend, isSending, placeholder = "Typ
                         className={`
                             inline-flex items-center justify-center p-2 rounded-xl transition-all duration-300
                             ${!value || isSending
-                                ? 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                                ? 'bg-slate-200 text-slate-400 cursor-not-allowed'
                                 : 'bg-primary-600 text-white hover:bg-primary-700 hover:shadow-lg hover:shadow-primary-600/30 hover:-translate-y-0.5 active:translate-y-0'}
                         `}
                         title="Send Message"

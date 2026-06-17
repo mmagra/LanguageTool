@@ -36,6 +36,12 @@ exports.getTeacherById = async (req, res) => {
             });
         }
 
+        // School isolation: non-super-admins may only access teachers in their own school.
+        const isSuper = req.user.role === 'super admin' || req.user.is_super_admin;
+        if (!isSuper && teacher.school_id !== req.user.school_id) {
+            return res.status(403).json({ success: false, message: 'Access denied' });
+        }
+
         res.json({
             success: true,
             data: teacher
@@ -58,6 +64,21 @@ exports.updateTeacherProfile = async (req, res) => {
         const profileData = req.body;
 
         const User = require('../models/User'); // Import User model
+
+        // Authorization: only the teacher themselves or an admin/super-admin may update this profile.
+        const target = await User.findById(teacherId);
+        if (!target) {
+            return res.status(404).json({ success: false, message: 'Teacher not found' });
+        }
+        const isSelf = parseInt(req.user.id, 10) === parseInt(teacherId, 10);
+        const isAdmin = req.user.role === 'admin' || req.user.role === 'super admin';
+        if (!isSelf && !isAdmin) {
+            return res.status(403).json({ success: false, message: 'Not authorized to update this profile' });
+        }
+        // Multi-tenant isolation for school admins: target must be in the same school.
+        if (req.user.role === 'admin' && req.user.school_id && target.school_id !== req.user.school_id) {
+            return res.status(403).json({ success: false, message: 'Not authorized to update this profile (School Mismatch)' });
+        }
 
         // Check validation for email/username updates if provided
         if (req.body.email || req.body.username) {

@@ -66,7 +66,7 @@ class User {
     const query = `
       SELECT id, email, password_hash, first_name, last_name, username,
              phone, profile_image, about, role, status, is_online,
-             approved_by, approved_at, created_at
+             approved_by, approved_at, created_at, school_id
       FROM users
       WHERE username = $1
     `;

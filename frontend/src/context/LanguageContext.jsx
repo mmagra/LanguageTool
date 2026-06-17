@@ -25,7 +25,7 @@ export const SPEECH_LOCALE_MAP = {};
 export const getSpeechLocale = (langCode) => SPEECH_LOCALE_MAP[langCode] || langCode;
 
 export const LanguageProvider = ({ children }) => {
-    const { user } = useAuth();
+    const { user, loading } = useAuth();
     const { i18n } = useTranslation();
 
     // Fetch dynamic languages
@@ -51,6 +51,17 @@ export const LanguageProvider = ({ children }) => {
         return langCode;
     };
 
+    /**
+     * Decide whether a language can speak (Google Cloud only — no free browser voice):
+     *   'premium' → school has voice enabled AND the language has a Google voice
+     *   'none'    → text only (no audio)
+     */
+    const getVoiceMode = (langCode, voiceEnabled) => {
+        if (!voiceEnabled) return 'none';
+        const found = dynamicLanguages.find(l => l.code === langCode);
+        return found?.tts_premium ? 'premium' : 'none';
+    };
+
     const preferredLanguage = user?.preferred_language || 'English';
     const preferredLangCode = getLanguageCodeDynamic(preferredLanguage);
     const isEnglish = currentLang === 'en';
@@ -63,20 +74,58 @@ export const LanguageProvider = ({ children }) => {
         return () => i18n.off('languageChanged', handleLanguageChange);
     }, [i18n]);
 
+    // Reset initialization when user logs out
     useEffect(() => {
-        // Wait for dynamic languages to be loaded if possible, but don't block too long
-        // If we have user and preferred lang, init
-        if (user && preferredLangCode && !hasInitialized.current) {
+        // Only trigger logout cleanup if auth has finished loading and there is no user
+        if (!loading && !user) {
+            hasInitialized.current = false;
+            // Force reset to English immediately on logout to prevent next user seeing previous language
             if (i18n.language !== 'en') {
                 i18n.changeLanguage('en');
             }
+            // Clear session preference
+            localStorage.removeItem('session_current_lang');
+        }
+    }, [user, loading, i18n]);
+
+    useEffect(() => {
+        // Wait for dynamic languages to be loaded if possible
+        if (languagesLoading) return;
+
+        // If we have user and haven't initialized language for this session yet
+        if (user && !hasInitialized.current) {
+            const savedSessionLang = localStorage.getItem('session_current_lang');
+            let targetLang = 'en';
+
+            if (savedSessionLang) {
+                // If user manually switched language this session (or reload), respect it
+                targetLang = savedSessionLang;
+            } else if (user.role === 'student') {
+                // Default: For students, use their preferred/primary language
+                if (preferredLangCode) {
+                    targetLang = preferredLangCode;
+                }
+            } else {
+                // Default: For others (Teachers/Admins), English
+                targetLang = 'en';
+            }
+
+            // Apply the language change if needed
+            if (i18n.language !== targetLang) {
+                i18n.changeLanguage(targetLang);
+            }
+
+            // Set session preference so it sticks on reload
+            localStorage.setItem('session_current_lang', targetLang);
+
             hasInitialized.current = true;
         }
-    }, [user, preferredLangCode, dynamicLanguages]);
+    }, [user, preferredLangCode, dynamicLanguages, languagesLoading, i18n]);
 
     const toggleLanguage = () => {
         const newLang = isEnglish ? preferredLangCode : 'en';
         i18n.changeLanguage(newLang);
+        localStorage.setItem('session_current_lang', newLang);
     };
 
     const value = {
@@ -89,6 +138,7 @@ export const LanguageProvider = ({ children }) => {
         availableLanguages: dynamicLanguages,
         getLanguageCode: getLanguageCodeDynamic,
         getSpeechLocale: getSpeechLocaleDynamic,
+        getVoiceMode,
 
         // Fallback maps (can be used for dropdowns if needed)
         staticLanguageMap: LANGUAGE_MAP

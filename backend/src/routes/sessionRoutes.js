@@ -2,17 +2,16 @@ const express = require('express');
 const router = express.Router();
 const sessionController = require('../controllers/sessionController');
 const { protect, authorize } = require('../middleware/auth');
+const requireSchoolActive = require('../middleware/requireSchoolActive');
+const requireSchoolValid = require('../middleware/requireSchoolValid');
 
-// @route   POST /api/sessions/start
-// @desc    Start In-Person Session
-router.post('/start', protect, authorize('teacher'), sessionController.startSession);
+router.use(protect);
+router.use(requireSchoolActive);
+router.use(requireSchoolValid);
+router.use(authorize('teacher'));
 
-// @route   POST /api/sessions/end
-// @desc    End In-Person Session
-router.post('/end', protect, authorize('teacher'), sessionController.endSession);
-
-// @route   GET /api/sessions/active
-// @desc    Get Active Session
-router.get('/active', protect, authorize('teacher'), sessionController.getActiveSession);
+router.post('/start', sessionController.startSession);
+router.post('/end', sessionController.endSession);
+router.get('/active', sessionController.getActiveSession);
 
 module.exports = router;

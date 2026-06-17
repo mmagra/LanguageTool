@@ -10,7 +10,7 @@ const Sidebar = ({ isOpen, onClose, collapsed, onCollapseChange }) => {
 
   const getRoleSidebar = () => {
     // Check for Super Admin first
-    if (user?.is_super_admin || user?.role === 'super_admin') {
+    if (user?.is_super_admin || user?.role === 'super admin' || user?.role === 'super_admin') {
       return (
         <SuperAdminSidebar
           collapsed={collapsed}

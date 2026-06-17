@@ -1,75 +1,87 @@
 const axios = require('axios');
 const { getLanguageCode } = require('../utils/languageCodes');
+const config = require('../config/config');
+const { pool } = require('../config/database');
+const { getSchoolFeature } = require('../utils/schoolFeatures');
 
 /**
- * Translate text using Google Cloud Translation API (primary) 
- * or free Google Translate endpoint (fallback)
+ * Resolve a target language (name or code) to its translation code.
+ * DB-first (the admin-managed source of truth), so any language the super admin
+ * adds translates with its stored `code`. Falls back to the hardcoded map only
+ * when the DB has nothing.
  */
+const resolveTargetCode = async (targetLang) => {
+    if (!targetLang) return 'en';
+    try {
+        const r = await pool.query(
+            'SELECT code FROM languages WHERE name ILIKE $1 OR code ILIKE $1 LIMIT 1',
+            [targetLang]
+        );
+        if (r.rows[0]?.code) return r.rows[0].code;
+    } catch (err) {
+        console.warn('resolveTargetCode DB lookup failed, using hardcoded map:', err.message);
+    }
+    return getLanguageCode(targetLang);
+};
+
+// Thrown when a school has used up its translation character allowance.
+class QuotaExceededError extends Error {
+    constructor(message) {
+        super(message);
+        this.name = 'QuotaExceededError';
+        this.code = 'TRANSLATION_QUOTA_EXCEEDED';
+    }
+}
+
 /**
- * Core translation logic (Reusable)
+ * Core translation logic — Google Cloud Translation ONLY (no free fallback).
+ * Meters usage against the school's translation character allowance and hard-blocks
+ * when the limit is reached.
+ *
  * @param {string} text - Text to translate
- * @param {string} targetLang - Target language name (e.g., "Spanish")
+ * @param {string} targetLang - Target language name or code (e.g. "Spanish")
+ * @param {number|null} schoolId - Requester's school (for quota + metering)
  * @returns {Promise<string>} Translated text
+ * @throws {QuotaExceededError} when the school's translation allowance is used up
  */
-const performTranslation = async (text, targetLang) => {
+const performTranslation = async (text, targetLang, schoolId = null) => {
     if (!text || !targetLang) return null;
 
-    // Get language code
-    const targetCode = getLanguageCode(targetLang);
-    console.log(`🔤 Translating to ${targetLang} (${targetCode})`);
+    if (!config.googleApiKey) {
+        throw new Error('Translation is not configured (missing GOOGLE_API_KEY)');
+    }
 
-    let translatedText = '';
-
-    // Try Primary: Google Cloud Translation API
-    if (process.env.GOOGLE_TRANSLATE_API_KEY) {
-        try {
-            console.log('🔑 Using Google Cloud Translation API');
-            const response = await axios.post(
-                `https://translation.googleapis.com/language/translate/v2?key=${process.env.GOOGLE_TRANSLATE_API_KEY}`,
-                {
-                    q: text,
-                    target: targetCode,
-                    source: 'en'
-                }
-            );
-            translatedText = response.data.data.translations[0].translatedText;
-            console.log('✅ Translation successful (Google API)');
-        } catch (apiError) {
-            console.warn('⚠️ Google API failed, falling back to free endpoint:', apiError.message);
+    // Quota check (hard block) — mirror of the in-person minutes pattern
+    if (schoolId) {
+        const q = await pool.query(
+            'SELECT translation_chars_used, translation_chars_limit FROM schools WHERE id = $1',
+            [schoolId]
+        );
+        const row = q.rows[0];
+        if (row && row.translation_chars_limit > 0 && row.translation_chars_used >= row.translation_chars_limit) {
+            throw new QuotaExceededError('Your school has reached its translation character limit.');
         }
     }
 
-    // Fallback: Free Google Translate endpoint
-    if (!translatedText) {
+    // Resolve language code (DB-first so any added language works)
+    const targetCode = await resolveTargetCode(targetLang);
+
+    // Google Cloud Translation (the only path)
+    const response = await axios.post(
+        `https://translation.googleapis.com/language/translate/v2?key=${config.googleApiKey}`,
+        { q: text, target: targetCode }
+    );
+    const translatedText = response.data.data.translations[0].translatedText;
+
+    // Meter usage (count source characters sent)
+    if (schoolId && text.length > 0) {
         try {
-            console.log('🌐 Using free Google Translate endpoint');
-            const url = `https://translate.google.com/translate_a/single?client=gtx&sl=auto&tl=${targetCode}&dt=t&q=${encodeURIComponent(text)}`;
-
-            const response = await axios.get(url, {
-                headers: {
-                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-                },
-                timeout: 10000
-            });
-
-            // Parse response: [[["translated", "original", ...]]]
-            if (response.data && Array.isArray(response.data) && response.data[0]) {
-                const translations = response.data[0];
-                if (Array.isArray(translations) && translations.length > 0) {
-                    translatedText = translations
-                        .filter(item => Array.isArray(item) && item[0])
-                        .map(item => item[0])
-                        .join('');
-                    console.log('✅ Translation successful (Free endpoint)');
-                } else {
-                    throw new Error('No translations found in response');
-                }
-            } else {
-                throw new Error('Invalid response format');
-            }
-        } catch (freeError) {
-            console.error('❌ Free endpoint failed:', freeError.message);
-            throw new Error(`Translation failed: ${freeError.message}`);
+            await pool.query(
+                'UPDATE schools SET translation_chars_used = translation_chars_used + $1 WHERE id = $2',
+                [text.length, schoolId]
+            );
+        } catch (meterErr) {
+            console.error('Failed to record translation usage:', meterErr.message);
         }
     }
 
@@ -90,19 +102,27 @@ const translateText = async (req, res) => {
             });
         }
 
-        const translatedText = await performTranslation(text, targetLang);
-        const targetCode = getLanguageCode(targetLang);
+        const entitled = await getSchoolFeature(req.user?.school_id, 'premium_translation');
+        if (!entitled) {
+            return res.status(403).json({ success: false, message: 'Translation is not enabled for this school' });
+        }
+
+        const translatedText = await performTranslation(text, targetLang, req.user?.school_id);
+        const targetCode = await resolveTargetCode(targetLang);
 
         res.json({
             success: true,
             translatedText,
-            source: process.env.GOOGLE_TRANSLATE_API_KEY ? 'google-api' : 'google-free', // simplified source check
+            source: 'google-cloud',
             targetLanguage: targetLang,
             targetCode
         });
 
     } catch (error) {
-        console.error('Translation error:', error);
+        if (error.code === 'TRANSLATION_QUOTA_EXCEEDED') {
+            return res.status(403).json({ success: false, code: error.code, message: error.message });
+        }
+        console.error('Translation error:', error.message);
         res.status(500).json({
             success: false,
             message: 'Translation failed',
@@ -113,5 +133,6 @@ const translateText = async (req, res) => {
 
 module.exports = {
     translateText,
-    performTranslation
+    performTranslation,
+    QuotaExceededError
 };

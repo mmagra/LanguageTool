@@ -12,6 +12,10 @@ CREATE TABLE IF NOT EXISTS languages (
     code VARCHAR(10) NOT NULL UNIQUE,
     speech_code VARCHAR(10),
     is_active BOOLEAN DEFAULT TRUE,
+    tts_free BOOLEAN DEFAULT FALSE,      -- can speak with the free browser voice
+    tts_premium BOOLEAN DEFAULT FALSE,   -- has a Google Cloud (paid) voice
+    voice_name VARCHAR(100),             -- chosen Google Cloud voice (e.g. es-ES-Wavenet-B); null = Google default
+    voice_gender VARCHAR(10),            -- MALE | FEMALE | NEUTRAL
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
@@ -24,19 +28,38 @@ CREATE TABLE IF NOT EXISTS schools (
     name VARCHAR(255) NOT NULL,
     contact_email VARCHAR(255),
     contact_number VARCHAR(50),  -- Added by 003
+    street_address VARCHAR(255), -- USA mailing address
+    city VARCHAR(100),
+    state VARCHAR(50),
+    zip_code VARCHAR(20),
     logo_url TEXT,
     status VARCHAR(20) DEFAULT 'active' CHECK (status IN ('active', 'suspended', 'trial')),
-    plan_tier VARCHAR(20) DEFAULT 'basic' CHECK (plan_tier IN ('basic', 'pro', 'enterprise')),
+    plan_tier VARCHAR(20) DEFAULT 'basic' CHECK (plan_tier IN ('basic', 'pro', 'enterprise', 'custom')),
     features JSONB DEFAULT '{
         "in_person": true,
         "chat_history": true,
-        "remote_sessions": false
+        "remote_sessions": false,
+        "premium_translation": false,
+        "premium_tts": false
     }'::jsonb,
     max_students INTEGER DEFAULT 100,
     max_teachers INTEGER DEFAULT 10,
     minutes_limit INTEGER DEFAULT 1000, -- Added by 006
     minutes_used INTEGER DEFAULT 0,     -- Added by 006
+    translation_chars_limit INTEGER DEFAULT 500000, -- monthly translation character allowance
+    translation_chars_used INTEGER DEFAULT 0,
+    tts_chars_limit INTEGER DEFAULT 250000,         -- monthly voice (TTS) character allowance
+    tts_chars_used INTEGER DEFAULT 0,
     valid_until TIMESTAMP WITH TIME ZONE,
+    -- Stripe recurring billing
+    stripe_customer_id VARCHAR(255),
+    stripe_subscription_id VARCHAR(255),
+    stripe_price_id VARCHAR(255),
+    subscription_status VARCHAR(20) DEFAULT 'none', -- none | active | past_due | canceled | trialing
+    monthly_price DECIMAL(10, 2),                   -- agreed recurring price charged each cycle
+    next_renewal_at TIMESTAMP WITH TIME ZONE,
+    free_access BOOLEAN DEFAULT false,              -- super-admin comp: full access with no payment
+    current_period_start TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP, -- when the active usage period began
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
@@ -160,6 +183,8 @@ CREATE TABLE IF NOT EXISTS subscription_logs (
     billing_period_start DATE,
     billing_period_end DATE,
     notes TEXT,
+    stripe_invoice_id VARCHAR(255),
+    stripe_subscription_id VARCHAR(255),
     created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 );
@@ -168,6 +193,17 @@ CREATE INDEX IF NOT EXISTS idx_subscription_logs_school ON subscription_logs(sch
 CREATE INDEX IF NOT EXISTS idx_subscription_logs_status ON subscription_logs(status);
 CREATE INDEX IF NOT EXISTS idx_subscription_logs_date ON subscription_logs(payment_date);
 CREATE INDEX IF NOT EXISTS idx_subscription_logs_invoice ON subscription_logs(invoice_number);
+CREATE INDEX IF NOT EXISTS idx_subscription_logs_stripe_invoice ON subscription_logs(stripe_invoice_id);
+
+-- Short payment links: code → Stripe Checkout URL (so we can share a short link)
+CREATE TABLE IF NOT EXISTS payment_links (
+    id SERIAL PRIMARY KEY,
+    code VARCHAR(16) UNIQUE NOT NULL,
+    school_id INTEGER REFERENCES schools(id),
+    target_url TEXT NOT NULL,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+CREATE INDEX IF NOT EXISTS idx_payment_links_code ON payment_links(code);
 
 -- ============================================================
 -- ============================================================
@@ -208,7 +244,62 @@ CREATE INDEX IF NOT EXISTS idx_audit_logs_resource ON audit_logs(resource_type, 
 CREATE INDEX IF NOT EXISTS idx_audit_logs_created_at ON audit_logs(created_at DESC);
 
 -- ============================================================
--- 13. INDEXES
+-- 13. PASSWORD RESET TOKENS TABLE
+-- ============================================================
+CREATE TABLE IF NOT EXISTS password_reset_tokens (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    token VARCHAR(255) UNIQUE NOT NULL,
+    expires_at TIMESTAMP WITH TIME ZONE NOT NULL,
+    used BOOLEAN DEFAULT false,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX IF NOT EXISTS idx_password_reset_tokens_token ON password_reset_tokens(token);
+CREATE INDEX IF NOT EXISTS idx_password_reset_tokens_user ON password_reset_tokens(user_id);
+
+-- ============================================================
+-- 14. NOTIFICATIONS TABLE
+-- ============================================================
+CREATE TABLE IF NOT EXISTS notifications (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
+    type VARCHAR(50) NOT NULL,
+    title VARCHAR(255),
+    body TEXT,
+    read BOOLEAN DEFAULT false,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX IF NOT EXISTS idx_notifications_user_id ON notifications(user_id, read);
+CREATE INDEX IF NOT EXISTS idx_notifications_created ON notifications(created_at DESC);
+
+-- ============================================================
+-- 15. SCHOOL USAGE HISTORY
+-- ============================================================
+-- One row per usage period. Written whenever usage meters are reset
+-- (new paid period, new trial, free-access grant). Lets super-admins
+-- see how much a school consumed in every past period.
+CREATE TABLE IF NOT EXISTS school_usage_history (
+    id SERIAL PRIMARY KEY,
+    school_id INTEGER NOT NULL REFERENCES schools(id) ON DELETE CASCADE,
+    period_type VARCHAR(20) NOT NULL CHECK (period_type IN ('paid', 'trial', 'free', 'manual')),
+    period_start TIMESTAMP WITH TIME ZONE NOT NULL,
+    period_end   TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    minutes_used INTEGER DEFAULT 0,
+    minutes_limit INTEGER DEFAULT 0,
+    translation_chars_used INTEGER DEFAULT 0,
+    translation_chars_limit INTEGER DEFAULT 0,
+    tts_chars_used INTEGER DEFAULT 0,
+    tts_chars_limit INTEGER DEFAULT 0,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX IF NOT EXISTS idx_school_usage_history_school ON school_usage_history(school_id);
+CREATE INDEX IF NOT EXISTS idx_school_usage_history_end   ON school_usage_history(period_end DESC);
+
+-- ============================================================
+-- 16. INDEXES
 -- ============================================================
 CREATE INDEX IF NOT EXISTS idx_users_email ON users(email);
 CREATE INDEX IF NOT EXISTS idx_users_role ON users(role);
@@ -216,9 +307,15 @@ CREATE INDEX IF NOT EXISTS idx_users_status ON users(status);
 CREATE INDEX IF NOT EXISTS idx_users_school_id ON users(school_id);
 CREATE INDEX IF NOT EXISTS idx_conversations_student ON conversations(student_id);
 CREATE INDEX IF NOT EXISTS idx_conversations_teacher ON conversations(teacher_id);
+CREATE INDEX IF NOT EXISTS idx_conversations_last_message ON conversations(last_message_at DESC);
 CREATE INDEX IF NOT EXISTS idx_messages_conversation ON messages(conversation_id);
 CREATE INDEX IF NOT EXISTS idx_messages_sender ON messages(sender_id);
+CREATE INDEX IF NOT EXISTS idx_messages_sent_at ON messages(sent_at DESC);
 CREATE INDEX IF NOT EXISTS idx_student_profiles_grade ON student_profiles(grade_id);
+CREATE INDEX IF NOT EXISTS idx_student_profiles_preferred_language ON student_profiles(preferred_language_id);
+CREATE INDEX IF NOT EXISTS idx_users_approved_by ON users(approved_by);
+CREATE INDEX IF NOT EXISTS idx_school_languages_language ON school_languages(language_id);
+CREATE INDEX IF NOT EXISTS idx_conversations_last_message_sender ON conversations(last_message_sender_id);
 CREATE INDEX IF NOT EXISTS idx_sessions_teacher ON sessions(teacher_id);
 CREATE INDEX IF NOT EXISTS idx_sessions_student ON sessions(student_id);
 CREATE INDEX IF NOT EXISTS idx_sessions_school ON sessions(school_id);
@@ -385,7 +482,7 @@ VALUES (
     '$2b$10$.9s85gZDkktS4LQt2eILLuy3IZd4caCfv7uVhjW9qdocO3D5am.na',
     'Super',
     'Admin',
-    'super_admin',
+    'super admin',
     'super admin',
     'active',
     '000000000',

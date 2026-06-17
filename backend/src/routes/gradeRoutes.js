@@ -1,13 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const gradeController = require('../controllers/gradeController');
+const { protect } = require('../middleware/auth');
 
-// @route   GET /api/grades
-// @desc    Get all grades
-router.get('/', gradeController.getAllGrades);
+// Public grade list for the registration page (must be declared before '/:id')
+router.get('/public', gradeController.getAllGrades);
 
-// @route   GET /api/grades/:id
-// @desc    Get grade by ID
-router.get('/:id', gradeController.getGradeById);
+router.get('/', protect, gradeController.getAllGrades);
+router.get('/:id', protect, gradeController.getGradeById);
 
 module.exports = router;

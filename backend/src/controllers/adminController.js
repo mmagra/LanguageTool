@@ -2,6 +2,8 @@ const User = require('../models/User');
 const bcrypt = require('bcryptjs');
 const db = require('../config/database');
 const vader = require('vader-sentiment');
+const { logAction } = require('./auditController');
+const { createAdminValidation, adminSetPasswordValidation } = require('../middleware/validation');
 
 // @desc    Get dashboard stats
 // @route   GET /api/admin/dashboard-stats
@@ -251,31 +253,35 @@ exports.handleUserApproval = async (req, res) => {
       });
     }
 
+    // Enforce school isolation
+    const targetUser = await User.findById(userId);
+    if (!targetUser || targetUser.school_id !== req.user.school_id) {
+      return res.status(403).json({ success: false, message: 'Access denied' });
+    }
+
     let updatedUser;
 
     if (action === 'approve') {
       updatedUser = await User.approveUser(userId, adminId);
       if (!updatedUser) {
-        return res.status(404).json({
-          success: false,
-          message: 'User not found or already processed'
-        });
+        return res.status(404).json({ success: false, message: 'User not found or already processed' });
       }
     } else {
       updatedUser = await User.rejectUser(userId, adminId);
       if (!updatedUser) {
-        return res.status(404).json({
-          success: false,
-          message: 'User not found or already processed'
-        });
+        return res.status(404).json({ success: false, message: 'User not found or already processed' });
       }
     }
 
-    res.json({
-      success: true,
-      message: `User ${action}d successfully`,
-      data: updatedUser
-    });
+    try {
+      const auditAction = action === 'approve' ? 'APPROVE_USER' : 'DENY_USER';
+      logAction(adminId, req.user.email, auditAction, 'user', userId, {
+        target_user_email: targetUser.email,
+        target_user_role: targetUser.role
+      }, req);
+    } catch (e) { console.error('Audit log error', e); }
+
+    res.json({ success: true, message: `User ${action}d successfully`, data: updatedUser });
 
   } catch (error) {
     console.error('User approval error:', error);
@@ -322,6 +328,12 @@ exports.getUserById = async (req, res) => {
       });
     }
 
+    // School isolation: a school admin may only view users in their own school.
+    const isSuper = req.user.role === 'super admin' || req.user.is_super_admin;
+    if (!isSuper && user.school_id !== req.user.school_id) {
+      return res.status(403).json({ success: false, message: 'Access denied' });
+    }
+
     res.json({
       success: true,
       data: user
@@ -331,6 +343,7 @@ exports.getUserById = async (req, res) => {
     console.error('Get user by ID error:', error);
     res.status(500).json({
       success: false,
+      message: 'Server error while fetching user'
     });
   }
 };
@@ -342,18 +355,19 @@ exports.deleteUser = async (req, res) => {
   try {
     const userId = req.params.id;
 
-    // Check if user exists and get role
     const userToDelete = await User.findById(userId);
     if (!userToDelete) {
-      return res.status(404).json({
-        success: false,
-        message: 'User not found'
-      });
+      return res.status(404).json({ success: false, message: 'User not found' });
     }
 
-    // If user is admin, check if they are the last one
+    // Enforce school isolation — admin can only delete users in their own school
+    if (userToDelete.school_id !== req.user.school_id) {
+      return res.status(403).json({ success: false, message: 'Access denied' });
+    }
+
+    // If user is admin, check if they are the last one IN THIS SCHOOL
     if (userToDelete.role === 'admin') {
-      const admins = await User.getAdmins();
+      const admins = await User.getAdmins(req.user.school_id);
       if (admins.length <= 1) {
         return res.status(400).json({
           success: false,
@@ -364,11 +378,14 @@ exports.deleteUser = async (req, res) => {
 
     await User.delete(userId);
 
-    res.json({
-      success: true,
-      message: 'User deleted successfully',
-      data: {}
-    });
+    try {
+      logAction(req.user.id, req.user.email, 'DELETE_USER', 'user', userId, {
+        deleted_user_email: userToDelete.email,
+        deleted_user_role: userToDelete.role
+      }, req);
+    } catch (e) { console.error('Audit log error', e); }
+
+    res.json({ success: true, message: 'User deleted successfully', data: {} });
 
   } catch (error) {
     console.error('Delete user error:', error);
@@ -414,14 +431,23 @@ exports.updateAdminProfile = async (req, res) => {
     const userId = req.params.id;
     const { first_name, last_name, phone, about, profile_image, email } = req.body;
 
-    // Verify the user is updating their own profile or is a super admin (for now assume own profile)
-    if (req.user.id !== userId) {
-      // Optional logic
+    // Authorization + multi-tenant isolation: only the user themselves or a super admin
+    // may edit an arbitrary profile; a school admin is limited to their own school.
+    const target = await User.findById(userId);
+    if (!target) {
+      return res.status(404).json({ success: false, message: 'User not found' });
+    }
+    const isSelf = parseInt(req.user.id, 10) === parseInt(userId, 10);
+    const isSuperAdmin = req.user.role === 'super admin';
+    if (!isSelf && !isSuperAdmin) {
+      if (req.user.school_id && target.school_id !== req.user.school_id) {
+        return res.status(403).json({ success: false, message: 'Not authorized to update this profile (School Mismatch)' });
+      }
     }
 
     // Check email uniqueness if email is being updated
     if (email) {
-      const currentUser = await User.findById(userId);
+      const currentUser = target;
       if (currentUser.email !== email) {
         const emailExists = await User.emailExists(email);
         if (emailExists) {
@@ -478,11 +504,12 @@ exports.createAdmin = async (req, res) => {
   try {
     const { firstName, lastName, email, phone, username, password } = req.body;
 
-    // Validation
-    if (!email || !password || !firstName || !lastName || !username) {
+    // Validation (shared rules: email format, password strength, phone, names)
+    const { error } = createAdminValidation(req.body);
+    if (error) {
       return res.status(400).json({
         success: false,
-        message: 'Please provide all required fields'
+        message: error.details[0].message
       });
     }
 
@@ -516,11 +543,11 @@ exports.createAdmin = async (req, res) => {
       schoolId: req.user.school_id
     });
 
-    res.status(201).json({
-      success: true,
-      data: user,
-      message: 'Admin created successfully'
-    });
+    try {
+      logAction(req.user.id, req.user.email, 'CREATE_ADMIN', 'user', user.id, { email, username }, req);
+    } catch (e) { console.error('Audit log error', e); }
+
+    res.status(201).json({ success: true, data: user, message: 'Admin created successfully' });
 
   } catch (error) {
     console.error('Create admin error:', error);
@@ -539,11 +566,18 @@ exports.resetPassword = async (req, res) => {
     const { password } = req.body;
     const userId = req.params.id;
 
-    if (!password || password.length < 6) {
+    const { error } = adminSetPasswordValidation({ password });
+    if (error) {
       return res.status(400).json({
         success: false,
-        message: 'Password must be at least 6 characters'
+        message: error.details[0].message
       });
+    }
+
+    // Enforce school isolation
+    const targetUser = await User.findById(userId);
+    if (!targetUser || targetUser.school_id !== req.user.school_id) {
+      return res.status(403).json({ success: false, message: 'Access denied' });
     }
 
     const salt = await bcrypt.genSalt(10);
@@ -552,16 +586,16 @@ exports.resetPassword = async (req, res) => {
     const updatedUser = await User.updatePassword(userId, hashedPassword);
 
     if (!updatedUser) {
-      return res.status(404).json({
-        success: false,
-        message: 'User not found'
-      });
+      return res.status(404).json({ success: false, message: 'User not found' });
     }
 
-    res.json({
-      success: true,
-      message: 'Password updated successfully'
-    });
+    try {
+      logAction(req.user.id, req.user.email, 'RESET_PASSWORD', 'user', userId, {
+        target_user_email: targetUser.email
+      }, req);
+    } catch (e) { console.error('Audit log error', e); }
+
+    res.json({ success: true, message: 'Password updated successfully' });
 
   } catch (error) {
     console.error('Reset password error:', error);

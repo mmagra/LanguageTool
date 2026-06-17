@@ -1,14 +1,11 @@
 /**
- * Service to handle Speech-to-Text, Translation, and Text-to-Speech
- * Uses Web Speech API (free in Chrome/Edge)
+ * Speech-to-Text (free browser Web Speech API), Translation + Text-to-Speech (Google Cloud only).
  */
 
 class TranslationService {
     constructor() {
-        // Check browser support
+        // Speech-to-Text stays on the free browser engine.
         this.recognition = null;
-        this.synthesis = window.speechSynthesis;
-
         if ('webkitSpeechRecognition' in window) {
             this.recognition = new window.webkitSpeechRecognition();
             this.recognition.continuous = true;
@@ -19,7 +16,13 @@ class TranslationService {
 
         this.isListening = false;
         this.transcriptBuffer = '';
+        this.currentAudio = null; // tracks the playing Cloud-TTS <audio> so we can cancel it
     }
+
+    /**
+     * Retained for backward compatibility (no-op now that voice is Cloud-only and mode is passed explicitly).
+     */
+    configure() { /* no-op */ }
 
     /**
      * Start listening for speech
@@ -88,18 +91,25 @@ class TranslationService {
      */
     async translateText(text, targetLang) {
         try {
-            console.log(`🔤 Translating "${text}" to ${targetLang}`);
+            // The /translate endpoint requires authentication — attach the JWT.
+            const token = localStorage.getItem('token');
 
             const response = await fetch(import.meta.env.VITE_API_BASE_URL + '/translate', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    ...(token ? { Authorization: `Bearer ${token}` } : {})
                 },
                 body: JSON.stringify({
                     text,
                     targetLang
                 })
             });
+
+            if (response.status === 403) {
+                const data = await response.json().catch(() => ({}));
+                throw new Error(data.message || 'Translation is not enabled for this school');
+            }
 
             if (!response.ok) {
                 throw new Error(`Translation API error: ${response.statusText}`);
@@ -115,26 +125,58 @@ class TranslationService {
             }
         } catch (error) {
             console.error('Translation error:', error);
-            // Return original text as fallback
-            return text;
+            throw error;
         }
     }
 
     /**
-     * Text-to-Speech
+     * Stop any in-progress Cloud audio playback.
      */
-    speakText(text, langCode = 'en-US') {
-        if (!this.synthesis) return;
+    cancelSpeech() {
+        if (this.currentAudio) {
+            try { this.currentAudio.pause(); } catch (_) { /* ignore */ }
+            this.currentAudio = null;
+        }
+    }
 
-        // Cancel current speech if any
-        this.synthesis.cancel();
+    /**
+     * Text-to-Speech — Google Cloud ONLY (no free browser voice).
+     * @param {string} text
+     * @param {string} langCode - BCP-47 locale (e.g. es-ES)
+     * @param {('premium'|'none')} [mode] - 'premium' → Google Cloud voice; 'none' → silent (text-only language).
+     *   On any failure (quota reached, error) there is NO audio — the message text still shows.
+     */
+    async speakText(text, langCode = 'en-US', mode) {
+        this.cancelSpeech();
+        if (!text) return;
 
-        const utterance = new SpeechSynthesisUtterance(text);
-        utterance.lang = langCode;
-        utterance.rate = 1.0; // Normal speed
-        utterance.pitch = 1.0;
+        const resolved = mode || 'premium';
+        if (resolved !== 'premium') return; // 'none' → text-only, stay silent
 
-        this.synthesis.speak(utterance);
+        try {
+            const token = localStorage.getItem('token');
+            const response = await fetch(import.meta.env.VITE_API_BASE_URL + '/speech/tts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    ...(token ? { Authorization: `Bearer ${token}` } : {})
+                },
+                body: JSON.stringify({ text, languageCode: langCode })
+            });
+
+            if (!response.ok) throw new Error(`TTS HTTP ${response.status}`);
+            const data = await response.json();
+            if (!data.success || !data.audioContent) throw new Error('No audio returned');
+
+            const audio = new Audio(`data:audio/mp3;base64,${data.audioContent}`);
+            this.currentAudio = audio;
+            audio.onended = () => { if (this.currentAudio === audio) this.currentAudio = null; };
+            await audio.play();
+        } catch (error) {
+            // Rethrow so callers can decide whether to show a toast.
+            // Auto-play callers should .catch(() => {}) to stay silent.
+            throw error;
+        }
     }
 }
 

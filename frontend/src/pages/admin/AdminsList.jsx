@@ -3,6 +3,9 @@ import { useNavigate } from 'react-router-dom'; // Ensure useNavigate is importe
 import api from '../../services/api';
 import { useAuth } from '../../context/AuthContext';
 import ProtectedRoute from '../../components/common/ProtectedRoute';
+import LoadingState from '../../components/common/LoadingState';
+import EmptyState from '../../components/common/EmptyState';
+import CustomDropdown from '../../components/common/CustomDropdown';
 import {
     Search,
     MoreVertical,
@@ -29,7 +32,12 @@ const AdminsList = () => {
     const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
-    const [itemsPerPage] = useState(10);
+    const [itemsPerPage, setItemsPerPage] = useState(10);
+
+    const changePage = (page) => {
+        setCurrentPage(page);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
     const [openActionMenu, setOpenActionMenu] = useState(null);
     const [menuPosition, setMenuPosition] = useState({ top: 0, left: 0 });
     const [sortConfig, setSortConfig] = useState({ key: null, direction: 'asc' });
@@ -99,7 +107,7 @@ const AdminsList = () => {
 
     // Helper to render sort icon
     const SortIcon = ({ columnKey }) => {
-        if (sortConfig.key !== columnKey) return <ArrowUpDown size={14} className="text-gray-400 ml-1" />;
+        if (sortConfig.key !== columnKey) return <ArrowUpDown size={14} className="text-slate-400 ml-1" />;
         return sortConfig.direction === 'asc'
             ? <ArrowUp size={14} className="text-primary-600 ml-1" />
             : <ArrowDown size={14} className="text-primary-600 ml-1" />;
@@ -154,7 +162,7 @@ const AdminsList = () => {
             setShowDeleteModal(false);
             setAdminToDelete(null);
         } catch (error) {
-            toast.error(error.response?.data?.message || 'Failed to delete admin');
+            toast.error(error?.message || 'Failed to delete admin');
             console.error(error);
         }
     };
@@ -171,36 +179,48 @@ const AdminsList = () => {
     return (
         <ProtectedRoute roles={['admin']}>
             <div className="space-y-6">
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
-                    <div>
-                        <h1 className="text-3xl font-bold text-gray-800 tracking-tight">Manage Admins</h1>
-                        <p className="text-gray-500 text-sm mt-1">View and manage system administrators.</p>
-                    </div>
-                    <div>
+                <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
+                    {/* Card Header: title + Add button */}
+                    <div className="px-6 py-5 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                        <div>
+                            <h2 className="text-lg font-bold text-slate-800 tracking-tight">Manage Admins</h2>
+                            <p className="text-slate-500 text-sm mt-0.5">View and manage system administrators.</p>
+                        </div>
                         <button
                             onClick={() => setShowAddModal(true)}
-                            className="flex items-center gap-2 px-5 py-2.5 bg-primary-600 text-white rounded-xl hover:bg-primary-700 transition-colors shadow-sm hover:shadow-md active:scale-95 text-sm font-medium"
+                            className="flex items-center gap-2 px-5 py-2.5 bg-primary-600 text-white rounded-xl hover:bg-primary-700 transition-colors shadow-sm hover:shadow-md active:scale-95 text-sm font-medium self-start sm:self-auto"
                         >
                             <Plus size={18} />
                             Add New Admin
                         </button>
                     </div>
-                </div>
 
-                <div className="bg-white rounded-2xl border border-gray-200 shadow-xl shadow-gray-100/50 overflow-hidden">
-                    {/* Header & Search */}
-                    <div className="px-6 py-5 border-b border-gray-200 flex flex-col sm:flex-row sm:items-center justify-end gap-4 bg-white">
+                    {/* Entries & Search */}
+                    <div className="px-6 py-5 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white">
+                        <div className="flex items-center gap-2">
+                            <label htmlFor="admins-per-page" className="text-sm text-slate-500 whitespace-nowrap">Show</label>
+                            <CustomDropdown
+                                className="w-20"
+                                value={itemsPerPage}
+                                onChange={(val) => { setItemsPerPage(Number(val)); setCurrentPage(1); }}
+                                searchable={false}
+                                showClear={false}
+                                matchTextInput
+                                buttonClassName="py-1.5 rounded-lg"
+                                surfaceClassName="bg-white border-slate-200 text-slate-700 focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                                options={[{ value: 10, label: '10' }, { value: 25, label: '25' }, { value: 50, label: '50' }]}
+                            />
+                            <span className="text-sm text-slate-500">entries</span>
+                        </div>
                         <div className="relative w-full sm:w-64">
-                            <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 group-focus-within:text-primary-600 transition-colors" />
+                            <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" aria-hidden="true" />
                             <input
                                 type="text"
                                 placeholder="Search admins..."
+                                aria-label="Search admins"
                                 value={searchTerm}
-                                onChange={(e) => {
-                                    setSearchTerm(e.target.value);
-                                    setCurrentPage(1);
-                                }}
-                                className="pl-10 pr-4 py-2 w-full bg-white/80 border border-gray-200 rounded-xl text-sm text-gray-700 placeholder-gray-500 focus:bg-white focus:border-primary-500 focus:ring-4 focus:ring-primary-500/10 outline-none transition-all duration-200 shadow-sm"
+                                onChange={(e) => { setSearchTerm(e.target.value); setCurrentPage(1); }}
+                                className="pl-10 pr-4 py-2 w-full bg-white/80 border border-slate-200 rounded-xl text-sm text-slate-700 placeholder-slate-500 focus:bg-white focus:border-primary-500 focus:ring-4 focus:ring-primary-500/10 outline-none transition-all duration-200 shadow-sm"
                             />
                         </div>
                     </div>
@@ -208,23 +228,15 @@ const AdminsList = () => {
                     {/* Table */}
                     <div className="overflow-x-auto">
                         {loading ? (
-                            <div className="flex items-center justify-center h-64">
-                                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600"></div>
-                            </div>
+                            <LoadingState label="Loading admins..." />
                         ) : filteredAdmins.length === 0 ? (
-                            <div className="flex flex-col items-center justify-center h-64 text-gray-500">
-                                <div className="p-4 bg-gray-50 rounded-full mb-3">
-                                    <UserPlus size={32} className="text-gray-400" />
-                                </div>
-                                <p className="text-base font-semibold text-gray-900">No admins found</p>
-                                <p className="text-sm text-gray-500 mt-1">Try adjusting your search terms.</p>
-                            </div>
+                            <EmptyState icon={UserPlus} title="No admins found" description="Try adjusting your search terms." />
                         ) : (
-                            <table className="min-w-full divide-y divide-gray-200">
+                            <table className="min-w-full divide-y divide-slate-200">
                                 <thead>
-                                    <tr className="bg-gray-50/50">
+                                    <tr className="bg-slate-50/50">
                                         <th
-                                            className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider cursor-pointer hover:bg-gray-100 transition-colors group select-none"
+                                            className="px-6 py-4 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider cursor-pointer hover:bg-slate-100 transition-colors group select-none"
                                             onClick={() => handleSort('name')}
                                         >
                                             <div className="flex items-center">
@@ -233,7 +245,7 @@ const AdminsList = () => {
                                             </div>
                                         </th>
                                         <th
-                                            className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider cursor-pointer hover:bg-gray-100 transition-colors group select-none"
+                                            className="px-6 py-4 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider cursor-pointer hover:bg-slate-100 transition-colors group select-none"
                                             onClick={() => handleSort('username')}
                                         >
                                             <div className="flex items-center">
@@ -242,7 +254,7 @@ const AdminsList = () => {
                                             </div>
                                         </th>
                                         <th
-                                            className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider cursor-pointer hover:bg-gray-100 transition-colors group select-none"
+                                            className="px-6 py-4 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider cursor-pointer hover:bg-slate-100 transition-colors group select-none"
                                             onClick={() => handleSort('email')}
                                         >
                                             <div className="flex items-center">
@@ -250,50 +262,50 @@ const AdminsList = () => {
                                                 <SortIcon columnKey="email" />
                                             </div>
                                         </th>
-                                        <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Phone</th>
-                                        <th className="px-6 py-4 text-right text-xs font-semibold text-gray-600 uppercase tracking-wider">Actions</th>
+                                        <th className="px-6 py-4 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider">Phone</th>
+                                        <th className="px-6 py-4 text-right text-xs font-semibold text-slate-600 uppercase tracking-wider">Actions</th>
                                     </tr>
                                 </thead>
-                                <tbody className="bg-white divide-y divide-gray-100">
+                                <tbody className="bg-white divide-y divide-slate-100">
                                     {currentAdmins.map((admin, index) => (
-                                        <tr key={admin.id} className="hover:bg-gray-100 transition-colors duration-200 group">
+                                        <tr key={admin.id} className="hover:bg-slate-100 transition-colors duration-200 group">
                                             <td className="px-6 py-4 whitespace-nowrap">
                                                 <div className="flex items-center">
                                                     {admin.profile_image ? (
                                                         <img
                                                             src={admin.profile_image}
                                                             alt={`${admin.first_name} ${admin.last_name}`}
-                                                            className="h-12 w-12 rounded-full object-cover shadow-sm border border-gray-100 group-hover:border-primary-200 transition-all group-hover:scale-105"
+                                                            className="h-12 w-12 rounded-full object-cover shadow-sm border border-slate-100 group-hover:border-primary-200 transition-all group-hover:scale-105"
                                                         />
                                                     ) : (
-                                                        <div className="h-12 w-12 rounded-full bg-white text-gray-500 border border-gray-100 group-hover:border-primary-200 group-hover:bg-white flex items-center justify-center text-sm font-bold shadow-sm transition-all group-hover:scale-105">
+                                                        <div className="h-12 w-12 rounded-full bg-white text-slate-500 border border-slate-100 group-hover:border-primary-200 group-hover:bg-white flex items-center justify-center text-sm font-bold shadow-sm transition-all group-hover:scale-105">
                                                             {admin.first_name?.[0]}{admin.last_name?.[0]}
                                                         </div>
                                                     )}
                                                     <div className="ml-3">
-                                                        <div className="text-sm font-medium text-gray-900 group-hover:text-primary-600 transition-colors">
+                                                        <div className="text-sm font-medium text-slate-900 group-hover:text-primary-600 transition-colors">
                                                             {admin.first_name} {admin.last_name}
                                                         </div>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td className="px-6 py-4 whitespace-nowrap">
-                                                <span className="text-xs font-medium text-gray-600 bg-gray-100 px-2.5 py-1 rounded-md border border-gray-200">
+                                                <span className="text-xs font-medium text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md border border-slate-200">
                                                     {admin.username || '-'}
                                                 </span>
                                             </td>
                                             <td className="px-6 py-4 whitespace-nowrap">
-                                                <div className="text-sm text-gray-600">{admin.email}</div>
+                                                <div className="text-sm text-slate-600">{admin.email}</div>
                                             </td>
                                             <td className="px-6 py-4 whitespace-nowrap">
-                                                <div className="text-sm text-gray-600">{admin.phone || '-'}</div>
+                                                <div className="text-sm text-slate-600">{admin.phone || '-'}</div>
                                             </td>
                                             <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium overflow-visible">
                                                 <button
                                                     onClick={(e) => toggleActionMenu(admin.id, e)}
                                                     className={`p-2 rounded-lg transition-all duration-200 ${openActionMenu === admin.id
                                                         ? 'bg-primary-50 text-primary-600'
-                                                        : 'text-gray-400 hover:text-primary-600 hover:bg-gray-50'}`}
+                                                        : 'text-slate-400 hover:text-primary-600 hover:bg-slate-50'}`}
                                                 >
                                                     <MoreVertical size={16} />
                                                 </button>
@@ -307,36 +319,36 @@ const AdminsList = () => {
 
                     {/* Pagination */}
                     {filteredAdmins.length > 0 && (
-                        <div className="px-6 py-4 border-t border-gray-100 flex items-center justify-between bg-white">
+                        <div className="px-6 py-4 border-t border-slate-100 flex items-center justify-between bg-white">
                             <div className="flex-1 flex justify-between sm:hidden">
                                 <button
-                                    onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                                    onClick={() => changePage(Math.max(currentPage - 1, 1))}
                                     disabled={currentPage === 1}
-                                    className="relative inline-flex items-center px-4 py-2 border border-gray-200 text-sm font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                                    className="relative inline-flex items-center px-4 py-2 border border-slate-200 text-sm font-medium rounded-lg text-slate-700 bg-white hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                                 >
                                     Previous
                                 </button>
                                 <button
-                                    onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                                    onClick={() => changePage(Math.min(currentPage + 1, totalPages))}
                                     disabled={currentPage === totalPages}
-                                    className="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-200 text-sm font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                                    className="ml-3 relative inline-flex items-center px-4 py-2 border border-slate-200 text-sm font-medium rounded-lg text-slate-700 bg-white hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                                 >
                                     Next
                                 </button>
                             </div>
                             <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
                                 <div>
-                                    <p className="text-sm text-gray-500">
-                                        Showing <span className="font-semibold text-gray-900">{indexOfFirstItem + 1}</span> to <span className="font-semibold text-gray-900">{Math.min(indexOfLastItem, filteredAdmins.length)}</span> of{' '}
-                                        <span className="font-semibold text-gray-900">{filteredAdmins.length}</span> entries
+                                    <p className="text-sm text-slate-500">
+                                        Showing <span className="font-semibold text-slate-900">{indexOfFirstItem + 1}</span> to <span className="font-semibold text-slate-900">{Math.min(indexOfLastItem, filteredAdmins.length)}</span> of{' '}
+                                        <span className="font-semibold text-slate-900">{filteredAdmins.length}</span> entries
                                     </p>
                                 </div>
                                 <div>
                                     <nav className="relative z-0 inline-flex rounded-lg shadow-sm space-x-2" aria-label="Pagination">
                                         <button
-                                            onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                                            onClick={() => changePage(Math.max(currentPage - 1, 1))}
                                             disabled={currentPage === 1}
-                                            className="p-2 rounded-lg border border-gray-200 bg-white text-gray-500 hover:bg-gray-50 hover:text-gray-900 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                                            className="p-2 rounded-lg border border-slate-200 bg-white text-slate-500 hover:bg-slate-50 hover:text-slate-900 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
                                         >
                                             <span className="sr-only">Previous</span>
                                             <ChevronLeft size={16} />
@@ -346,10 +358,10 @@ const AdminsList = () => {
                                         {[...Array(totalPages || 1)].map((_, i) => (
                                             <button
                                                 key={i}
-                                                onClick={() => setCurrentPage(i + 1)}
+                                                onClick={() => changePage(i + 1)}
                                                 className={`w-8 h-8 flex items-center justify-center rounded-lg text-sm font-medium transition-all duration-200 ${currentPage === i + 1
                                                     ? 'bg-primary-600 text-white shadow-md shadow-primary-600/20'
-                                                    : 'bg-white border border-gray-200 text-gray-600 hover:bg-gray-50 hover:border-gray-300'
+                                                    : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 hover:border-slate-300'
                                                     }`}
                                             >
                                                 {i + 1}
@@ -357,9 +369,9 @@ const AdminsList = () => {
                                         ))}
 
                                         <button
-                                            onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                                            onClick={() => changePage(Math.min(currentPage + 1, totalPages))}
                                             disabled={currentPage === totalPages || totalPages <= 1}
-                                            className="p-2 rounded-lg border border-gray-200 bg-white text-gray-500 hover:bg-gray-50 hover:text-gray-900 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                                            className="p-2 rounded-lg border border-slate-200 bg-white text-slate-500 hover:bg-slate-50 hover:text-slate-900 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
                                         >
                                             <span className="sr-only">Next</span>
                                             <ChevronRight size={16} />
@@ -375,7 +387,7 @@ const AdminsList = () => {
             {/* Fixed Position Action Menu */}
             {openActionMenu && (
                 <div
-                    className="fixed z-50 w-48 bg-white rounded-xl shadow-xl border border-gray-100 py-2 animate-in fade-in zoom-in-95 duration-100"
+                    className="fixed z-50 w-48 bg-white rounded-xl shadow-xl border border-slate-100 py-2 animate-in fade-in zoom-in-95 duration-100"
                     style={{
                         top: `${menuPosition.top}px`,
                         left: `${menuPosition.left}px`,
@@ -383,11 +395,11 @@ const AdminsList = () => {
                     }}
                     onClick={(e) => e.stopPropagation()}
                 >
-                    <div className="block px-4 py-2 text-xs text-gray-400 font-semibold uppercase tracking-wider">
+                    <div className="block px-4 py-2 text-xs text-slate-400 font-semibold uppercase tracking-wider">
                         Admin Options
                     </div>
                     <button
-                        className="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 flex items-center gap-3 transition-colors"
+                        className="w-full text-left px-4 py-2 text-sm text-slate-700 hover:bg-slate-50 flex items-center gap-3 transition-colors"
                         onClick={() => { handleResetPassword(admins.find(a => a.id === openActionMenu)); setOpenActionMenu(null); }}
                     >
                         <ArrowUpDown size={14} className="text-amber-500" />
@@ -408,22 +420,22 @@ const AdminsList = () => {
             {showDeleteModal && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-in fade-in duration-200">
                     <div
-                        className="bg-white rounded-2xl shadow-xl w-full max-w-md overflow-hidden animate-in zoom-in-95 duration-200"
+                        className="bg-white rounded-xl shadow-xl w-full max-w-md overflow-hidden animate-in zoom-in-95 duration-200"
                         onClick={e => e.stopPropagation()}
                     >
                         <div className="p-6">
                             <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full mb-4">
                                 <Trash2 size={24} className="text-red-600" />
                             </div>
-                            <h3 className="text-xl font-bold text-center text-gray-900 mb-2">Delete Admin User</h3>
-                            <p className="text-gray-500 text-center text-sm">
+                            <h3 className="text-xl font-bold text-center text-slate-900 mb-2">Delete Admin User</h3>
+                            <p className="text-slate-500 text-center text-sm">
                                 Are you sure you want to delete this administrator? This action cannot be undone.
                             </p>
                         </div>
-                        <div className="flex border-t border-gray-100 bg-gray-50/50 p-4 gap-3">
+                        <div className="flex border-t border-slate-100 bg-slate-50/50 p-4 gap-3">
                             <button
                                 onClick={() => setShowDeleteModal(false)}
-                                className="flex-1 px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-xl hover:bg-gray-50 focus:ring-4 focus:ring-gray-200 transition-all"
+                                className="flex-1 px-4 py-2 text-sm font-medium text-slate-700 bg-white border border-slate-300 rounded-xl hover:bg-slate-50 focus:ring-4 focus:ring-slate-200 transition-all"
                             >
                                 Cancel
                             </button>

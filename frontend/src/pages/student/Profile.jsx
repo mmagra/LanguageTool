@@ -3,10 +3,13 @@ import { useTranslation } from 'react-i18next';
 import { useAuth } from '../../context/AuthContext';
 import {
     User, Mail, Phone, Shield, Edit2, Save, X, GraduationCap,
-    Globe, Users, UserCheck, AlertCircle, Camera, Check, Trash2
+    Globe, Users, UserCheck, Camera, Check, Trash2
 } from 'lucide-react';
+import ErrorState from '../../components/common/ErrorState';
+import { formatPhone, isValidPhone, PHONE_MESSAGE } from '../../utils/validation';
 import CustomDropdown from '../../components/common/CustomDropdown';
 import useSchoolLanguages from '../../hooks/useSchoolLanguages';
+import api from '../../services/api';
 
 
 
@@ -50,10 +53,9 @@ const Profile = () => {
 
     const fetchGrades = async () => {
         try {
-            const response = await fetch('/api/grades');
-            const data = await response.json();
+            const response = await api.get('/grades');
+            const data = response; // api.js returns data directly
             if (data.success) {
-                console.log('Fetched grades:', data.data);
                 // Transform grades for CustomDropdown
                 setGrades(data.data.map(g => ({ value: String(g.id), label: g.name })));
             }
@@ -65,21 +67,12 @@ const Profile = () => {
     const fetchStudentData = async () => {
         try {
             setError(null);
-            console.log('Fetching student data for user ID:', user.id);
-            console.log('Current User Context:', user);
 
-            const response = await fetch(`/api/students/${user.id}`, {
-                headers: {
-                    'Authorization': `Bearer ${localStorage.getItem('token')}`
-                }
-            });
+            const response = await api.get(`/students/${user.id}`);
+            const data = response; // api.js returns data directly
 
-            console.log('Response status:', response.status);
 
-            const data = await response.json();
-            console.log('API Response:', data);
-
-            if (response.ok && data.success) {
+            if (data && data.success) {
                 const student = data.data || {};
 
                 // Robust mapping handling both snake_case and camelCase and user fallback
@@ -91,7 +84,6 @@ const Profile = () => {
                 // Ensure grade_id is string for Select mapping
                 const gradeId = student.grade_id ? String(student.grade_id) : '';
 
-                console.log('Mapped Data:', { firstName, lastName, gradeId });
 
                 setStudentData(student);
                 setFormData({
@@ -131,9 +123,10 @@ const Profile = () => {
     };
 
     const handleChange = (e) => {
+        const { name, value } = e.target;
         setFormData({
             ...formData,
-            [e.target.name]: e.target.value
+            [name]: name === 'phone' ? formatPhone(value) : value
         });
     };
 
@@ -207,23 +200,18 @@ const Profile = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (formData.phone && !isValidPhone(formData.phone)) {
+            setMessage({ type: 'error', text: PHONE_MESSAGE });
+            return;
+        }
         setLoading(true);
         setMessage(null);
 
         try {
-            const response = await fetch(`/api/students/${user.id}/profile`, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${localStorage.getItem('token')}`
-                },
-                body: JSON.stringify({
-                    ...formData,
-                    profile_image: profileImage || '' // Send empty string if null
-                })
+            const data = await api.put(`/students/${user.id}/profile`, {
+                ...formData,
+                profile_image: profileImage || '' // Send empty string if null
             });
-
-            const data = await response.json();
 
             if (data.success) {
                 setMessage({ type: 'success', text: t('profile:successUpdate') });
@@ -260,36 +248,21 @@ const Profile = () => {
 
     // Loading skeleton
     if (!studentData) {
+        if (error) return <ErrorState title={t('profile:errorLoading')} message={error} onRetry={fetchStudentData} />;
         return (
             <div className="h-full animate-fade-in p-6">
-                {error && (
-                    <div className="mb-6 bg-red-50 border border-red-200 rounded-xl p-4 flex items-start gap-3">
-                        <AlertCircle className="text-red-600 shrink-0 mt-0.5" size={20} />
-                        <div>
-                            <p className="text-red-800 font-semibold">{t('profile:errorLoading')}</p>
-                            <p className="text-red-700 text-sm mt-1">{error}</p>
-                            <button
-                                onClick={fetchStudentData}
-                                className="mt-3 px-4 py-2 bg-red-600 text-white rounded-lg hover:bg-red-700 transition-colors text-sm font-semibold"
-                            >
-                                {t('common:tryAgain')}
-                            </button>
-                        </div>
-                    </div>
-                )}
-
-                <div className="bg-white rounded-2xl shadow-xl shadow-gray-200/50 border border-gray-100 p-8">
+                <div className="bg-white rounded-xl shadow-sm border border-slate-100 p-8">
                     <div className="animate-pulse space-y-6">
                         <div className="flex items-center gap-6">
-                            <div className="w-32 h-32 rounded-full bg-gray-200"></div>
+                            <div className="w-32 h-32 rounded-full bg-slate-200"></div>
                             <div className="flex-1 space-y-3">
-                                <div className="h-8 bg-gray-200 rounded w-48"></div>
-                                <div className="h-4 bg-gray-200 rounded w-64"></div>
+                                <div className="h-8 bg-slate-200 rounded w-48"></div>
+                                <div className="h-4 bg-slate-200 rounded w-64"></div>
                             </div>
                         </div>
                         <div className="grid grid-cols-2 gap-4">
                             {[1, 2, 3, 4, 5, 6, 7, 8].map(i => (
-                                <div key={i} className="h-16 bg-gray-200 rounded-xl"></div>
+                                <div key={i} className="h-16 bg-slate-200 rounded-xl"></div>
                             ))}
                         </div>
                     </div>
@@ -316,21 +289,21 @@ const Profile = () => {
                 )}
 
                 {/* Profile Card */}
-                <div className="bg-white rounded-2xl shadow-xl shadow-gray-200/50 border border-gray-100 overflow-hidden">
+                <div className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
                     {/* Header with Avatar */}
                     {/* Header with Avatar */}
-                    <div className="bg-[#f0f4fe] p-6 md:p-8 relative">
+                    <div className="bg-slate-50 p-6 md:p-8 relative">
                         <div className="flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left">
                             {/* Profile Picture */}
                             <div className="relative group shrink-0">
-                                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#2ea3f2] to-[#f2a93b] p-[3px] shadow-lg">
+                                <div className="w-24 h-24 rounded-full bg-primary-600 p-[3px] shadow-lg">
                                     <div className="w-full h-full rounded-full bg-white flex items-center justify-center relative overflow-hidden">
                                         {profileImage && (profileImage.startsWith('data:') || profileImage.startsWith('http')) ? (
                                             <img src={profileImage} alt="Profile" className="w-full h-full object-cover" />
                                         ) : (
                                             <>
-                                                <div className="absolute inset-0 bg-[#f0f4fe] opacity-50"></div>
-                                                <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#2ea3f2] to-[#f2a93b] relative z-10">
+                                                <div className="absolute inset-0 bg-slate-50 opacity-50"></div>
+                                                <span className="text-4xl font-bold text-primary-700 relative z-10">
                                                     {(formData.first_name?.[0] || 'S')}{(formData.last_name?.[0] || 'T')}
                                                 </span>
                                             </>
@@ -342,9 +315,9 @@ const Profile = () => {
                                         <button
                                             type="button"
                                             onClick={() => fileInputRef.current?.click()}
-                                            className="absolute bottom-0 right-0 p-1.5 bg-white rounded-full shadow-lg hover:bg-gray-50 transition-colors border-2 border-indigo-600"
+                                            className="absolute bottom-0 right-0 p-1.5 bg-white rounded-full shadow-lg hover:bg-slate-50 transition-colors border-2 border-primary-600"
                                         >
-                                            <Camera size={14} className="text-indigo-600" />
+                                            <Camera size={14} className="text-primary-600" />
                                         </button>
                                         {profileImage && (profileImage.startsWith('data:') || profileImage.startsWith('http')) && (
                                             <button
@@ -368,17 +341,17 @@ const Profile = () => {
 
                             {/* Name and Role */}
                             <div className="flex-1 min-w-0">
-                                <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1 break-words">
+                                <h1 className="text-2xl md:text-2xl font-semibold text-slate-900 mb-1 break-words">
                                     {formData.first_name || 'Student'} {formData.last_name || 'Name'}
                                 </h1>
-                                <p className="text-gray-600 font-medium mb-2 break-all">{studentData.email}</p>
+                                <p className="text-slate-600 font-medium mb-2 break-all">{studentData.email}</p>
                                 <div className="flex items-center justify-center md:justify-start gap-3 flex-wrap">
-                                    <span className="text-xs font-semibold tracking-wide text-gray-900 bg-white px-3 py-1 rounded-full border border-gray-200 shadow-sm">
+                                    <span className="text-xs font-semibold tracking-wide text-slate-900 bg-white px-3 py-1 rounded-full border border-slate-200 shadow-sm">
                                         {t('profile:studentID')}: {studentData.username || t('common:notProvided')}
                                     </span>
-                                    <div className="flex items-center gap-2 px-3 py-1 bg-white rounded-full border border-gray-200 shadow-sm">
-                                        <Shield size={14} className="text-[#f2a93b]" />
-                                        <span className="text-gray-900 font-bold text-xs">{t('profile:role')}</span>
+                                    <div className="flex items-center gap-2 px-3 py-1 bg-white rounded-full border border-slate-200 shadow-sm">
+                                        <Shield size={14} className="text-brand-amber" />
+                                        <span className="text-slate-900 font-bold text-xs">{t('profile:role')}</span>
                                     </div>
                                 </div>
                             </div>
@@ -388,7 +361,7 @@ const Profile = () => {
                                 {!isEditing ? (
                                     <button
                                         onClick={() => setIsEditing(true)}
-                                        className="flex items-center gap-2 px-4 py-2 bg-white text-indigo-600 font-bold rounded-xl text-sm transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                                        className="flex items-center gap-2 px-4 py-2 bg-white text-primary-600 font-bold rounded-xl text-sm transition-all duration-300 shadow-lg hover:shadow-md hover:-translate-y-0.5"
                                     >
                                         <Edit2 size={16} />
                                         {t('profile:editProfile')}
@@ -398,7 +371,7 @@ const Profile = () => {
                                         <button
                                             type="button"
                                             onClick={handleCancel}
-                                            className="flex items-center gap-2 px-4 py-2 bg-white text-gray-700 font-bold rounded-xl text-sm transition-all hover:bg-gray-50 border border-gray-200 shadow-sm"
+                                            className="flex items-center gap-2 px-4 py-2 bg-white text-slate-700 font-bold rounded-xl text-sm transition-all hover:bg-slate-50 border border-slate-200 shadow-sm"
                                         >
                                             <X size={16} />
                                             {t('common:cancel')}
@@ -406,7 +379,7 @@ const Profile = () => {
                                         <button
                                             onClick={handleSubmit}
                                             disabled={loading}
-                                            className={`flex items-center gap-2 px-4 py-2 bg-white text-indigo-600 font-bold rounded-xl text-sm transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}
+                                            className={`flex items-center gap-2 px-4 py-2 bg-white text-primary-600 font-bold rounded-xl text-sm transition-all duration-300 shadow-lg hover:shadow-md hover:-translate-y-0.5 ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}
                                         >
                                             <Save size={16} />
                                             {loading ? t('profile:saving') : t('profile:saveChanges')}
@@ -422,8 +395,8 @@ const Profile = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {/* First Name */}
                             <div>
-                                <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
-                                    <User size={16} className="text-indigo-600" />
+                                <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
+                                    <User size={16} className="text-primary-600" />
                                     {t('profile:firstName')}
                                 </label>
                                 <input
@@ -434,16 +407,16 @@ const Profile = () => {
                                     onChange={handleChange}
                                     disabled={!isEditing}
                                     className={`w-full px-4 py-3 border rounded-xl transition-all outline-none ${isEditing
-                                        ? 'border-gray-300 bg-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500'
-                                        : 'border-gray-200 bg-gray-50 text-gray-700 cursor-not-allowed placeholder-gray-400'
+                                        ? 'border-slate-300 bg-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500'
+                                        : 'border-slate-200 bg-slate-50 text-slate-700 cursor-not-allowed placeholder-slate-400'
                                         }`}
                                 />
                             </div>
 
                             {/* Last Name */}
                             <div>
-                                <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
-                                    <User size={16} className="text-indigo-600" />
+                                <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
+                                    <User size={16} className="text-primary-600" />
                                     {t('profile:lastName')}
                                 </label>
                                 <input
@@ -454,49 +427,51 @@ const Profile = () => {
                                     onChange={handleChange}
                                     disabled={!isEditing}
                                     className={`w-full px-4 py-3 border rounded-xl transition-all outline-none ${isEditing
-                                        ? 'border-gray-300 bg-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500'
-                                        : 'border-gray-200 bg-gray-50 text-gray-700 cursor-not-allowed placeholder-gray-400'
+                                        ? 'border-slate-300 bg-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500'
+                                        : 'border-slate-200 bg-slate-50 text-slate-700 cursor-not-allowed placeholder-slate-400'
                                         }`}
                                 />
                             </div>
 
                             {/* Email (Read-only) */}
                             <div>
-                                <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
-                                    <Mail size={16} className="text-indigo-600" />
+                                <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
+                                    <Mail size={16} className="text-primary-600" />
                                     {t('profile:email')}
                                 </label>
                                 <input
                                     type="email"
                                     value={studentData.email || ''}
                                     disabled
-                                    className="w-full px-4 py-3 border border-gray-200 bg-gray-50 text-gray-700 rounded-xl cursor-not-allowed"
+                                    className="w-full px-4 py-3 border border-slate-200 bg-slate-50 text-slate-700 rounded-xl cursor-not-allowed"
                                 />
                             </div>
 
                             {/* Phone */}
                             <div>
-                                <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
-                                    <Phone size={16} className="text-indigo-600" />
+                                <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
+                                    <Phone size={16} className="text-primary-600" />
                                     {t('profile:phone')}
                                 </label>
                                 <input
                                     type="tel"
                                     name="phone"
                                     value={formData.phone || ''}
-                                    placeholder={!isEditing && !formData.phone ? t('common:notProvided') : ""}
+                                    placeholder={!isEditing && !formData.phone ? t('common:notProvided') : "(000) 000 0000"}
                                     onChange={handleChange}
                                     disabled={!isEditing}
+                                    inputMode="numeric"
+                                    maxLength={14}
                                     className={`w-full px-4 py-3 border rounded-xl transition-all outline-none ${isEditing
-                                        ? 'border-gray-300 bg-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500'
-                                        : 'border-gray-200 bg-gray-50 text-gray-700 cursor-not-allowed placeholder-gray-400'
+                                        ? 'border-slate-300 bg-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500'
+                                        : 'border-slate-200 bg-slate-50 text-slate-700 cursor-not-allowed placeholder-slate-400'
                                         }`}
                                 />
                             </div>
 
                             {/* Grade */}
                             <div>
-                                <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
+                                <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
                                     <GraduationCap size={16} className="text-purple-600" />
                                     {t('profile:grade')}
                                 </label>
@@ -514,7 +489,7 @@ const Profile = () => {
 
                             {/* Primary Language */}
                             <div>
-                                <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
+                                <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
                                     <Globe size={16} className="text-purple-600" />
                                     {t('profile:primaryLanguage')}
                                 </label>
@@ -532,7 +507,7 @@ const Profile = () => {
 
                             {/* Guardian Name */}
                             <div>
-                                <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
+                                <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
                                     <UserCheck size={16} className="text-blue-600" />
                                     {t('profile:guardianName')}
                                 </label>
@@ -544,15 +519,15 @@ const Profile = () => {
                                     onChange={handleChange}
                                     disabled={!isEditing}
                                     className={`w-full px-4 py-3 border rounded-xl transition-all outline-none ${isEditing
-                                        ? 'border-gray-300 bg-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500'
-                                        : 'border-gray-200 bg-gray-50 text-gray-700 cursor-not-allowed placeholder-gray-400'
+                                        ? 'border-slate-300 bg-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500'
+                                        : 'border-slate-200 bg-slate-50 text-slate-700 cursor-not-allowed placeholder-slate-400'
                                         }`}
                                 />
                             </div>
 
                             {/* Guardian Relation */}
                             <div>
-                                <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
+                                <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
                                     <Users size={16} className="text-blue-600" />
                                     {t('profile:guardianRelation')}
                                 </label>

@@ -15,6 +15,8 @@ const superAdminUserRoutes = require('./superAdminUserRoutes');
 const brandingRoutes = require('./brandingRoutes');
 const analyticsRoutes = require('./analyticsRoutes');
 const alertsRoutes = require('./alertsRoutes');
+const auditRoutes = require('./auditRoutes');
+const notificationRoutes = require('./notificationRoutes');
 
 // Route groups
 router.use('/auth', authRoutes);
@@ -23,8 +25,8 @@ router.use('/grades', gradeRoutes);
 router.use('/teachers', teacherRoutes);
 router.use('/students', studentRoutes);
 router.use('/messages', messageRoutes);
-router.use('/messages', messageRoutes);
 router.use('/translate', translationRoutes);
+router.use('/speech', require('./speechRoutes'));
 router.use('/sessions', require('./sessionRoutes'));
 
 // Super Admin / System Routes (Self-contained paths starting with / or /system)
@@ -35,6 +37,8 @@ router.use(superAdminUserRoutes);
 router.use(brandingRoutes);
 router.use(analyticsRoutes);
 router.use(alertsRoutes);
+router.use(auditRoutes);
+router.use('/notifications', notificationRoutes);
 
 // Health check route
 router.get('/health', (req, res) => {

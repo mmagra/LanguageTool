@@ -1,12 +1,8 @@
 const { pool } = require('../config/database');
+const { ROLES } = require('../utils/constants');
 
-/**
- * Middleware to check if the requested language (in body) is allowed for the user's school.
- * Expects `preferred_language` or `language_code` in req.body.
- */
 const checkLanguageAccess = async (req, res, next) => {
-    // 1. Skip for Super Admins
-    if (req.user.is_super_admin) {
+    if (req.user.is_super_admin || req.user.role === ROLES.SUPER_ADMIN) {
         return next();
     }
 
@@ -59,8 +55,6 @@ const checkLanguageAccess = async (req, res, next) => {
 
         // normalize the body to use the correct code if needed?
         // req.body.preferred_language = languageData.code; // Optional side effect to normalize input
-
-        next();
 
         next();
 

@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Toaster } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { useSocket } from '../../context/SocketContext';
 import { PhoneIncoming, Phone, X, Play } from 'lucide-react';
 import Header from './Header';
 import Sidebar from './Sidebar';
-import Footer from './Footer';
 import TeacherSidebar from './TeacherSidebar';
 
 const DashboardLayout = ({ children }) => {
@@ -26,22 +24,22 @@ const DashboardLayout = ({ children }) => {
     if (!socket || !user) return;
 
     const handleInvite = (data) => {
-      console.log("📲 Global Incoming Invite:", data);
       setIncomingInvite(data);
       // Play ringtone here if desired
     };
 
     const handleCancelled = () => {
-      console.log("❌ Session cancelled by teacher");
       setIncomingInvite(null);
     };
 
     socket.on('session_invite', handleInvite);
     socket.on('session_cancelled', handleCancelled);
+    socket.on('session_declined', handleCancelled); // clear the modal when the student declines
 
     return () => {
       socket.off('session_invite', handleInvite);
       socket.off('session_cancelled', handleCancelled);
+      socket.off('session_declined', handleCancelled);
     };
   }, [socket, user]);
 
@@ -49,7 +47,7 @@ const DashboardLayout = ({ children }) => {
     if (socket && incomingInvite) {
       const { roomId } = incomingInvite;
       // Navigate to the communication page with state
-      navigate('/student/in-person', {
+      navigate('/student/live-conversation', {
         state: {
           autoJoinRoomId: roomId,
           teacherName: incomingInvite.teacherName,
@@ -83,9 +81,7 @@ const DashboardLayout = ({ children }) => {
   };
 
   return (
-    <div className="flex h-screen bg-slate-50/50">
-      <Toaster position="top-right" />
-
+    <div className="flex h-screen bg-app-bg text-slate-700 dark:bg-slate-950 dark:text-slate-300">
       {/* Sidebar for Desktop */}
       <div className="hidden lg:block">
         <SidebarComponent
@@ -107,7 +103,7 @@ const DashboardLayout = ({ children }) => {
         {mobileSidebarOpen && (
           <div className="fixed inset-0 z-[60] lg:hidden">
             <div
-              className="fixed inset-0 bg-black/50"
+              className="fixed inset-0 bg-slate-950/60 backdrop-blur-sm"
               onClick={handleSidebarClose}
             />
             <div className="fixed inset-y-0 left-0 z-[70]">
@@ -121,14 +117,9 @@ const DashboardLayout = ({ children }) => {
         )}
 
         <main className="flex-1 overflow-y-auto">
-          <div className="min-h-full flex flex-col">
-            <div className="flex-1 py-8 px-12 md:py-12 md:px-24">
-              <div className="max-w-8xl mx-auto">
-                {children}
-              </div>
-            </div>
-            <div className="mt-auto">
-              <Footer />
+          <div className="py-8 px-6 md:px-8 lg:px-10">
+            <div className="max-w-7xl mx-auto">
+              {children}
             </div>
           </div>
         </main>
@@ -136,44 +127,42 @@ const DashboardLayout = ({ children }) => {
 
       {/* INCOMING INVITE GLOBAL MODAL */}
       {incomingInvite && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/60 backdrop-blur-sm animate-fade-in">
-          <div className="bg-white rounded-3xl shadow-2xl w-full max-w-lg p-10 m-4 animate-scale-in text-center relative overflow-hidden">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-slate-950/60 backdrop-blur-sm animate-fade-in">
+          <div className="bg-white rounded-xl shadow-lg w-full max-w-lg p-8 sm:p-10 m-4 animate-scale-in text-center relative overflow-hidden border border-slate-200 dark:bg-slate-900 dark:border-slate-800">
 
             {/* Title */}
-            <h2 className="text-2xl font-bold text-gray-900 mb-8">In-Person Session Request</h2>
+            <h2 className="text-xl font-semibold text-slate-900 dark:text-slate-50 mb-8">Live Conversation Request</h2>
 
-            {/* Teacher Avatar with Gradient Border */}
-            <div className="mx-auto mb-6 w-28 h-28 rounded-full bg-gradient-to-br from-[#2ea3f2] to-[#f2a93b] p-[4px] shadow-lg">
-              <div className="w-full h-full rounded-full bg-white flex items-center justify-center relative overflow-hidden">
-                {incomingInvite.teacherImage ? (
-                  <img
-                    src={incomingInvite.teacherImage}
-                    alt={incomingInvite.teacherName}
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#2ea3f2] to-[#f2a93b]">
-                    {incomingInvite.teacherName?.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2) || 'T'}
-                  </span>
-                )}
-              </div>
+            {/* Teacher Avatar */}
+            <div className="mx-auto mb-6 w-24 h-24 rounded-full bg-white border border-slate-200 flex items-center justify-center relative overflow-hidden shadow-sm dark:bg-slate-900 dark:border-slate-700">
+              {incomingInvite.teacherImage ? (
+                <img
+                  src={incomingInvite.teacherImage}
+                  alt={incomingInvite.teacherName}
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                <span className="text-3xl font-semibold text-primary-700">
+                  {incomingInvite.teacherName?.split(' ').map(n => n[0]).join('').toUpperCase().slice(0, 2) || 'T'}
+                </span>
+              )}
             </div>
 
-            <p className="text-gray-500 mb-10 text-lg">
-              <span className="font-bold text-gray-800">{incomingInvite.teacherName}</span> is inviting you to join an in-person session.
+            <p className="text-slate-500 dark:text-slate-400 mb-10 text-sm">
+              <span className="font-semibold text-slate-800 dark:text-slate-100">{incomingInvite.teacherName}</span> is inviting you to a live conversation.
             </p>
 
             <div className="grid grid-cols-2 gap-4">
               <button
                 onClick={handleDeclineInvite}
-                className="w-full px-6 py-2.5 bg-red-50 text-red-600 border border-red-100 font-bold rounded-2xl hover:bg-red-100 transition-all flex items-center justify-center gap-2"
+                className="w-full px-6 py-2.5 bg-red-50 text-red-600 border border-red-100 font-semibold rounded-lg hover:bg-red-100 transition-colors flex items-center justify-center gap-2 dark:bg-red-950/30 dark:text-red-300 dark:border-red-900 dark:hover:bg-red-950/50"
               >
                 <X size={20} />
                 Decline
               </button>
               <button
                 onClick={handleAcceptInvite}
-                className="w-full px-6 py-2.5 bg-primary-100/50 text-primary-700 font-bold rounded-2xl hover:bg-primary-700 hover:text-white hover:shadow-md transition-all flex items-center justify-center gap-2 shadow-sm"
+                className="w-full px-6 py-2.5 bg-primary-600 text-white font-semibold rounded-lg hover:bg-primary-700 transition-colors flex items-center justify-center gap-2 shadow-sm"
               >
                 <Play size={20} fill="currentColor" />
                 Join

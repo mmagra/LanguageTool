@@ -41,10 +41,15 @@ const logAuditEntry = async (req, action, resourceType, resourceId, details, res
             finalResourceId = responseData.data.id;
         }
 
-        // Merge request body with additional details
+        // Strip sensitive fields before logging
+        const SENSITIVE_FIELDS = ['password', 'current_password', 'new_password', 'token', 'secret', 'password_hash'];
+        const sanitizedBody = Object.fromEntries(
+            Object.entries(req.body || {}).filter(([key]) => !SENSITIVE_FIELDS.includes(key))
+        );
+
         const finalDetails = {
             ...details,
-            requestBody: req.body,
+            requestBody: sanitizedBody,
             params: req.params,
             query: req.query
         };

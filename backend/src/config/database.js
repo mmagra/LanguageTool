@@ -7,11 +7,18 @@ const pool = new Pool({
   database: process.env.DB_NAME,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
+  max: 20,
+  idleTimeoutMillis: 30000,
+  connectionTimeoutMillis: 2000,
 });
 
-// Test database connection
+// Log only the first client connection, not every pool checkout
+let dbConnected = false;
 pool.on('connect', () => {
-  console.log('Connected to PostgreSQL database');
+  if (!dbConnected) {
+    console.log('Connected to PostgreSQL database');
+    dbConnected = true;
+  }
 });
 
 pool.on('error', (err) => {

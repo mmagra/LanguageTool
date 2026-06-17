@@ -7,22 +7,49 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Minimal Enterprise accent — confident professional blue
         primary: {
-          50: '#eef2ff',
-          100: '#e0e7ff',
-          200: '#c7d2fe',
-          300: '#a5b4fc',
-          400: '#818cf8',
-          500: '#6366f1',
-          600: '#4f46e5',
-          700: '#4338ca',
-          800: '#3730a3',
-          900: '#312e81',
-          950: '#1e1b4b',
+          50: '#eff6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
+          800: '#1e40af',
+          900: '#1e3a8a',
+          950: '#172554',
+          DEFAULT: '#2563eb',
+        },
+        // Semantic tokens
+        success: '#059669',
+        warning: '#d97706',
+        danger: '#dc2626',
+        info: '#2563eb',
+        // Brand accent (kept for backward-compat; gradients are being retired)
+        brand: {
+          blue: '#2563eb',
+          amber: '#f59e0b',
         },
       },
       fontFamily: {
-        inter: ['Inter', 'sans-serif'],
+        inter: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      borderRadius: {
+        lg: '0.5rem',
+        xl: '0.75rem',
+      },
+      boxShadow: {
+        xs: '0 1px 2px 0 rgb(15 23 42 / 0.04)',
+        sm: '0 1px 3px 0 rgb(15 23 42 / 0.06), 0 1px 2px -1px rgb(15 23 42 / 0.06)',
+      },
+      zIndex: {
+        dropdown: '40',
+        modal: '50',
+        overlay: '60',
+        drawer: '70',
+        invite: '100',
       },
       animation: {
         'ken-burns': 'ken-burns 20s ease-out infinite alternate',

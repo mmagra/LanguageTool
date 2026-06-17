@@ -1,5 +1,7 @@
 const { pool } = require('../config/database');
 const bcrypt = require('bcryptjs');
+const { logAction } = require('./auditController');
+const { createUserValidation } = require('../middleware/validation');
 
 // @desc    Get all users (Super Admin only, supports filtering by school and role)
 // @route   GET /api/super-admin/users
@@ -9,7 +11,7 @@ exports.getAllUsers = async (req, res) => {
 
     try {
         let query = `
-            SELECT u.id, u.first_name, u.last_name, u.email, u.role, u.status, u.school_id, u.created_at,
+            SELECT u.id, u.first_name, u.last_name, u.email, u.phone, u.profile_image, u.role, u.status, u.school_id, u.created_at,
                    s.name as school_name
             FROM users u
             LEFT JOIN schools s ON u.school_id = s.id
@@ -61,21 +63,23 @@ exports.createUser = async (req, res) => {
         last_name,
         role,
         school_id,
-        preferred_language = 'English'
+        preferred_language_id = null // students only; stored on student_profiles
     } = req.body;
 
-    if (!email || !password || !first_name || !last_name || !role) {
-        return res.status(400).json({ success: false, message: 'Please provide all required fields' });
+    // Shared validation: email format, password strength, names, phone
+    const { error } = createUserValidation(req.body);
+    if (error) {
+        return res.status(400).json({ success: false, message: error.details[0].message });
     }
 
-    // Role validation
+    // Role validation (super-admin UI only creates these roles)
     const validRoles = ['admin', 'teacher', 'student'];
     if (!validRoles.includes(role)) {
         return res.status(400).json({ success: false, message: 'Invalid role' });
     }
 
-    if (role !== 'super_admin' && !school_id) {
-        return res.status(400).json({ success: false, message: 'School ID is required for non-super-admin users' });
+    if (role !== 'super admin' && !school_id) {
+        return res.status(400).json({ success: false, message: 'School ID is required for non-super admin users' });
     }
 
     try {
@@ -85,25 +89,32 @@ exports.createUser = async (req, res) => {
 
         const result = await pool.query(
             `INSERT INTO users (
-                email, password_hash, first_name, last_name, role, school_id, preferred_language, status
-            ) VALUES ($1, $2, $3, $4, $5, $6, $7, 'active') 
+                email, password_hash, first_name, last_name, role, school_id, status
+            ) VALUES ($1, $2, $3, $4, $5, $6, 'active')
             RETURNING id, email, first_name, last_name, role, school_id`,
-            [email, hashedPassword, first_name, last_name, role, school_id, preferred_language]
+            [email, hashedPassword, first_name, last_name, role, school_id]
         );
 
-        // If it's a student, checking/creating profile (simplified for now)
+        // Students must always have a student_profiles row (the teacher view + language
+        // read from it). Create one, with the chosen language if provided.
         if (role === 'student') {
-            // Fetch language ID if dynamic
-            // For now, minimal student profile creation if needed
-            // await pool.query('INSERT INTO student_profiles ...')
-            // Leaving this for the specific student creation flow if needed, 
-            // but Super Admin usually creates School Admins.
+            await pool.query(
+                `INSERT INTO student_profiles (user_id, preferred_language_id)
+                 VALUES ($1, $2) ON CONFLICT (user_id) DO NOTHING`,
+                [result.rows[0].id, preferred_language_id]
+            );
         }
 
         res.status(201).json({
             success: true,
             data: result.rows[0]
         });
+
+        // Audit Log
+        const { logAction } = require('./auditController');
+        logAction(req.user.id, req.user.email, 'CREATE_USER', 'user', result.rows[0].id, {
+            email, role, school_id, created_by: req.user.email
+        }, req);
 
     } catch (err) {
         console.error('Error creating user:', err);
@@ -136,6 +147,13 @@ exports.updateUser = async (req, res) => {
         }
 
         res.json({ success: true, data: result.rows[0] });
+
+        // Audit Log
+        const { logAction } = require('./auditController');
+        logAction(req.user.id, req.user.email, 'UPDATE_USER', 'user', id, {
+            original_data: req.body,
+            updated_by: req.user.email
+        }, req);
     } catch (err) {
         console.error('Update user error:', err);
         res.status(500).json({ success: false, message: 'Server error' });

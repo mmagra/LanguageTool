@@ -24,7 +24,12 @@ const Students = () => {
     const [loading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState('');
     const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 10;
+    const [itemsPerPage, setItemsPerPage] = useState(10);
+
+    const changePage = (page) => {
+        setCurrentPage(page);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
     const [sortConfig, setSortConfig] = useState({ key: null, direction: 'asc' });
 
     // Filter States
@@ -144,7 +149,7 @@ const Students = () => {
 
     // Helper to render sort icon
     const SortIcon = ({ columnKey }) => {
-        if (sortConfig.key !== columnKey) return <ArrowUpDown size={14} className="text-gray-400 ml-1" />;
+        if (sortConfig.key !== columnKey) return <ArrowUpDown size={14} className="text-slate-400 ml-1" />;
         return sortConfig.direction === 'asc'
             ? <ArrowUp size={14} className="text-primary-600 ml-1" />
             : <ArrowDown size={14} className="text-primary-600 ml-1" />;
@@ -155,14 +160,14 @@ const Students = () => {
             <div className="space-y-6">
                 <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
                     <div>
-                        <h1 className="text-3xl font-bold text-gray-800 tracking-tight">Manage Students</h1>
-                        <p className="text-gray-500 text-sm mt-1">View and manage all students in the system.</p>
+                        <h1 className="text-xl font-semibold tracking-tight text-slate-900">Manage Students</h1>
+                        <p className="text-slate-500 text-sm mt-1">View and manage all students in the system.</p>
                     </div>
                 </div>
 
-                <div className="bg-white rounded-2xl border border-gray-200 shadow-xl shadow-gray-100/50 overflow-hidden">
+                <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
                     {/* Header & Search - Clean, Unified */}
-                    <div className="px-6 py-5 border-b border-gray-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white">
+                    <div className="px-6 py-5 border-b border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-white">
                         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                             {/* Grade Filter */}
                             <CustomDropdown
@@ -185,18 +190,32 @@ const Students = () => {
                             />
                         </div>
 
-                        <div className="relative w-full sm:w-64">
-                            <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 group-focus-within:text-primary-600 transition-colors" />
-                            <input
-                                type="text"
-                                placeholder="Search students..."
-                                value={searchTerm}
-                                onChange={(e) => {
-                                    setSearchTerm(e.target.value);
-                                    setCurrentPage(1);
-                                }}
-                                className="pl-10 pr-4 py-2 w-full bg-white/80 border border-gray-200 rounded-xl text-sm text-gray-700 placeholder-gray-500 focus:bg-white focus:border-primary-500 focus:ring-4 focus:ring-primary-500/10 outline-none transition-all duration-200 shadow-sm"
-                            />
+                        <div className="flex items-center gap-4 w-full sm:w-auto">
+                            <div className="flex items-center gap-2">
+                                <label htmlFor="students-per-page" className="text-sm text-slate-500 whitespace-nowrap">Show</label>
+                                <CustomDropdown
+                                    className="w-20"
+                                    value={itemsPerPage}
+                                    onChange={(val) => { setItemsPerPage(Number(val)); setCurrentPage(1); }}
+                                    searchable={false}
+                                    showClear={false}
+                                    matchTextInput
+                                    buttonClassName="py-1.5 rounded-lg"
+                                    surfaceClassName="bg-white border-slate-200 text-slate-700 focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                                    options={[{ value: 10, label: '10' }, { value: 25, label: '25' }, { value: 50, label: '50' }]}
+                                />
+                            </div>
+                            <div className="relative w-full sm:w-64">
+                                <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" aria-hidden="true" />
+                                <input
+                                    type="text"
+                                    placeholder="Search students..."
+                                    aria-label="Search students"
+                                    value={searchTerm}
+                                    onChange={(e) => { setSearchTerm(e.target.value); setCurrentPage(1); }}
+                                    className="pl-10 pr-4 py-2 w-full bg-white/80 border border-slate-200 rounded-xl text-sm text-slate-700 placeholder-slate-500 focus:bg-white focus:border-primary-500 focus:ring-4 focus:ring-primary-500/10 outline-none transition-all duration-200 shadow-sm"
+                                />
+                            </div>
                         </div>
                     </div>
 
@@ -207,19 +226,19 @@ const Students = () => {
                                 <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600"></div>
                             </div>
                         ) : filteredStudents.length === 0 ? (
-                            <div className="flex flex-col items-center justify-center h-64 text-gray-500">
-                                <div className="p-4 bg-gray-50 rounded-full mb-3">
-                                    <UserPlus size={32} className="text-gray-400" />
+                            <div className="flex flex-col items-center justify-center h-64 text-slate-500">
+                                <div className="p-4 bg-slate-50 rounded-full mb-3">
+                                    <UserPlus size={32} className="text-slate-400" />
                                 </div>
-                                <p className="text-base font-semibold text-gray-900">No students found</p>
-                                <p className="text-sm text-gray-500 mt-1">Try adjusting your search terms.</p>
+                                <p className="text-base font-semibold text-slate-900">No students found</p>
+                                <p className="text-sm text-slate-500 mt-1">Try adjusting your search terms.</p>
                             </div>
                         ) : (
-                            <table className="min-w-full divide-y divide-gray-200">
+                            <table className="min-w-full divide-y divide-slate-200">
                                 <thead>
-                                    <tr className="bg-gray-50/50">
+                                    <tr className="bg-slate-50/50">
                                         <th
-                                            className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider cursor-pointer hover:bg-gray-100 transition-colors group select-none"
+                                            className="px-6 py-4 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider cursor-pointer hover:bg-slate-100 transition-colors group select-none"
                                             onClick={() => handleSort('name')}
                                         >
                                             <div className="flex items-center">
@@ -228,7 +247,7 @@ const Students = () => {
                                             </div>
                                         </th>
                                         <th
-                                            className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider cursor-pointer hover:bg-gray-100 transition-colors group select-none"
+                                            className="px-6 py-4 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider cursor-pointer hover:bg-slate-100 transition-colors group select-none"
                                             onClick={() => handleSort('student_id')}
                                         >
                                             <div className="flex items-center">
@@ -237,7 +256,7 @@ const Students = () => {
                                             </div>
                                         </th>
                                         <th
-                                            className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider cursor-pointer hover:bg-gray-100 transition-colors group select-none"
+                                            className="px-6 py-4 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider cursor-pointer hover:bg-slate-100 transition-colors group select-none"
                                             onClick={() => handleSort('grade')}
                                         >
                                             <div className="flex items-center">
@@ -246,7 +265,7 @@ const Students = () => {
                                             </div>
                                         </th>
                                         <th
-                                            className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider cursor-pointer hover:bg-gray-100 transition-colors group select-none"
+                                            className="px-6 py-4 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider cursor-pointer hover:bg-slate-100 transition-colors group select-none"
                                             onClick={() => handleSort('guardian_name')}
                                         >
                                             <div className="flex items-center">
@@ -255,7 +274,7 @@ const Students = () => {
                                             </div>
                                         </th>
                                         <th
-                                            className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider cursor-pointer hover:bg-gray-100 transition-colors group select-none"
+                                            className="px-6 py-4 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider cursor-pointer hover:bg-slate-100 transition-colors group select-none"
                                             onClick={() => handleSort('language')}
                                         >
                                             <div className="flex items-center">
@@ -264,7 +283,7 @@ const Students = () => {
                                             </div>
                                         </th>
                                         <th
-                                            className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider cursor-pointer hover:bg-gray-100 transition-colors group select-none"
+                                            className="px-6 py-4 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider cursor-pointer hover:bg-slate-100 transition-colors group select-none"
                                             onClick={() => handleSort('email')}
                                         >
                                             <div className="flex items-center">
@@ -272,18 +291,18 @@ const Students = () => {
                                                 <SortIcon columnKey="email" />
                                             </div>
                                         </th>
-                                        <th className="px-6 py-4 text-left text-xs font-semibold text-gray-600 uppercase tracking-wider">Phone</th>
-                                        <th className="px-6 py-4 text-right text-xs font-semibold text-gray-400 uppercase tracking-wider">
+                                        <th className="px-6 py-4 text-left text-xs font-semibold text-slate-600 uppercase tracking-wider">Phone</th>
+                                        <th className="px-6 py-4 text-right text-xs font-semibold text-slate-400 uppercase tracking-wider">
                                             <ChevronRight size={16} className="ml-auto" />
                                         </th>
                                     </tr>
                                 </thead>
-                                <tbody className="bg-white divide-y divide-gray-100">
+                                <tbody className="bg-white divide-y divide-slate-100">
                                     {currentStudents.map((student) => (
                                         <tr
                                             key={student.id}
                                             onClick={() => navigate(`/admin/students/${student.id}`)}
-                                            className="hover:bg-gray-50 transition-colors duration-200 group cursor-pointer"
+                                            className="hover:bg-slate-50 transition-colors duration-200 group cursor-pointer"
                                         >
                                             <td className="px-6 py-4 whitespace-nowrap">
                                                 <div className="flex items-center">
@@ -291,42 +310,42 @@ const Students = () => {
                                                         <img
                                                             src={student.profile_image}
                                                             alt={`${student.first_name} ${student.last_name}`}
-                                                            className="h-12 w-12 rounded-full object-cover shadow-sm border border-gray-100 group-hover:border-primary-200 transition-all group-hover:scale-105"
+                                                            className="h-12 w-12 rounded-full object-cover shadow-sm border border-slate-100 group-hover:border-primary-200 transition-all group-hover:scale-105"
                                                         />
                                                     ) : (
-                                                        <div className="h-12 w-12 rounded-full bg-white text-gray-500 border border-gray-100 group-hover:border-primary-200 group-hover:bg-white flex items-center justify-center text-sm font-bold shadow-sm transition-all group-hover:scale-105">
+                                                        <div className="h-12 w-12 rounded-full bg-white text-slate-500 border border-slate-100 group-hover:border-primary-200 group-hover:bg-white flex items-center justify-center text-sm font-bold shadow-sm transition-all group-hover:scale-105">
                                                             {student.first_name?.[0]}{student.last_name?.[0]}
                                                         </div>
                                                     )}
                                                     <div className="ml-3">
-                                                        <div className="text-sm font-medium text-gray-900 group-hover:text-primary-600 transition-colors">
+                                                        <div className="text-sm font-medium text-slate-900 group-hover:text-primary-600 transition-colors">
                                                             {student.first_name} {student.last_name}
                                                         </div>
                                                     </div>
                                                 </div>
                                             </td>
                                             <td className="px-6 py-4 whitespace-nowrap">
-                                                <span className="text-xs font-medium text-gray-600 bg-gray-100 px-2.5 py-1 rounded-md border border-gray-200">
+                                                <span className="text-xs font-medium text-slate-600 bg-slate-100 px-2.5 py-1 rounded-md border border-slate-200">
                                                     {student.student_id || '-'}
                                                 </span>
                                             </td>
                                             <td className="px-6 py-4 whitespace-nowrap">
-                                                <div className="text-sm text-gray-600">{student.grade || '-'}</div>
+                                                <div className="text-sm text-slate-600">{student.grade || '-'}</div>
                                             </td>
                                             <td className="px-6 py-4 whitespace-nowrap">
-                                                <div className="text-sm text-gray-600">{student.guardian_name || '-'}</div>
+                                                <div className="text-sm text-slate-600">{student.guardian_name || '-'}</div>
                                             </td>
                                             <td className="px-6 py-4 whitespace-nowrap">
-                                                <div className="text-sm text-gray-600">{student.language || '-'}</div>
+                                                <div className="text-sm text-slate-600">{student.language || '-'}</div>
                                             </td>
                                             <td className="px-6 py-4 whitespace-nowrap">
-                                                <div className="text-sm text-gray-600">{student.email}</div>
+                                                <div className="text-sm text-slate-600">{student.email}</div>
                                             </td>
                                             <td className="px-6 py-4 whitespace-nowrap">
-                                                <div className="text-sm text-gray-600">{student.phone || '-'}</div>
+                                                <div className="text-sm text-slate-600">{student.phone || '-'}</div>
                                             </td>
                                             <td className="px-6 py-4 whitespace-nowrap text-right">
-                                                <ChevronRight size={18} className="text-gray-300 group-hover:text-primary-500 transition-colors ml-auto" />
+                                                <ChevronRight size={18} className="text-slate-300 group-hover:text-primary-500 transition-colors ml-auto" />
                                             </td>
                                         </tr>
                                     ))}
@@ -337,36 +356,36 @@ const Students = () => {
 
                     {/* Pagination */}
                     {filteredStudents.length > 0 && (
-                        <div className="px-6 py-4 border-t border-gray-100 flex items-center justify-between bg-white">
+                        <div className="px-6 py-4 border-t border-slate-100 flex items-center justify-between bg-white">
                             <div className="flex-1 flex justify-between sm:hidden">
                                 <button
-                                    onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                                    onClick={() => changePage(Math.max(currentPage - 1, 1))}
                                     disabled={currentPage === 1}
-                                    className="relative inline-flex items-center px-4 py-2 border border-gray-200 text-sm font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                                    className="relative inline-flex items-center px-4 py-2 border border-slate-200 text-sm font-medium rounded-lg text-slate-700 bg-white hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                                 >
                                     Previous
                                 </button>
                                 <button
-                                    onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                                    onClick={() => changePage(Math.min(currentPage + 1, totalPages))}
                                     disabled={currentPage === totalPages}
-                                    className="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-200 text-sm font-medium rounded-lg text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                                    className="ml-3 relative inline-flex items-center px-4 py-2 border border-slate-200 text-sm font-medium rounded-lg text-slate-700 bg-white hover:bg-slate-50 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                                 >
                                     Next
                                 </button>
                             </div>
                             <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
                                 <div>
-                                    <p className="text-sm text-gray-500">
-                                        Showing <span className="font-semibold text-gray-900">{indexOfFirstItem + 1}</span> to <span className="font-semibold text-gray-900">{Math.min(indexOfLastItem, filteredStudents.length)}</span> of{' '}
-                                        <span className="font-semibold text-gray-900">{filteredStudents.length}</span> entries
+                                    <p className="text-sm text-slate-500">
+                                        Showing <span className="font-semibold text-slate-900">{indexOfFirstItem + 1}</span> to <span className="font-semibold text-slate-900">{Math.min(indexOfLastItem, filteredStudents.length)}</span> of{' '}
+                                        <span className="font-semibold text-slate-900">{filteredStudents.length}</span> entries
                                     </p>
                                 </div>
                                 <div>
                                     <nav className="relative z-0 inline-flex rounded-lg shadow-sm space-x-2" aria-label="Pagination">
                                         <button
-                                            onClick={() => setCurrentPage(prev => Math.max(prev - 1, 1))}
+                                            onClick={() => changePage(Math.max(currentPage - 1, 1))}
                                             disabled={currentPage === 1}
-                                            className="p-2 rounded-lg border border-gray-200 bg-white text-gray-500 hover:bg-gray-50 hover:text-gray-900 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                                            className="p-2 rounded-lg border border-slate-200 bg-white text-slate-500 hover:bg-slate-50 hover:text-slate-900 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
                                         >
                                             <span className="sr-only">Previous</span>
                                             <ChevronLeft size={16} />
@@ -376,10 +395,10 @@ const Students = () => {
                                         {[...Array(totalPages || 1)].map((_, i) => (
                                             <button
                                                 key={i}
-                                                onClick={() => setCurrentPage(i + 1)}
+                                                onClick={() => changePage(i + 1)}
                                                 className={`w-8 h-8 flex items-center justify-center rounded-lg text-sm font-medium transition-all duration-200 ${currentPage === i + 1
                                                     ? 'bg-primary-600 text-white shadow-md shadow-primary-600/20'
-                                                    : 'bg-white border border-gray-200 text-gray-600 hover:bg-gray-50 hover:border-gray-300'
+                                                    : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50 hover:border-slate-300'
                                                     }`}
                                             >
                                                 {i + 1}
@@ -387,9 +406,9 @@ const Students = () => {
                                         ))}
 
                                         <button
-                                            onClick={() => setCurrentPage(prev => Math.min(prev + 1, totalPages))}
+                                            onClick={() => changePage(Math.min(currentPage + 1, totalPages))}
                                             disabled={currentPage === totalPages || totalPages <= 1}
-                                            className="p-2 rounded-lg border border-gray-200 bg-white text-gray-500 hover:bg-gray-50 hover:text-gray-900 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
+                                            className="p-2 rounded-lg border border-slate-200 bg-white text-slate-500 hover:bg-slate-50 hover:text-slate-900 disabled:opacity-30 disabled:cursor-not-allowed transition-all"
                                         >
                                             <span className="sr-only">Next</span>
                                             <ChevronRight size={16} />

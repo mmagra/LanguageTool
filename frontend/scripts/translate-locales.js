@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 const LOCALES_DIR = path.join(__dirname, '../public/locales');
 
 import 'dotenv/config'; // Load .env
-const API_BASE_URL = process.env.VITE_API_BASE_URL + '/translate';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL + '/translate';
 // HARDCODED Languages List to avoid import issues
 const LANGUAGES = {
     'Afrikaans': 'af',

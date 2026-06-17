@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { BookOpen, CheckCircle, Clock, Users, MessageCircle, Globe, Languages, Check, X, MessageSquare } from 'lucide-react';
+import { Users, MessageCircle, Check, X, MessageSquare, GraduationCap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../../context/AuthContext';
 import api from '../../services/api';
@@ -18,6 +19,7 @@ const Dashboard = () => {
     teacherCount: 0,
     conversationCount: 0
   });
+  const [studentInfo, setStudentInfo] = useState(null);
   const [loading, setLoading] = useState(true);
 
   // Dynamic status checks
@@ -62,7 +64,6 @@ const Dashboard = () => {
     const fetchDashboardStats = async () => {
       try {
         const response = await api.get('/students/dashboard-stats');
-        console.log('Dashboard stats response:', response);
         if (response.success) {
           setDashboardStats(response.data);
         }
@@ -74,8 +75,25 @@ const Dashboard = () => {
       }
     };
 
+    const fetchStudentInfo = async () => {
+      if (!user?.id) return;
+      try {
+        const res = await api.get(`/students/${user.id}`);
+        if (res.success) setStudentInfo(res.data);
+      } catch (error) {
+        console.error('Error fetching student info:', error);
+      }
+    };
+
     fetchDashboardStats();
-  }, []);
+    fetchStudentInfo();
+  }, [user?.id]);
+
+  const studentName = studentInfo
+    ? `${studentInfo.first_name || ''} ${studentInfo.last_name || ''}`.trim()
+    : `${user?.firstName || ''} ${user?.lastName || ''}`.trim();
+  const guardianName = studentInfo?.guardian_name?.trim();
+  const gradeName = studentInfo?.grade_name;
 
   // Dashboard stats with dynamic data
   const stats = [
@@ -94,11 +112,31 @@ const Dashboard = () => {
       subText: t('dashboard:stats.conversationsSubText')
     },
     {
-      title: t('dashboard:stats.languages'),
-      value: '108',
-      icon: Languages,
-      color: 'bg-indigo-50 text-indigo-600',
-      subText: t('dashboard:stats.languagesSubText', { written: writtenCount, verbal: verbalCount })
+      title: 'Student Details',
+      value: studentName || 'Student',
+      icon: GraduationCap,
+      color: 'bg-primary-50 text-primary-600',
+      subText: gradeName ? `Grade ${gradeName}` : 'Grade not assigned'
+    },
+
+  ];
+
+  const quickActions = [
+    {
+      title: t('sidebar:conversations'),
+      label: 'Messages',
+      description: 'Read and reply to translated teacher messages.',
+      icon: MessageSquare,
+      to: '/student/conversations',
+      tone: 'bg-primary-50 text-primary-600'
+    },
+    {
+      title: t('sidebar:inPerson'),
+      label: 'Live',
+      description: 'Join a live translated conversation when invited.',
+      icon: Users,
+      to: '/student/live-conversation',
+      tone: 'bg-emerald-50 text-emerald-600'
     },
   ];
 
@@ -107,95 +145,109 @@ const Dashboard = () => {
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h1 className="text-3xl font-bold text-gray-800 tracking-tight">{t('dashboard:title')}</h1>
-          <p className="text-gray-500 text-sm mt-1">{t('dashboard:subtitle')}</p>
+          <h1 className="text-xl font-semibold tracking-tight text-slate-900 dark:text-slate-50">
+            Welcome{guardianName ? `, ${guardianName}` : ''}
+          </h1>
+          <p className="text-slate-500 dark:text-slate-400 text-sm mt-1.5">
+            Stay connected with teachers through translated messages and live conversations.
+          </p>
         </div>
-        <div className="flex items-center gap-3">
-          <div className="text-sm font-medium text-gray-600 bg-white px-4 py-2 rounded-xl shadow-sm border border-gray-200/60">
-            {new Date().toLocaleDateString(i18n.language, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
-          </div>
+        <div className="app-date-pill self-start md:self-auto">
+          {new Date().toLocaleDateString(i18n.language, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
         </div>
       </div>
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
         {stats.map((stat, index) => {
           const Icon = stat.icon;
           return (
-            <div key={index} className="bg-white rounded-2xl p-6 shadow-xl shadow-gray-200/50 border border-gray-100 hover:shadow-2xl transition-shadow">
-              <div className="flex items-start justify-between mb-4">
-                <div className={`p-3 rounded-xl ${stat.color}`}>
-                  <Icon size={24} />
+            <div key={index} className="app-card app-card-hover p-5">
+              <div className="flex items-center gap-4">
+                <div className={`app-icon-tile ${stat.color}`}>
+                  <Icon size={20} />
                 </div>
-                <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">{stat.title}</span>
+                <div className="min-w-0">
+                  <p className="app-eyebrow">{stat.title}</p>
+                  <h3 className="text-2xl font-semibold text-slate-900 dark:text-slate-50 leading-tight mt-1 truncate">
+                    {stat.value}
+                  </h3>
+                </div>
               </div>
-              <div className="mb-4">
-                <h3 className="text-3xl font-bold text-gray-900 mb-1">
-                  {stat.value}
-                </h3>
-              </div>
-              <div className="pt-4 border-t border-gray-50 text-xs text-gray-500 font-medium">
+              <p className="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400 font-medium">
                 {stat.subText}
-              </div>
+              </p>
             </div>
           );
         })}
       </div>
 
+      <div>
+        <div className="mb-4">
+          <p className="app-eyebrow">Start here</p>
+          <h2 className="app-section-title mt-1">Communication tools</h2>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {quickActions.map((action) => {
+            const Icon = action.icon;
+            return (
+              <Link key={action.title} to={action.to} className="app-card app-card-hover p-6 block">
+                <div className="flex items-start justify-between gap-4">
+                  <div className={`app-icon-tile ${action.tone}`}>
+                    <Icon size={20} />
+                  </div>
+                  <span className="app-eyebrow">{action.label}</span>
+                </div>
+                <h3 className="mt-5 text-sm font-semibold text-slate-900">{action.title}</h3>
+                <p className="mt-1 text-sm text-slate-500 leading-relaxed">{action.description}</p>
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+
 
       {/* Language Support Status Card */}
-      <div className="bg-white rounded-2xl shadow-xl shadow-gray-200/50 border border-gray-100 overflow-hidden w-full">
+      <div className="app-card">
         <div className="p-6">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          {/* Section heading */}
+          <div className="mb-6">
+            <p className="app-eyebrow mb-1.5">
+              {t('dashboard:languageStatus.title')}
+            </p>
+            <h2 className="text-lg font-semibold tracking-tight text-slate-900 dark:text-slate-50">
+              {t('dashboard:languageStatus.primary')} <span className="text-primary-600">{localizedPrimaryLanguage}</span>
+            </h2>
+          </div>
 
-            {/* Primary Language - Takes 2 columns */}
-            <div className="md:col-span-2 p-6 h-full flex flex-col justify-center">
-              <h2 className="text-lg font-bold text-gray-700 mb-2">{t('dashboard:languageStatus.title')}</h2>
-              <h3 className="text-2xl font-bold text-gray-900 tracking-tight">
-                {t('dashboard:languageStatus.primary')} <span className="text-indigo-600 border-b-2 border-indigo-200">{localizedPrimaryLanguage}</span>
-              </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+            {/* Written Support */}
+            <div className="rounded-xl border border-slate-200 p-5 dark:border-slate-800">
+              <div className="flex items-start justify-between">
+                <div className={`app-icon-tile ${isWrittenSupported ? 'bg-emerald-50 text-emerald-600' : 'bg-red-50 text-red-600'}`}>
+                  <MessageCircle size={20} />
+                </div>
+                <span className={`inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full ${isWrittenSupported ? 'bg-emerald-50 text-emerald-700' : 'bg-red-50 text-red-700'}`}>
+                  {isWrittenSupported ? <Check size={13} strokeWidth={3} /> : <X size={13} strokeWidth={3} />}
+                  {isWrittenSupported ? t('dashboard:languageStatus.written.available') : t('dashboard:languageStatus.written.unsupported')}
+                </span>
+              </div>
+              <h4 className="text-sm font-semibold text-slate-900 dark:text-slate-50 mt-4">{t('dashboard:languageStatus.written.title')}</h4>
             </div>
 
-            {/* Written Support - Takes 1 column */}
-            <div className={`relative overflow-hidden rounded-2xl border-2 transition-all duration-300 hover:scale-105 shadow-md hover:shadow-xl ${isWrittenSupported ? 'bg-gradient-to-br from-emerald-50 to-teal-50 border-emerald-200' : 'bg-gradient-to-br from-red-50 to-orange-50 border-red-200'}`}>
-              <div className="p-6 h-full flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className={`p-2 rounded-xl ${isWrittenSupported ? 'bg-emerald-100' : 'bg-red-100'}`}>
-                      <MessageCircle className={isWrittenSupported ? 'text-emerald-600' : 'text-red-600'} size={20} />
-                    </div>
-                    {isWrittenSupported ?
-                      <div className="bg-emerald-500 text-white p-1.5 rounded-full shadow-lg"><Check size={18} strokeWidth={3} /></div> :
-                      <div className="bg-red-500 text-white p-1.5 rounded-full shadow-lg"><X size={18} strokeWidth={3} /></div>
-                    }
-                  </div>
-                  <h4 className="font-bold text-gray-900 text-base mb-2">{t('dashboard:languageStatus.written.title')}</h4>
-                  <p className={`text-xs font-semibold ${isWrittenSupported ? 'text-emerald-700' : 'text-red-700'}`}>
-                    {isWrittenSupported ? t('dashboard:languageStatus.written.available') : t('dashboard:languageStatus.written.unsupported')}
-                  </p>
+            {/* Verbal Support */}
+            <div className="rounded-xl border border-slate-200 p-5 dark:border-slate-800">
+              <div className="flex items-start justify-between">
+                <div className={`app-icon-tile ${isVerbalSupported ? 'bg-emerald-50 text-emerald-600' : 'bg-red-50 text-red-600'}`}>
+                  <Users size={20} />
                 </div>
+                <span className={`inline-flex items-center gap-1.5 text-xs font-medium px-2.5 py-1 rounded-full ${isVerbalSupported ? 'bg-emerald-50 text-emerald-700' : 'bg-red-50 text-red-700'}`}>
+                  {isVerbalSupported ? <Check size={13} strokeWidth={3} /> : <X size={13} strokeWidth={3} />}
+                  {isVerbalSupported ? t('dashboard:languageStatus.verbal.available') : t('dashboard:languageStatus.verbal.unsupported')}
+                </span>
               </div>
-            </div>
-
-            {/* Verbal Support - Takes 1 column */}
-            <div className={`relative overflow-hidden rounded-2xl border-2 transition-all duration-300 hover:scale-105 shadow-md hover:shadow-xl ${isVerbalSupported ? 'bg-gradient-to-br from-emerald-50 to-teal-50 border-emerald-200' : 'bg-gradient-to-br from-red-50 to-orange-50 border-red-200'}`}>
-              <div className="p-6 h-full flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className={`p-2 rounded-xl ${isVerbalSupported ? 'bg-emerald-100' : 'bg-red-100'}`}>
-                      <Users className={isVerbalSupported ? 'text-emerald-600' : 'text-red-600'} size={20} />
-                    </div>
-                    {isVerbalSupported ?
-                      <div className="bg-emerald-500 text-white p-1.5 rounded-full shadow-lg"><Check size={18} strokeWidth={3} /></div> :
-                      <div className="bg-red-500 text-white p-1.5 rounded-full shadow-lg"><X size={18} strokeWidth={3} /></div>
-                    }
-                  </div>
-                  <h4 className="font-bold text-gray-900 text-base mb-2">{t('dashboard:languageStatus.verbal.title')}</h4>
-                  <p className={`text-xs font-semibold ${isVerbalSupported ? 'text-emerald-700' : 'text-red-700'}`}>
-                    {isVerbalSupported ? t('dashboard:languageStatus.verbal.available') : t('dashboard:languageStatus.verbal.unsupported')}
-                  </p>
-                </div>
-              </div>
+              <h4 className="text-sm font-semibold text-slate-900 dark:text-slate-50 mt-4">{t('dashboard:languageStatus.verbal.title')}</h4>
             </div>
 
           </div>

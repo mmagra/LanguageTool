@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { MessageCircle, Search, User, Shield, GraduationCap, Languages, Heart, ArrowLeft, MoreHorizontal, Trash2 } from 'lucide-react';
 import RichTextEditor from '../../components/common/RichTextEditor';
+import { sanitizeHtml } from '../../utils/sanitize';
 import { useAuth } from '../../context/AuthContext';
 import { useChat } from '../../hooks/useChat';
 import ProtectedRoute from '../../components/common/ProtectedRoute';
@@ -160,7 +161,7 @@ const AdminChats = () => {
                 <Icon size={18} />
             </div>
             <div className="min-w-0">
-                <p className="text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-0.5">{label}</p>
+                <p className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-0.5">{label}</p>
                 <p className="text-xs font-semibold text-slate-800 truncate">{value || 'N/A'}</p>
             </div>
         </div>
@@ -179,7 +180,7 @@ const AdminChats = () => {
 
     return (
         <ProtectedRoute roles={['admin']}>
-            <div className="h-[calc(100dvh-80px)] md:h-[calc(100vh-100px)] flex flex-col md:flex-row bg-white rounded-2xl shadow-xl shadow-slate-200/60 border border-slate-100 overflow-hidden font-inter">
+            <div className="h-[calc(100dvh-80px)] md:h-[calc(100vh-100px)] flex flex-col md:flex-row bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden font-inter">
 
                 {/* Sidebar */}
                 <div className={`${selectedChat ? 'hidden md:flex' : 'flex'} w-full md:w-96 border-r border-slate-100 flex-col bg-white z-20`}>
@@ -240,7 +241,7 @@ const AdminChats = () => {
                                                 />
                                             ) : (
                                                 <div className={`w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold shadow-sm transition-all group-hover:scale-105
-                                                ${isActive ? 'bg-gradient-to-br from-primary-600 to-indigo-600 text-white shadow-primary-500/20' : 'bg-slate-100 text-slate-500'}`}>
+                                                ${isActive ? 'bg-primary-600 text-white' : 'bg-slate-100 text-slate-500'}`}>
                                                     {conv.teacher_first_name?.[0]}
                                                 </div>
                                             )}
@@ -257,11 +258,11 @@ const AdminChats = () => {
                                                         <span className="text-xs text-slate-400">with</span>
                                                     </div>
                                                     {/* Swapped: Student Name is Secondary */}
-                                                    <span className="text-xs font-semibold text-indigo-600 truncate block mt-0.5">
+                                                    <span className="text-xs font-semibold text-primary-600 truncate block mt-0.5">
                                                         {sName}
                                                     </span>
                                                 </div>
-                                                <span className={`text-[10px] font-medium whitespace-nowrap px-1.5 py-0.5 rounded-full ${unreadCount > 0 ? 'text-green-700 bg-green-50' : 'text-slate-400 bg-slate-50'}`}>
+                                                <span className={`text-xs font-medium whitespace-nowrap px-1.5 py-0.5 rounded-full ${unreadCount > 0 ? 'text-green-700 bg-green-50' : 'text-slate-400 bg-slate-50'}`}>
                                                     {formatTime(conv.updated_at)}
                                                 </span>
                                             </div>
@@ -271,7 +272,7 @@ const AdminChats = () => {
                                                     {stripHtml(conv.last_message) || 'No messages yet'}
                                                 </p>
                                                 {unreadCount > 0 && (
-                                                    <span className="shrink-0 bg-green-500 text-white text-[10px] font-bold h-5 min-w-[20px] px-1.5 flex items-center justify-center rounded-full shadow-sm">
+                                                    <span className="shrink-0 bg-green-500 text-white text-xs font-bold h-5 min-w-[20px] px-1.5 flex items-center justify-center rounded-full shadow-sm">
                                                         {unreadCount}
                                                     </span>
                                                 )}
@@ -292,13 +293,13 @@ const AdminChats = () => {
                             <div className="bg-white/80 backdrop-blur-md border-b border-slate-100 z-10">
                                 <div className="px-6 py-4 flex items-center justify-between gap-4">
                                     <div className="flex items-center gap-4">
-                                        <button onClick={() => setSelectedChat(null)} className="md:hidden p-2 -ml-2 text-slate-500 hover:bg-slate-100 rounded-full">
+                                        <button onClick={() => setSelectedChat(null)} className="md:hidden p-2 -ml-2 text-slate-500 hover:bg-slate-100 rounded-full" aria-label="Back to conversations">
                                             <ArrowLeft size={20} />
                                         </button>
 
                                         <div className="flex items-center gap-4">
                                             <div className="relative group cursor-default">
-                                                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#2ea3f2] to-[#f2a93b] p-[2px] shadow-md group-hover:shadow-lg transition-all duration-500">
+                                                <div className="w-12 h-12 rounded-full bg-primary-600 p-[2px] shadow-md group-hover:shadow-lg transition-all duration-500">
                                                     <div className="w-full h-full rounded-full bg-white flex items-center justify-center relative overflow-hidden">
                                                         {selectedChat.teacher_profile_image ? (
                                                             <img
@@ -307,7 +308,7 @@ const AdminChats = () => {
                                                                 className="w-full h-full object-cover"
                                                             />
                                                         ) : (
-                                                            <span className="text-base font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#2ea3f2] to-[#f2a93b]">
+                                                            <span className="text-base font-bold text-primary-700">
                                                                 {selectedChat.teacher_first_name?.[0]}{selectedChat.teacher_last_name?.[0]}
                                                             </span>
                                                         )}
@@ -319,14 +320,14 @@ const AdminChats = () => {
                                                     <h3 className="text-base font-bold text-slate-800 leading-tight">
                                                         {selectedChat.teacher_first_name} {selectedChat.teacher_last_name}
                                                     </h3>
-                                                    <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-primary-50 text-primary-700 border border-primary-100">TEACHER</span>
+                                                    <span className="px-1.5 py-0.5 rounded text-xs font-bold bg-primary-50 text-primary-700 border border-primary-100">TEACHER</span>
                                                 </div>
                                                 <div className="text-sm text-slate-500 flex items-center gap-1 mt-0.5">
                                                     <span>chatting with</span>
                                                     <span className="font-semibold text-slate-700">
                                                         {selectedChat.student_first_name} {selectedChat.student_last_name}
                                                     </span>
-                                                    <span className="px-1 py-0 text-[9px] font-bold bg-indigo-50 text-indigo-700 border border-indigo-100 rounded">STUDENT</span>
+                                                    <span className="px-1.5 py-0.5 text-xs font-bold bg-primary-50 text-primary-700 border border-primary-100 rounded">STUDENT</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -337,10 +338,11 @@ const AdminChats = () => {
                                         <button
                                             onClick={handleDeleteClick}
                                             className="p-2 bg-white text-red-600 rounded-xl shadow-sm border border-slate-100 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200"
+                                            aria-label="Delete conversation"
                                         >
                                             <Trash2 size={18} />
                                         </button>
-                                        <div className="absolute right-0 top-full mt-2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-50">
+                                        <div className="absolute right-0 top-full mt-2 px-2 py-1 bg-slate-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-50">
                                             Delete Conversation
                                         </div>
                                     </div>
@@ -425,25 +427,25 @@ const AdminChats = () => {
                                             <React.Fragment key={msg.id || index}>
                                                 {showDate && (
                                                     <div className="flex justify-center my-4">
-                                                        <span className="text-[10px] bg-slate-100 px-3 py-1 rounded-full text-slate-500 font-bold tracking-wide">
+                                                        <span className="text-xs bg-slate-100 px-3 py-1 rounded-full text-slate-500 font-bold tracking-wide">
                                                             {new Date(msg.sent_at).toLocaleDateString()}
                                                         </span>
                                                     </div>
                                                 )}
                                                 <div className={`flex flex-col ${alignRight ? 'items-end' : 'items-start'} mb-1`}>
                                                     {/* Sender Label for clarity in Admin View */}
-                                                    <span className={`text-[10px] font-bold mb-1 px-1 ${alignRight ? 'text-primary-600 mr-1' : 'text-slate-500 ml-1'}`}>
+                                                    <span className={`text-xs font-bold mb-1 px-1 ${alignRight ? 'text-primary-600 mr-1' : 'text-slate-500 ml-1'}`}>
                                                         {isAdmin ? 'Admin' : (msg.sender_name || (isTeacher ? 'Teacher' : isStudent ? 'Student' : 'User'))}
                                                     </span>
 
-                                                    <div className={`max-w-[85%] px-4 py-2.5 rounded-2xl text-sm shadow-sm relative group
+                                                    <div className={`max-w-[85%] px-4 py-2.5 rounded-xl text-sm shadow-sm relative group
                                                         ${alignRight
                                                             ? (isAdmin ? 'bg-amber-50 border border-amber-100 text-amber-900 rounded-br-none'
                                                                 : 'bg-primary-50 border border-primary-100 text-slate-800 rounded-br-none')
                                                             : 'bg-white border border-slate-100 text-slate-800 rounded-bl-none'}
                                                     `}>
-                                                        <div dangerouslySetInnerHTML={{ __html: msg.content }} className="prose prose-sm max-w-none" />
-                                                        <div className={`text-[9px] mt-1.5 flex ${alignRight ? 'justify-end' : 'justify-start'} font-bold opacity-60`}>
+                                                        <div dangerouslySetInnerHTML={{ __html: sanitizeHtml(msg.content) }} className="prose prose-sm max-w-none" />
+                                                        <div className={`text-xs mt-1.5 flex ${alignRight ? 'justify-end' : 'justify-start'} font-bold opacity-60`}>
                                                             {formatTime(msg.sent_at)}
                                                         </div>
                                                     </div>
@@ -474,15 +476,28 @@ const AdminChats = () => {
                         // Empty State
                         <div className="flex-1 flex flex-col items-center justify-center text-center p-8">
                             <div className="relative mb-6">
-                                <div className="absolute inset-0 bg-primary-100 rounded-full blur-2xl opacity-60"></div>
-                                <div className="relative w-24 h-24 bg-white rounded-3xl flex items-center justify-center shadow-xl shadow-slate-200 border border-white">
+                                <div className="relative w-20 h-20 bg-white rounded-xl flex items-center justify-center shadow-sm border border-slate-200">
                                     <Shield size={40} className="text-primary-500" />
                                 </div>
                             </div>
                             <h3 className="text-2xl font-bold text-slate-800 mb-2">Admin Chat Monitor</h3>
-                            <p className="text-slate-500 max-w-sm mx-auto leading-relaxed">
-                                Select a conversation to view message history or intervene in a chat session.
+                            <p className="text-slate-500 max-w-sm mx-auto leading-relaxed mb-6">
+                                This page shows all active and past teacher–student conversations in your school. Select any conversation on the left to view its full message history, or send a message to intervene.
                             </p>
+                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-lg mx-auto text-left">
+                                <div className="bg-white rounded-xl p-3 border border-slate-100 shadow-sm">
+                                    <p className="text-xs font-bold text-primary-600 mb-1">👁 Monitor</p>
+                                    <p className="text-xs text-slate-500">View all messages between teachers and students</p>
+                                </div>
+                                <div className="bg-white rounded-xl p-3 border border-slate-100 shadow-sm">
+                                    <p className="text-xs font-bold text-primary-600 mb-1">✉ Intervene</p>
+                                    <p className="text-xs text-slate-500">Send messages directly into any conversation</p>
+                                </div>
+                                <div className="bg-white rounded-xl p-3 border border-slate-100 shadow-sm">
+                                    <p className="text-xs font-bold text-primary-600 mb-1">🗑 Moderate</p>
+                                    <p className="text-xs text-slate-500">Delete inappropriate conversations</p>
+                                </div>
+                            </div>
                         </div>
                     )}
                 </div>
@@ -490,21 +505,21 @@ const AdminChats = () => {
 
             {/* Delete Confirmation Modal */}
             {showDeleteModal && selectedChat && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-900/60 backdrop-blur-sm animate-in fade-in duration-200">
-                    <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden animate-in zoom-in-95 duration-200">
+                <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-in fade-in duration-200">
+                    <div className="bg-white rounded-xl shadow-lg w-full max-w-md overflow-hidden animate-in zoom-in-95 duration-200">
                         <div className="p-6 text-center">
                             <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <Trash2 size={32} className="text-red-600" />
                             </div>
-                            <h3 className="text-xl font-bold text-gray-900 mb-2">Delete Conversation?</h3>
-                            <p className="text-gray-500 text-sm mb-6">
+                            <h3 className="text-xl font-bold text-slate-900 mb-2">Delete Conversation?</h3>
+                            <p className="text-slate-500 text-sm mb-6">
                                 Are you sure you want to delete the chat with <strong>{selectedChat.student_first_name} {selectedChat.student_last_name}</strong>?
                                 This action cannot be undone.
                             </p>
                             <div className="flex gap-3">
                                 <button
                                     onClick={() => setShowDeleteModal(false)}
-                                    className="flex-1 px-4 py-2.5 text-sm font-semibold text-gray-700 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl transition-all"
+                                    className="flex-1 px-4 py-2.5 text-sm font-semibold text-slate-700 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl transition-all"
                                 >
                                     Cancel
                                 </button>

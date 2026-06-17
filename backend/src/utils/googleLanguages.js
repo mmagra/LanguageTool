@@ -1,0 +1,136 @@
+/**
+ * Canonical Google language catalog — single source of truth for the super-admin
+ * "Import Google catalog" feature and the add-language picker.
+ *
+ * Each entry:
+ *   name         display name
+ *   code         Google Translate target code (ISO 639-1 / Google variant)
+ *   speech_code  BCP-47 locale for Google Cloud Text-to-Speech (null if no Cloud voice)
+ *   tts_premium  true when Google Cloud has a voice for this language
+ *   tts_free     true when the free browser voice commonly supports this language
+ *
+ * Languages WITH a Cloud voice get a speech_code + tts_premium=true (and tts_free=true,
+ * since browsers generally support those mainstream locales). The long tail is
+ * translation-only by default (admins can enable free browser voice per language).
+ */
+
+// --- Languages with a Google Cloud TTS voice (premium) ---
+const VOICE = [
+    { name: 'Afrikaans', code: 'af', speech_code: 'af-ZA' },
+    { name: 'Arabic', code: 'ar', speech_code: 'ar-XA' },
+    { name: 'Bengali', code: 'bn', speech_code: 'bn-IN' },
+    { name: 'Bulgarian', code: 'bg', speech_code: 'bg-BG' },
+    { name: 'Catalan', code: 'ca', speech_code: 'ca-ES' },
+    { name: 'Chinese (Simplified)', code: 'zh-CN', speech_code: 'cmn-CN' },
+    { name: 'Chinese (Traditional)', code: 'zh-TW', speech_code: 'cmn-TW' },
+    { name: 'Czech', code: 'cs', speech_code: 'cs-CZ' },
+    { name: 'Danish', code: 'da', speech_code: 'da-DK' },
+    { name: 'Dutch', code: 'nl', speech_code: 'nl-NL' },
+    { name: 'English', code: 'en', speech_code: 'en-US' },
+    { name: 'Filipino', code: 'tl', speech_code: 'fil-PH' },
+    { name: 'Finnish', code: 'fi', speech_code: 'fi-FI' },
+    { name: 'French', code: 'fr', speech_code: 'fr-FR' },
+    { name: 'Galician', code: 'gl', speech_code: 'gl-ES' },
+    { name: 'German', code: 'de', speech_code: 'de-DE' },
+    { name: 'Greek', code: 'el', speech_code: 'el-GR' },
+    { name: 'Gujarati', code: 'gu', speech_code: 'gu-IN' },
+    { name: 'Hebrew', code: 'iw', speech_code: 'he-IL' },
+    { name: 'Hindi', code: 'hi', speech_code: 'hi-IN' },
+    { name: 'Hungarian', code: 'hu', speech_code: 'hu-HU' },
+    { name: 'Icelandic', code: 'is', speech_code: 'is-IS' },
+    { name: 'Indonesian', code: 'id', speech_code: 'id-ID' },
+    { name: 'Italian', code: 'it', speech_code: 'it-IT' },
+    { name: 'Japanese', code: 'ja', speech_code: 'ja-JP' },
+    { name: 'Kannada', code: 'kn', speech_code: 'kn-IN' },
+    { name: 'Korean', code: 'ko', speech_code: 'ko-KR' },
+    { name: 'Latvian', code: 'lv', speech_code: 'lv-LV' },
+    { name: 'Lithuanian', code: 'lt', speech_code: 'lt-LT' },
+    { name: 'Malay', code: 'ms', speech_code: 'ms-MY' },
+    { name: 'Malayalam', code: 'ml', speech_code: 'ml-IN' },
+    { name: 'Marathi', code: 'mr', speech_code: 'mr-IN' },
+    { name: 'Norwegian', code: 'no', speech_code: 'nb-NO' },
+    { name: 'Polish', code: 'pl', speech_code: 'pl-PL' },
+    { name: 'Portuguese', code: 'pt', speech_code: 'pt-PT' },
+    { name: 'Punjabi', code: 'pa', speech_code: 'pa-IN' },
+    { name: 'Romanian', code: 'ro', speech_code: 'ro-RO' },
+    { name: 'Russian', code: 'ru', speech_code: 'ru-RU' },
+    { name: 'Serbian', code: 'sr', speech_code: 'sr-RS' },
+    { name: 'Slovak', code: 'sk', speech_code: 'sk-SK' },
+    { name: 'Spanish', code: 'es', speech_code: 'es-ES' },
+    { name: 'Swahili', code: 'sw', speech_code: 'sw-KE' },
+    { name: 'Swedish', code: 'sv', speech_code: 'sv-SE' },
+    { name: 'Tamil', code: 'ta', speech_code: 'ta-IN' },
+    { name: 'Telugu', code: 'te', speech_code: 'te-IN' },
+    { name: 'Thai', code: 'th', speech_code: 'th-TH' },
+    { name: 'Turkish', code: 'tr', speech_code: 'tr-TR' },
+    { name: 'Ukrainian', code: 'uk', speech_code: 'uk-UA' },
+    { name: 'Urdu', code: 'ur', speech_code: 'ur-IN' },
+    { name: 'Vietnamese', code: 'vi', speech_code: 'vi-VN' },
+].map(l => ({ ...l, tts_premium: true, tts_free: true }));
+
+// --- Translation-only languages (no Cloud voice; browser voice off by default) ---
+const TEXT_ONLY = [
+    { name: 'Albanian', code: 'sq' },
+    { name: 'Amharic', code: 'am' },
+    { name: 'Armenian', code: 'hy' },
+    { name: 'Azerbaijani', code: 'az' },
+    { name: 'Basque', code: 'eu' },
+    { name: 'Belarusian', code: 'be' },
+    { name: 'Bosnian', code: 'bs' },
+    { name: 'Cebuano', code: 'ceb' },
+    { name: 'Chichewa', code: 'ny' },
+    { name: 'Corsican', code: 'co' },
+    { name: 'Croatian', code: 'hr' },
+    { name: 'Esperanto', code: 'eo' },
+    { name: 'Estonian', code: 'et' },
+    { name: 'Frisian', code: 'fy' },
+    { name: 'Georgian', code: 'ka' },
+    { name: 'Haitian Creole', code: 'ht' },
+    { name: 'Hausa', code: 'ha' },
+    { name: 'Hawaiian', code: 'haw' },
+    { name: 'Hmong', code: 'hmn' },
+    { name: 'Igbo', code: 'ig' },
+    { name: 'Irish', code: 'ga' },
+    { name: 'Javanese', code: 'jw' },
+    { name: 'Kazakh', code: 'kk' },
+    { name: 'Khmer', code: 'km' },
+    { name: 'Kinyarwanda', code: 'rw' },
+    { name: 'Kurdish (Kurmanji)', code: 'ku' },
+    { name: 'Kyrgyz', code: 'ky' },
+    { name: 'Lao', code: 'lo' },
+    { name: 'Latin', code: 'la' },
+    { name: 'Luxembourgish', code: 'lb' },
+    { name: 'Macedonian', code: 'mk' },
+    { name: 'Malagasy', code: 'mg' },
+    { name: 'Maltese', code: 'mt' },
+    { name: 'Maori', code: 'mi' },
+    { name: 'Mongolian', code: 'mn' },
+    { name: 'Myanmar (Burmese)', code: 'my' },
+    { name: 'Nepali', code: 'ne' },
+    { name: 'Odia (Oriya)', code: 'or' },
+    { name: 'Pashto', code: 'ps' },
+    { name: 'Persian', code: 'fa' },
+    { name: 'Samoan', code: 'sm' },
+    { name: 'Scots Gaelic', code: 'gd' },
+    { name: 'Sesotho', code: 'st' },
+    { name: 'Shona', code: 'sn' },
+    { name: 'Sindhi', code: 'sd' },
+    { name: 'Sinhala', code: 'si' },
+    { name: 'Slovenian', code: 'sl' },
+    { name: 'Somali', code: 'so' },
+    { name: 'Sundanese', code: 'su' },
+    { name: 'Tajik', code: 'tg' },
+    { name: 'Tatar', code: 'tt' },
+    { name: 'Turkmen', code: 'tk' },
+    { name: 'Uyghur', code: 'ug' },
+    { name: 'Uzbek', code: 'uz' },
+    { name: 'Welsh', code: 'cy' },
+    { name: 'Xhosa', code: 'xh' },
+    { name: 'Yiddish', code: 'yi' },
+    { name: 'Yoruba', code: 'yo' },
+    { name: 'Zulu', code: 'zu' },
+].map(l => ({ ...l, speech_code: null, tts_premium: false, tts_free: false }));
+
+const GOOGLE_LANGUAGES = [...VOICE, ...TEXT_ONLY].sort((a, b) => a.name.localeCompare(b.name));
+
+module.exports = { GOOGLE_LANGUAGES };

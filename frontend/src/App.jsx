@@ -24,6 +24,7 @@ import DeniedUsers from './pages/admin/DeniedUsers';
 import AdminsList from './pages/admin/AdminsList';
 import Profile from './pages/admin/Profile';
 import SchoolDetails from './pages/admin/SchoolDetails';
+import AdminBilling from './pages/admin/Billing';
 
 // Super Admin Pages
 import SuperAdminDashboard from './pages/super-admin/Dashboard';
@@ -31,6 +32,7 @@ import Languages from './pages/super-admin/Languages';
 import Schools from './pages/super-admin/Schools';
 import Admins from './pages/super-admin/Admins';
 import SuperAdminSchoolDetails from './pages/super-admin/SchoolDetails';
+import SuperAdminBilling from './pages/super-admin/Billing';
 import SuperAdminProfile from './pages/super-admin/Profile';
 import AuditLogs from './pages/super-admin/AuditLogs';
 
@@ -39,53 +41,26 @@ import TeacherDashboard from './pages/teacher/Dashboard';
 import TeacherAllStudents from './pages/teacher/AllStudents';
 import TeacherGroupMessage from './pages/teacher/GroupMessage';
 import TeacherConversations from './pages/teacher/Conversations';
-import TeacherInPerson from './pages/teacher/InPersonCommunication';
-import InPersonSession from './pages/teacher/InPersonSession';
+import TeacherLiveConversation from './pages/teacher/LiveConversation';
+import LiveConversationSession from './pages/teacher/LiveConversationSession';
 import SendMessagePrivate from './pages/teacher/SendMessagePrivate';
 import TeacherProfile from './pages/teacher/Profile';
 
 // Student Pages
 import StudentDashboard from './pages/student/Dashboard';
 import StudentConversations from './pages/student/Conversations';
-import StudentInPerson from './pages/student/InPersonCommunication';
+import StudentLiveConversation from './pages/student/LiveConversation';
 import StudentProfile from './pages/student/Profile';
 import ChangePassword from './pages/common/ChangePassword';
 import HelpSupport from './pages/common/HelpSupport';
-// Components for placeholder pages
+import ForgotPassword from './pages/ForgotPassword';
+import ResetPassword from './pages/ResetPassword';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
+import NotFound from './pages/NotFound';
 import ProtectedRoute from './components/common/ProtectedRoute';
 import PublicRoute from './components/common/PublicRoute';
 import DashboardLayout from './components/common/DashboardLayout';
-
-// Placeholder components for sidebar links
-const AdminUsers = () => (
-  <div className="p-6">
-    <h1 className="text-3xl font-bold text-gray-800 mb-4">All Users</h1>
-    <div className="card">
-      <p className="text-gray-600">This page will display all registered users in the system.</p>
-      <p className="text-gray-500 mt-2">Feature coming soon!</p>
-    </div>
-  </div>
-);
-
-const AdminSettings = () => (
-  <div className="p-6">
-    <h1 className="text-3xl font-bold text-gray-800 mb-4">System Settings</h1>
-    <div className="card">
-      <p className="text-gray-600">Configure system preferences and settings.</p>
-      <p className="text-gray-500 mt-2">Feature coming soon!</p>
-    </div>
-  </div>
-);
-
-const AdminReports = () => (
-  <div className="p-6">
-    <h1 className="text-3xl font-bold text-gray-800 mb-4">Reports & Analytics</h1>
-    <div className="card">
-      <p className="text-gray-600">View system usage reports and analytics.</p>
-      <p className="text-gray-500 mt-2">Feature coming soon!</p>
-    </div>
-  </div>
-);
 
 
 
@@ -101,7 +76,14 @@ function App() {
               <NotificationProvider>
                 <LanguageProvider>
                   <div className="App">
-                    <Toaster position="top-right" />
+                    <Toaster
+                      position="top-right"
+                      toastOptions={{
+                        className: 'rounded-xl shadow-lg text-sm font-medium',
+                        success: { style: { background: '#f0fdf4', color: '#166534', border: '1px solid #bbf7d0' } },
+                        error:   { style: { background: '#fef2f2', color: '#991b1b', border: '1px solid #fecaca' } },
+                      }}
+                    />
                     <Routes>
                       {/* Public Routes */}
                       <Route path="/" element={<Navigate to="/login" replace />} />
@@ -115,20 +97,32 @@ function App() {
                           <Register />
                         </PublicRoute>
                       } />
+                      <Route path="/forgot-password" element={
+                        <PublicRoute>
+                          <ForgotPassword />
+                        </PublicRoute>
+                      } />
+                      <Route path="/reset-password" element={
+                        <PublicRoute>
+                          <ResetPassword />
+                        </PublicRoute>
+                      } />
+                      <Route path="/privacy" element={<PrivacyPolicy />} />
+                      <Route path="/terms" element={<TermsOfService />} />
 
                       {/* Main Dashboard Route */}
                       <Route path="/dashboard" element={<Dashboard />} />
 
                       {/* Use a placeholder for Super Admin Routes first */}
                       <Route path="/super-admin/dashboard" element={
-                        <ProtectedRoute roles={['super_admin']}>
+                        <ProtectedRoute roles={['super admin']}>
                           <DashboardLayout>
                             <SuperAdminDashboard />
                           </DashboardLayout>
                         </ProtectedRoute>
                       } />
                       <Route path="/super-admin/languages" element={
-                        <ProtectedRoute roles={['super_admin']}>
+                        <ProtectedRoute roles={['super admin']}>
                           <DashboardLayout>
                             <Languages />
                           </DashboardLayout>
@@ -136,22 +130,29 @@ function App() {
                       } />
 
                       <Route path="/super-admin/schools" element={
-                        <ProtectedRoute roles={['super_admin']}>
+                        <ProtectedRoute roles={['super admin']}>
                           <DashboardLayout>
                             <Schools />
                           </DashboardLayout>
                         </ProtectedRoute>
                       } />
                       <Route path="/super-admin/schools/:id" element={
-                        <ProtectedRoute roles={['super_admin']}>
+                        <ProtectedRoute roles={['super admin']}>
                           <DashboardLayout>
                             <SuperAdminSchoolDetails />
                           </DashboardLayout>
                         </ProtectedRoute>
                       } />
+                      <Route path="/super-admin/billing" element={
+                        <ProtectedRoute roles={['super admin']}>
+                          <DashboardLayout>
+                            <SuperAdminBilling />
+                          </DashboardLayout>
+                        </ProtectedRoute>
+                      } />
 
                       <Route path="/super-admin/profile" element={
-                        <ProtectedRoute roles={['super_admin']}>
+                        <ProtectedRoute roles={['super admin']}>
                           <DashboardLayout>
                             <SuperAdminProfile />
                           </DashboardLayout>
@@ -159,7 +160,7 @@ function App() {
                       } />
 
                       <Route path="/super-admin/change-password" element={
-                        <ProtectedRoute roles={['super_admin']}>
+                        <ProtectedRoute roles={['super admin']}>
                           <DashboardLayout>
                             <ChangePassword />
                           </DashboardLayout>
@@ -167,9 +168,17 @@ function App() {
                       } />
 
                       <Route path="/super-admin/audit-logs" element={
-                        <ProtectedRoute roles={['super_admin']}>
+                        <ProtectedRoute roles={['super admin']}>
                           <DashboardLayout>
                             <AuditLogs />
+                          </DashboardLayout>
+                        </ProtectedRoute>
+                      } />
+
+                      <Route path="/super-admin/admins" element={
+                        <ProtectedRoute roles={['super admin']}>
+                          <DashboardLayout>
+                            <Admins />
                           </DashboardLayout>
                         </ProtectedRoute>
                       } />
@@ -189,27 +198,9 @@ function App() {
                           </DashboardLayout>
                         </ProtectedRoute>
                       } />
-                      <Route path="/admin/users" element={
-                        <ProtectedRoute roles={['admin']}>
-                          <DashboardLayout>
-                            <AdminUsers />
-                          </DashboardLayout>
-                        </ProtectedRoute>
-                      } />
-                      <Route path="/admin/settings" element={
-                        <ProtectedRoute roles={['admin']}>
-                          <DashboardLayout>
-                            <ChangePassword />
-                          </DashboardLayout>
-                        </ProtectedRoute>
-                      } />
-                      <Route path="/admin/reports" element={
-                        <ProtectedRoute roles={['admin']}>
-                          <DashboardLayout>
-                            <AdminReports />
-                          </DashboardLayout>
-                        </ProtectedRoute>
-                      } />
+                      <Route path="/admin/users" element={<Navigate to="/admin/students" replace />} />
+                      <Route path="/admin/settings" element={<Navigate to="/admin/profile" replace />} />
+                      <Route path="/admin/reports" element={<Navigate to="/admin/dashboard" replace />} />
 
                       <Route path="/admin/teachers" element={
                         <ProtectedRoute roles={['admin']}>
@@ -260,17 +251,19 @@ function App() {
                           </DashboardLayout>
                         </ProtectedRoute>
                       } />
-                      <Route path="/admin/admins" element={
-                        <ProtectedRoute roles={['admin']}>
-                          <DashboardLayout>
-                            <AdminsList />
-                          </DashboardLayout>
-                        </ProtectedRoute>
-                      } />
+                      {/* Admins are now a tab inside Manage School */}
+                      <Route path="/admin/admins" element={<Navigate to="/admin/school-details" replace />} />
                       <Route path="/admin/school-details" element={
                         <ProtectedRoute roles={['admin']}>
                           <DashboardLayout>
                             <SchoolDetails />
+                          </DashboardLayout>
+                        </ProtectedRoute>
+                      } />
+                      <Route path="/admin/billing" element={
+                        <ProtectedRoute roles={['admin']}>
+                          <DashboardLayout>
+                            <AdminBilling />
                           </DashboardLayout>
                         </ProtectedRoute>
                       } />
@@ -314,17 +307,17 @@ function App() {
                           </DashboardLayout>
                         </ProtectedRoute>
                       } />
-                      <Route path="/teacher/in-person" element={
+                      <Route path="/teacher/live-conversation" element={
                         <ProtectedRoute roles={['teacher']}>
                           <DashboardLayout>
-                            <TeacherInPerson />
+                            <TeacherLiveConversation />
                           </DashboardLayout>
                         </ProtectedRoute>
                       } />
-                      <Route path="/teacher/in-person-session" element={
+                      <Route path="/teacher/live-conversation-session" element={
                         <ProtectedRoute roles={['teacher']}>
                           <DashboardLayout>
-                            <InPersonSession />
+                            <LiveConversationSession />
                           </DashboardLayout>
                         </ProtectedRoute>
                       } />
@@ -368,10 +361,10 @@ function App() {
                           </DashboardLayout>
                         </ProtectedRoute>
                       } />
-                      <Route path="/student/in-person" element={
+                      <Route path="/student/live-conversation" element={
                         <ProtectedRoute roles={['student']}>
                           <DashboardLayout>
-                            <StudentInPerson />
+                            <StudentLiveConversation />
                           </DashboardLayout>
                         </ProtectedRoute>
                       } />
@@ -401,7 +394,7 @@ function App() {
                       } />
 
                       {/* Catch-all route */}
-                      <Route path="*" element={<Navigate to="/" replace />} />
+                      <Route path="*" element={<NotFound />} />
                     </Routes>
                   </div>
                 </LanguageProvider>

@@ -5,9 +5,9 @@ const { protect } = require('../middleware/auth');
 const requireSuperAdmin = require('../middleware/requireSuperAdmin');
 
 router.get('/super-admin/users', protect, requireSuperAdmin, userController.getAllUsers);
+// check-availability must be before /:id to avoid route shadowing
+router.post('/super-admin/users/check-availability', protect, requireSuperAdmin, userController.checkUserAvailability);
 router.post('/super-admin/users', protect, requireSuperAdmin, userController.createUser);
 router.put('/super-admin/users/:id', protect, requireSuperAdmin, userController.updateUser);
-// Check availability route
-router.post('/super-admin/users/check-availability', protect, requireSuperAdmin, userController.checkUserAvailability);
 
 module.exports = router;

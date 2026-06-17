@@ -1,13 +1,8 @@
 const { pool } = require('../config/database');
+const { ROLES } = require('../utils/constants');
 
-/**
- * Middleware to ensure the user's associated school is active.
- * Skips check for Super Admins.
- * If school is inactive, blocks access.
- */
 const requireSchoolActive = async (req, res, next) => {
-    // 1. Super Admins bypass this check
-    if (req.user.is_super_admin) {
+    if (req.user.is_super_admin || req.user.role === ROLES.SUPER_ADMIN) {
         return next();
     }
 

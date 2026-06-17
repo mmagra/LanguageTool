@@ -39,6 +39,12 @@ exports.getStudentById = async (req, res) => {
             });
         }
 
+        // School isolation: non-super-admins may only access students in their own school.
+        const isSuper = req.user.role === 'super admin' || req.user.is_super_admin;
+        if (!isSuper && student.school_id !== req.user.school_id) {
+            return res.status(403).json({ success: false, message: 'Access denied' });
+        }
+
         res.json({
             success: true,
             data: student
@@ -58,12 +64,23 @@ exports.getStudentById = async (req, res) => {
 exports.updateStudentProfile = async (req, res) => {
     try {
         const studentId = req.params.id;
-        // Verify that the user updating the profile is the owner or an admin
-        if (req.user.role !== 'admin' && req.user.id.toString() !== studentId) {
-            return res.status(401).json({
+        const isSuper = req.user.role === 'super admin' || req.user.is_super_admin;
+        // Verify that the user updating the profile is the owner, an admin, or super admin
+        if (req.user.role !== 'admin' && !isSuper && req.user.id.toString() !== studentId) {
+            return res.status(403).json({
                 success: false,
                 message: 'Not authorized to update this profile'
             });
+        }
+        // A school admin may only edit students in their own school
+        if (req.user.role === 'admin') {
+            const target = await Student.findById(studentId);
+            if (!target) {
+                return res.status(404).json({ success: false, message: 'Student not found' });
+            }
+            if (target.school_id !== req.user.school_id) {
+                return res.status(403).json({ success: false, message: 'Access denied' });
+            }
         }
 
         const {
@@ -132,18 +149,13 @@ exports.updateStudentProfile = async (req, res) => {
         });
 
         // 3. Update Student Profile Specifics
+        // Language is stored as preferred_language_id (FK). Student.updateProfile only
+        // honors grade_id, guardian_name, guardian_relation, preferred_language_id.
         const updatedProfile = await Student.updateProfile(studentId, {
             grade_id,
             guardian_name,
             guardian_relation,
-            grade_id,
-            guardian_name,
-            guardian_relation,
-            preferred_language, // Pass legacy if needed, or better, logic to resolve ID if only name provided?
-            // For now, we prefer ID. If ID is provided, it overrides/is used.
-            preferred_language_id,
-            institution,
-            learning_goals
+            preferred_language_id
         });
 
         // Emit socket event for profile update
@@ -232,7 +244,14 @@ exports.bulkUpdateGrades = async (req, res) => {
             });
         }
 
-        const updatedStudents = await Student.updateGradesBulk(studentIds, newGradeId);
+        // Multi-tenant isolation: a school admin may only update students in their own school.
+        const isSuperAdmin = req.user.role === 'super admin';
+        if (!isSuperAdmin && !req.user.school_id) {
+            return res.status(403).json({ success: false, message: 'No school context for this operation' });
+        }
+        const scopeSchoolId = isSuperAdmin ? null : req.user.school_id;
+
+        const updatedStudents = await Student.updateGradesBulk(studentIds, newGradeId, scopeSchoolId);
 
         res.json({
             success: true,
@@ -255,10 +274,8 @@ exports.bulkUpdateGrades = async (req, res) => {
 exports.getDashboardStats = async (req, res) => {
     try {
         // Log full user object for debugging
-        console.log('[DEBUG-STATS] Full User:', JSON.stringify(req.user, null, 2));
 
         const studentId = req.user.id;
-        console.log(`[DEBUG-STATS] Fetching stats for student_id: ${studentId}`);
 
         // Simple query strictly on conversations table first
         const conversationQuery = `
@@ -270,7 +287,6 @@ exports.getDashboardStats = async (req, res) => {
         `;
 
         const result = await db.query(conversationQuery, [studentId]);
-        console.log('[DEBUG-STATS] Query Result Rows:', result.rows);
 
         const row = result.rows[0];
         const stats = {
@@ -278,7 +294,6 @@ exports.getDashboardStats = async (req, res) => {
             conversationCount: parseInt(row.conversation_count) || 0
         };
 
-        console.log('[DEBUG-STATS] Final Stats:', stats);
 
         res.json({
             success: true,

@@ -1,34 +1,21 @@
 const express = require('express');
 const router = express.Router();
 const messageController = require('../controllers/messageController');
-const { protect } = require('../middleware/auth');
+const { protect, authorize } = require('../middleware/auth');
+const requireSchoolActive = require('../middleware/requireSchoolActive');
+const requireSchoolValid = require('../middleware/requireSchoolValid');
+const { messageLimiter } = require('../middleware/rateLimiter');
 
-// @route   GET /api/messages/conversations
-// @desc    Get user's conversations
-router.get('/conversations', protect, messageController.getConversations);
+router.use(protect);
+router.use(requireSchoolActive);
+router.use(requireSchoolValid);
 
-// @route   POST /api/messages/conversations
-// @desc    Create new conversation
-router.post('/conversations', protect, messageController.createConversation);
-
-// @route   GET /api/messages/conversations/:id
-// @desc    Get conversation with messages
-router.get('/conversations/:id', protect, messageController.getConversationById);
-
-// @route   POST /api/messages/conversations/:id/messages
-// @desc    Send message in conversation
-router.post('/conversations/:id/messages', protect, messageController.sendMessage);
-
-// @route   POST /api/messages/group
-// @desc    Send bulk group message with auto-translation
-router.post('/group', protect, messageController.sendGroupMessage);
-
-// @route   PUT /api/messages/conversations/:id/read
-// @desc    Mark conversation as read
-router.put('/conversations/:id/read', protect, messageController.markAsRead);
-
-// @route   DELETE /api/messages/conversations/:id
-// @desc    Delete conversation (Admin only)
-router.delete('/conversations/:id', protect, messageController.deleteConversation);
+router.get('/conversations', messageController.getConversations);
+router.post('/conversations', messageLimiter, messageController.createConversation);
+router.get('/conversations/:id', messageController.getConversationById);
+router.post('/conversations/:id/messages', messageLimiter, messageController.sendMessage);
+router.post('/group', authorize('teacher', 'admin', 'super admin'), messageLimiter, messageController.sendGroupMessage);
+router.put('/conversations/:id/read', messageController.markAsRead);
+router.delete('/conversations/:id', authorize('admin', 'super admin'), messageController.deleteConversation);
 
 module.exports = router;

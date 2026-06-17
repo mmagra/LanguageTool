@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import api from '../../services/api';
 import ProtectedRoute from '../../components/common/ProtectedRoute';
 import {
@@ -7,6 +7,7 @@ import {
     ArrowLeft, Trash2, Camera, Check, AlertCircle, Building, Briefcase, FileText, Lock
 } from 'lucide-react';
 import toast from 'react-hot-toast';
+import { formatPhone, isValidPhone, PHONE_MESSAGE } from '../../utils/validation';
 import AdminResetPasswordModal from './modals/AdminResetPasswordModal';
 
 const TeacherDetails = () => {
@@ -64,9 +65,10 @@ const TeacherDetails = () => {
     };
 
     const handleChange = (e) => {
+        const { name, value } = e.target;
         setFormData({
             ...formData,
-            [e.target.name]: e.target.value
+            [name]: name === 'phone' ? formatPhone(value) : value
         });
     };
 
@@ -132,6 +134,10 @@ const TeacherDetails = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (formData.phone && !isValidPhone(formData.phone)) {
+            toast.error(PHONE_MESSAGE);
+            return;
+        }
         setSaving(true);
 
         try {
@@ -194,7 +200,7 @@ const TeacherDetails = () => {
                     <h3 className="text-lg font-bold text-red-700">Teacher Not Found</h3>
                     <button
                         onClick={() => navigate('/admin/teachers')}
-                        className="mt-4 px-4 py-2 bg-white border border-gray-300 rounded-lg text-sm font-medium hover:bg-gray-50 transition-colors"
+                        className="mt-4 px-4 py-2 bg-white border border-slate-300 rounded-lg text-sm font-medium hover:bg-slate-50 transition-colors"
                     >
                         Return to List
                     </button>
@@ -207,23 +213,32 @@ const TeacherDetails = () => {
         <ProtectedRoute roles={['admin']}>
             <div className="h-full overflow-y-auto animate-fade-in font-inter p-6">
                 <div className="max-w-5xl mx-auto space-y-6 pb-12 animate-in fade-in slide-in-from-bottom-4 duration-500">
-                    {/* Header Navigation */}
+                    {/* Breadcrumb / Back navigation */}
+                    <nav className="flex items-center gap-1.5 text-xs text-slate-400 mb-1 flex-wrap" aria-label="Breadcrumb">
+                        <Link to="/admin/dashboard" className="hover:text-primary-600 transition-colors font-medium">Dashboard</Link>
+                        <span className="text-slate-300">›</span>
+                        <Link to="/admin/teachers" className="hover:text-primary-600 transition-colors font-medium">Teachers</Link>
+                        <span className="text-slate-300">›</span>
+                        <span className="text-slate-600 font-medium">{teacherData?.first_name} {teacherData?.last_name}</span>
+                    </nav>
+                    <button onClick={() => navigate(-1)} className="flex items-center gap-1.5 text-sm text-slate-500 hover:text-slate-800 transition-colors font-medium mb-4">
+                        <ArrowLeft size={15} /> Back to Teachers
+                    </button>
 
-
-                    <div className="bg-white rounded-2xl shadow-xl shadow-gray-200/50 border border-gray-100 overflow-hidden">
+                    <div className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
                         {/* Cover / Header Area */}
-                        <div className="bg-[#f0f4fe] p-6 md:p-8 relative">
+                        <div className="bg-slate-50 p-6 md:p-8 relative">
                             <div className="flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left">
                                 {/* Avatar Section */}
                                 <div className="relative group shrink-0">
-                                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#2ea3f2] to-[#f2a93b] p-[3px] shadow-lg">
+                                    <div className="w-24 h-24 rounded-full bg-primary-600 p-[3px] shadow-lg">
                                         <div className="w-full h-full rounded-full bg-white flex items-center justify-center relative overflow-hidden">
                                             {profileImage && (profileImage.startsWith('data:') || profileImage.startsWith('http')) ? (
                                                 <img src={profileImage} alt="Profile" className="w-full h-full object-cover" />
                                             ) : (
                                                 <>
-                                                    <div className="absolute inset-0 bg-[#f0f4fe] opacity-50"></div>
-                                                    <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#2ea3f2] to-[#f2a93b] relative z-10">
+                                                    <div className="absolute inset-0 bg-slate-50 opacity-50"></div>
+                                                    <span className="text-4xl font-bold text-primary-700 relative z-10">
                                                         {(formData.first_name?.[0] || 'T')}{(formData.last_name?.[0] || 'P')}
                                                     </span>
                                                 </>
@@ -235,9 +250,9 @@ const TeacherDetails = () => {
                                             <button
                                                 type="button"
                                                 onClick={() => fileInputRef.current?.click()}
-                                                className="absolute bottom-0 right-0 p-1.5 bg-white rounded-full shadow-lg hover:bg-gray-50 transition-colors border-2 border-indigo-600"
+                                                className="absolute bottom-0 right-0 p-1.5 bg-white rounded-full shadow-lg hover:bg-slate-50 transition-colors border-2 border-primary-600"
                                             >
-                                                <Camera size={14} className="text-indigo-600" />
+                                                <Camera size={14} className="text-primary-600" />
                                             </button>
                                             {profileImage && (
                                                 <button
@@ -255,19 +270,19 @@ const TeacherDetails = () => {
 
                                 {/* Info Section */}
                                 <div className="flex-1 min-w-0">
-                                    <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1 break-words">
+                                    <h1 className="text-2xl md:text-2xl font-semibold text-slate-900 mb-1 break-words">
                                         {teacherData.first_name} {teacherData.last_name}
                                     </h1>
-                                    <p className="text-gray-600 font-medium mb-2 break-all">
+                                    <p className="text-slate-600 font-medium mb-2 break-all">
                                         {isEditing ? formData.email : teacherData.email}
                                     </p>
                                     <div className="flex items-center justify-center md:justify-start gap-3 flex-wrap">
-                                        <span className="text-xs font-semibold tracking-wide text-gray-900 bg-white px-3 py-1 rounded-full border border-gray-200 shadow-sm">
+                                        <span className="text-xs font-semibold tracking-wide text-slate-900 bg-white px-3 py-1 rounded-full border border-slate-200 shadow-sm">
                                             ID: {isEditing ? formData.username : teacherData.username}
                                         </span>
-                                        <div className="flex items-center gap-2 px-3 py-1 bg-white rounded-full border border-gray-200 shadow-sm">
-                                            <Briefcase size={14} className="text-[#f2a93b]" />
-                                            <span className="text-gray-900 font-bold text-xs">Teacher</span>
+                                        <div className="flex items-center gap-2 px-3 py-1 bg-white rounded-full border border-slate-200 shadow-sm">
+                                            <Briefcase size={14} className="text-brand-amber" />
+                                            <span className="text-slate-900 font-bold text-xs">Teacher</span>
                                         </div>
                                     </div>
                                 </div>
@@ -278,11 +293,11 @@ const TeacherDetails = () => {
                                             <div className="relative group">
                                                 <button
                                                     onClick={() => setIsEditing(true)}
-                                                    className="p-2 bg-white text-indigo-600 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+                                                    className="p-2 bg-white text-primary-600 rounded-xl shadow-lg hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
                                                 >
                                                     <Edit2 size={18} />
                                                 </button>
-                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-slate-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
                                                     Edit Profile
                                                 </div>
                                             </div>
@@ -290,11 +305,11 @@ const TeacherDetails = () => {
                                             <div className="relative group">
                                                 <button
                                                     onClick={() => setShowPasswordModal(true)}
-                                                    className="p-2 bg-white text-amber-600 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+                                                    className="p-2 bg-white text-amber-600 rounded-xl shadow-lg hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
                                                 >
                                                     <Lock size={18} />
                                                 </button>
-                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-slate-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
                                                     Change Password
                                                 </div>
                                             </div>
@@ -302,11 +317,11 @@ const TeacherDetails = () => {
                                             <div className="relative group">
                                                 <button
                                                     onClick={() => setShowDeleteModal(true)}
-                                                    className="p-2 bg-white text-red-600 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+                                                    className="p-2 bg-white text-red-600 rounded-xl shadow-lg hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
                                                 >
                                                     <Trash2 size={18} />
                                                 </button>
-                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-slate-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
                                                     Delete Teacher
                                                 </div>
                                             </div>
@@ -316,7 +331,7 @@ const TeacherDetails = () => {
                                             <button
                                                 type="button"
                                                 onClick={handleCancel}
-                                                className="flex items-center gap-2 px-4 py-2 bg-white text-gray-700 font-bold rounded-xl text-sm transition-all hover:bg-gray-50 border border-gray-200 shadow-sm"
+                                                className="flex items-center gap-2 px-4 py-2 bg-white text-slate-700 font-bold rounded-xl text-sm transition-all hover:bg-slate-50 border border-slate-200 shadow-sm"
                                             >
                                                 <X size={16} />
                                                 Cancel
@@ -324,7 +339,7 @@ const TeacherDetails = () => {
                                             <button
                                                 onClick={handleSubmit}
                                                 disabled={saving}
-                                                className="flex items-center gap-2 px-4 py-2 bg-indigo-600 text-white font-bold rounded-xl text-sm transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 hover:bg-indigo-700"
+                                                className="flex items-center gap-2 px-4 py-2 bg-primary-600 text-white font-bold rounded-xl text-sm transition-all duration-300 shadow-lg hover:shadow-md hover:-translate-y-0.5 hover:bg-primary-700"
                                             >
                                                 {saving ? (
                                                     <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
@@ -345,8 +360,8 @@ const TeacherDetails = () => {
                         <form onSubmit={handleSubmit} className="p-6 md:p-8">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
-                                    <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
-                                        <User size={16} className="text-indigo-600" /> First Name
+                                    <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
+                                        <User size={16} className="text-primary-600" /> First Name
                                     </label>
                                     <input
                                         type="text"
@@ -354,12 +369,12 @@ const TeacherDetails = () => {
                                         value={formData.first_name}
                                         onChange={handleChange}
                                         disabled={!isEditing}
-                                        className={`w-full px-4 h-12 border rounded-xl transition-all outline-none text-sm ${isEditing ? 'border-gray-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-gray-200 bg-gray-50 text-gray-700 cursor-not-allowed'}`}
+                                        className={`w-full px-4 h-12 border rounded-xl transition-all outline-none text-sm ${isEditing ? 'border-slate-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-slate-200 bg-slate-50 text-slate-700 cursor-not-allowed'}`}
                                     />
                                 </div>
                                 <div>
-                                    <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
-                                        <User size={16} className="text-indigo-600" /> Last Name
+                                    <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
+                                        <User size={16} className="text-primary-600" /> Last Name
                                     </label>
                                     <input
                                         type="text"
@@ -367,13 +382,13 @@ const TeacherDetails = () => {
                                         value={formData.last_name}
                                         onChange={handleChange}
                                         disabled={!isEditing}
-                                        className={`w-full px-4 h-12 border rounded-xl transition-all outline-none text-sm ${isEditing ? 'border-gray-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-gray-200 bg-gray-50 text-gray-700 cursor-not-allowed'}`}
+                                        className={`w-full px-4 h-12 border rounded-xl transition-all outline-none text-sm ${isEditing ? 'border-slate-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-slate-200 bg-slate-50 text-slate-700 cursor-not-allowed'}`}
                                     />
                                 </div>
 
                                 <div>
-                                    <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
-                                        <Mail size={16} className="text-indigo-600" /> Email Address
+                                    <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
+                                        <Mail size={16} className="text-primary-600" /> Email Address
                                     </label>
                                     <input
                                         type="email"
@@ -381,12 +396,12 @@ const TeacherDetails = () => {
                                         value={formData.email}
                                         onChange={handleChange}
                                         disabled={!isEditing}
-                                        className={`w-full px-4 h-12 border rounded-xl transition-all outline-none text-sm ${isEditing ? 'border-gray-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-gray-200 bg-gray-50 text-gray-700 cursor-not-allowed'}`}
+                                        className={`w-full px-4 h-12 border rounded-xl transition-all outline-none text-sm ${isEditing ? 'border-slate-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-slate-200 bg-slate-50 text-slate-700 cursor-not-allowed'}`}
                                     />
                                 </div>
                                 <div>
-                                    <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
-                                        <Phone size={16} className="text-indigo-600" /> Phone Number
+                                    <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
+                                        <Phone size={16} className="text-primary-600" /> Phone Number
                                     </label>
                                     <input
                                         type="tel"
@@ -394,13 +409,15 @@ const TeacherDetails = () => {
                                         value={formData.phone}
                                         onChange={handleChange}
                                         disabled={!isEditing}
-                                        className={`w-full px-4 h-12 border rounded-xl transition-all outline-none text-sm ${isEditing ? 'border-gray-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-gray-200 bg-gray-50 text-gray-700 cursor-not-allowed'}`}
-                                        placeholder={!isEditing && !formData.phone ? "Not provided" : ""}
+                                        inputMode="numeric"
+                                        maxLength={14}
+                                        className={`w-full px-4 h-12 border rounded-xl transition-all outline-none text-sm ${isEditing ? 'border-slate-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-slate-200 bg-slate-50 text-slate-700 cursor-not-allowed'}`}
+                                        placeholder={!isEditing && !formData.phone ? "Not provided" : "(000) 000 0000"}
                                     />
                                 </div>
 
                                 <div>
-                                    <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
+                                    <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
                                         <Shield size={16} className="text-purple-600" /> Employee ID
                                     </label>
                                     <input
@@ -409,14 +426,14 @@ const TeacherDetails = () => {
                                         value={formData.username}
                                         onChange={handleChange}
                                         disabled={!isEditing}
-                                        className={`w-full px-4 h-12 border rounded-xl transition-all outline-none font-mono text-sm ${isEditing ? 'border-gray-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-gray-200 bg-gray-50 text-gray-700 cursor-not-allowed'}`}
+                                        className={`w-full px-4 h-12 border rounded-xl transition-all outline-none font-mono text-sm ${isEditing ? 'border-slate-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-slate-200 bg-slate-50 text-slate-700 cursor-not-allowed'}`}
                                     />
                                 </div>
                                 <div>
-                                    <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
+                                    <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
                                         <Building size={16} className="text-purple-600" /> School Name
                                     </label>
-                                    <div className="w-full px-4 h-12 border border-gray-200 bg-gray-50 rounded-xl flex items-center text-sm text-gray-700 cursor-not-allowed">
+                                    <div className="w-full px-4 h-12 border border-slate-200 bg-slate-50 rounded-xl flex items-center text-sm text-slate-700 cursor-not-allowed">
                                         {formData.school_name || "Not provided"}
                                     </div>
                                 </div>
@@ -426,21 +443,21 @@ const TeacherDetails = () => {
 
                     {/* Delete Confirmation Modal */}
                     {showDeleteModal && (
-                        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-gray-900/60 backdrop-blur-sm animate-in fade-in duration-200">
-                            <div className="bg-white rounded-2xl shadow-2xl w-full max-w-md overflow-hidden animate-in zoom-in-95 duration-200">
+                        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-in fade-in duration-200">
+                            <div className="bg-white rounded-xl shadow-lg w-full max-w-md overflow-hidden animate-in zoom-in-95 duration-200">
                                 <div className="p-6 text-center">
                                     <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                                         <Trash2 size={32} className="text-red-600" />
                                     </div>
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2">Delete Teacher?</h3>
-                                    <p className="text-gray-500 text-sm mb-6">
+                                    <h3 className="text-xl font-bold text-slate-900 mb-2">Delete Teacher?</h3>
+                                    <p className="text-slate-500 text-sm mb-6">
                                         Are you sure you want to delete <strong>{teacherData.first_name} {teacherData.last_name}</strong>?
                                         This action cannot be undone and will remove all associated data.
                                     </p>
                                     <div className="flex gap-3">
                                         <button
                                             onClick={() => setShowDeleteModal(false)}
-                                            className="flex-1 px-4 py-2.5 text-sm font-semibold text-gray-700 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-xl transition-all"
+                                            className="flex-1 px-4 py-2.5 text-sm font-semibold text-slate-700 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-xl transition-all"
                                         >
                                             Cancel
                                         </button>

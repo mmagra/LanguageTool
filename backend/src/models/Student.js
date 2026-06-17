@@ -131,17 +131,19 @@ class Student {
         }
     }
 
-    // Update grades for multiple students
-    static async updateGradesBulk(studentIds, newGradeId) {
+    // Update grades for multiple students.
+    // When schoolId is provided, only students in that school are affected (multi-tenant isolation).
+    static async updateGradesBulk(studentIds, newGradeId, schoolId = null) {
         const query = `
             UPDATE student_profiles
             SET grade_id = $2, updated_at = CURRENT_TIMESTAMP
             WHERE user_id = ANY($1::int[])
+              AND ($3::int IS NULL OR user_id IN (SELECT id FROM users WHERE school_id = $3))
             RETURNING *
         `;
 
         try {
-            const result = await db.query(query, [studentIds, newGradeId]);
+            const result = await db.query(query, [studentIds, newGradeId, schoolId]);
             return result.rows;
         } catch (error) {
             throw new Error(`Error updating student grades: ${error.message}`);

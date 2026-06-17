@@ -1,6 +1,7 @@
 import React, { createContext, useState, useContext, useEffect } from 'react';
 import { authService } from '../services/authService';
 import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
 const AuthContext = createContext({});
 
@@ -9,93 +10,58 @@ export const useAuth = () => useContext(AuthContext);
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    // Check if user is logged in on mount
-    console.log('AuthProvider mounted - checking localStorage');
-
     const token = localStorage.getItem('token');
     const storedUser = authService.getCurrentUser();
 
-    console.log('Stored token exists:', !!token);
-    console.log('Stored user exists:', !!storedUser);
-
     if (storedUser && token) {
-      if (storedUser?.role) {
-        storedUser.role = storedUser.role.toLowerCase();
-      }
-      console.log('Setting user from localStorage:', storedUser);
+      if (storedUser?.role) storedUser.role = storedUser.role.toLowerCase();
       setUser(storedUser);
-    } else {
-      console.log('No user/token in localStorage');
     }
 
-    // Always fetch fresh profile if token exists to ensure we have latest data (like preferred_language)
     if (token) {
       authService.getProfile()
         .then(response => {
           if (response.success) {
             const freshUser = response.data;
             if (freshUser.role) freshUser.role = freshUser.role.toLowerCase();
-
-            console.log('Refreshed user profile from server:', freshUser);
             setUser(freshUser);
             localStorage.setItem('user', JSON.stringify(freshUser));
           }
         })
-        .catch(err => console.error('Failed to refresh profile:', err));
+        .catch(err => console.error('Failed to refresh profile:', err))
+        .finally(() => setLoading(false)); // only finish loading once the profile resolves
+    } else {
+      setLoading(false);
     }
-
-    setLoading(false);
   }, []);
 
   const login = async (identifier, password) => {
-    console.log('AuthContext login called for:', identifier);
-
     try {
       const response = await authService.login({ identifier, password });
-      console.log('AuthContext login response:', response);
 
       if (response.success) {
         const userData = response.data.user;
-        if (userData?.role) {
-          userData.role = userData.role.toLowerCase();
-        }
+        if (userData?.role) userData.role = userData.role.toLowerCase();
         setUser(userData);
-
-        // Auto-switch language if student
-        // Auto-switch language logic disabled as per user request (show English by default)
-        /*
-        if (userData?.role === 'student' && userData?.preferred_language) {
-          import('../utils/languages').then(({ getLanguageCode }) => {
-            import('i18next').then(i18n => {
-              const code = getLanguageCode(userData.preferred_language);
-              i18n.default.changeLanguage(code);
-              console.log('🌐 Language switched to:', code);
-            });
-          });
-        }
-        */
-
-        console.log('User set in AuthContext:', userData);
         toast.success('Login successful!', { duration: 3000 });
         return { success: true };
       } else {
-        console.error('Login failed in AuthContext:', response);
         return { success: false, error: response.message };
       }
     } catch (error) {
-      console.error('AuthContext login error:', error);
       toast.error(error.message || 'Login failed');
       return { success: false, error: error.message };
     }
   };
 
   const logout = () => {
-    console.log('AuthContext logout called');
     authService.logout();
     setUser(null);
     toast.success('Logged out successfully');
+    navigate('/login');
   };
 
   const register = async (userData) => {
@@ -122,7 +88,6 @@ export const AuthProvider = ({ children }) => {
         const freshUser = response.data;
         if (freshUser.role) freshUser.role = freshUser.role.toLowerCase();
 
-        console.log('Manually refreshed user profile:', freshUser);
         setUser(freshUser);
         localStorage.setItem('user', JSON.stringify(freshUser));
         return { success: true, user: freshUser };
@@ -147,12 +112,6 @@ export const AuthProvider = ({ children }) => {
     isStudent: user?.role === 'student',
     isApproved: user?.status === 'approved' || user?.status === 'active',
   };
-
-  console.log('AuthContext value:', {
-    user: user?.email,
-    isAuthenticated: value.isAuthenticated,
-    isAdmin: value.isAdmin
-  });
 
   return (
     <AuthContext.Provider value={value}>

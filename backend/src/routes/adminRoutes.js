@@ -15,11 +15,14 @@ const {
 } = require('../controllers/adminController');
 const { auth, authorize } = require('../middleware/auth');
 const { validate } = require('../middleware/validation');
+const requireSchoolActive = require('../middleware/requireSchoolActive');
+const requireSchoolValid = require('../middleware/requireSchoolValid');
 const Joi = require('joi');
 
-// Protect all routes with auth and admin authorization
 router.use(auth);
 router.use(authorize('admin'));
+router.use(requireSchoolActive);
+router.use(requireSchoolValid);
 
 // Dashboard stats route
 router.get('/dashboard-stats', getDashboardStats);

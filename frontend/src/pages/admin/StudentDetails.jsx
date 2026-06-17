@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 import ProtectedRoute from '../../components/common/ProtectedRoute';
 import {
     User, Mail, Phone, Shield, Edit2, Save, X,
@@ -8,6 +8,7 @@ import {
 import toast from 'react-hot-toast';
 import api from '../../services/api';
 import CustomDropdown from '../../components/common/CustomDropdown';
+import { formatPhone, isValidPhone, PHONE_MESSAGE } from '../../utils/validation';
 import AdminResetPasswordModal from './modals/AdminResetPasswordModal';
 
 const StudentDetails = () => {
@@ -146,9 +147,10 @@ const StudentDetails = () => {
     }, [id]);
 
     const handleChange = (e) => {
+        const { name, value } = e.target;
         setFormData({
             ...formData,
-            [e.target.name]: e.target.value
+            [name]: name === 'phone' ? formatPhone(value) : value
         });
     };
 
@@ -179,6 +181,10 @@ const StudentDetails = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (formData.phone && !isValidPhone(formData.phone)) {
+            toast.error(PHONE_MESSAGE);
+            return;
+        }
         setSaving(true);
         setMessage(null);
 
@@ -201,7 +207,7 @@ const StudentDetails = () => {
             }
         } catch (error) {
             console.error('Update error:', error);
-            const errorMsg = error.response?.data?.message || 'Failed to update profile';
+            const errorMsg = error?.message || 'Failed to update profile';
             setMessage({ type: 'error', text: errorMsg });
             toast.error(errorMsg);
         } finally {
@@ -245,19 +251,19 @@ const StudentDetails = () => {
     if (loading) {
         return (
             <div className="flex justify-center items-center h-full">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-indigo-600"></div>
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600"></div>
             </div>
         );
     }
 
     if (!studentData) {
         return (
-            <div className="flex flex-col items-center justify-center h-full text-gray-500">
+            <div className="flex flex-col items-center justify-center h-full text-slate-500">
                 <AlertCircle size={48} className="mb-4 text-red-400" />
-                <p className="text-xl font-semibold text-gray-700">Student not found</p>
+                <p className="text-xl font-semibold text-slate-700">Student not found</p>
                 <button
                     onClick={() => navigate('/admin/students')}
-                    className="mt-4 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors"
+                    className="mt-4 px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
                 >
                     Back to Students
                 </button>
@@ -271,6 +277,18 @@ const StudentDetails = () => {
         <ProtectedRoute roles={['admin']}>
             <div className="h-full overflow-y-auto animate-fade-in font-inter p-6">
                 <div className="max-w-5xl mx-auto space-y-6 pb-12 animate-in fade-in slide-in-from-bottom-4 duration-500">
+
+                    {/* Breadcrumb / Back navigation */}
+                    <nav className="flex items-center gap-1.5 text-xs text-slate-400 mb-1 flex-wrap" aria-label="Breadcrumb">
+                        <Link to="/admin/dashboard" className="hover:text-primary-600 transition-colors font-medium">Dashboard</Link>
+                        <span className="text-slate-300">›</span>
+                        <Link to="/admin/students" className="hover:text-primary-600 transition-colors font-medium">Students</Link>
+                        <span className="text-slate-300">›</span>
+                        <span className="text-slate-600 font-medium">{studentData?.first_name} {studentData?.last_name}</span>
+                    </nav>
+                    <button onClick={() => navigate(-1)} className="flex items-center gap-1.5 text-sm text-slate-500 hover:text-slate-800 transition-colors font-medium mb-4">
+                        <ArrowLeft size={15} /> Back to Students
+                    </button>
 
                     {/* Message Alert */}
                     {message && (
@@ -286,20 +304,20 @@ const StudentDetails = () => {
                         </div>
                     )}
 
-                    <div className="bg-white rounded-2xl shadow-xl shadow-gray-200/50 border border-gray-100 overflow-hidden">
+                    <div className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
                         {/* Cover / Header Area */}
-                        <div className="bg-[#f0f4fe] p-6 md:p-8 relative">
+                        <div className="bg-slate-50 p-6 md:p-8 relative">
                             <div className="flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left">
                                 {/* Avatar Section */}
                                 <div className="relative group shrink-0">
-                                    <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#2ea3f2] to-[#f2a93b] p-[3px] shadow-lg">
+                                    <div className="w-24 h-24 rounded-full bg-primary-600 p-[3px] shadow-lg">
                                         <div className="w-full h-full rounded-full bg-white flex items-center justify-center relative overflow-hidden">
                                             {profileImage && (profileImage.startsWith('data:') || profileImage.startsWith('http')) ? (
                                                 <img src={profileImage} alt="Profile" className="w-full h-full object-cover" />
                                             ) : (
                                                 <>
-                                                    <div className="absolute inset-0 bg-[#f0f4fe] opacity-50"></div>
-                                                    <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#2ea3f2] to-[#f2a93b] relative z-10">
+                                                    <div className="absolute inset-0 bg-slate-50 opacity-50"></div>
+                                                    <span className="text-4xl font-bold text-primary-700 relative z-10">
                                                         {(formData.first_name?.[0] || 'S')}{(formData.last_name?.[0] || 'T')}
                                                     </span>
                                                 </>
@@ -311,9 +329,9 @@ const StudentDetails = () => {
                                             <button
                                                 type="button"
                                                 onClick={() => fileInputRef.current?.click()}
-                                                className="absolute bottom-0 right-0 p-1.5 bg-white rounded-full shadow-lg hover:bg-gray-50 transition-colors border-2 border-indigo-600"
+                                                className="absolute bottom-0 right-0 p-1.5 bg-white rounded-full shadow-lg hover:bg-slate-50 transition-colors border-2 border-primary-600"
                                             >
-                                                <Camera size={14} className="text-indigo-600" />
+                                                <Camera size={14} className="text-primary-600" />
                                             </button>
                                             {profileImage && (
                                                 <button
@@ -331,19 +349,19 @@ const StudentDetails = () => {
 
                                 {/* Info Section */}
                                 <div className="flex-1 min-w-0">
-                                    <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1 break-words">
+                                    <h1 className="text-2xl md:text-2xl font-semibold text-slate-900 mb-1 break-words">
                                         {studentData.first_name} {studentData.last_name}
                                     </h1>
-                                    <p className="text-gray-600 font-medium mb-2 break-all">
+                                    <p className="text-slate-600 font-medium mb-2 break-all">
                                         {isEditing ? formData.email : studentData.email}
                                     </p>
                                     <div className="flex items-center justify-center md:justify-start gap-3 flex-wrap">
-                                        <span className="text-xs font-semibold tracking-wide text-gray-900 bg-white px-3 py-1 rounded-full border border-gray-200 shadow-sm">
+                                        <span className="text-xs font-semibold tracking-wide text-slate-900 bg-white px-3 py-1 rounded-full border border-slate-200 shadow-sm">
                                             ID: {isEditing ? formData.username : studentData.username}
                                         </span>
-                                        <div className="flex items-center gap-2 px-3 py-1 bg-white rounded-full border border-gray-200 shadow-sm">
-                                            <Shield size={14} className="text-[#f2a93b]" />
-                                            <span className="text-gray-900 font-bold text-xs">Student</span>
+                                        <div className="flex items-center gap-2 px-3 py-1 bg-white rounded-full border border-slate-200 shadow-sm">
+                                            <Shield size={14} className="text-brand-amber" />
+                                            <span className="text-slate-900 font-bold text-xs">Student</span>
                                         </div>
                                     </div>
                                 </div>
@@ -354,11 +372,11 @@ const StudentDetails = () => {
                                             <div className="relative group">
                                                 <button
                                                     onClick={() => setIsEditing(true)}
-                                                    className="p-2 bg-white text-indigo-600 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+                                                    className="p-2 bg-white text-primary-600 rounded-xl shadow-lg hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
                                                 >
                                                     <Edit2 size={18} />
                                                 </button>
-                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-slate-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
                                                     Edit Profile
                                                 </div>
                                             </div>
@@ -366,11 +384,11 @@ const StudentDetails = () => {
                                             <div className="relative group">
                                                 <button
                                                     onClick={() => setShowPasswordModal(true)}
-                                                    className="p-2 bg-white text-amber-600 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+                                                    className="p-2 bg-white text-amber-600 rounded-xl shadow-lg hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
                                                 >
                                                     <Lock size={18} />
                                                 </button>
-                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-slate-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
                                                     Change Password
                                                 </div>
                                             </div>
@@ -378,11 +396,11 @@ const StudentDetails = () => {
                                             <div className="relative group">
                                                 <button
                                                     onClick={() => setShowDeleteModal(true)}
-                                                    className="p-2 bg-white text-red-600 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300"
+                                                    className="p-2 bg-white text-red-600 rounded-xl shadow-lg hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
                                                 >
                                                     <Trash2 size={18} />
                                                 </button>
-                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                                                <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-slate-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
                                                     Delete Student
                                                 </div>
                                             </div>
@@ -392,7 +410,7 @@ const StudentDetails = () => {
                                             <button
                                                 type="button"
                                                 onClick={handleCancel}
-                                                className="flex items-center gap-2 px-6 py-2.5 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 focus:ring-4 focus:ring-gray-100 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-sm hover:shadow-md active:scale-95"
+                                                className="flex items-center gap-2 px-6 py-2.5 text-sm font-medium text-slate-700 bg-white border border-slate-200 rounded-xl hover:bg-slate-50 focus:ring-4 focus:ring-slate-100 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-sm hover:shadow-md active:scale-95"
                                             >
                                                 <X size={18} />
                                                 Cancel
@@ -421,8 +439,8 @@ const StudentDetails = () => {
                         <form onSubmit={handleSubmit} className="p-6 md:p-8">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div>
-                                    <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
-                                        <User size={16} className="text-indigo-600" /> First Name
+                                    <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
+                                        <User size={16} className="text-primary-600" /> First Name
                                     </label>
                                     <input
                                         type="text"
@@ -430,12 +448,12 @@ const StudentDetails = () => {
                                         value={formData.first_name}
                                         onChange={handleChange}
                                         disabled={!isEditing}
-                                        className={`w-full px-4 h-12 border rounded-xl transition-all outline-none text-sm ${isEditing ? 'border-gray-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-gray-200 bg-gray-50 text-gray-700 cursor-not-allowed'}`}
+                                        className={`w-full px-4 h-12 border rounded-xl transition-all outline-none text-sm ${isEditing ? 'border-slate-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-slate-200 bg-slate-50 text-slate-700 cursor-not-allowed'}`}
                                     />
                                 </div>
                                 <div>
-                                    <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
-                                        <User size={16} className="text-indigo-600" /> Last Name
+                                    <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
+                                        <User size={16} className="text-primary-600" /> Last Name
                                     </label>
                                     <input
                                         type="text"
@@ -443,13 +461,13 @@ const StudentDetails = () => {
                                         value={formData.last_name}
                                         onChange={handleChange}
                                         disabled={!isEditing}
-                                        className={`w-full px-4 h-12 border rounded-xl transition-all outline-none text-sm ${isEditing ? 'border-gray-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-gray-200 bg-gray-50 text-gray-700 cursor-not-allowed'}`}
+                                        className={`w-full px-4 h-12 border rounded-xl transition-all outline-none text-sm ${isEditing ? 'border-slate-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-slate-200 bg-slate-50 text-slate-700 cursor-not-allowed'}`}
                                     />
                                 </div>
 
                                 <div>
-                                    <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
-                                        <Mail size={16} className="text-indigo-600" /> Email Address
+                                    <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
+                                        <Mail size={16} className="text-primary-600" /> Email Address
                                     </label>
                                     <input
                                         type="email"
@@ -457,12 +475,12 @@ const StudentDetails = () => {
                                         value={formData.email}
                                         onChange={handleChange}
                                         disabled={!isEditing}
-                                        className={`w-full px-4 h-12 border rounded-xl transition-all outline-none text-sm ${isEditing ? 'border-gray-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-gray-200 bg-gray-50 text-gray-700 cursor-not-allowed'}`}
+                                        className={`w-full px-4 h-12 border rounded-xl transition-all outline-none text-sm ${isEditing ? 'border-slate-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-slate-200 bg-slate-50 text-slate-700 cursor-not-allowed'}`}
                                     />
                                 </div>
                                 <div>
-                                    <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
-                                        <Phone size={16} className="text-indigo-600" /> Phone Number
+                                    <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
+                                        <Phone size={16} className="text-primary-600" /> Phone Number
                                     </label>
                                     <input
                                         type="tel"
@@ -470,13 +488,15 @@ const StudentDetails = () => {
                                         value={formData.phone}
                                         onChange={handleChange}
                                         disabled={!isEditing}
-                                        className={`w-full px-4 h-12 border rounded-xl transition-all outline-none text-sm ${isEditing ? 'border-gray-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-gray-200 bg-gray-50 text-gray-700 cursor-not-allowed'}`}
-                                        placeholder={!isEditing && !formData.phone ? "Not provided" : ""}
+                                        inputMode="numeric"
+                                        maxLength={14}
+                                        className={`w-full px-4 h-12 border rounded-xl transition-all outline-none text-sm ${isEditing ? 'border-slate-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-slate-200 bg-slate-50 text-slate-700 cursor-not-allowed'}`}
+                                        placeholder={!isEditing && !formData.phone ? "Not provided" : "(000) 000 0000"}
                                     />
                                 </div>
 
                                 <div>
-                                    <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
+                                    <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
                                         <Shield size={16} className="text-purple-600" /> Student ID
                                     </label>
                                     <input
@@ -485,23 +505,23 @@ const StudentDetails = () => {
                                         value={formData.username}
                                         onChange={handleChange}
                                         disabled={!isEditing}
-                                        className={`w-full px-4 h-12 border rounded-xl transition-all outline-none font-mono text-sm ${isEditing ? 'border-gray-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-gray-200 bg-gray-50 text-gray-700 cursor-not-allowed'}`}
+                                        className={`w-full px-4 h-12 border rounded-xl transition-all outline-none font-mono text-sm ${isEditing ? 'border-slate-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-slate-200 bg-slate-50 text-slate-700 cursor-not-allowed'}`}
                                     />
                                 </div>
 
                                 {/* School Name */}
                                 <div>
-                                    <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
+                                    <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
                                         <Building size={16} className="text-purple-600" /> School Name
                                     </label>
-                                    <div className={`w-full px-4 h-12 border rounded-xl flex items-center text-sm ${isEditing ? 'border-gray-200 bg-gray-50 text-gray-500 cursor-not-allowed' : 'border-gray-200 bg-gray-50 text-gray-700'}`}>
+                                    <div className={`w-full px-4 h-12 border rounded-xl flex items-center text-sm ${isEditing ? 'border-slate-200 bg-slate-50 text-slate-500 cursor-not-allowed' : 'border-slate-200 bg-slate-50 text-slate-700'}`}>
                                         {formData.school_name || "Not provided"}
                                     </div>
                                 </div>
 
                                 {/* Grade Dropdown */}
                                 <div>
-                                    <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
+                                    <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
                                         <GraduationCap size={16} className="text-purple-600" /> Grade
                                     </label>
                                     <CustomDropdown
@@ -517,7 +537,7 @@ const StudentDetails = () => {
                                 </div>
 
                                 <div>
-                                    <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
+                                    <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
                                         <Globe size={16} className="text-purple-600" /> Primary Language
                                     </label>
                                     <CustomDropdown
@@ -534,7 +554,7 @@ const StudentDetails = () => {
 
                                 {/* Guardian Name */}
                                 <div>
-                                    <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
+                                    <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
                                         <UserCheck size={16} className="text-blue-600" /> Guardian Name
                                     </label>
                                     <input
@@ -543,14 +563,14 @@ const StudentDetails = () => {
                                         value={formData.guardian_name}
                                         onChange={handleChange}
                                         disabled={!isEditing}
-                                        className={`w-full px-4 h-12 border rounded-xl transition-all outline-none text-sm ${isEditing ? 'border-gray-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-gray-200 bg-gray-50 text-gray-700 cursor-not-allowed'}`}
+                                        className={`w-full px-4 h-12 border rounded-xl transition-all outline-none text-sm ${isEditing ? 'border-slate-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-slate-200 bg-slate-50 text-slate-700 cursor-not-allowed'}`}
                                         placeholder={!isEditing && !formData.guardian_name ? "Not provided" : ""}
                                     />
                                 </div>
 
                                 {/* Guardian Relation Dropdown */}
                                 <div>
-                                    <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
+                                    <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
                                         <Users size={16} className="text-blue-600" /> Guardian Relation
                                     </label>
                                     <CustomDropdown
@@ -571,20 +591,20 @@ const StudentDetails = () => {
                     {/* Delete Confirmation Modal */}
                     {showDeleteModal && (
                         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4 animate-in fade-in duration-200">
-                            <div className="bg-white rounded-2xl w-full max-w-md overflow-hidden shadow-2xl animate-in zoom-in-95 duration-200">
+                            <div className="bg-white rounded-xl w-full max-w-md overflow-hidden shadow-lg animate-in zoom-in-95 duration-200">
                                 <div className="p-6">
                                     <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4 mx-auto">
                                         <AlertCircle className="text-red-600" size={24} />
                                     </div>
-                                    <h3 className="text-xl font-bold text-gray-900 text-center mb-2">Delete Student?</h3>
-                                    <p className="text-gray-500 text-center mb-6">
+                                    <h3 className="text-xl font-bold text-slate-900 text-center mb-2">Delete Student?</h3>
+                                    <p className="text-slate-500 text-center mb-6">
                                         Are you sure you want to delete <strong>{studentData.first_name} {studentData.last_name}</strong>?
                                         This action cannot be undone and all student data will be permanently removed.
                                     </p>
                                     <div className="flex gap-3">
                                         <button
                                             onClick={() => setShowDeleteModal(false)}
-                                            className="flex-1 px-4 py-2.5 text-sm font-semibold text-gray-700 bg-gray-50 hover:bg-gray-100 rounded-xl border border-gray-200 transition-all"
+                                            className="flex-1 px-4 py-2.5 text-sm font-semibold text-slate-700 bg-slate-50 hover:bg-slate-100 rounded-xl border border-slate-200 transition-all"
                                         >
                                             Cancel
                                         </button>

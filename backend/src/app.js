@@ -6,6 +6,8 @@ const config = require('./config/config');
 
 // Import routes
 const routes = require('./routes');
+const webhookController = require('./controllers/webhookController');
+const stripeController = require('./controllers/stripeController');
 
 // Initialize express app
 const app = express();
@@ -15,10 +17,15 @@ app.use(helmet());
 
 // CORS configuration
 app.use(cors({
-  //origin: config.corsOrigin,
-  origin: '*',
+  origin: config.corsOrigin || 'http://localhost:5173',
   credentials: true
 }));
+
+// Stripe webhook MUST receive the raw body for signature verification, so it is
+// mounted BEFORE the JSON body parser. All other routes use parsed JSON below.
+app.post('/api/stripe/webhook',
+  express.raw({ type: 'application/json' }),
+  webhookController.handleStripeWebhook);
 
 // Body parser middleware
 app.use(express.json({ limit: '50mb' }));
@@ -32,6 +39,9 @@ if (config.nodeEnv === 'development') {
 // Mount routes
 app.use('/api', routes);
 
+// Public short payment link → 302 redirect to the Stripe Checkout page
+app.get('/pay/:code', stripeController.redirectShortLink);
+
 // 404 handler - FIXED VERSION
 app.use((req, res, next) => {
   res.status(404).json({
@@ -40,9 +50,22 @@ app.use((req, res, next) => {
   });
 });
 
+// Redact secrets (e.g. ?key=, ?api_key=, tokens) from any string before logging.
+const redactSecrets = (str) =>
+  typeof str === 'string'
+    ? str.replace(/([?&](?:key|api_key|apikey|access_token|token)=)[^&\s]+/gi, '$1[REDACTED]')
+    : str;
+
 // Global error handler
 app.use((err, req, res, next) => {
-  console.error('Global error handler:', err);
+  // Log only safe, redacted fields — never the full error object (axios errors
+  // embed the outbound request URL, which can contain the Google API key).
+  console.error('Global error handler:', {
+    message: redactSecrets(err.message),
+    status: err.status,
+    url: redactSecrets(err.config?.url),
+    stack: config.nodeEnv === 'development' ? redactSecrets(err.stack) : undefined,
+  });
 
   res.status(err.status || 500).json({
     success: false,

@@ -309,6 +309,9 @@ export const useChat = (userType = 'teacher') => { // 'teacher' or 'student'
             });
 
             if (response.success) {
+                if (response.translationWarning) {
+                    toast(response.translationWarning, { icon: '⚠️' });
+                }
                 const sentMessage = response.data?.data || response.data;
                 const messageToAdd = {
                     ...sentMessage,

@@ -143,14 +143,14 @@ const ImageCropper = ({
     if (!isOpen) return null;
 
     return (
-        <div className="fixed inset-0 z-[200] flex items-center justify-center bg-gray-900/60 backdrop-blur-sm animate-fade-in p-4">
-            <div className="bg-white rounded-2xl shadow-2xl w-full max-w-xl overflow-hidden animate-scale-in flex flex-col max-h-[90vh]">
-                <div className="flex justify-between items-center p-6 border-b border-gray-100 bg-[#f0f4fe]">
+        <div className="fixed inset-0 z-[200] flex items-center justify-center bg-slate-900/60 backdrop-blur-sm animate-fade-in p-4">
+            <div className="bg-white rounded-xl shadow-lg w-full max-w-xl overflow-hidden animate-scale-in flex flex-col max-h-[90vh]">
+                <div className="flex justify-between items-center p-6 border-b border-slate-100 bg-slate-50">
                     <div>
-                        <h3 className="text-xl font-bold text-gray-800">Upload & Adjust Logo</h3>
-                        <p className="text-xs text-gray-500 mt-1">Crop and resize your image</p>
+                        <h3 className="text-xl font-bold text-slate-800">Upload & Adjust Logo</h3>
+                        <p className="text-xs text-slate-500 mt-1">Crop and resize your image</p>
                     </div>
-                    <button onClick={onClose} className="p-2 bg-white rounded-full hover:bg-gray-100 text-gray-500 transition-colors shadow-sm">
+                    <button onClick={onClose} className="p-2 bg-white rounded-full hover:bg-slate-100 text-slate-500 transition-colors shadow-sm">
                         <X size={20} />
                     </button>
                 </div>
@@ -159,17 +159,17 @@ const ImageCropper = ({
                     {!imageSrc ? (
                         <div
                             onClick={() => fileInputRef.current?.click()}
-                            className="border-2 border-dashed border-gray-300 rounded-xl p-16 flex flex-col items-center justify-center cursor-pointer hover:bg-gray-50 hover:border-indigo-400 transition-all group flex-1"
+                            className="border-2 border-dashed border-slate-300 rounded-xl p-16 flex flex-col items-center justify-center cursor-pointer hover:bg-slate-50 hover:border-primary-400 transition-all group flex-1"
                         >
-                            <div className="w-20 h-20 bg-indigo-50 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                                <Upload size={40} className="text-indigo-600" />
+                            <div className="w-20 h-20 bg-primary-50 rounded-full flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                                <Upload size={40} className="text-primary-600" />
                             </div>
-                            <p className="text-gray-600 font-medium text-lg">Click to upload image</p>
-                            <p className="text-gray-400 text-sm mt-2">PNG, JPG up to 5MB</p>
+                            <p className="text-slate-600 font-medium text-lg">Click to upload image</p>
+                            <p className="text-slate-400 text-sm mt-2">PNG, JPG up to 5MB</p>
                         </div>
                     ) : (
                         <div className="space-y-6 flex-1 flex flex-col">
-                            <div className="flex-1 min-h-[300px] bg-gray-100 rounded-xl overflow-hidden relative flex items-center justify-center border border-gray-200 checkerboard-bg"
+                            <div className="flex-1 min-h-[300px] bg-slate-100 rounded-xl overflow-hidden relative flex items-center justify-center border border-slate-200 checkerboard-bg"
                                 onMouseMove={handleMouseMove}
                                 onMouseUp={handleMouseUp}
                                 onMouseLeave={handleMouseUp}
@@ -177,7 +177,7 @@ const ImageCropper = ({
                                 {/* Crop Overlay/Guidelines */}
                                 <div
                                     ref={containerRef}
-                                    className="absolute border-2 border-indigo-500 z-10 shadow-[0_0_0_9999px_rgba(0,0,0,0.6)]"
+                                    className="absolute border-2 border-primary-500 z-10 shadow-[0_0_0_9999px_rgba(0,0,0,0.6)]"
                                     style={{
                                         width: '80%',
                                         aspectRatio: `${aspectRatio}`,
@@ -203,12 +203,12 @@ const ImageCropper = ({
                             </div>
 
                             {/* Controls */}
-                            <div className="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                            <div className="bg-slate-50 p-4 rounded-xl border border-slate-100">
                                 <div className="flex items-center gap-4">
                                     <button
                                         type="button"
                                         onClick={handleZoomOut}
-                                        className="p-1 text-gray-400 hover:text-indigo-600 hover:bg-indigo-50 rounded-full transition-colors"
+                                        className="p-1 text-slate-400 hover:text-primary-600 hover:bg-primary-50 rounded-full transition-colors"
                                     >
                                         <ZoomOut size={20} />
                                     </button>
@@ -219,23 +219,23 @@ const ImageCropper = ({
                                         step="0.1"
                                         value={scale}
                                         onChange={(e) => setScale(parseFloat(e.target.value))}
-                                        className="flex-1 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-indigo-600"
+                                        className="flex-1 h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-primary-600"
                                     />
                                     <button
                                         type="button"
                                         onClick={handleZoomIn}
-                                        className="p-1 text-gray-400 hover:text-indigo-600 hover:bg-indigo-50 rounded-full transition-colors"
+                                        className="p-1 text-slate-400 hover:text-primary-600 hover:bg-primary-50 rounded-full transition-colors"
                                     >
                                         <ZoomIn size={20} />
                                     </button>
                                 </div>
                             </div>
 
-                            <div className="flex justify-between items-center text-sm text-gray-500">
-                                <button onClick={() => fileInputRef.current?.click()} className="text-indigo-600 hover:text-indigo-800 font-medium">
+                            <div className="flex justify-between items-center text-sm text-slate-500">
+                                <button onClick={() => fileInputRef.current?.click()} className="text-primary-600 hover:text-primary-800 font-medium">
                                     Upload Different Image
                                 </button>
-                                <button onClick={() => { setScale(1); setPosition({ x: 0, y: 0 }) }} className="text-gray-400 hover:text-gray-600">
+                                <button onClick={() => { setScale(1); setPosition({ x: 0, y: 0 }) }} className="text-slate-400 hover:text-slate-600">
                                     Reset
                                 </button>
                             </div>
@@ -251,10 +251,10 @@ const ImageCropper = ({
                     />
                 </div>
 
-                <div className="p-6 border-t border-gray-100 flex justify-end gap-3 bg-white">
+                <div className="p-6 border-t border-slate-100 flex justify-end gap-3 bg-white">
                     <button
                         onClick={onClose}
-                        className="px-6 py-2.5 text-sm font-semibold text-gray-700 bg-white hover:bg-gray-50 border border-gray-300 rounded-xl transition-all flex items-center gap-2 shadow-sm"
+                        className="px-6 py-2.5 text-sm font-semibold text-slate-700 bg-white hover:bg-slate-50 border border-slate-300 rounded-xl transition-all flex items-center gap-2 shadow-sm"
                     >
                         <X size={16} />
                         Cancel

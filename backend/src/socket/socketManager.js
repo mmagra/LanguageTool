@@ -1,16 +1,37 @@
 const socketIo = require('socket.io');
+const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 const { pool } = require('../config/database');
+const config = require('../config/config');
 
 let io;
 
 const onlineUsers = new Map(); // userId -> Set<socketId>
 
 const init = (server) => {
+    const allowedOrigins = [config.frontendUrl, config.corsOrigin].filter(Boolean);
     io = socketIo(server, {
         cors: {
-            origin: "*",
-            methods: ["GET", "POST"]
+            origin: allowedOrigins.length ? allowedOrigins : false,
+            methods: ["GET", "POST"],
+            credentials: true
+        }
+    });
+
+    // Authenticate every socket via JWT — never trust a client-supplied userId.
+    io.use((socket, next) => {
+        try {
+            const token = socket.handshake.auth?.token
+                || socket.handshake.query?.token
+                || (socket.handshake.headers?.authorization || '').replace('Bearer ', '');
+            if (!token) return next(new Error('Authentication required'));
+            const decoded = jwt.verify(token, config.jwt.secret);
+            socket.userId = String(decoded.id);
+            socket.userRole = decoded.role;
+            socket.schoolId = decoded.school_id;
+            next();
+        } catch (err) {
+            next(new Error('Invalid authentication token'));
         }
     });
 
@@ -36,7 +57,6 @@ const init = (server) => {
                     [duration, session.school_id]
                 );
 
-                console.log(`Auto-ended session ${sessionId}. Duration: ${duration}m`);
 
                 // Notify remaining users
                 io.to(room).emit('session_ended', { sessionId, duration });
@@ -47,13 +67,12 @@ const init = (server) => {
     };
 
     io.on('connection', (socket) => {
-        console.log('New client connected:', socket.id);
 
-        const userId = socket.handshake.query.userId;
+        // Identity comes from the verified JWT (set in io.use), not from the client query.
+        const userId = socket.userId;
         if (userId) {
             // Join personal user room for direct messaging
             socket.join(String(userId));
-            console.log(`Socket ${socket.id} joined user room: ${userId}`);
 
             // Add user to online tracking
             if (!onlineUsers.has(userId)) {
@@ -64,7 +83,6 @@ const init = (server) => {
             // Update database status to online
             User.setOnlineStatus(userId, true)
                 .then(() => {
-                    console.log(`User ${userId} set to online in database (socket connection)`);
                 })
                 .catch(err => {
                     console.error(`Error setting user ${userId} online:`, err);
@@ -72,20 +90,17 @@ const init = (server) => {
 
             // Broadcast online status
             io.emit('user_online', { userId });
-            console.log(`User ${userId} came online`);
         }
 
         socket.on('join_conversation', (conversationId) => {
             // Ensure ID is string for consistency
             const room = String(conversationId);
             socket.join(room);
-            console.log(`Socket ${socket.id} joined conversation: ${room}`);
         });
 
         socket.on('leave_conversation', (conversationId) => {
             const room = String(conversationId);
             socket.leave(room);
-            console.log(`Socket ${socket.id} left conversation: ${room}`);
         });
 
         // Allow clients to check status of a specific user
@@ -117,22 +132,19 @@ const init = (server) => {
                 userId: data.userId || userId,
                 profileImage: data.profileImage
             });
-            console.log(`Profile updated broadcast for user ${data.userId || userId}`);
         });
 
 
 
-        // --- REAL-TIME IN-PERSON SESSION EVENTS --- //
+        // --- REAL-TIME LIVE CONVERSATION EVENTS --- //
 
         socket.on('join_session', (roomId) => {
             const room = String(roomId);
             socket.join(room);
-            console.log(`Socket ${socket.id} joined session room: ${room}`);
         });
 
         // Teacher sends invite to student
         socket.on('session_invite', ({ studentId, teacherName, teacherImage, roomId }) => {
-            console.log(`Session invite from ${teacherName} to Student ${studentId}`);
             const room = String(roomId);
 
             // Send to student's personal room
@@ -150,7 +162,6 @@ const init = (server) => {
                     const studentSocket = io.sockets.sockets.get(socketId);
                     if (studentSocket) {
                         studentSocket.join(room);
-                        console.log(`Student socket ${socketId} auto-joined session room: ${room}`);
                     }
                 });
             }
@@ -162,7 +173,6 @@ const init = (server) => {
             socket.join(room); // Ensure student is in room
             // Notify teacher (and anyone else in room)
             io.to(room).emit('session_accepted', { roomId });
-            console.log(`Session accepted in room: ${room}`);
         });
 
         // Teacher cancels session request
@@ -170,7 +180,6 @@ const init = (server) => {
             const room = String(roomId);
             // Broadcast to everyone in room (mainly the student)
             io.to(room).emit('session_cancelled', { roomId });
-            console.log(`Session cancelled for room: ${room}`);
         });
 
         // Student declines session invitation
@@ -178,7 +187,6 @@ const init = (server) => {
             const room = String(roomId);
             // Broadcast to everyone in room (mainly the teacher)
             io.to(room).emit('session_declined', { roomId });
-            console.log(`Session declined for room: ${room}`);
         });
 
         // Speech/Text Exchange
@@ -229,7 +237,6 @@ const init = (server) => {
 
             // Clean up: make this socket leave
             socket.leave(room);
-            console.log(`Session ended for room: ${room}`);
         });
 
         // Leave Session (cleanup)
@@ -252,12 +259,13 @@ const init = (server) => {
             }
 
             socket.leave(room);
-            console.log(`Socket ${socket.id} left session room: ${room}`);
         });
 
-        socket.on('disconnecting', () => {
+        socket.on('disconnecting', async () => {
             const rooms = [...socket.rooms];
-            rooms.forEach(async (room) => {
+            // for...of with await — forEach(async) does not wait, which could leave
+            // a session 'active' in the DB if the process is interrupted mid-cleanup.
+            for (const room of rooms) {
                 if (room.startsWith('session_')) {
                     const parts = room.split('_');
                     let sessionId = null;
@@ -274,11 +282,10 @@ const init = (server) => {
                         await endSessionInDb(sessionId, room);
                     }
                 }
-            });
+            }
         });
 
         socket.on('disconnect', () => {
-            console.log('Client disconnected:', socket.id);
             if (userId && onlineUsers.has(userId)) {
                 const userSockets = onlineUsers.get(userId);
                 userSockets.delete(socket.id);
@@ -289,14 +296,12 @@ const init = (server) => {
                     // Update database status to offline
                     User.setOnlineStatus(userId, false)
                         .then(() => {
-                            console.log(`User ${userId} set to offline in database (socket disconnect)`);
                         })
                         .catch(err => {
                             console.error(`Error setting user ${userId} offline:`, err);
                         });
 
                     io.emit('user_offline', { userId });
-                    console.log(`User ${userId} went offline`);
                 }
             }
         });

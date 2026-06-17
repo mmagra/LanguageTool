@@ -36,6 +36,7 @@ class Teacher {
       SELECT 
         u.id, u.email, u.username, u.first_name, u.last_name, u.phone, 
         u.profile_image, u.about, u.status, u.is_online, u.created_at,
+        u.school_id,
         tp.id as profile_id,
         s.name as school_name -- From schools table
       FROM users u

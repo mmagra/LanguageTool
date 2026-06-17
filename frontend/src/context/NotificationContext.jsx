@@ -14,7 +14,7 @@ export const NotificationProvider = ({ children }) => {
     const [unreadCount, setUnreadCount] = useState(0);
 
     const fetchNotifications = async () => {
-        if (!user || user.role === 'admin') return;
+        if (!user) return;
 
         try {
             const response = await api.get('/messages/conversations');
@@ -39,7 +39,7 @@ export const NotificationProvider = ({ children }) => {
 
     // Socket Event Listeners
     useEffect(() => {
-        if (!socket || !user || user.role === 'admin') return;
+        if (!socket || !user) return;
 
         // 1. New Message: Re-fetch or Increment
         const handleNewMessage = (data) => {

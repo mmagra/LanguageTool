@@ -7,10 +7,8 @@ const Dashboard = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    console.log('Dashboard useEffect - user:', user);
     if (!loading && user) {
-      console.log('Redirecting based on role:', user.role);
-      if (user.is_super_admin || user.role === 'super_admin') {
+      if (user.is_super_admin || user.role === 'super_admin' || user.role === 'super admin') {
         navigate('/super-admin/dashboard');
       } else if (user.role === 'admin') {
         navigate('/admin/dashboard');
@@ -25,7 +23,7 @@ const Dashboard = () => {
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <p className="text-gray-600">Loading dashboard...</p>
+        <p className="text-slate-600">Loading dashboard...</p>
       </div>
     );
   }
@@ -33,8 +31,8 @@ const Dashboard = () => {
   return (
     <div className="flex items-center justify-center min-h-screen">
       <div className="text-center py-12">
-        <h2 className="text-2xl font-bold text-gray-800 mb-2">Redirecting...</h2>
-        <p className="text-gray-600">Please wait while we redirect you to your dashboard.</p>
+        <h2 className="text-2xl font-bold text-slate-800 mb-2">Redirecting...</h2>
+        <p className="text-slate-600">Please wait while we redirect you to your dashboard.</p>
       </div>
     </div>
   );

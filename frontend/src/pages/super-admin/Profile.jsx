@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useAuth } from '../../context/AuthContext';
+import api from '../../services/api';
 import {
     User, Mail, Phone, Shield, Edit2, Save, X,
     AlertCircle, Camera, Check, Trash2
 } from 'lucide-react';
+import { formatPhone, isValidPhone, PHONE_MESSAGE } from '../../utils/validation';
 
 const SuperAdminProfile = () => {
     const { user, refreshUser } = useAuth();
@@ -35,9 +37,10 @@ const SuperAdminProfile = () => {
     }, [user]);
 
     const handleChange = (e) => {
+        const { name, value } = e.target;
         setFormData({
             ...formData,
-            [e.target.name]: e.target.value
+            [name]: name === 'phone' ? formatPhone(value) : value
         });
     };
 
@@ -103,23 +106,18 @@ const SuperAdminProfile = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (formData.phone && !isValidPhone(formData.phone)) {
+            setMessage({ type: 'error', text: PHONE_MESSAGE });
+            return;
+        }
         setLoading(true);
         setMessage(null);
 
         try {
-            const response = await fetch(`/api/auth/profile`, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${localStorage.getItem('token')}`
-                },
-                body: JSON.stringify({
-                    ...formData,
-                    profile_image: profileImage || ''
-                })
+            const data = await api.updateProfile({
+                ...formData,
+                profile_image: profileImage || ''
             });
-
-            const data = await response.json();
 
             if (data.success) {
                 setMessage({ type: 'success', text: 'Profile updated successfully!' });
@@ -130,7 +128,7 @@ const SuperAdminProfile = () => {
                 setMessage({ type: 'error', text: data.message || 'Failed to update profile' });
             }
         } catch (error) {
-            setMessage({ type: 'error', text: 'An error occurred. Please try again.' });
+            setMessage({ type: 'error', text: error.message || 'An error occurred. Please try again.' });
         } finally {
             setLoading(false);
         }
@@ -160,19 +158,19 @@ const SuperAdminProfile = () => {
                     </div>
                 )}
 
-                <div className="bg-white rounded-2xl shadow-xl shadow-gray-200/50 border border-gray-100 overflow-hidden">
+                <div className="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden">
                     {/* Header */}
-                    <div className="bg-[#f0f4fe] p-6 md:p-8 relative">
+                    <div className="bg-slate-50 p-6 md:p-8 relative">
                         <div className="flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left">
                             <div className="relative group shrink-0">
-                                <div className="w-24 h-24 rounded-full bg-gradient-to-br from-[#2ea3f2] to-[#f2a93b] p-[3px] shadow-lg">
+                                <div className="w-24 h-24 rounded-full bg-primary-600 p-[3px] shadow-lg">
                                     <div className="w-full h-full rounded-full bg-white flex items-center justify-center relative overflow-hidden">
                                         {profileImage && (profileImage.startsWith('data:') || profileImage.startsWith('http')) ? (
                                             <img src={profileImage} alt="Profile" className="w-full h-full object-cover" />
                                         ) : (
                                             <>
-                                                <div className="absolute inset-0 bg-[#f0f4fe] opacity-50"></div>
-                                                <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#2ea3f2] to-[#f2a93b] relative z-10">
+                                                <div className="absolute inset-0 bg-slate-50 opacity-50"></div>
+                                                <span className="text-4xl font-bold text-primary-700 relative z-10">
                                                     {(formData.first_name?.[0] || 'S')}{(formData.last_name?.[0] || 'A')}
                                                 </span>
                                             </>
@@ -184,9 +182,9 @@ const SuperAdminProfile = () => {
                                         <button
                                             type="button"
                                             onClick={() => fileInputRef.current?.click()}
-                                            className="absolute bottom-0 right-0 p-1.5 bg-white rounded-full shadow-lg hover:bg-gray-50 transition-colors border-2 border-indigo-600"
+                                            className="absolute bottom-0 right-0 p-1.5 bg-white rounded-full shadow-lg hover:bg-slate-50 transition-colors border-2 border-primary-600"
                                         >
-                                            <Camera size={14} className="text-indigo-600" />
+                                            <Camera size={14} className="text-primary-600" />
                                         </button>
                                         {profileImage && (
                                             <button
@@ -203,17 +201,17 @@ const SuperAdminProfile = () => {
                             </div>
 
                             <div className="flex-1 min-w-0">
-                                <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-1 break-words">
+                                <h1 className="text-2xl md:text-2xl font-semibold text-slate-900 mb-1 break-words">
                                     {formData.first_name || 'Super'} {formData.last_name || 'Admin'}
                                 </h1>
-                                <p className="text-gray-600 font-medium mb-2 break-all">{formData.email}</p>
+                                <p className="text-slate-600 font-medium mb-2 break-all">{formData.email}</p>
                                 <div className="flex items-center justify-center md:justify-start gap-3 flex-wrap">
-                                    <span className="text-xs font-semibold tracking-wide text-gray-900 bg-white px-3 py-1 rounded-full border border-gray-200 shadow-sm">
+                                    <span className="text-xs font-semibold tracking-wide text-slate-900 bg-white px-3 py-1 rounded-full border border-slate-200 shadow-sm">
                                         ID: {user?.username || 'Not set'}
                                     </span>
-                                    <div className="flex items-center gap-2 px-3 py-1 bg-white rounded-full border border-gray-200 shadow-sm">
-                                        <Shield size={14} className="text-[#f2a93b]" />
-                                        <span className="text-gray-900 font-bold text-xs">Super Administrator</span>
+                                    <div className="flex items-center gap-2 px-3 py-1 bg-white rounded-full border border-slate-200 shadow-sm">
+                                        <Shield size={14} className="text-brand-amber" />
+                                        <span className="text-slate-900 font-bold text-xs">Super Administrator</span>
                                     </div>
                                 </div>
                             </div>
@@ -222,7 +220,7 @@ const SuperAdminProfile = () => {
                                 {!isEditing ? (
                                     <button
                                         onClick={() => setIsEditing(true)}
-                                        className="flex items-center gap-2 px-4 py-2 bg-white text-indigo-600 font-bold rounded-xl text-sm transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                                        className="flex items-center gap-2 px-4 py-2 bg-white text-primary-600 font-bold rounded-xl text-sm transition-all duration-300 shadow-lg hover:shadow-md hover:-translate-y-0.5"
                                     >
                                         <Edit2 size={16} />
                                         Edit Profile
@@ -232,7 +230,7 @@ const SuperAdminProfile = () => {
                                         <button
                                             type="button"
                                             onClick={handleCancel}
-                                            className="flex items-center gap-2 px-4 py-2 bg-white text-gray-700 font-bold rounded-xl text-sm transition-all hover:bg-gray-50 border border-gray-200 shadow-sm"
+                                            className="flex items-center gap-2 px-4 py-2 bg-white text-slate-700 font-bold rounded-xl text-sm transition-all hover:bg-slate-50 border border-slate-200 shadow-sm"
                                         >
                                             <X size={16} />
                                             Cancel
@@ -240,7 +238,7 @@ const SuperAdminProfile = () => {
                                         <button
                                             onClick={handleSubmit}
                                             disabled={loading}
-                                            className={`flex items-center gap-2 px-4 py-2 bg-white text-indigo-600 font-bold rounded-xl text-sm transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5 ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}
+                                            className={`flex items-center gap-2 px-4 py-2 bg-white text-primary-600 font-bold rounded-xl text-sm transition-all duration-300 shadow-lg hover:shadow-md hover:-translate-y-0.5 ${loading ? 'opacity-70 cursor-not-allowed' : ''}`}
                                         >
                                             <Save size={16} />
                                             {loading ? 'Saving...' : 'Save Changes'}
@@ -255,8 +253,8 @@ const SuperAdminProfile = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {/* First Name */}
                             <div>
-                                <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
-                                    <User size={16} className="text-indigo-600" /> First Name
+                                <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
+                                    <User size={16} className="text-primary-600" /> First Name
                                 </label>
                                 <input
                                     type="text"
@@ -264,14 +262,14 @@ const SuperAdminProfile = () => {
                                     value={formData.first_name}
                                     onChange={handleChange}
                                     disabled={!isEditing}
-                                    className={`w-full px-4 py-3 border rounded-xl transition-all outline-none ${isEditing ? 'border-gray-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-gray-200 bg-gray-50 text-gray-700 cursor-not-allowed'}`}
+                                    className={`w-full px-4 py-3 border rounded-xl transition-all outline-none ${isEditing ? 'border-slate-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-slate-200 bg-slate-50 text-slate-700 cursor-not-allowed'}`}
                                 />
                             </div>
 
                             {/* Last Name */}
                             <div>
-                                <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
-                                    <User size={16} className="text-indigo-600" /> Last Name
+                                <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
+                                    <User size={16} className="text-primary-600" /> Last Name
                                 </label>
                                 <input
                                     type="text"
@@ -279,14 +277,14 @@ const SuperAdminProfile = () => {
                                     value={formData.last_name}
                                     onChange={handleChange}
                                     disabled={!isEditing}
-                                    className={`w-full px-4 py-3 border rounded-xl transition-all outline-none ${isEditing ? 'border-gray-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-gray-200 bg-gray-50 text-gray-700 cursor-not-allowed'}`}
+                                    className={`w-full px-4 py-3 border rounded-xl transition-all outline-none ${isEditing ? 'border-slate-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-slate-200 bg-slate-50 text-slate-700 cursor-not-allowed'}`}
                                 />
                             </div>
 
                             {/* Email */}
                             <div>
-                                <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
-                                    <Mail size={16} className="text-indigo-600" /> Email
+                                <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
+                                    <Mail size={16} className="text-primary-600" /> Email
                                 </label>
                                 <input
                                     type="email"
@@ -294,14 +292,14 @@ const SuperAdminProfile = () => {
                                     value={formData.email}
                                     onChange={handleChange}
                                     disabled={!isEditing}
-                                    className={`w-full px-4 py-3 border rounded-xl transition-all outline-none ${isEditing ? 'border-gray-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-gray-200 bg-gray-50 text-gray-700 cursor-not-allowed'}`}
+                                    className={`w-full px-4 py-3 border rounded-xl transition-all outline-none ${isEditing ? 'border-slate-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-slate-200 bg-slate-50 text-slate-700 cursor-not-allowed'}`}
                                 />
                             </div>
 
                             {/* Phone */}
                             <div>
-                                <label className="flex items-center gap-2 text-sm font-semibold text-gray-700 mb-2">
-                                    <Phone size={16} className="text-indigo-600" /> Phone
+                                <label className="flex items-center gap-2 text-sm font-semibold text-slate-700 mb-2">
+                                    <Phone size={16} className="text-primary-600" /> Phone
                                 </label>
                                 <input
                                     type="tel"
@@ -309,8 +307,10 @@ const SuperAdminProfile = () => {
                                     value={formData.phone}
                                     onChange={handleChange}
                                     disabled={!isEditing}
-                                    className={`w-full px-4 py-3 border rounded-xl transition-all outline-none ${isEditing ? 'border-gray-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-gray-200 bg-gray-50 text-gray-700 cursor-not-allowed'}`}
-                                    placeholder={!isEditing && !formData.phone ? "Not provided" : ""}
+                                    inputMode="numeric"
+                                    maxLength={14}
+                                    className={`w-full px-4 py-3 border rounded-xl transition-all outline-none ${isEditing ? 'border-slate-300 bg-white focus:ring-2 focus:ring-primary-500' : 'border-slate-200 bg-slate-50 text-slate-700 cursor-not-allowed'}`}
+                                    placeholder={!isEditing && !formData.phone ? "Not provided" : "(000) 000 0000"}
                                 />
                             </div>
                         </div>

@@ -21,9 +21,6 @@ const StudentSidebar = ({ collapsed, onCollapseChange, onClose }) => {
   const { requestNavigation } = useSessionContext();
   const { logoUrl } = useBranding();
 
-  // Control the height of the logo section here
-  const logoSectionHeight = 'h-[72.5px]';
-
   const toggleSubmenu = (menu) => {
     setActiveSubmenu(activeSubmenu === menu ? null : menu);
   };
@@ -48,10 +45,10 @@ const StudentSidebar = ({ collapsed, onCollapseChange, onClose }) => {
       path: '/student/conversations'
     },
     {
-      id: 'in-person',
+      id: 'live-conversation',
       icon: Users,
       label: t('sidebar:inPerson'),
-      path: '/student/in-person'
+      path: '/student/live-conversation'
     },
   ];
 
@@ -107,15 +104,18 @@ const StudentSidebar = ({ collapsed, onCollapseChange, onClose }) => {
             onClick={() => toggleSubmenu(item.id)}
             onMouseEnter={() => handleMouseEnter(item.id)}
             onMouseLeave={handleMouseLeave}
-            className={`w-full flex items-center justify-between py-2 px-3 rounded-xl transition-all duration-300 group ${activeSubmenu === item.id
-              ? 'bg-gradient-to-r from-primary-600/90 to-primary-700/90 backdrop-blur-md text-white shadow-lg shadow-primary-500/30 border border-white/20'
-              : 'text-gray-600 hover:bg-gray-50 hover:text-primary-600 hover:translate-x-1'
+            className={`sidebar-link w-full justify-between group ${activeSubmenu === item.id
+              ? 'sidebar-link-active'
+              : ''
               } ${collapsed ? 'justify-center' : ''}`}
+            aria-label={collapsed ? item.label : undefined}
+            aria-expanded={activeSubmenu === item.id}
+            title={collapsed ? item.label : undefined}
           >
             <div className="flex items-center gap-3">
-              <div className={`p-1.5 rounded-lg transition-all duration-300 ${activeSubmenu === item.id
-                ? 'bg-white/20 text-white backdrop-blur-sm'
-                : 'bg-gray-100 text-gray-500 group-hover:bg-primary-50 group-hover:text-primary-600'
+              <div className={`sidebar-icon-tile ${activeSubmenu === item.id
+                ? 'sidebar-icon-tile-active'
+                : ''
                 } ${collapsed ? 'mx-auto' : ''}`}>
                 <Icon size={20} />
               </div>
@@ -128,7 +128,7 @@ const StudentSidebar = ({ collapsed, onCollapseChange, onClose }) => {
             {!collapsed && (
               <ChevronRight
                 size={16}
-                className={`transition-transform duration-300 ${activeSubmenu === item.id ? 'rotate-90 text-white' : 'text-gray-400'
+                className={`transition-transform duration-200 ${activeSubmenu === item.id ? 'rotate-90 text-primary-500' : 'text-slate-400'
                   }`}
               />
             )}
@@ -136,16 +136,16 @@ const StudentSidebar = ({ collapsed, onCollapseChange, onClose }) => {
 
           {
             !collapsed && activeSubmenu === item.id && (
-              <div className="ml-4 pl-4 border-l border-gray-200 mt-2 mb-2 space-y-1">
+              <div className="ml-4 pl-4 border-l border-slate-200 dark:border-slate-800 mt-2 mb-2 space-y-1">
                 {item.submenu.map((subItem, subIndex) => (
                   <NavLink
                     key={subIndex}
                     to={subItem.path}
                     end
                     className={({ isActive }) =>
-                      `flex items-center justify-between px-3 py-2 rounded-md transition-colors text-sm ${isActive
-                        ? 'bg-primary-50 text-primary-700'
-                        : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                      `flex items-center justify-between px-3 py-2 rounded-lg transition-colors text-sm ${isActive
+                        ? 'bg-primary-50 text-primary-700 dark:bg-primary-950/40 dark:text-primary-300'
+                        : 'text-slate-500 hover:text-slate-900 hover:bg-slate-50 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-100'
                       }`
                     }
                     onClick={onClose}
@@ -167,9 +167,9 @@ const StudentSidebar = ({ collapsed, onCollapseChange, onClose }) => {
           ref={(el) => (menuItemRefs.current[item.id] = el)}
           to={item.path}
           className={({ isActive }) =>
-            `flex items-center gap-3 py-2 px-3 rounded-xl mb-1 transition-all duration-300 group ${isActive
-              ? 'bg-gradient-to-r from-primary-600/90 to-primary-700/90 backdrop-blur-md text-white shadow-lg shadow-primary-500/30 border border-white/20'
-              : 'text-gray-600 hover:bg-gray-50 hover:text-primary-600 hover:translate-x-1'
+            `sidebar-link mb-1 group ${isActive
+              ? 'sidebar-link-active'
+              : ''
             } ${collapsed ? 'justify-center' : ''}`
           }
           onMouseEnter={() => handleMouseEnter(item.id)}
@@ -179,9 +179,14 @@ const StudentSidebar = ({ collapsed, onCollapseChange, onClose }) => {
             requestNavigation(item.path);
             onClose();
           }}
+          aria-label={collapsed ? item.label : undefined}
+          title={collapsed ? item.label : undefined}
         >
-          <div className={`p-1.5 rounded-lg transition-all duration-300 ${''
-            } flex items-center justify-center shrink-0`}>
+          <div className={`sidebar-icon-tile ${
+            location.pathname === item.path
+              ? 'sidebar-icon-tile-active'
+              : ''
+          }`}>
             <Icon size={20} className="shrink-0" />
           </div>
           {!collapsed && (
@@ -197,18 +202,18 @@ const StudentSidebar = ({ collapsed, onCollapseChange, onClose }) => {
   return (
     <>
       <div
-        className={`flex flex-col h-full bg-white border-r border-gray-100 text-gray-900 transition-all duration-300 ${collapsed ? 'w-20' : 'w-[17rem]'
+        className={`sidebar-shell ${collapsed ? 'w-20' : 'w-[17rem]'
           }`}
       >
         {/* Sidebar Header */}
-        <div className={` ${logoSectionHeight} flex items-center justify-center mb-6 border-b border-indigo-100`}>
+        <div className="sidebar-brand">
           {!collapsed ? (
-            <div className="w-full px-4">
-              <div className="w-full flex items-center justify-center">
+            <div className="w-full">
+              <div className="sidebar-logo-frame">
                 <img
-                  src={logoUrl || "/Spoken-Edge-Text-Logo.png"}
+                  src={logoUrl || "/Spoken-Edge-Text-Logo-trans.png"}
                   alt="Logo"
-                  className="w-full max-w-[200px] h-auto object-contain"
+                  className="w-full max-w-[180px] h-auto object-contain"
                   style={{
                     maxHeight: '75px',
                     objectFit: 'contain'
@@ -254,11 +259,12 @@ const StudentSidebar = ({ collapsed, onCollapseChange, onClose }) => {
           <nav className="space-y-1">
             {collapsed && (
               <div className="mb-3">
-                <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider px-2.5 py-2 text-center">
+                <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider px-2.5 py-2 text-center">
                   •••
                 </p>
               </div>
             )}
+            {!collapsed && <p className="sidebar-nav-label">Workspace</p>}
 
             {menuItems.map((item, index) => (
               <SidebarItem key={item.id} item={item} index={index} />
@@ -266,10 +272,10 @@ const StudentSidebar = ({ collapsed, onCollapseChange, onClose }) => {
           </nav>
         </div>
 
-        <div className="hidden lg:block border-t border-gray-200 p-4">
+        <div className="hidden lg:block border-t border-slate-200 px-3 py-2 dark:border-slate-800">
           <button
             onClick={toggleCollapse}
-            className={`w-full flex items-center justify-between p-2 hover:bg-gray-100 rounded-lg transition-colors text-gray-600 hover:text-gray-900 ${collapsed ? 'justify-center' : ''
+            className={`w-full flex items-center justify-between px-2 py-1.5 hover:bg-slate-100 rounded-lg transition-colors text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-slate-100 ${collapsed ? 'justify-center' : ''
               }`}
             title={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
           >
@@ -278,7 +284,7 @@ const StudentSidebar = ({ collapsed, onCollapseChange, onClose }) => {
                 <div className="flex items-center gap-2">
                   <span className="text-sm font-medium">{t('sidebar:collapse')}</span>
                 </div>
-                <ChevronLeft size={18} className="text-gray-400" />
+                <ChevronLeft size={18} className="text-slate-400" />
               </>
             ) : (
               <ChevronRight size={20} />
@@ -295,7 +301,7 @@ const StudentSidebar = ({ collapsed, onCollapseChange, onClose }) => {
 
           return (
             <div
-              className="fixed bg-white rounded-lg shadow-xl border border-gray-200 py-1 z-[9999] min-w-[180px]"
+              className="sidebar-flyout"
               style={{
                 top: `${submenuPosition.top}px`,
                 left: `${submenuPosition.left}px`,
@@ -306,8 +312,8 @@ const StudentSidebar = ({ collapsed, onCollapseChange, onClose }) => {
               {item.submenu ? (
                 <>
                   {/* Smaller header padding */}
-                  <div className="px-3 py-1.5 border-b border-gray-100">
-                    <span className="font-medium text-sm text-gray-900">{item.label}</span>
+                  <div className="px-3 py-1.5 border-b border-slate-100 dark:border-slate-800">
+                    <span className="font-medium text-sm text-slate-900 dark:text-slate-50">{item.label}</span>
                   </div>
                   <div className="py-0.5">
                     {item.submenu.map((subItem, index) => (
@@ -315,9 +321,9 @@ const StudentSidebar = ({ collapsed, onCollapseChange, onClose }) => {
                         key={index}
                         to={subItem.path}
                         className={({ isActive }) =>
-                          `flex items-center justify-between px-3 py-1.5 text-sm transition-colors hover:bg-gray-50 ${isActive
-                            ? 'text-primary-700 bg-primary-50'
-                            : 'text-gray-700'
+                          `flex items-center justify-between px-3 py-1.5 text-sm transition-colors hover:bg-slate-50 dark:hover:bg-slate-800 ${isActive
+                            ? 'text-primary-700 bg-primary-50 dark:text-primary-300 dark:bg-primary-950/40'
+                            : 'text-slate-700 dark:text-slate-300'
                           }`
                         }
                         onClick={() => {
@@ -332,7 +338,7 @@ const StudentSidebar = ({ collapsed, onCollapseChange, onClose }) => {
                 </>
               ) : (
                 <div className="px-3 py-1.5">
-                  <span className="font-medium text-sm text-gray-900">{item.label}</span>
+                  <span className="font-medium text-sm text-slate-900 dark:text-slate-50">{item.label}</span>
                 </div>
               )}
             </div>

@@ -6,14 +6,16 @@ const { pool } = require('../config/database');
 exports.getMySchoolBranding = async (req, res) => {
     try {
         // If super admin, return system default
-        if (req.user.is_super_admin) {
+        if (req.user.role === 'super admin' || req.user.is_super_admin) {
             return res.json({
                 success: true,
                 data: {
-                    name: 'Spokene Super Admin',
+                    name: 'Spoken Edge Super Admin',
                     logo_url: null, // Use default
                     is_system_default: true,
-                    allowed_languages: [] // Super admin has access to all generally
+                    allowed_languages: [], // Super admin has access to all generally
+                    premium_translation: false,
+                    premium_tts: false
                 }
             });
         }
@@ -24,7 +26,7 @@ exports.getMySchoolBranding = async (req, res) => {
 
         // Get school details
         const schoolResult = await pool.query(
-            'SELECT id, name, logo_url, plan_tier FROM schools WHERE id = $1',
+            'SELECT id, name, logo_url, plan_tier, features FROM schools WHERE id = $1',
             [req.user.school_id]
         );
 
@@ -33,6 +35,11 @@ exports.getMySchoolBranding = async (req, res) => {
         }
 
         const schoolData = schoolResult.rows[0];
+
+        // Surface the per-school premium API entitlements (flattened for the client)
+        schoolData.premium_translation = schoolData.features?.premium_translation === true;
+        schoolData.premium_tts = schoolData.features?.premium_tts === true;
+        delete schoolData.features; // don't leak the full features blob
 
         // Get allowed languages
         const languagesResult = await pool.query(

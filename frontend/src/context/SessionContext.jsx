@@ -75,7 +75,7 @@ export const SessionProvider = ({ children }) => {
                 isOpen={showModal}
                 onCancel={handleCancelNavigation}
                 onConfirm={handleConfirmNavigation}
-                message="You have an active in-person session. Leaving this page will end the session. Are you sure?"
+                message="You have an active live conversation. Leaving this page will end it. Are you sure?"
             />
         </SessionContext.Provider>
     );

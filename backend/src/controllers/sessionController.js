@@ -1,6 +1,8 @@
 const { pool } = require('../config/database');
+const socketManager = require('../socket/socketManager');
+const { logAction } = require('./auditController');
 
-// @desc    Start an in-person session
+// @desc    Start a live conversation
 // @route   POST /api/sessions/start
 // @access  Teacher
 exports.startSession = async (req, res) => {
@@ -13,17 +15,34 @@ exports.startSession = async (req, res) => {
     }
 
     try {
-        // limit: Check if school has minutes remaining? 
-        // For now, allow start, but maybe warn if quota exceeded?
-        // Let's keep it simple: Start successful.
-
-        // Check for existing active session for this teacher and END it (cleanup)
-        await pool.query(
-            `UPDATE sessions 
-             SET status = 'completed', end_time = NOW(), duration_minutes = EXTRACT(EPOCH FROM (NOW() - start_time))/60 
-             WHERE teacher_id = $1 AND status = 'active'`,
+        // Check for existing active session — do NOT auto-end, require explicit end
+        const existingSession = await pool.query(
+            `SELECT id FROM sessions WHERE teacher_id = $1 AND status = 'active'`,
             [teacher_id]
         );
+        if (existingSession.rows.length > 0) {
+            return res.status(409).json({
+                success: false,
+                message: 'You already have an active session. Please end it before starting a new one.'
+            });
+        }
+
+        // Check school minutes quota
+        if (school_id) {
+            const schoolResult = await pool.query(
+                'SELECT minutes_used, minutes_limit FROM schools WHERE id = $1',
+                [school_id]
+            );
+            if (schoolResult.rows.length > 0) {
+                const { minutes_used, minutes_limit } = schoolResult.rows[0];
+                if (minutes_limit > 0 && minutes_used >= minutes_limit) {
+                    return res.status(403).json({
+                        success: false,
+                        message: 'Your school has reached its session minutes limit. Please contact your administrator.'
+                    });
+                }
+            }
+        }
 
         const result = await pool.query(
             `INSERT INTO sessions (teacher_id, student_id, school_id, start_time, status)
@@ -34,21 +53,20 @@ exports.startSession = async (req, res) => {
 
         const session = result.rows[0];
 
-        // Emit socket event to notify student? 
-        // Ideally done via socketManager listening to 'join_session', but we can trigger specific event here if needed.
-        // User's browser will join room.
+        try {
+            logAction(teacher_id, null, 'START_SESSION', 'session', session.id, {
+                student_id, school_id
+            }, null);
+        } catch (e) { console.error('Audit log error', e); }
 
-        res.status(201).json({
-            success: true,
-            data: session
-        });
+        res.status(201).json({ success: true, data: session });
     } catch (err) {
         console.error('Error starting session:', err);
         res.status(500).json({ success: false, message: 'Server error' });
     }
 };
 
-// @desc    End an in-person session
+// @desc    End a live conversation
 // @route   POST /api/sessions/end
 // @access  Teacher
 exports.endSession = async (req, res) => {
@@ -110,19 +128,19 @@ exports.endSession = async (req, res) => {
 
             await client.query('COMMIT');
 
-            // Notify Student via Socket
-            const io = req.app.get('io');
+            try {
+                logAction(teacher_id, null, 'END_SESSION', 'session', session.id, {
+                    student_id: session.student_id, minutes_used: minutesUsed, school_id
+                }, null);
+            } catch (e) { console.error('Audit log error', e); }
+
+            const io = socketManager.getIO();
             if (io) {
-                // Emit to room 'session_<id>' ?? Or just to student ID?
-                // If we use room 'session_<session_id>', we need to know it.
-                // Or emit to `user_<student_id>`.
-                io.to(`user_${session.student_id}`).emit('session_ended', {
+                io.to(String(session.student_id)).emit('session_ended', {
                     sessionId: session.id,
                     duration: minutesUsed
                 });
-
-                // Also emit to user_<teacher> just in case
-                io.to(`user_${teacher_id}`).emit('session_ended', {
+                io.to(String(teacher_id)).emit('session_ended', {
                     sessionId: session.id,
                     duration: minutesUsed
                 });

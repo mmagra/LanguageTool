@@ -7,7 +7,7 @@ const PublicHeader = () => {
   const { isAuthenticated, user } = useAuth();
 
   return (
-    <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
+    <header className="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
       <div className="h-16 flex items-center">
         <div className="container mx-auto px-4 md:px-6 w-full">
           <div className="flex items-center justify-between">
@@ -32,8 +32,8 @@ const PublicHeader = () => {
             <nav className="hidden md:flex items-center gap-6">
               {isAuthenticated ? (
                 <>
-                  <span className="text-sm text-gray-600">
-                    Welcome, <span className="font-semibold text-gray-900">{user?.firstName || 'User'}</span>
+                  <span className="text-sm text-slate-600">
+                    Welcome, <span className="font-semibold text-slate-900">{user?.firstName || 'User'}</span>
                   </span>
                   <Link
                     to="/dashboard"
@@ -47,7 +47,7 @@ const PublicHeader = () => {
                 <>
                   <Link
                     to="/login"
-                    className="flex items-center gap-2 text-gray-700 hover:text-primary-600 font-medium transition-colors"
+                    className="flex items-center gap-2 text-slate-700 hover:text-primary-600 font-medium transition-colors"
                   >
                     <LogIn size={18} />
                     Login
@@ -77,7 +77,7 @@ const PublicHeader = () => {
                 <>
                   <Link
                     to="/login"
-                    className="p-2 text-gray-700 hover:text-primary-600 transition-colors"
+                    className="p-2 text-slate-700 hover:text-primary-600 transition-colors"
                     aria-label="Login"
                   >
                     <LogIn size={20} />

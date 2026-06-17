@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import api from '../../services/api';
 import { toast } from 'react-hot-toast';
-import { Building2, Mail, Link as LinkIcon, Save, Upload, AlertCircle, Phone, Image as ImageIcon, Edit2, X, Trash2, Users, Clock, Sparkles, GraduationCap, TrendingUp, Medal } from 'lucide-react';
+import { Building2, Mail, Link as LinkIcon, Save, Upload, AlertCircle, Phone, Image as ImageIcon, Edit2, X, Trash2, Users, Clock, Sparkles, GraduationCap, TrendingUp, Medal, MapPin } from 'lucide-react';
 import { useBranding } from '../../context/BrandingContext';
 import ImageCropper from '../../components/common/ImageCropper';
+import AdminsList from './AdminsList';
+import { formatPhone, isValidPhone, PHONE_MESSAGE } from '../../utils/validation';
+import { US_STATES, ZIP_REGEX } from '../../utils/usStates';
+import CustomDropdown from '../../components/common/CustomDropdown';
 
 const SchoolDetails = () => {
-    const { schoolName, logoUrl, planTier, loading: brandingLoading } = useBranding();
+    const { schoolName, logoUrl, planTier, loading: brandingLoading, refreshBranding } = useBranding();
+    const [activeTab, setActiveTab] = useState('profile');
     const [loading, setLoading] = useState(true);
     const [saving, setSaving] = useState(false);
     const [showCropper, setShowCropper] = useState(false);
@@ -18,6 +23,10 @@ const SchoolDetails = () => {
         name: '',
         contact_email: '',
         contact_number: '',
+        street_address: '',
+        city: '',
+        state: '',
+        zip_code: '',
         logo_url: ''
     });
 
@@ -30,7 +39,8 @@ const SchoolDetails = () => {
             setLoading(true);
             const response = await api.getMySchool();
             if (response.success) {
-                const { name, contact_email, contact_number, logo_url, student_count, teacher_count, minutes_used, minutes_limit, max_students, max_teachers } = response.data;
+                const { name, contact_email, contact_number, logo_url, student_count, teacher_count, minutes_used, minutes_limit, max_students, max_teachers,
+                    translation_chars_used, translation_chars_limit, tts_chars_used, tts_chars_limit } = response.data;
                 const data = {
                     name: name || '',
                     contact_email: contact_email || '',
@@ -41,7 +51,11 @@ const SchoolDetails = () => {
                     minutes_used: minutes_used || 0,
                     minutes_limit: minutes_limit || 1000,
                     max_students: max_students || 100,
-                    max_teachers: max_teachers || 10
+                    max_teachers: max_teachers || 10,
+                    translation_chars_used: translation_chars_used || 0,
+                    translation_chars_limit: translation_chars_limit || 0,
+                    tts_chars_used: tts_chars_used || 0,
+                    tts_chars_limit: tts_chars_limit || 0
                 };
                 setFormData(data);
                 setInitialData(data);
@@ -54,8 +68,10 @@ const SchoolDetails = () => {
         }
     };
 
+    const PHONE_FIELDS = ['contact_number', 'admin_phone', 'phone'];
     const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: PHONE_FIELDS.includes(name) ? formatPhone(value) : value });
     };
 
     const handleCancel = () => {
@@ -69,6 +85,14 @@ const SchoolDetails = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (formData.contact_number && !isValidPhone(formData.contact_number)) {
+            toast.error(PHONE_MESSAGE);
+            return;
+        }
+        if (formData.zip_code && !ZIP_REGEX.test(String(formData.zip_code).trim())) {
+            toast.error('Enter a valid US ZIP code (e.g. 12345 or 12345-6789)');
+            return;
+        }
         try {
             setSaving(true);
             const response = await api.updateMySchool(formData);
@@ -76,41 +100,55 @@ const SchoolDetails = () => {
                 toast.success('School details updated successfully');
                 setInitialData(formData);
                 setIsEditing(false);
-                // Optional: Refresh Branding Context if needed, but page reload works too
-                // Ideally trigger a refresh in context, but for now user sees success
-                setTimeout(() => window.location.reload(), 1000);
+                // Refresh local + branding (header/sidebar logo & name) without a full page reload
+                await fetchSchoolDetails();
+                if (refreshBranding) refreshBranding();
             }
         } catch (error) {
             console.error('Update failed:', error);
-            toast.error(error.response?.data?.message || 'Failed to update school');
+            toast.error(error?.message || 'Failed to update school');
         } finally {
             setSaving(false);
         }
     };
 
     if (loading) {
-        return <div className="p-8 text-center text-gray-500">Loading school details...</div>;
+        return <div className="p-8 text-center text-slate-500">Loading school details...</div>;
     }
 
     return (
-        <div className="space-y-6 animate-fade-in font-inter px-20">
-            <div className="mb-6">
-                <h1 className="text-3xl font-bold text-gray-800 tracking-tight">Manage School Details</h1>
-                <p className="text-gray-500 text-sm mt-1">Update your school's public profile and branding.</p>
+        <div className="space-y-6 animate-fade-in font-inter max-w-5xl mx-auto px-4 sm:px-6">
+            <div>
+                <h1 className="text-xl font-semibold tracking-tight text-slate-900">Manage School</h1>
+                <p className="text-slate-500 text-sm mt-1">Update your school profile and manage administrators.</p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
-                {/* Left Column: Form */}
-                <div className="lg:col-span-3 space-y-6 h-full">
-                    <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow-xl shadow-gray-200/50 border border-gray-100 p-6 space-y-6 h-full flex flex-col justify-between">
+            {/* Tabs */}
+            <div className="flex gap-1 border-b border-slate-100">
+                {[{ id: 'profile', label: 'School Profile', icon: Building2 }, { id: 'admins', label: 'Administrators', icon: Users }].map(t => {
+                    const TabIcon = t.icon;
+                    return (
+                        <button
+                            key={t.id}
+                            onClick={() => setActiveTab(t.id)}
+                            className={`flex items-center gap-2 px-4 py-2.5 text-sm font-semibold border-b-2 -mb-px transition-colors ${activeTab === t.id ? 'border-primary-600 text-primary-600' : 'border-transparent text-slate-500 hover:text-slate-700'}`}
+                        >
+                            <TabIcon size={16} /> {t.label}
+                        </button>
+                    );
+                })}
+            </div>
+
+            {activeTab === 'profile' && (
+                <form onSubmit={handleSubmit} className="bg-white rounded-xl shadow-sm border border-slate-100 p-6 space-y-6">
                         {/* Logo Upload */}
                         <div>
-                            <label className="block text-sm font-semibold text-gray-700 mb-2">School Logo</label>
+                            <label className="block text-sm font-semibold text-slate-700 mb-2">School Logo</label>
 
                             <div className="flex flex-col sm:flex-row items-start gap-6">
                                 {/* Preview Area (Fixed Size Container) */}
                                 <div className="shrink-0">
-                                    <div className="w-[180px] h-[56px] bg-gray-50 border border-gray-200 rounded-lg flex items-center justify-center overflow-hidden">
+                                    <div className="w-[180px] h-[56px] bg-slate-50 border border-slate-200 rounded-lg flex items-center justify-center overflow-hidden">
                                         {formData.logo_url ? (
                                             <img
                                                 src={formData.logo_url}
@@ -136,7 +174,7 @@ const SchoolDetails = () => {
                                             <button
                                                 type="button"
                                                 onClick={() => setShowCropper(true)}
-                                                className="h-8 flex items-center gap-2 text-xs font-medium text-indigo-600 bg-indigo-50 hover:bg-indigo-100 px-3 rounded-md transition-colors"
+                                                className="h-8 flex items-center gap-2 text-xs font-medium text-primary-600 bg-primary-50 hover:bg-primary-100 px-3 rounded-md transition-colors"
                                             >
                                                 {formData.logo_url ? 'Replace' : 'Upload Logo'}
                                             </button>
@@ -145,7 +183,7 @@ const SchoolDetails = () => {
                                                 <button
                                                     type="button"
                                                     onClick={() => setFormData({ ...formData, logo_url: '' })}
-                                                    className="h-8 w-8 flex items-center justify-center text-gray-400 hover:text-red-600 hover:bg-red-50 border border-gray-200 hover:border-red-100 rounded-md transition-all ml-1"
+                                                    className="h-8 w-8 flex items-center justify-center text-slate-400 hover:text-red-600 hover:bg-red-50 border border-slate-200 hover:border-red-100 rounded-md transition-all ml-1"
                                                     title="Remove Logo"
                                                 >
                                                     <Trash2 size={16} />
@@ -153,13 +191,13 @@ const SchoolDetails = () => {
                                             )}
                                         </div>
 
-                                        <p className="text-[10px] text-gray-400 leading-tight">
+                                        <p className="text-xs text-slate-400 leading-tight">
                                             320x100px transp. PNG
                                         </p>
                                     </div>
                                 ) : (
                                     <div className="flex flex-col justify-center h-[56px]">
-                                        <span className="text-sm text-gray-400 italic">Enable editing to change logo</span>
+                                        <span className="text-sm text-slate-400 italic">Enable editing to change logo</span>
                                     </div>
                                 )}
                             </div>
@@ -167,9 +205,9 @@ const SchoolDetails = () => {
 
                         {/* School Name */}
                         <div>
-                            <label className="block text-sm font-semibold text-gray-700 mb-2">School Name</label>
+                            <label className="block text-sm font-semibold text-slate-700 mb-2">School Name</label>
                             <div className="relative">
-                                <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
+                                <Building2 className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={20} />
                                 <input
                                     type="text"
                                     name="name"
@@ -177,44 +215,109 @@ const SchoolDetails = () => {
                                     onChange={handleChange}
                                     required
                                     disabled={!isEditing}
-                                    className={`w-full pl-10 pr-4 py-3 border rounded-xl outline-none transition-all ${isEditing ? 'border-gray-200 focus:ring-2 focus:ring-indigo-500 bg-white' : 'border-gray-100 bg-gray-50 text-gray-500 cursor-not-allowed'}`}
+                                    className={`w-full pl-10 pr-4 py-3 border rounded-xl outline-none transition-all ${isEditing ? 'border-slate-200 focus:ring-2 focus:ring-primary-500 bg-white' : 'border-slate-100 bg-slate-50 text-slate-500 cursor-not-allowed'}`}
                                     placeholder="Enter school name"
                                 />
                             </div>
                         </div>
 
-                        {/* Contact Email */}
+                        {/* Email + Contact No. — 2 columns */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label className="block text-sm font-semibold text-slate-700 mb-2">Email</label>
+                                <div className="relative">
+                                    <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={20} />
+                                    <input
+                                        type="email"
+                                        name="contact_email"
+                                        value={formData.contact_email}
+                                        onChange={handleChange}
+                                        required
+                                        disabled={!isEditing}
+                                        className={`w-full pl-10 pr-4 py-3 border rounded-xl outline-none transition-all ${isEditing ? 'border-slate-200 focus:ring-2 focus:ring-primary-500 bg-white' : 'border-slate-100 bg-slate-50 text-slate-500 cursor-not-allowed'}`}
+                                        placeholder="Enter contact email address"
+                                    />
+                                </div>
+                            </div>
+
+                            <div>
+                                <label className="block text-sm font-semibold text-slate-700 mb-2">Contact No.</label>
+                                <div className="relative">
+                                    <Phone className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={20} />
+                                    <input
+                                        type="tel"
+                                        name="contact_number"
+                                        value={formData.contact_number}
+                                        onChange={handleChange}
+                                        required
+                                        disabled={!isEditing}
+                                        inputMode="numeric"
+                                        maxLength={14}
+                                        className={`w-full pl-10 pr-4 py-3 border rounded-xl outline-none transition-all ${isEditing ? 'border-slate-200 focus:ring-2 focus:ring-primary-500 bg-white' : 'border-slate-100 bg-slate-50 text-slate-500 cursor-not-allowed'}`}
+                                        placeholder="(000) 000 0000"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* School Address (USA) */}
                         <div>
-                            <label className="block text-sm font-semibold text-gray-700 mb-2">Contact Email</label>
+                            <label className="block text-sm font-semibold text-slate-700 mb-2">Street Address</label>
                             <div className="relative">
-                                <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
+                                <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" size={20} />
                                 <input
-                                    type="email"
-                                    name="contact_email"
-                                    value={formData.contact_email}
+                                    type="text"
+                                    name="street_address"
+                                    value={formData.street_address}
                                     onChange={handleChange}
-                                    required
                                     disabled={!isEditing}
-                                    className={`w-full pl-10 pr-4 py-3 border rounded-xl outline-none transition-all ${isEditing ? 'border-gray-200 focus:ring-2 focus:ring-indigo-500 bg-white' : 'border-gray-100 bg-gray-50 text-gray-500 cursor-not-allowed'}`}
-                                    placeholder="Enter contact email address"
+                                    className={`w-full pl-10 pr-4 py-3 border rounded-xl outline-none transition-all ${isEditing ? 'border-slate-200 focus:ring-2 focus:ring-primary-500 bg-white' : 'border-slate-100 bg-slate-50 text-slate-500 cursor-not-allowed'}`}
+                                    placeholder="123 Main St, Suite 100"
                                 />
                             </div>
                         </div>
 
-                        {/* Contact Phone (NEW) */}
-                        <div>
-                            <label className="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
-                            <div className="relative">
-                                <Phone className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" size={20} />
+                        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                            <div className="col-span-2 sm:col-span-1">
+                                <label className="block text-sm font-semibold text-slate-700 mb-2">City</label>
                                 <input
-                                    type="tel"
-                                    name="contact_number"
-                                    value={formData.contact_number}
+                                    type="text"
+                                    name="city"
+                                    value={formData.city}
                                     onChange={handleChange}
-                                    required
                                     disabled={!isEditing}
-                                    className={`w-full pl-10 pr-4 py-3 border rounded-xl outline-none transition-all ${isEditing ? 'border-gray-200 focus:ring-2 focus:ring-indigo-500 bg-white' : 'border-gray-100 bg-gray-50 text-gray-500 cursor-not-allowed'}`}
-                                    placeholder="Enter contact number"
+                                    className={`w-full px-4 py-3 border rounded-xl outline-none transition-all ${isEditing ? 'border-slate-200 focus:ring-2 focus:ring-primary-500 bg-white' : 'border-slate-100 bg-slate-50 text-slate-500 cursor-not-allowed'}`}
+                                    placeholder="City"
+                                />
+                            </div>
+                            <div>
+                                <label className="block text-sm font-semibold text-slate-700 mb-2">State</label>
+                                <CustomDropdown
+                                    options={US_STATES}
+                                    value={formData.state}
+                                    onChange={val => setFormData({ ...formData, state: val })}
+                                    placeholder="Select state"
+                                    matchTextInput
+                                    showClear={false}
+                                    disabled={!isEditing}
+                                    dropdownPosition="top"
+                                    surfaceClassName="bg-white border-slate-200 text-slate-900 focus:ring-2 focus:ring-primary-500 focus:border-primary-500"
+                                    disabledClassName="bg-slate-50 border-slate-100 text-slate-500 cursor-not-allowed"
+                                    buttonClassName="h-[50px] rounded-xl text-base"
+                                />
+                            </div>
+                            <div>
+                                <label className="block text-sm font-semibold text-slate-700 mb-2">ZIP Code</label>
+                                <input
+                                    type="text"
+                                    name="zip_code"
+                                    value={formData.zip_code}
+                                    onChange={e => setFormData({ ...formData, zip_code: e.target.value.replace(/[^\d-]/g, '') })}
+                                    disabled={!isEditing}
+                                    inputMode="numeric"
+                                    maxLength={10}
+                                    className={`w-full px-4 py-3 border rounded-xl outline-none transition-all ${isEditing ? 'border-slate-200 focus:ring-2 focus:ring-primary-500 bg-white' : 'border-slate-100 bg-slate-50 text-slate-500 cursor-not-allowed'}`}
+                                    placeholder="12345"
                                 />
                             </div>
                         </div>
@@ -224,7 +327,7 @@ const SchoolDetails = () => {
                                 <button
                                     type="button"
                                     onClick={() => setIsEditing(true)}
-                                    className="flex items-center gap-2 px-6 py-2.5 text-sm bg-indigo-600 text-white rounded-xl font-medium shadow-sm hover:bg-indigo-700 transition-all hover:shadow-md active:scale-95"
+                                    className="flex items-center gap-2 px-6 py-2.5 text-sm bg-primary-600 text-white rounded-xl font-medium shadow-sm hover:bg-primary-700 transition-all hover:shadow-md active:scale-95"
                                 >
                                     <Edit2 size={18} />
                                     Edit Details
@@ -234,7 +337,7 @@ const SchoolDetails = () => {
                                     <button
                                         type="button"
                                         onClick={handleCancel}
-                                        className="flex items-center gap-2 px-6 py-2.5 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-xl hover:bg-gray-50 focus:ring-4 focus:ring-gray-100 transition-all shadow-sm hover:shadow-md active:scale-95"
+                                        className="flex items-center gap-2 px-6 py-2.5 text-sm font-medium text-slate-700 bg-white border border-slate-200 rounded-xl hover:bg-slate-50 focus:ring-4 focus:ring-slate-100 transition-all shadow-sm hover:shadow-md active:scale-95"
                                     >
                                         <X size={18} />
                                         Cancel
@@ -242,7 +345,7 @@ const SchoolDetails = () => {
                                     <button
                                         type="submit"
                                         disabled={saving}
-                                        className="flex items-center gap-2 px-6 py-2.5 text-sm bg-indigo-600 text-white rounded-xl font-medium shadow-sm hover:bg-indigo-700 transition-all hover:shadow-md active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
+                                        className="flex items-center gap-2 px-6 py-2.5 text-sm bg-primary-600 text-white rounded-xl font-medium shadow-sm hover:bg-primary-700 transition-all hover:shadow-md active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
                                     >
                                         {saving ? (
                                             <>
@@ -259,110 +362,12 @@ const SchoolDetails = () => {
                                 </>
                             )}
                         </div>
-                    </form>
-                </div>
+                </form>
+            )}
 
-                {/* Right Column: Plan Usage Details */}
-                <div className="lg:col-span-2 space-y-6 h-full">
-                    <div className="bg-white rounded-2xl shadow-xl shadow-gray-200/50 border border-gray-100 p-5 h-full flex flex-col relative overflow-hidden">
-                        {/* Decorative background removed */}
-
-                        <div className="flex items-center gap-3 mb-4 relative z-10">
-                            <div className="p-2.5 bg-indigo-50 rounded-xl">
-                                <TrendingUp size={20} className="text-indigo-600" />
-                            </div>
-                            <h3 className="text-base font-bold text-gray-900 tracking-tight">
-                                Plan Usage & Limits
-                            </h3>
-                        </div>
-
-                        <div className="space-y-4 flex-1 relative z-10">
-                            {/* Students Usage */}
-                            <div className="bg-gray-50/50 rounded-xl p-3 border border-gray-100">
-                                <div className="flex justify-between items-end mb-3">
-                                    <div className="flex items-center gap-2">
-                                        <GraduationCap size={16} className="text-indigo-500" />
-                                        <span className="text-sm font-semibold text-gray-700">Active Students</span>
-                                    </div>
-                                    <span className="text-sm font-bold text-gray-900">
-                                        {formData.student_count || 0} <span className="text-gray-400 font-normal">/ {formData.max_students || '∞'}</span>
-                                    </span>
-                                </div>
-                                <div className="w-full h-2.5 bg-gray-200 rounded-full overflow-hidden mb-2">
-                                    <div
-                                        className="h-full bg-gradient-to-r from-indigo-500 to-indigo-400 rounded-full transition-all duration-1000 shadow-[0_0_10px_rgba(99,102,241,0.3)]"
-                                        style={{ width: `${Math.min(((formData.student_count || 0) / (formData.max_students || 100)) * 100, 100)}%` }}
-                                    ></div>
-                                </div>
-                                <p className="text-xs text-gray-500 font-medium">
-                                    {Math.max(0, (formData.max_students || 100) - (formData.student_count || 0))} profiles remaining
-                                </p>
-                            </div>
-
-                            {/* Teachers Usage */}
-                            <div className="bg-gray-50/50 rounded-xl p-4 border border-gray-100">
-                                <div className="flex justify-between items-end mb-3">
-                                    <div className="flex items-center gap-2">
-                                        <Users size={16} className="text-blue-500" />
-                                        <span className="text-sm font-semibold text-gray-700">Active Teachers</span>
-                                    </div>
-                                    <span className="text-sm font-bold text-gray-900">
-                                        {formData.teacher_count || 0} <span className="text-gray-400 font-normal">/ {formData.max_teachers || '∞'}</span>
-                                    </span>
-                                </div>
-                                <div className="w-full h-2.5 bg-gray-200 rounded-full overflow-hidden mb-2">
-                                    <div
-                                        className="h-full bg-gradient-to-r from-blue-500 to-blue-400 rounded-full transition-all duration-1000 shadow-[0_0_10px_rgba(59,130,246,0.3)]"
-                                        style={{ width: `${Math.min(((formData.teacher_count || 0) / (formData.max_teachers || 10)) * 100, 100)}%` }}
-                                    ></div>
-                                </div>
-                                <p className="text-xs text-gray-500 font-medium">
-                                    {Math.max(0, (formData.max_teachers || 10) - (formData.teacher_count || 0))} profiles remaining
-                                </p>
-                            </div>
-
-                            {/* Minutes Usage */}
-                            <div className="bg-gray-50/50 rounded-xl p-4 border border-gray-100">
-                                <div className="flex justify-between items-end mb-3">
-                                    <div className="flex items-center gap-2">
-                                        <Clock size={16} className="text-purple-500" />
-                                        <span className="text-sm font-semibold text-gray-700">In-Person Minutes</span>
-                                    </div>
-                                    <span className="text-sm font-bold text-gray-900">
-                                        {formData.minutes_used || 0} <span className="text-gray-400 font-normal">/ {formData.minutes_limit || 1000}</span>
-                                    </span>
-                                </div>
-                                <div className="w-full h-2.5 bg-gray-200 rounded-full overflow-hidden mb-2">
-                                    <div
-                                        className="h-full bg-gradient-to-r from-purple-500 to-purple-400 rounded-full transition-all duration-1000 shadow-[0_0_10px_rgba(168,85,247,0.3)]"
-                                        style={{ width: `${Math.min(((formData.minutes_used || 0) / (formData.minutes_limit || 1000)) * 100, 100)}%` }}
-                                    ></div>
-                                </div>
-                                <p className="text-xs text-gray-500 font-medium">
-                                    {Math.max(0, (formData.minutes_limit || 1000) - (formData.minutes_used || 0))} minutes available
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="mt-4 relative z-10">
-                            <div className="bg-gradient-to-br from-gray-900 to-gray-800 rounded-2xl p-5 text-white shadow-xl flex items-center justify-between border border-gray-700">
-                                <div>
-                                    <div className="flex items-center gap-2 mb-1">
-                                        <Medal size={16} className="text-yellow-400" />
-                                        <span className="text-xs text-gray-300 uppercase tracking-widest font-semibold">Current Tier</span>
-                                    </div>
-                                    <span className="text-2xl font-bold capitalize tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
-                                        {planTier || 'Enterprise'}
-                                    </span>
-                                </div>
-                                <span className="text-xs font-bold bg-white/10 px-3 py-1.5 rounded-lg text-white backdrop-blur-md border border-white/10 shadow-sm">
-                                    ACTIVE
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {activeTab === 'admins' && (
+                <AdminsList />
+            )}
 
             {/* Image Cropper Modal */}
             <ImageCropper
